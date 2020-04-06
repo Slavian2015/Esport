@@ -34,10 +34,10 @@ dash_app.layout = html.Div([
 @dash_app.callback(Output('page-content', 'children'),
               [Input('url', 'pathname')])
 def display_page(pathname):
-    # if pathname == '/app1':
-    #      return layout1
-    # elif pathname == '/app2':
-    #      return layout2
+    if pathname == '/app1':
+         return layout1
+    elif pathname == '/app2':
+         return layout2
     if pathname == '/':
          return layout_main
     else:
