@@ -1,10 +1,11 @@
+from app import dash_app, app
+from layouts import layout1, layout2, layout_main
 from dash.dependencies import Input, Output
 import dash_core_components as dcc
 import dash_html_components as html
 import dash_design_kit as ddk
 
-from app import dash_app, app
-from layouts import layout1, layout2, layout_main
+
 import callbacks
 
 
@@ -44,4 +45,4 @@ def display_page(pathname):
 
 if __name__ == "__main__":
     # app.run_server(debug=True)
-    app.run(debug=False, port=80, host='127.0.0.1')
+    app.run(debug=False)
