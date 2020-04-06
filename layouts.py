@@ -991,7 +991,7 @@ def serve_layout():
                                 children=[ddk.Card(width=100,
                                                    style={'background-color': 'transparent', 'margin': '10px'},
                                                    children=[
-                                                       ddk.CardHeader(title='Live'),
+                                                       ddk.CardHeader(title='Live',style={'background-color': 'transparent', 'margin': '10px'},),
                                                        html.Div(Card_matches)
                           ])]),
                       ddk.Block(width=33,
@@ -999,7 +999,7 @@ def serve_layout():
                                 children=[ddk.Card(width=100,
                                                    style={'background-color': 'transparent', 'margin': '10px'},
                                                    children=[
-                                                       ddk.CardHeader(title='Matches'),
+                                                       ddk.CardHeader(title='Matches',style={'background-color': 'transparent', 'margin': '10px'},),
                                                        html.Div(Card_matches)
                                                    ])]),
                       ddk.Block(width=33,
@@ -1007,7 +1007,7 @@ def serve_layout():
                                 children=[ddk.Card(width=100,
                                                    style={'background-color': 'transparent', 'margin': '10px'},
                                                    children=[
-                                                       ddk.CardHeader(title='Results'),
+                                                       ddk.CardHeader(title='Results',style={'background-color': 'transparent', 'margin': '10px'},),
                                                        html.Div(Card_matches)
                                                    ])])])
     return layout
