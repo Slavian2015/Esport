@@ -15,10 +15,12 @@ dash_app.layout = html.Div([
                      children=[
                          ddk.Header(style={'height': '7vh', 'background-color': '#1f78b494', 'opacity': '0.8'},
                                     children=[
-                                        # ddk.Logo(src='../assets/logo.png'),
+                                        ddk.Logo(src='../assets/logo.png'),
                                         ddk.Block(style={'text-align': 'right'}, children=[
                                             dcc.Link('HOME', style={'color': 'azure', 'margin': '10px'}, href='/'),
-                                           ])]),
+                                            dcc.Link('Карточка Матча', style={'color': '#fff', 'margin': '10px'}, href='/app1'),
+                                            dcc.Link('Карточка Матча2', style={'color': '#fff', 'margin': '10px'}, href='/app1'),
+                                            dcc.Link('Go to App 2', style={'color': '#fff', 'margin': '10px'}, href='/app2')])]),
 
 
 

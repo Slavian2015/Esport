@@ -1013,1073 +1013,1073 @@ def serve_layout():
     return layout
 layout_main = serve_layout()
 
-#
-# #####       EXAMPLE of Table   ###########
-# Card_matches = dbc.ListGroup(flush=True,
-#                              style={'max-height':'-webkit-fill-available', 'overflowY':'scroll'},
-#                              children=[
-#                             dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
-#                                  'height': '50px', 'justify-content': 'center',
-#                                  'vertical-align': '-webkit-baseline-middle',
-#                                  'max-height': 'fit-content', 'padding': '0px',
-#                                  'align-items': 'center'},
-#                           color="default",
-#                           action = True,
-#                           children=[
-#                               ddk.Row(style={'max-height': 'fit-content',
-#                                              'height': '100%',
-#                                              'padding': '0px',
-#                                              "width": '100%', 'align-items': 'center',
-#                                              'justify-content': 'center', 'margin': '0',
-#                                              'vertical-align': '-webkit-baseline-middle',
-#                                              'textAlign': 'center', 'margin-left': '0',
-#                                              'margin-right': '0'},
-#                                       children=[
-#                                           ddk.Block(width=30,
-#                                                     style={
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '0', 'margin-right': '0'},
-#                                                   children=[
-#                                                       ddk.Block(width=50,
-#                                                                 style={
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=ddk.Logo(src='../assets/logo.png',
-#                                                                                 style={
-#                                                                                      'max-height': '-webkit-fill-available',
-#                                                                                        'padding': '0px', 'margin': '0',
-#                                                                                      'vertical-align': '-webkit-baseline-middle'})),
-#                                                       ddk.Block(width=50,
-#                                                                 style={
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=html.H6('CyberL',
-#                                                                               style={
-#                                                                                      'padding': '0px', 'margin': '0',
-#                                                                         'max-height': '-webkit-fill-available',
-#                                                                         'vertical-align': '-webkit-baseline-middle'}))]),
-#
-#                                           ddk.Block(width=10,
-#                                                     style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '10px', 'margin-right': '10px'},
-#                                                   children=html.H6('20:30',
-#                                                                   style={'height': '100%',
-#                                                                          'max-height': 'fit-content',
-#                                                                          'vertical-align': '-webkit-baseline-middle'})),
-#
-#                                           ddk.Block(width=30,
-#                                                     style={
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '0', 'margin-right': '0'},
-#                                                     children=[
-#
-#                                                         ddk.Block(width=50,
-#                                                                   style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=html.H6('CyberL',
-#                                                                               style={
-#                                                                                      'padding': '0px', 'margin': '0',
-#                                                                                      'max-height': '-webkit-fill-available',
-#                                                                                      'vertical-align': '-webkit-baseline-middle'})),
-#
-#                                                         ddk.Block(width=50,
-#                                                                   style={
-#                                                                       'padding': '0px',
-#                                                                       'vertical-align': '-webkit-baseline-middle',
-#                                                                       'align-items': 'center',
-#                                                                       'justify-content': 'center',
-#                                                                       'margin': '0', 'textAlign': 'center'},
-#                                                               children=ddk.Logo(src='../assets/logo.png',
-#                                                                                 style={
-#                                                                                        'max-height': '-webkit-fill-available',
-#                                                                                        'padding': '0px', 'margin': '0',
-#                                                                                        'vertical-align': '-webkit-baseline-middle'}))]),
-#
-#                                           ddk.Block(width=30,
-#                                                     style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '10px', 'margin-right': '10px'},
-#                                                     children=html.H6('ESL SA',
-#                                                                   style={'height': '100%',
-#                                                                          'max-height': 'fit-content',
-#                                                                          'vertical-align': '-webkit-baseline-middle'})),
-#
-#
-#                                       ])]),
-#         dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
-#                                  'height': '50px', 'justify-content': 'center',
-#                                  'vertical-align': '-webkit-baseline-middle',
-#                                  'max-height': 'fit-content', 'padding': '0px',
-#                                  'align-items': 'center'},
-#                           color="default",
-#                           action = True,
-#                           children=[
-#                               ddk.Row(style={'max-height': 'fit-content',
-#                                              'height': '100%',
-#                                              'padding': '0px',
-#                                              "width": '100%', 'align-items': 'center',
-#                                              'justify-content': 'center', 'margin': '0',
-#                                              'vertical-align': '-webkit-baseline-middle',
-#                                              'textAlign': 'center', 'margin-left': '0',
-#                                              'margin-right': '0'},
-#                                       children=[
-#                                           ddk.Block(width=30,
-#                                                     style={
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '0', 'margin-right': '0'},
-#                                                   children=[
-#                                                       ddk.Block(width=50,
-#                                                                 style={
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=ddk.Logo(src='../assets/logo.png',
-#                                                                                 style={
-#                                                                                      'max-height': '-webkit-fill-available',
-#                                                                                        'padding': '0px', 'margin': '0',
-#                                                                                      'vertical-align': '-webkit-baseline-middle'})),
-#                                                       ddk.Block(width=50,
-#                                                                 style={
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=html.H6('CyberL',
-#                                                                               style={
-#                                                                                      'padding': '0px', 'margin': '0',
-#                                                                         'max-height': '-webkit-fill-available',
-#                                                                         'vertical-align': '-webkit-baseline-middle'}))]),
-#
-#                                           ddk.Block(width=10,
-#                                                     style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '10px', 'margin-right': '10px'},
-#                                                   children=html.H6('20:30',
-#                                                                   style={'height': '100%',
-#                                                                          'max-height': 'fit-content',
-#                                                                          'vertical-align': '-webkit-baseline-middle'})),
-#
-#                                           ddk.Block(width=30,
-#                                                     style={
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '0', 'margin-right': '0'},
-#                                                     children=[
-#
-#                                                         ddk.Block(width=50,
-#                                                                   style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=html.H6('CyberL',
-#                                                                               style={
-#                                                                                      'padding': '0px', 'margin': '0',
-#                                                                                      'max-height': '-webkit-fill-available',
-#                                                                                      'vertical-align': '-webkit-baseline-middle'})),
-#
-#                                                         ddk.Block(width=50,
-#                                                                   style={
-#                                                                       'padding': '0px',
-#                                                                       'vertical-align': '-webkit-baseline-middle',
-#                                                                       'align-items': 'center',
-#                                                                       'justify-content': 'center',
-#                                                                       'margin': '0', 'textAlign': 'center'},
-#                                                               children=ddk.Logo(src='../assets/logo.png',
-#                                                                                 style={
-#                                                                                        'max-height': '-webkit-fill-available',
-#                                                                                        'padding': '0px', 'margin': '0',
-#                                                                                        'vertical-align': '-webkit-baseline-middle'}))]),
-#
-#                                           ddk.Block(width=30,
-#                                                     style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '10px', 'margin-right': '10px'},
-#                                                     children=html.H6('ESL SA',
-#                                                                   style={'height': '100%',
-#                                                                          'max-height': 'fit-content',
-#                                                                          'vertical-align': '-webkit-baseline-middle'})),
-#
-#
-#                                       ])]),
-#         dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
-#                                  'height': '50px', 'justify-content': 'center',
-#                                  'vertical-align': '-webkit-baseline-middle',
-#                                  'max-height': 'fit-content', 'padding': '0px',
-#                                  'align-items': 'center'},
-#                           color="default",
-#                           action = True,
-#                           children=[
-#                               ddk.Row(style={'max-height': 'fit-content',
-#                                              'height': '100%',
-#                                              'padding': '0px',
-#                                              "width": '100%', 'align-items': 'center',
-#                                              'justify-content': 'center', 'margin': '0',
-#                                              'vertical-align': '-webkit-baseline-middle',
-#                                              'textAlign': 'center', 'margin-left': '0',
-#                                              'margin-right': '0'},
-#                                       children=[
-#                                           ddk.Block(width=30,
-#                                                     style={
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '0', 'margin-right': '0'},
-#                                                   children=[
-#                                                       ddk.Block(width=50,
-#                                                                 style={
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=ddk.Logo(src='../assets/logo.png',
-#                                                                                 style={
-#                                                                                      'max-height': '-webkit-fill-available',
-#                                                                                        'padding': '0px', 'margin': '0',
-#                                                                                      'vertical-align': '-webkit-baseline-middle'})),
-#                                                       ddk.Block(width=50,
-#                                                                 style={
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=html.H6('CyberL',
-#                                                                               style={
-#                                                                                      'padding': '0px', 'margin': '0',
-#                                                                         'max-height': '-webkit-fill-available',
-#                                                                         'vertical-align': '-webkit-baseline-middle'}))]),
-#
-#                                           ddk.Block(width=10,
-#                                                     style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '10px', 'margin-right': '10px'},
-#                                                   children=html.H6('20:30',
-#                                                                   style={'height': '100%',
-#                                                                          'max-height': 'fit-content',
-#                                                                          'vertical-align': '-webkit-baseline-middle'})),
-#
-#                                           ddk.Block(width=30,
-#                                                     style={
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '0', 'margin-right': '0'},
-#                                                     children=[
-#
-#                                                         ddk.Block(width=50,
-#                                                                   style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=html.H6('CyberL',
-#                                                                               style={
-#                                                                                      'padding': '0px', 'margin': '0',
-#                                                                                      'max-height': '-webkit-fill-available',
-#                                                                                      'vertical-align': '-webkit-baseline-middle'})),
-#
-#                                                         ddk.Block(width=50,
-#                                                                   style={
-#                                                                       'padding': '0px',
-#                                                                       'vertical-align': '-webkit-baseline-middle',
-#                                                                       'align-items': 'center',
-#                                                                       'justify-content': 'center',
-#                                                                       'margin': '0', 'textAlign': 'center'},
-#                                                               children=ddk.Logo(src='../assets/logo.png',
-#                                                                                 style={
-#                                                                                        'max-height': '-webkit-fill-available',
-#                                                                                        'padding': '0px', 'margin': '0',
-#                                                                                        'vertical-align': '-webkit-baseline-middle'}))]),
-#
-#                                           ddk.Block(width=30,
-#                                                     style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '10px', 'margin-right': '10px'},
-#                                                     children=html.H6('ESL SA',
-#                                                                   style={'height': '100%',
-#                                                                          'max-height': 'fit-content',
-#                                                                          'vertical-align': '-webkit-baseline-middle'})),
-#
-#
-#                                       ])]),
-#         dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
-#                                  'height': '50px', 'justify-content': 'center',
-#                                  'vertical-align': '-webkit-baseline-middle',
-#                                  'max-height': 'fit-content', 'padding': '0px',
-#                                  'align-items': 'center'},
-#                           color="default",
-#                           action = True,
-#                           children=[
-#                               ddk.Row(style={'max-height': 'fit-content',
-#                                              'height': '100%',
-#                                              'padding': '0px',
-#                                              "width": '100%', 'align-items': 'center',
-#                                              'justify-content': 'center', 'margin': '0',
-#                                              'vertical-align': '-webkit-baseline-middle',
-#                                              'textAlign': 'center', 'margin-left': '0',
-#                                              'margin-right': '0'},
-#                                       children=[
-#                                           ddk.Block(width=30,
-#                                                     style={
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '0', 'margin-right': '0'},
-#                                                   children=[
-#                                                       ddk.Block(width=50,
-#                                                                 style={
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=ddk.Logo(src='../assets/logo.png',
-#                                                                                 style={
-#                                                                                      'max-height': '-webkit-fill-available',
-#                                                                                        'padding': '0px', 'margin': '0',
-#                                                                                      'vertical-align': '-webkit-baseline-middle'})),
-#                                                       ddk.Block(width=50,
-#                                                                 style={
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=html.H6('CyberL',
-#                                                                               style={
-#                                                                                      'padding': '0px', 'margin': '0',
-#                                                                         'max-height': '-webkit-fill-available',
-#                                                                         'vertical-align': '-webkit-baseline-middle'}))]),
-#
-#                                           ddk.Block(width=10,
-#                                                     style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '10px', 'margin-right': '10px'},
-#                                                   children=html.H6('20:30',
-#                                                                   style={'height': '100%',
-#                                                                          'max-height': 'fit-content',
-#                                                                          'vertical-align': '-webkit-baseline-middle'})),
-#
-#                                           ddk.Block(width=30,
-#                                                     style={
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '0', 'margin-right': '0'},
-#                                                     children=[
-#
-#                                                         ddk.Block(width=50,
-#                                                                   style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=html.H6('CyberL',
-#                                                                               style={
-#                                                                                      'padding': '0px', 'margin': '0',
-#                                                                                      'max-height': '-webkit-fill-available',
-#                                                                                      'vertical-align': '-webkit-baseline-middle'})),
-#
-#                                                         ddk.Block(width=50,
-#                                                                   style={
-#                                                                       'padding': '0px',
-#                                                                       'vertical-align': '-webkit-baseline-middle',
-#                                                                       'align-items': 'center',
-#                                                                       'justify-content': 'center',
-#                                                                       'margin': '0', 'textAlign': 'center'},
-#                                                               children=ddk.Logo(src='../assets/logo.png',
-#                                                                                 style={
-#                                                                                        'max-height': '-webkit-fill-available',
-#                                                                                        'padding': '0px', 'margin': '0',
-#                                                                                        'vertical-align': '-webkit-baseline-middle'}))]),
-#
-#                                           ddk.Block(width=30,
-#                                                     style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '10px', 'margin-right': '10px'},
-#                                                     children=html.H6('ESL SA',
-#                                                                   style={'height': '100%',
-#                                                                          'max-height': 'fit-content',
-#                                                                          'vertical-align': '-webkit-baseline-middle'})),
-#
-#
-#                                       ])]),
-#         dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
-#                                  'height': '50px', 'justify-content': 'center',
-#                                  'vertical-align': '-webkit-baseline-middle',
-#                                  'max-height': 'fit-content', 'padding': '0px',
-#                                  'align-items': 'center'},
-#                           color="default",
-#                           action = True,
-#                           children=[
-#                               ddk.Row(style={'max-height': 'fit-content',
-#                                              'height': '100%',
-#                                              'padding': '0px',
-#                                              "width": '100%', 'align-items': 'center',
-#                                              'justify-content': 'center', 'margin': '0',
-#                                              'vertical-align': '-webkit-baseline-middle',
-#                                              'textAlign': 'center', 'margin-left': '0',
-#                                              'margin-right': '0'},
-#                                       children=[
-#                                           ddk.Block(width=30,
-#                                                     style={
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '0', 'margin-right': '0'},
-#                                                   children=[
-#                                                       ddk.Block(width=50,
-#                                                                 style={
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=ddk.Logo(src='../assets/logo.png',
-#                                                                                 style={
-#                                                                                      'max-height': '-webkit-fill-available',
-#                                                                                        'padding': '0px', 'margin': '0',
-#                                                                                      'vertical-align': '-webkit-baseline-middle'})),
-#                                                       ddk.Block(width=50,
-#                                                                 style={
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=html.H6('CyberL',
-#                                                                               style={
-#                                                                                      'padding': '0px', 'margin': '0',
-#                                                                         'max-height': '-webkit-fill-available',
-#                                                                         'vertical-align': '-webkit-baseline-middle'}))]),
-#
-#                                           ddk.Block(width=10,
-#                                                     style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '10px', 'margin-right': '10px'},
-#                                                   children=html.H6('20:30',
-#                                                                   style={'height': '100%',
-#                                                                          'max-height': 'fit-content',
-#                                                                          'vertical-align': '-webkit-baseline-middle'})),
-#
-#                                           ddk.Block(width=30,
-#                                                     style={
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '0', 'margin-right': '0'},
-#                                                     children=[
-#
-#                                                         ddk.Block(width=50,
-#                                                                   style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=html.H6('CyberL',
-#                                                                               style={
-#                                                                                      'padding': '0px', 'margin': '0',
-#                                                                                      'max-height': '-webkit-fill-available',
-#                                                                                      'vertical-align': '-webkit-baseline-middle'})),
-#
-#                                                         ddk.Block(width=50,
-#                                                                   style={
-#                                                                       'padding': '0px',
-#                                                                       'vertical-align': '-webkit-baseline-middle',
-#                                                                       'align-items': 'center',
-#                                                                       'justify-content': 'center',
-#                                                                       'margin': '0', 'textAlign': 'center'},
-#                                                               children=ddk.Logo(src='../assets/logo.png',
-#                                                                                 style={
-#                                                                                        'max-height': '-webkit-fill-available',
-#                                                                                        'padding': '0px', 'margin': '0',
-#                                                                                        'vertical-align': '-webkit-baseline-middle'}))]),
-#
-#                                           ddk.Block(width=30,
-#                                                     style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '10px', 'margin-right': '10px'},
-#                                                     children=html.H6('ESL SA',
-#                                                                   style={'height': '100%',
-#                                                                          'max-height': 'fit-content',
-#                                                                          'vertical-align': '-webkit-baseline-middle'})),
-#
-#
-#                                       ])]),
-#         dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
-#                                  'height': '50px', 'justify-content': 'center',
-#                                  'vertical-align': '-webkit-baseline-middle',
-#                                  'max-height': 'fit-content', 'padding': '0px',
-#                                  'align-items': 'center'},
-#                           color="default",
-#                           action = True,
-#                           children=[
-#                               ddk.Row(style={'max-height': 'fit-content',
-#                                              'height': '100%',
-#                                              'padding': '0px',
-#                                              "width": '100%', 'align-items': 'center',
-#                                              'justify-content': 'center', 'margin': '0',
-#                                              'vertical-align': '-webkit-baseline-middle',
-#                                              'textAlign': 'center', 'margin-left': '0',
-#                                              'margin-right': '0'},
-#                                       children=[
-#                                           ddk.Block(width=30,
-#                                                     style={
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '0', 'margin-right': '0'},
-#                                                   children=[
-#                                                       ddk.Block(width=50,
-#                                                                 style={
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=ddk.Logo(src='../assets/logo.png',
-#                                                                                 style={
-#                                                                                      'max-height': '-webkit-fill-available',
-#                                                                                        'padding': '0px', 'margin': '0',
-#                                                                                      'vertical-align': '-webkit-baseline-middle'})),
-#                                                       ddk.Block(width=50,
-#                                                                 style={
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=html.H6('CyberL',
-#                                                                               style={
-#                                                                                      'padding': '0px', 'margin': '0',
-#                                                                         'max-height': '-webkit-fill-available',
-#                                                                         'vertical-align': '-webkit-baseline-middle'}))]),
-#
-#                                           ddk.Block(width=10,
-#                                                     style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '10px', 'margin-right': '10px'},
-#                                                   children=html.H6('20:30',
-#                                                                   style={'height': '100%',
-#                                                                          'max-height': 'fit-content',
-#                                                                          'vertical-align': '-webkit-baseline-middle'})),
-#
-#                                           ddk.Block(width=30,
-#                                                     style={
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '0', 'margin-right': '0'},
-#                                                     children=[
-#
-#                                                         ddk.Block(width=50,
-#                                                                   style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=html.H6('CyberL',
-#                                                                               style={
-#                                                                                      'padding': '0px', 'margin': '0',
-#                                                                                      'max-height': '-webkit-fill-available',
-#                                                                                      'vertical-align': '-webkit-baseline-middle'})),
-#
-#                                                         ddk.Block(width=50,
-#                                                                   style={
-#                                                                       'padding': '0px',
-#                                                                       'vertical-align': '-webkit-baseline-middle',
-#                                                                       'align-items': 'center',
-#                                                                       'justify-content': 'center',
-#                                                                       'margin': '0', 'textAlign': 'center'},
-#                                                               children=ddk.Logo(src='../assets/logo.png',
-#                                                                                 style={
-#                                                                                        'max-height': '-webkit-fill-available',
-#                                                                                        'padding': '0px', 'margin': '0',
-#                                                                                        'vertical-align': '-webkit-baseline-middle'}))]),
-#
-#                                           ddk.Block(width=30,
-#                                                     style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '10px', 'margin-right': '10px'},
-#                                                     children=html.H6('ESL SA',
-#                                                                   style={'height': '100%',
-#                                                                          'max-height': 'fit-content',
-#                                                                          'vertical-align': '-webkit-baseline-middle'})),
-#
-#
-#                                       ])]),
-#         dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
-#                                  'height': '50px', 'justify-content': 'center',
-#                                  'vertical-align': '-webkit-baseline-middle',
-#                                  'max-height': 'fit-content', 'padding': '0px',
-#                                  'align-items': 'center'},
-#                           color="default",
-#                           action = True,
-#                           children=[
-#                               ddk.Row(style={'max-height': 'fit-content',
-#                                              'height': '100%',
-#                                              'padding': '0px',
-#                                              "width": '100%', 'align-items': 'center',
-#                                              'justify-content': 'center', 'margin': '0',
-#                                              'vertical-align': '-webkit-baseline-middle',
-#                                              'textAlign': 'center', 'margin-left': '0',
-#                                              'margin-right': '0'},
-#                                       children=[
-#                                           ddk.Block(width=30,
-#                                                     style={
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '0', 'margin-right': '0'},
-#                                                   children=[
-#                                                       ddk.Block(width=50,
-#                                                                 style={
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=ddk.Logo(src='../assets/logo.png',
-#                                                                                 style={
-#                                                                                      'max-height': '-webkit-fill-available',
-#                                                                                        'padding': '0px', 'margin': '0',
-#                                                                                      'vertical-align': '-webkit-baseline-middle'})),
-#                                                       ddk.Block(width=50,
-#                                                                 style={
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=html.H6('CyberL',
-#                                                                               style={
-#                                                                                      'padding': '0px', 'margin': '0',
-#                                                                         'max-height': '-webkit-fill-available',
-#                                                                         'vertical-align': '-webkit-baseline-middle'}))]),
-#
-#                                           ddk.Block(width=10,
-#                                                     style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '10px', 'margin-right': '10px'},
-#                                                   children=html.H6('20:30',
-#                                                                   style={'height': '100%',
-#                                                                          'max-height': 'fit-content',
-#                                                                          'vertical-align': '-webkit-baseline-middle'})),
-#
-#                                           ddk.Block(width=30,
-#                                                     style={
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '0', 'margin-right': '0'},
-#                                                     children=[
-#
-#                                                         ddk.Block(width=50,
-#                                                                   style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=html.H6('CyberL',
-#                                                                               style={
-#                                                                                      'padding': '0px', 'margin': '0',
-#                                                                                      'max-height': '-webkit-fill-available',
-#                                                                                      'vertical-align': '-webkit-baseline-middle'})),
-#
-#                                                         ddk.Block(width=50,
-#                                                                   style={
-#                                                                       'padding': '0px',
-#                                                                       'vertical-align': '-webkit-baseline-middle',
-#                                                                       'align-items': 'center',
-#                                                                       'justify-content': 'center',
-#                                                                       'margin': '0', 'textAlign': 'center'},
-#                                                               children=ddk.Logo(src='../assets/logo.png',
-#                                                                                 style={
-#                                                                                        'max-height': '-webkit-fill-available',
-#                                                                                        'padding': '0px', 'margin': '0',
-#                                                                                        'vertical-align': '-webkit-baseline-middle'}))]),
-#
-#                                           ddk.Block(width=30,
-#                                                     style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '10px', 'margin-right': '10px'},
-#                                                     children=html.H6('ESL SA',
-#                                                                   style={'height': '100%',
-#                                                                          'max-height': 'fit-content',
-#                                                                          'vertical-align': '-webkit-baseline-middle'})),
-#
-#
-#                                       ])]),
-#         dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
-#                                  'height': '50px', 'justify-content': 'center',
-#                                  'vertical-align': '-webkit-baseline-middle',
-#                                  'max-height': 'fit-content', 'padding': '0px',
-#                                  'align-items': 'center'},
-#                           color="default",
-#                           action = True,
-#                           children=[
-#                               ddk.Row(style={'max-height': 'fit-content',
-#                                              'height': '100%',
-#                                              'padding': '0px',
-#                                              "width": '100%', 'align-items': 'center',
-#                                              'justify-content': 'center', 'margin': '0',
-#                                              'vertical-align': '-webkit-baseline-middle',
-#                                              'textAlign': 'center', 'margin-left': '0',
-#                                              'margin-right': '0'},
-#                                       children=[
-#                                           ddk.Block(width=30,
-#                                                     style={
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '0', 'margin-right': '0'},
-#                                                   children=[
-#                                                       ddk.Block(width=50,
-#                                                                 style={
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=ddk.Logo(src='../assets/logo.png',
-#                                                                                 style={
-#                                                                                      'max-height': '-webkit-fill-available',
-#                                                                                        'padding': '0px', 'margin': '0',
-#                                                                                      'vertical-align': '-webkit-baseline-middle'})),
-#                                                       ddk.Block(width=50,
-#                                                                 style={
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=html.H6('CyberL',
-#                                                                               style={
-#                                                                                      'padding': '0px', 'margin': '0',
-#                                                                         'max-height': '-webkit-fill-available',
-#                                                                         'vertical-align': '-webkit-baseline-middle'}))]),
-#
-#                                           ddk.Block(width=10,
-#                                                     style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '10px', 'margin-right': '10px'},
-#                                                   children=html.H6('20:30',
-#                                                                   style={'height': '100%',
-#                                                                          'max-height': 'fit-content',
-#                                                                          'vertical-align': '-webkit-baseline-middle'})),
-#
-#                                           ddk.Block(width=30,
-#                                                     style={
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '0', 'margin-right': '0'},
-#                                                     children=[
-#
-#                                                         ddk.Block(width=50,
-#                                                                   style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=html.H6('CyberL',
-#                                                                               style={
-#                                                                                      'padding': '0px', 'margin': '0',
-#                                                                                      'max-height': '-webkit-fill-available',
-#                                                                                      'vertical-align': '-webkit-baseline-middle'})),
-#
-#                                                         ddk.Block(width=50,
-#                                                                   style={
-#                                                                       'padding': '0px',
-#                                                                       'vertical-align': '-webkit-baseline-middle',
-#                                                                       'align-items': 'center',
-#                                                                       'justify-content': 'center',
-#                                                                       'margin': '0', 'textAlign': 'center'},
-#                                                               children=ddk.Logo(src='../assets/logo.png',
-#                                                                                 style={
-#                                                                                        'max-height': '-webkit-fill-available',
-#                                                                                        'padding': '0px', 'margin': '0',
-#                                                                                        'vertical-align': '-webkit-baseline-middle'}))]),
-#
-#                                           ddk.Block(width=30,
-#                                                     style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '10px', 'margin-right': '10px'},
-#                                                     children=html.H6('ESL SA',
-#                                                                   style={'height': '100%',
-#                                                                          'max-height': 'fit-content',
-#                                                                          'vertical-align': '-webkit-baseline-middle'})),
-#
-#
-#                                       ])]),
-#         dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
-#                                  'height': '50px', 'justify-content': 'center',
-#                                  'vertical-align': '-webkit-baseline-middle',
-#                                  'max-height': 'fit-content', 'padding': '0px',
-#                                  'align-items': 'center'},
-#                           color="default",
-#                           action = True,
-#                           children=[
-#                               ddk.Row(style={'max-height': 'fit-content',
-#                                              'height': '100%',
-#                                              'padding': '0px',
-#                                              "width": '100%', 'align-items': 'center',
-#                                              'justify-content': 'center', 'margin': '0',
-#                                              'vertical-align': '-webkit-baseline-middle',
-#                                              'textAlign': 'center', 'margin-left': '0',
-#                                              'margin-right': '0'},
-#                                       children=[
-#                                           ddk.Block(width=30,
-#                                                     style={
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '0', 'margin-right': '0'},
-#                                                   children=[
-#                                                       ddk.Block(width=50,
-#                                                                 style={
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=ddk.Logo(src='../assets/logo.png',
-#                                                                                 style={
-#                                                                                      'max-height': '-webkit-fill-available',
-#                                                                                        'padding': '0px', 'margin': '0',
-#                                                                                      'vertical-align': '-webkit-baseline-middle'})),
-#                                                       ddk.Block(width=50,
-#                                                                 style={
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=html.H6('CyberL',
-#                                                                               style={
-#                                                                                      'padding': '0px', 'margin': '0',
-#                                                                         'max-height': '-webkit-fill-available',
-#                                                                         'vertical-align': '-webkit-baseline-middle'}))]),
-#
-#                                           ddk.Block(width=10,
-#                                                     style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '10px', 'margin-right': '10px'},
-#                                                   children=html.H6('20:30',
-#                                                                   style={'height': '100%',
-#                                                                          'max-height': 'fit-content',
-#                                                                          'vertical-align': '-webkit-baseline-middle'})),
-#
-#                                           ddk.Block(width=30,
-#                                                     style={
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '0', 'margin-right': '0'},
-#                                                     children=[
-#
-#                                                         ddk.Block(width=50,
-#                                                                   style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center'},
-#                                                               children=html.H6('CyberL',
-#                                                                               style={
-#                                                                                      'padding': '0px', 'margin': '0',
-#                                                                                      'max-height': '-webkit-fill-available',
-#                                                                                      'vertical-align': '-webkit-baseline-middle'})),
-#
-#                                                         ddk.Block(width=50,
-#                                                                   style={
-#                                                                       'padding': '0px',
-#                                                                       'vertical-align': '-webkit-baseline-middle',
-#                                                                       'align-items': 'center',
-#                                                                       'justify-content': 'center',
-#                                                                       'margin': '0', 'textAlign': 'center'},
-#                                                               children=ddk.Logo(src='../assets/logo.png',
-#                                                                                 style={
-#                                                                                        'max-height': '-webkit-fill-available',
-#                                                                                        'padding': '0px', 'margin': '0',
-#                                                                                        'vertical-align': '-webkit-baseline-middle'}))]),
-#
-#                                           ddk.Block(width=30,
-#                                                     style={'max-width': 'fit-content',
-#                                                          'max-height': 'fit-content',
-#                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-#                                                          'align-items': 'center', 'justify-content': 'center',
-#                                                          'margin': '0', 'textAlign': 'center',
-#                                                          'margin-left': '10px', 'margin-right': '10px'},
-#                                                     children=html.H6('ESL SA',
-#                                                                   style={'height': '100%',
-#                                                                          'max-height': 'fit-content',
-#                                                                          'vertical-align': '-webkit-baseline-middle'})),
-#
-#
-#                                       ])]),
-#
-#
-#                                  ])
-#
-#
-# match_head = ddk.Card(style={'width':'fit-content', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c',},
-#                                              children=[
-#                                                  ddk.Block(width=100, style={'height':'fit-content', }, children=[html.H2('Матч RNG vs NewBee', style={'text-align':'center', 'margin':'0'})]),
-#                                                  ddk.Block(width=100, style={'max-height':'fit-content'}, children=[html.H6('05 апрб 11:15 MSK', style={'text-align':'center', 'margin':'0'})]),
-#                                                  ddk.Block(width=40,  style={'max-height':'fit-content'}, children=[
-#                                                      ddk.Block(width=100,
-#                                                                children=[
-#                                                                    ddk.Block(width=70, children=[
-#                                                                        ddk.Block(width=100,
-#                                                                                  children=html.H2('Royal Never Give Up',
-#                                                                                                   style={
-#                                                                                                       'text-align': 'right', 'margin':'0'})),
-#                                                                        ddk.Block(width=100,
-#                                                                                  children=html.H6('P1, P2, P3, P4, P5',
-#                                                                                                   style={
-#                                                                                                       'text-align': 'right', 'margin':'0'})),
-#
-#                                                                    ]),
-#                                                                    ddk.Block(width=30, children=[
-#                                                                        ddk.Logo(src='\\assets\\png\\1.png',
-#                                                                                 style={
-#                                                                                      'max-height': '100px',
-#                                                                                      'height': '80px',
-#                                                                                      'width': '80px',
-#                                                                                     'text-align': 'left',
-#                                                                                      'padding': '0px', 'margin': '0',
-#                                                                                      'vertical-align': '-webkit-baseline-middle'})
-#                                                                    ]),
-#                                                                ])
-#                                                  ]),
-#                                                  ddk.Block(width=20,  style={'max-height':'fit-content'}, children=[]),
-#                                                  ddk.Block(width=40,  style={'max-height':'fit-content'}, children=[
-#                                                      ddk.Block(width=100,
-#                                                                children=[
-#                                                                    ddk.Block(width=30, children=[
-#                                                                        ddk.Logo(src='\\assets\\png\\2.png',
-#                                                                                 style={
-#                                                                                     'max-height': '100px',
-#                                                                                     'text-align': 'right',
-#                                                                                     'height': '80px',
-#                                                                                      'width': '80px',
-#                                                                                     'padding': '0px', 'margin': '0',
-#                                                                                     'vertical-align': '-webkit-baseline-middle'})
-#                                                                    ]),
-#                                                                    ddk.Block(width=70, children=[
-#                                                                        ddk.Block(width=100, children=html.H2('Royal Never Give Up', style={'text-align':'left', 'margin':'0'})),
-#                                                                        ddk.Block(width=100, children=html.H6('P1, P2, P3, P4, P5', style={'text-align':'left', 'margin':'0'})),
-#
-#                                                                    ]),
-#
-#                                                                ])
-#                                                  ]),
-#
-#
-#
-#
-#
-#                                              ])
-#
-# # create tab to enter a value
-# first_tab = dcc.Tab(label="Live",
-#                     children=[match_head,
-#                               match_head])
-#
-# # create tab to retrieve the value entered in the other tab
-# second_tab = dcc.Tab(label="Statistics",
-#                      children=[match_head,
-#                                match_head,
-#                                match_head,
-#                                match_head,
-#                                match_head,
-#                                match_head])
-#
-# # assemble tabs in dcc.Tabs object
-# tabs = dcc.Tabs(children=[first_tab, second_tab])
-#
-#
-#
-# #####  ############   #############   ###########
-#
-# layout1=ddk.Block(width=100,
-#                   style={'height': '90vh', 'text-align':'center', 'overflowY':'scroll',},
-#                   children=[
-#                       ddk.Block(width=70,
-#                                 style={'height':'89vh', 'overflowY': 'scroll', 'overflowX': 'hidden', 'margin':'0', 'padding':'0', 'color':'azure'},
-#                                 children=[
-#                                     match_head,
-#                                     ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c',},
-#                                              children=tabs),
-#
-#
-#                                 ]),
-#                       ddk.Block(width=30,
-#                                 style={'height':'90vh'},
-#                                 children=[ddk.Card(width=100,
-#                                                    style={'background-color': 'transparent', 'max-height':'40vh', 'min-height':'40vh', 'overflowY': 'hidden', 'margin':'10px'},
-#                                                    children=[
-#                                                        ddk.CardHeader(title='Live'),
-#                                                        Card_matches]),
-#                                           ddk.Card(width=100,
-#                                                    style={'background-color': 'transparent', 'max-height':'45vh', 'min-height':'45vh', 'overflowY': 'hidden','margin': '10px'},
-#                                                    children=[
-#                                                        ddk.CardHeader(title='Matches'),
-#                                                        Card_matches])
-#                                           ]),
-#
-# ])
-#
-#
-# layout2 = html.Div([
-#     html.H3('Slava 2'),
-#     dcc.Dropdown(
-#         id='app-2-dropdown',
-#         options=[
-#             {'label': 'App 2 - {}'.format(i), 'value': i} for i in [
-#                 'NYC', 'MTL', 'LA'
-#             ]
-#         ]
-#     ),
-#     html.Div(id='app-2-display-value'),
-#     dcc.Link('Go to App 1', href='/app1')
-# ])
-#
+
+#####       EXAMPLE of Table   ###########
+Card_matches = dbc.ListGroup(flush=True,
+                             style={'max-height':'-webkit-fill-available', 'overflowY':'scroll'},
+                             children=[
+                            dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
+                                 'height': '50px', 'justify-content': 'center',
+                                 'vertical-align': '-webkit-baseline-middle',
+                                 'max-height': 'fit-content', 'padding': '0px',
+                                 'align-items': 'center'},
+                          color="default",
+                          action = True,
+                          children=[
+                              ddk.Row(style={'max-height': 'fit-content',
+                                             'height': '100%',
+                                             'padding': '0px',
+                                             "width": '100%', 'align-items': 'center',
+                                             'justify-content': 'center', 'margin': '0',
+                                             'vertical-align': '-webkit-baseline-middle',
+                                             'textAlign': 'center', 'margin-left': '0',
+                                             'margin-right': '0'},
+                                      children=[
+                                          ddk.Block(width=30,
+                                                    style={
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '0', 'margin-right': '0'},
+                                                  children=[
+                                                      ddk.Block(width=50,
+                                                                style={
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=ddk.Logo(src='../assets/logo.png',
+                                                                                style={
+                                                                                     'max-height': '-webkit-fill-available',
+                                                                                       'padding': '0px', 'margin': '0',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})),
+                                                      ddk.Block(width=50,
+                                                                style={
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=html.H6('CyberL',
+                                                                              style={
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                        'max-height': '-webkit-fill-available',
+                                                                        'vertical-align': '-webkit-baseline-middle'}))]),
+
+                                          ddk.Block(width=10,
+                                                    style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '10px', 'margin-right': '10px'},
+                                                  children=html.H6('20:30',
+                                                                  style={'height': '100%',
+                                                                         'max-height': 'fit-content',
+                                                                         'vertical-align': '-webkit-baseline-middle'})),
+
+                                          ddk.Block(width=30,
+                                                    style={
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '0', 'margin-right': '0'},
+                                                    children=[
+
+                                                        ddk.Block(width=50,
+                                                                  style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=html.H6('CyberL',
+                                                                              style={
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                                     'max-height': '-webkit-fill-available',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})),
+
+                                                        ddk.Block(width=50,
+                                                                  style={
+                                                                      'padding': '0px',
+                                                                      'vertical-align': '-webkit-baseline-middle',
+                                                                      'align-items': 'center',
+                                                                      'justify-content': 'center',
+                                                                      'margin': '0', 'textAlign': 'center'},
+                                                              children=ddk.Logo(src='../assets/logo.png',
+                                                                                style={
+                                                                                       'max-height': '-webkit-fill-available',
+                                                                                       'padding': '0px', 'margin': '0',
+                                                                                       'vertical-align': '-webkit-baseline-middle'}))]),
+
+                                          ddk.Block(width=30,
+                                                    style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '10px', 'margin-right': '10px'},
+                                                    children=html.H6('ESL SA',
+                                                                  style={'height': '100%',
+                                                                         'max-height': 'fit-content',
+                                                                         'vertical-align': '-webkit-baseline-middle'})),
+
+
+                                      ])]),
+        dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
+                                 'height': '50px', 'justify-content': 'center',
+                                 'vertical-align': '-webkit-baseline-middle',
+                                 'max-height': 'fit-content', 'padding': '0px',
+                                 'align-items': 'center'},
+                          color="default",
+                          action = True,
+                          children=[
+                              ddk.Row(style={'max-height': 'fit-content',
+                                             'height': '100%',
+                                             'padding': '0px',
+                                             "width": '100%', 'align-items': 'center',
+                                             'justify-content': 'center', 'margin': '0',
+                                             'vertical-align': '-webkit-baseline-middle',
+                                             'textAlign': 'center', 'margin-left': '0',
+                                             'margin-right': '0'},
+                                      children=[
+                                          ddk.Block(width=30,
+                                                    style={
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '0', 'margin-right': '0'},
+                                                  children=[
+                                                      ddk.Block(width=50,
+                                                                style={
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=ddk.Logo(src='../assets/logo.png',
+                                                                                style={
+                                                                                     'max-height': '-webkit-fill-available',
+                                                                                       'padding': '0px', 'margin': '0',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})),
+                                                      ddk.Block(width=50,
+                                                                style={
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=html.H6('CyberL',
+                                                                              style={
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                        'max-height': '-webkit-fill-available',
+                                                                        'vertical-align': '-webkit-baseline-middle'}))]),
+
+                                          ddk.Block(width=10,
+                                                    style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '10px', 'margin-right': '10px'},
+                                                  children=html.H6('20:30',
+                                                                  style={'height': '100%',
+                                                                         'max-height': 'fit-content',
+                                                                         'vertical-align': '-webkit-baseline-middle'})),
+
+                                          ddk.Block(width=30,
+                                                    style={
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '0', 'margin-right': '0'},
+                                                    children=[
+
+                                                        ddk.Block(width=50,
+                                                                  style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=html.H6('CyberL',
+                                                                              style={
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                                     'max-height': '-webkit-fill-available',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})),
+
+                                                        ddk.Block(width=50,
+                                                                  style={
+                                                                      'padding': '0px',
+                                                                      'vertical-align': '-webkit-baseline-middle',
+                                                                      'align-items': 'center',
+                                                                      'justify-content': 'center',
+                                                                      'margin': '0', 'textAlign': 'center'},
+                                                              children=ddk.Logo(src='../assets/logo.png',
+                                                                                style={
+                                                                                       'max-height': '-webkit-fill-available',
+                                                                                       'padding': '0px', 'margin': '0',
+                                                                                       'vertical-align': '-webkit-baseline-middle'}))]),
+
+                                          ddk.Block(width=30,
+                                                    style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '10px', 'margin-right': '10px'},
+                                                    children=html.H6('ESL SA',
+                                                                  style={'height': '100%',
+                                                                         'max-height': 'fit-content',
+                                                                         'vertical-align': '-webkit-baseline-middle'})),
+
+
+                                      ])]),
+        dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
+                                 'height': '50px', 'justify-content': 'center',
+                                 'vertical-align': '-webkit-baseline-middle',
+                                 'max-height': 'fit-content', 'padding': '0px',
+                                 'align-items': 'center'},
+                          color="default",
+                          action = True,
+                          children=[
+                              ddk.Row(style={'max-height': 'fit-content',
+                                             'height': '100%',
+                                             'padding': '0px',
+                                             "width": '100%', 'align-items': 'center',
+                                             'justify-content': 'center', 'margin': '0',
+                                             'vertical-align': '-webkit-baseline-middle',
+                                             'textAlign': 'center', 'margin-left': '0',
+                                             'margin-right': '0'},
+                                      children=[
+                                          ddk.Block(width=30,
+                                                    style={
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '0', 'margin-right': '0'},
+                                                  children=[
+                                                      ddk.Block(width=50,
+                                                                style={
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=ddk.Logo(src='../assets/logo.png',
+                                                                                style={
+                                                                                     'max-height': '-webkit-fill-available',
+                                                                                       'padding': '0px', 'margin': '0',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})),
+                                                      ddk.Block(width=50,
+                                                                style={
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=html.H6('CyberL',
+                                                                              style={
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                        'max-height': '-webkit-fill-available',
+                                                                        'vertical-align': '-webkit-baseline-middle'}))]),
+
+                                          ddk.Block(width=10,
+                                                    style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '10px', 'margin-right': '10px'},
+                                                  children=html.H6('20:30',
+                                                                  style={'height': '100%',
+                                                                         'max-height': 'fit-content',
+                                                                         'vertical-align': '-webkit-baseline-middle'})),
+
+                                          ddk.Block(width=30,
+                                                    style={
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '0', 'margin-right': '0'},
+                                                    children=[
+
+                                                        ddk.Block(width=50,
+                                                                  style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=html.H6('CyberL',
+                                                                              style={
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                                     'max-height': '-webkit-fill-available',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})),
+
+                                                        ddk.Block(width=50,
+                                                                  style={
+                                                                      'padding': '0px',
+                                                                      'vertical-align': '-webkit-baseline-middle',
+                                                                      'align-items': 'center',
+                                                                      'justify-content': 'center',
+                                                                      'margin': '0', 'textAlign': 'center'},
+                                                              children=ddk.Logo(src='../assets/logo.png',
+                                                                                style={
+                                                                                       'max-height': '-webkit-fill-available',
+                                                                                       'padding': '0px', 'margin': '0',
+                                                                                       'vertical-align': '-webkit-baseline-middle'}))]),
+
+                                          ddk.Block(width=30,
+                                                    style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '10px', 'margin-right': '10px'},
+                                                    children=html.H6('ESL SA',
+                                                                  style={'height': '100%',
+                                                                         'max-height': 'fit-content',
+                                                                         'vertical-align': '-webkit-baseline-middle'})),
+
+
+                                      ])]),
+        dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
+                                 'height': '50px', 'justify-content': 'center',
+                                 'vertical-align': '-webkit-baseline-middle',
+                                 'max-height': 'fit-content', 'padding': '0px',
+                                 'align-items': 'center'},
+                          color="default",
+                          action = True,
+                          children=[
+                              ddk.Row(style={'max-height': 'fit-content',
+                                             'height': '100%',
+                                             'padding': '0px',
+                                             "width": '100%', 'align-items': 'center',
+                                             'justify-content': 'center', 'margin': '0',
+                                             'vertical-align': '-webkit-baseline-middle',
+                                             'textAlign': 'center', 'margin-left': '0',
+                                             'margin-right': '0'},
+                                      children=[
+                                          ddk.Block(width=30,
+                                                    style={
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '0', 'margin-right': '0'},
+                                                  children=[
+                                                      ddk.Block(width=50,
+                                                                style={
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=ddk.Logo(src='../assets/logo.png',
+                                                                                style={
+                                                                                     'max-height': '-webkit-fill-available',
+                                                                                       'padding': '0px', 'margin': '0',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})),
+                                                      ddk.Block(width=50,
+                                                                style={
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=html.H6('CyberL',
+                                                                              style={
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                        'max-height': '-webkit-fill-available',
+                                                                        'vertical-align': '-webkit-baseline-middle'}))]),
+
+                                          ddk.Block(width=10,
+                                                    style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '10px', 'margin-right': '10px'},
+                                                  children=html.H6('20:30',
+                                                                  style={'height': '100%',
+                                                                         'max-height': 'fit-content',
+                                                                         'vertical-align': '-webkit-baseline-middle'})),
+
+                                          ddk.Block(width=30,
+                                                    style={
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '0', 'margin-right': '0'},
+                                                    children=[
+
+                                                        ddk.Block(width=50,
+                                                                  style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=html.H6('CyberL',
+                                                                              style={
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                                     'max-height': '-webkit-fill-available',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})),
+
+                                                        ddk.Block(width=50,
+                                                                  style={
+                                                                      'padding': '0px',
+                                                                      'vertical-align': '-webkit-baseline-middle',
+                                                                      'align-items': 'center',
+                                                                      'justify-content': 'center',
+                                                                      'margin': '0', 'textAlign': 'center'},
+                                                              children=ddk.Logo(src='../assets/logo.png',
+                                                                                style={
+                                                                                       'max-height': '-webkit-fill-available',
+                                                                                       'padding': '0px', 'margin': '0',
+                                                                                       'vertical-align': '-webkit-baseline-middle'}))]),
+
+                                          ddk.Block(width=30,
+                                                    style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '10px', 'margin-right': '10px'},
+                                                    children=html.H6('ESL SA',
+                                                                  style={'height': '100%',
+                                                                         'max-height': 'fit-content',
+                                                                         'vertical-align': '-webkit-baseline-middle'})),
+
+
+                                      ])]),
+        dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
+                                 'height': '50px', 'justify-content': 'center',
+                                 'vertical-align': '-webkit-baseline-middle',
+                                 'max-height': 'fit-content', 'padding': '0px',
+                                 'align-items': 'center'},
+                          color="default",
+                          action = True,
+                          children=[
+                              ddk.Row(style={'max-height': 'fit-content',
+                                             'height': '100%',
+                                             'padding': '0px',
+                                             "width": '100%', 'align-items': 'center',
+                                             'justify-content': 'center', 'margin': '0',
+                                             'vertical-align': '-webkit-baseline-middle',
+                                             'textAlign': 'center', 'margin-left': '0',
+                                             'margin-right': '0'},
+                                      children=[
+                                          ddk.Block(width=30,
+                                                    style={
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '0', 'margin-right': '0'},
+                                                  children=[
+                                                      ddk.Block(width=50,
+                                                                style={
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=ddk.Logo(src='../assets/logo.png',
+                                                                                style={
+                                                                                     'max-height': '-webkit-fill-available',
+                                                                                       'padding': '0px', 'margin': '0',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})),
+                                                      ddk.Block(width=50,
+                                                                style={
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=html.H6('CyberL',
+                                                                              style={
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                        'max-height': '-webkit-fill-available',
+                                                                        'vertical-align': '-webkit-baseline-middle'}))]),
+
+                                          ddk.Block(width=10,
+                                                    style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '10px', 'margin-right': '10px'},
+                                                  children=html.H6('20:30',
+                                                                  style={'height': '100%',
+                                                                         'max-height': 'fit-content',
+                                                                         'vertical-align': '-webkit-baseline-middle'})),
+
+                                          ddk.Block(width=30,
+                                                    style={
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '0', 'margin-right': '0'},
+                                                    children=[
+
+                                                        ddk.Block(width=50,
+                                                                  style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=html.H6('CyberL',
+                                                                              style={
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                                     'max-height': '-webkit-fill-available',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})),
+
+                                                        ddk.Block(width=50,
+                                                                  style={
+                                                                      'padding': '0px',
+                                                                      'vertical-align': '-webkit-baseline-middle',
+                                                                      'align-items': 'center',
+                                                                      'justify-content': 'center',
+                                                                      'margin': '0', 'textAlign': 'center'},
+                                                              children=ddk.Logo(src='../assets/logo.png',
+                                                                                style={
+                                                                                       'max-height': '-webkit-fill-available',
+                                                                                       'padding': '0px', 'margin': '0',
+                                                                                       'vertical-align': '-webkit-baseline-middle'}))]),
+
+                                          ddk.Block(width=30,
+                                                    style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '10px', 'margin-right': '10px'},
+                                                    children=html.H6('ESL SA',
+                                                                  style={'height': '100%',
+                                                                         'max-height': 'fit-content',
+                                                                         'vertical-align': '-webkit-baseline-middle'})),
+
+
+                                      ])]),
+        dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
+                                 'height': '50px', 'justify-content': 'center',
+                                 'vertical-align': '-webkit-baseline-middle',
+                                 'max-height': 'fit-content', 'padding': '0px',
+                                 'align-items': 'center'},
+                          color="default",
+                          action = True,
+                          children=[
+                              ddk.Row(style={'max-height': 'fit-content',
+                                             'height': '100%',
+                                             'padding': '0px',
+                                             "width": '100%', 'align-items': 'center',
+                                             'justify-content': 'center', 'margin': '0',
+                                             'vertical-align': '-webkit-baseline-middle',
+                                             'textAlign': 'center', 'margin-left': '0',
+                                             'margin-right': '0'},
+                                      children=[
+                                          ddk.Block(width=30,
+                                                    style={
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '0', 'margin-right': '0'},
+                                                  children=[
+                                                      ddk.Block(width=50,
+                                                                style={
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=ddk.Logo(src='../assets/logo.png',
+                                                                                style={
+                                                                                     'max-height': '-webkit-fill-available',
+                                                                                       'padding': '0px', 'margin': '0',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})),
+                                                      ddk.Block(width=50,
+                                                                style={
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=html.H6('CyberL',
+                                                                              style={
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                        'max-height': '-webkit-fill-available',
+                                                                        'vertical-align': '-webkit-baseline-middle'}))]),
+
+                                          ddk.Block(width=10,
+                                                    style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '10px', 'margin-right': '10px'},
+                                                  children=html.H6('20:30',
+                                                                  style={'height': '100%',
+                                                                         'max-height': 'fit-content',
+                                                                         'vertical-align': '-webkit-baseline-middle'})),
+
+                                          ddk.Block(width=30,
+                                                    style={
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '0', 'margin-right': '0'},
+                                                    children=[
+
+                                                        ddk.Block(width=50,
+                                                                  style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=html.H6('CyberL',
+                                                                              style={
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                                     'max-height': '-webkit-fill-available',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})),
+
+                                                        ddk.Block(width=50,
+                                                                  style={
+                                                                      'padding': '0px',
+                                                                      'vertical-align': '-webkit-baseline-middle',
+                                                                      'align-items': 'center',
+                                                                      'justify-content': 'center',
+                                                                      'margin': '0', 'textAlign': 'center'},
+                                                              children=ddk.Logo(src='../assets/logo.png',
+                                                                                style={
+                                                                                       'max-height': '-webkit-fill-available',
+                                                                                       'padding': '0px', 'margin': '0',
+                                                                                       'vertical-align': '-webkit-baseline-middle'}))]),
+
+                                          ddk.Block(width=30,
+                                                    style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '10px', 'margin-right': '10px'},
+                                                    children=html.H6('ESL SA',
+                                                                  style={'height': '100%',
+                                                                         'max-height': 'fit-content',
+                                                                         'vertical-align': '-webkit-baseline-middle'})),
+
+
+                                      ])]),
+        dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
+                                 'height': '50px', 'justify-content': 'center',
+                                 'vertical-align': '-webkit-baseline-middle',
+                                 'max-height': 'fit-content', 'padding': '0px',
+                                 'align-items': 'center'},
+                          color="default",
+                          action = True,
+                          children=[
+                              ddk.Row(style={'max-height': 'fit-content',
+                                             'height': '100%',
+                                             'padding': '0px',
+                                             "width": '100%', 'align-items': 'center',
+                                             'justify-content': 'center', 'margin': '0',
+                                             'vertical-align': '-webkit-baseline-middle',
+                                             'textAlign': 'center', 'margin-left': '0',
+                                             'margin-right': '0'},
+                                      children=[
+                                          ddk.Block(width=30,
+                                                    style={
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '0', 'margin-right': '0'},
+                                                  children=[
+                                                      ddk.Block(width=50,
+                                                                style={
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=ddk.Logo(src='../assets/logo.png',
+                                                                                style={
+                                                                                     'max-height': '-webkit-fill-available',
+                                                                                       'padding': '0px', 'margin': '0',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})),
+                                                      ddk.Block(width=50,
+                                                                style={
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=html.H6('CyberL',
+                                                                              style={
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                        'max-height': '-webkit-fill-available',
+                                                                        'vertical-align': '-webkit-baseline-middle'}))]),
+
+                                          ddk.Block(width=10,
+                                                    style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '10px', 'margin-right': '10px'},
+                                                  children=html.H6('20:30',
+                                                                  style={'height': '100%',
+                                                                         'max-height': 'fit-content',
+                                                                         'vertical-align': '-webkit-baseline-middle'})),
+
+                                          ddk.Block(width=30,
+                                                    style={
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '0', 'margin-right': '0'},
+                                                    children=[
+
+                                                        ddk.Block(width=50,
+                                                                  style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=html.H6('CyberL',
+                                                                              style={
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                                     'max-height': '-webkit-fill-available',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})),
+
+                                                        ddk.Block(width=50,
+                                                                  style={
+                                                                      'padding': '0px',
+                                                                      'vertical-align': '-webkit-baseline-middle',
+                                                                      'align-items': 'center',
+                                                                      'justify-content': 'center',
+                                                                      'margin': '0', 'textAlign': 'center'},
+                                                              children=ddk.Logo(src='../assets/logo.png',
+                                                                                style={
+                                                                                       'max-height': '-webkit-fill-available',
+                                                                                       'padding': '0px', 'margin': '0',
+                                                                                       'vertical-align': '-webkit-baseline-middle'}))]),
+
+                                          ddk.Block(width=30,
+                                                    style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '10px', 'margin-right': '10px'},
+                                                    children=html.H6('ESL SA',
+                                                                  style={'height': '100%',
+                                                                         'max-height': 'fit-content',
+                                                                         'vertical-align': '-webkit-baseline-middle'})),
+
+
+                                      ])]),
+        dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
+                                 'height': '50px', 'justify-content': 'center',
+                                 'vertical-align': '-webkit-baseline-middle',
+                                 'max-height': 'fit-content', 'padding': '0px',
+                                 'align-items': 'center'},
+                          color="default",
+                          action = True,
+                          children=[
+                              ddk.Row(style={'max-height': 'fit-content',
+                                             'height': '100%',
+                                             'padding': '0px',
+                                             "width": '100%', 'align-items': 'center',
+                                             'justify-content': 'center', 'margin': '0',
+                                             'vertical-align': '-webkit-baseline-middle',
+                                             'textAlign': 'center', 'margin-left': '0',
+                                             'margin-right': '0'},
+                                      children=[
+                                          ddk.Block(width=30,
+                                                    style={
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '0', 'margin-right': '0'},
+                                                  children=[
+                                                      ddk.Block(width=50,
+                                                                style={
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=ddk.Logo(src='../assets/logo.png',
+                                                                                style={
+                                                                                     'max-height': '-webkit-fill-available',
+                                                                                       'padding': '0px', 'margin': '0',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})),
+                                                      ddk.Block(width=50,
+                                                                style={
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=html.H6('CyberL',
+                                                                              style={
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                        'max-height': '-webkit-fill-available',
+                                                                        'vertical-align': '-webkit-baseline-middle'}))]),
+
+                                          ddk.Block(width=10,
+                                                    style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '10px', 'margin-right': '10px'},
+                                                  children=html.H6('20:30',
+                                                                  style={'height': '100%',
+                                                                         'max-height': 'fit-content',
+                                                                         'vertical-align': '-webkit-baseline-middle'})),
+
+                                          ddk.Block(width=30,
+                                                    style={
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '0', 'margin-right': '0'},
+                                                    children=[
+
+                                                        ddk.Block(width=50,
+                                                                  style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=html.H6('CyberL',
+                                                                              style={
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                                     'max-height': '-webkit-fill-available',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})),
+
+                                                        ddk.Block(width=50,
+                                                                  style={
+                                                                      'padding': '0px',
+                                                                      'vertical-align': '-webkit-baseline-middle',
+                                                                      'align-items': 'center',
+                                                                      'justify-content': 'center',
+                                                                      'margin': '0', 'textAlign': 'center'},
+                                                              children=ddk.Logo(src='../assets/logo.png',
+                                                                                style={
+                                                                                       'max-height': '-webkit-fill-available',
+                                                                                       'padding': '0px', 'margin': '0',
+                                                                                       'vertical-align': '-webkit-baseline-middle'}))]),
+
+                                          ddk.Block(width=30,
+                                                    style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '10px', 'margin-right': '10px'},
+                                                    children=html.H6('ESL SA',
+                                                                  style={'height': '100%',
+                                                                         'max-height': 'fit-content',
+                                                                         'vertical-align': '-webkit-baseline-middle'})),
+
+
+                                      ])]),
+        dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
+                                 'height': '50px', 'justify-content': 'center',
+                                 'vertical-align': '-webkit-baseline-middle',
+                                 'max-height': 'fit-content', 'padding': '0px',
+                                 'align-items': 'center'},
+                          color="default",
+                          action = True,
+                          children=[
+                              ddk.Row(style={'max-height': 'fit-content',
+                                             'height': '100%',
+                                             'padding': '0px',
+                                             "width": '100%', 'align-items': 'center',
+                                             'justify-content': 'center', 'margin': '0',
+                                             'vertical-align': '-webkit-baseline-middle',
+                                             'textAlign': 'center', 'margin-left': '0',
+                                             'margin-right': '0'},
+                                      children=[
+                                          ddk.Block(width=30,
+                                                    style={
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '0', 'margin-right': '0'},
+                                                  children=[
+                                                      ddk.Block(width=50,
+                                                                style={
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=ddk.Logo(src='../assets/logo.png',
+                                                                                style={
+                                                                                     'max-height': '-webkit-fill-available',
+                                                                                       'padding': '0px', 'margin': '0',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})),
+                                                      ddk.Block(width=50,
+                                                                style={
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=html.H6('CyberL',
+                                                                              style={
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                        'max-height': '-webkit-fill-available',
+                                                                        'vertical-align': '-webkit-baseline-middle'}))]),
+
+                                          ddk.Block(width=10,
+                                                    style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '10px', 'margin-right': '10px'},
+                                                  children=html.H6('20:30',
+                                                                  style={'height': '100%',
+                                                                         'max-height': 'fit-content',
+                                                                         'vertical-align': '-webkit-baseline-middle'})),
+
+                                          ddk.Block(width=30,
+                                                    style={
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '0', 'margin-right': '0'},
+                                                    children=[
+
+                                                        ddk.Block(width=50,
+                                                                  style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                              children=html.H6('CyberL',
+                                                                              style={
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                                     'max-height': '-webkit-fill-available',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})),
+
+                                                        ddk.Block(width=50,
+                                                                  style={
+                                                                      'padding': '0px',
+                                                                      'vertical-align': '-webkit-baseline-middle',
+                                                                      'align-items': 'center',
+                                                                      'justify-content': 'center',
+                                                                      'margin': '0', 'textAlign': 'center'},
+                                                              children=ddk.Logo(src='../assets/logo.png',
+                                                                                style={
+                                                                                       'max-height': '-webkit-fill-available',
+                                                                                       'padding': '0px', 'margin': '0',
+                                                                                       'vertical-align': '-webkit-baseline-middle'}))]),
+
+                                          ddk.Block(width=30,
+                                                    style={'max-width': 'fit-content',
+                                                         'max-height': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center',
+                                                         'margin-left': '10px', 'margin-right': '10px'},
+                                                    children=html.H6('ESL SA',
+                                                                  style={'height': '100%',
+                                                                         'max-height': 'fit-content',
+                                                                         'vertical-align': '-webkit-baseline-middle'})),
+
+
+                                      ])]),
+
+
+                                 ])
+
+
+match_head = ddk.Card(style={'width':'fit-content', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c',},
+                                             children=[
+                                                 ddk.Block(width=100, style={'height':'fit-content', }, children=[html.H2('Матч RNG vs NewBee', style={'text-align':'center', 'margin':'0'})]),
+                                                 ddk.Block(width=100, style={'max-height':'fit-content'}, children=[html.H6('05 апрб 11:15 MSK', style={'text-align':'center', 'margin':'0'})]),
+                                                 ddk.Block(width=40,  style={'max-height':'fit-content'}, children=[
+                                                     ddk.Block(width=100,
+                                                               children=[
+                                                                   ddk.Block(width=70, children=[
+                                                                       ddk.Block(width=100,
+                                                                                 children=html.H2('Royal Never Give Up',
+                                                                                                  style={
+                                                                                                      'text-align': 'right', 'margin':'0'})),
+                                                                       ddk.Block(width=100,
+                                                                                 children=html.H6('P1, P2, P3, P4, P5',
+                                                                                                  style={
+                                                                                                      'text-align': 'right', 'margin':'0'})),
+
+                                                                   ]),
+                                                                   ddk.Block(width=30, children=[
+                                                                       ddk.Logo(src='\\assets\\png\\1.png',
+                                                                                style={
+                                                                                     'max-height': '100px',
+                                                                                     'height': '80px',
+                                                                                     'width': '80px',
+                                                                                    'text-align': 'left',
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})
+                                                                   ]),
+                                                               ])
+                                                 ]),
+                                                 ddk.Block(width=20,  style={'max-height':'fit-content'}, children=[]),
+                                                 ddk.Block(width=40,  style={'max-height':'fit-content'}, children=[
+                                                     ddk.Block(width=100,
+                                                               children=[
+                                                                   ddk.Block(width=30, children=[
+                                                                       ddk.Logo(src='\\assets\\png\\2.png',
+                                                                                style={
+                                                                                    'max-height': '100px',
+                                                                                    'text-align': 'right',
+                                                                                    'height': '80px',
+                                                                                     'width': '80px',
+                                                                                    'padding': '0px', 'margin': '0',
+                                                                                    'vertical-align': '-webkit-baseline-middle'})
+                                                                   ]),
+                                                                   ddk.Block(width=70, children=[
+                                                                       ddk.Block(width=100, children=html.H2('Royal Never Give Up', style={'text-align':'left', 'margin':'0'})),
+                                                                       ddk.Block(width=100, children=html.H6('P1, P2, P3, P4, P5', style={'text-align':'left', 'margin':'0'})),
+
+                                                                   ]),
+
+                                                               ])
+                                                 ]),
+
+
+
+
+
+                                             ])
+
+# create tab to enter a value
+first_tab = dcc.Tab(label="Live",
+                    children=[match_head,
+                              match_head])
+
+# create tab to retrieve the value entered in the other tab
+second_tab = dcc.Tab(label="Statistics",
+                     children=[match_head,
+                               match_head,
+                               match_head,
+                               match_head,
+                               match_head,
+                               match_head])
+
+# assemble tabs in dcc.Tabs object
+tabs = dcc.Tabs(children=[first_tab, second_tab])
+
+
+
+#####  ############   #############   ###########
+
+layout1=ddk.Block(width=100,
+                  style={'height': '90vh', 'text-align':'center', 'overflowY':'scroll',},
+                  children=[
+                      ddk.Block(width=70,
+                                style={'height':'89vh', 'overflowY': 'scroll', 'overflowX': 'hidden', 'margin':'0', 'padding':'0', 'color':'azure'},
+                                children=[
+                                    match_head,
+                                    ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c',},
+                                             children=tabs),
+
+
+                                ]),
+                      ddk.Block(width=30,
+                                style={'height':'90vh'},
+                                children=[ddk.Card(width=100,
+                                                   style={'background-color': 'transparent', 'max-height':'40vh', 'min-height':'40vh', 'overflowY': 'hidden', 'margin':'10px'},
+                                                   children=[
+                                                       ddk.CardHeader(title='Live'),
+                                                       Card_matches]),
+                                          ddk.Card(width=100,
+                                                   style={'background-color': 'transparent', 'max-height':'45vh', 'min-height':'45vh', 'overflowY': 'hidden','margin': '10px'},
+                                                   children=[
+                                                       ddk.CardHeader(title='Matches'),
+                                                       Card_matches])
+                                          ]),
+
+])
+
+
+layout2 = html.Div([
+    html.H3('Slava 2'),
+    dcc.Dropdown(
+        id='app-2-dropdown',
+        options=[
+            {'label': 'App 2 - {}'.format(i), 'value': i} for i in [
+                'NYC', 'MTL', 'LA'
+            ]
+        ]
+    ),
+    html.Div(id='app-2-display-value'),
+    dcc.Link('Go to App 1', href='/app1')
+])
+
 
