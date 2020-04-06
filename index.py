@@ -18,6 +18,7 @@ dash_app.layout = html.Div([
                                         ddk.Block(style={'text-align': 'right'}, children=[
                                             dcc.Link('HOME', style={'color': 'azure', 'margin': '10px'}, href='/'),
                                             dcc.Link('Карточка Матча', style={'color': '#fff', 'margin': '10px'}, href='/app1'),
+                                            dcc.Link('Карточка Матча2', style={'color': '#fff', 'margin': '10px'}, href='/app1'),
                                             dcc.Link('Go to App 2', style={'color': '#fff', 'margin': '10px'}, href='/app2')])]),
 
 
