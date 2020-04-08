@@ -2416,7 +2416,7 @@ match_head = ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', 
                                                                    ]),
                                                                ])
                                                  ]),
-                                                 ddk.Block(width=20,  style={'max-height':'fit-content'}, children=[html.H1('1 vs 2', style={'text-align':'center', 'margin':'0'})]),
+                                                 ddk.Block(width=20,  style={'max-height':'fit-content'}, children=[html.H1('1 vs 2', style={'text-align':'center', 'font-size': '40px', 'margin':'0'})]),
                                                  ddk.Block(width=40,  style={'max-height':'fit-content'}, children=[
                                                      ddk.Block(width=100,
                                                                children=[
@@ -2681,126 +2681,167 @@ chart_table = ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px',
 
 
 #################   Statistics  #############################################
-stat_team1 = ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c',},
+
+
+head_list_item = ddk.Block(width=100, style={'vertical-align': '-webkit-baseline-middle', 'height':'35px'}, children=[ddk.Block(width=20, style={'vertical-align': '-webkit-baseline-middle'}, children=[html.H2('1', style={'vertical-align': '-webkit-baseline-middle','text-align': 'center', 'margin': '0'})]),
+                                                ddk.Block(width=60, style={'vertical-align': '-webkit-baseline-middle'}, children=[html.H6('05.04.20 ', style={'vertical-align': '-webkit-baseline-middle','text-align': 'center', 'margin': '0'})]),
+                                                ddk.Block(width=20, style={'vertical-align': '-webkit-baseline-middle'}, children=[html.H2('2', style={'vertical-align': '-webkit-baseline-middle','text-align': 'center', 'margin': '0'})])])
+head_list = dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
+                                                                       'height': '40px', 'justify-content': 'center',
+                                                                       'vertical-align': '-webkit-baseline-middle',
+                                                                       'max-height': 'fit-content', 'padding': '0px',
+                                                                       # 'background-color':'#0e4e70',
+                                                                       'list-style': 'none',
+                                                                       'align-items': 'center'},children=[head_list_item])
+head_to_head = ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c',},
                                              children=[
-                                                 ddk.Block(width=100, style={'height':'fit-content', }, children=[html.H2('Матч RNG vs NewBee', style={'text-align':'center', 'margin':'0'})]),
-                                                 ddk.Block(width=100, style={'max-height':'fit-content'}, children=[html.H6('05 апрб 11:15 MSK', style={'text-align':'center', 'margin':'0'})]),
-                                                 ddk.Block(width=40,  style={'max-height':'fit-content'}, children=[
-                                                     ddk.Block(width=100,
-                                                               children=[
-                                                                   ddk.Block(width=70, children=[
-                                                                       ddk.Block(width=100,
-                                                                                 children=html.H2('Royal Never Give Up',
-                                                                                                  style={
-                                                                                                      'text-align': 'right', 'margin':'0'})),
-                                                                       ddk.Block(width=100,
-                                                                                 children=html.H6('P1, P2, P3, P4, P5',
-                                                                                                  style={
-                                                                                                      'text-align': 'right', 'margin':'0'})),
-
-                                                                   ]),
-                                                                   ddk.Block(width=30, children=[
-                                                                       ddk.Logo(src='\\assets\\png\\1.png',
-                                                                                style={
-                                                                                     'max-height': '100px',
-                                                                                     'height': '80px',
-                                                                                     'width': '80px',
-                                                                                    'text-align': 'left',
-                                                                                     'padding': '0px', 'margin': '0',
-                                                                                     'vertical-align': '-webkit-baseline-middle'})
-                                                                   ]),
-                                                               ])
-                                                 ]),
-                                                 ddk.Block(width=20,  style={'max-height':'fit-content'}, children=[html.H1('1 vs 2', style={'text-align':'center', 'margin':'0'})]),
-                                                 ddk.Block(width=40,  style={'max-height':'fit-content'}, children=[
-                                                     ddk.Block(width=100,
-                                                               children=[
-                                                                   ddk.Block(width=30, children=[
-                                                                       ddk.Logo(src='\\assets\\png\\2.png',
-                                                                                style={
-                                                                                    'max-height': '100px',
-                                                                                    'text-align': 'right',
-                                                                                    'height': '80px',
-                                                                                     'width': '80px',
-                                                                                    'padding': '0px', 'margin': '0',
-                                                                                    'vertical-align': '-webkit-baseline-middle'})
-                                                                   ]),
-                                                                   ddk.Block(width=70, children=[
-                                                                       ddk.Block(width=100, children=html.H2('Royal Never Give Up', style={'text-align':'left', 'margin':'0'})),
-                                                                       ddk.Block(width=100, children=html.H6('P1, P2, P3, P4, P5', style={'text-align':'left', 'margin':'0'})),
-
-                                                                   ]),
-
-                                                               ])
-                                                 ]),
+                                                 ddk.Block(width=100, children=[ddk.Block(width=30, style={'vertical-align': '-webkit-baseline-middle',},children=[ddk.Block(width=100, children=[html.H6('Побед', style={'text-align': 'center', 'margin': '0'})]),
+                                                                                                              ddk.Block(width=100, children=[html.H2('3', style={'text-align': 'center', 'margin': '0'})])]),
+                                                                                ddk.Block(width=40, style={'vertical-align': '-webkit-baseline-middle',},children=[ddk.Card(shadow_weight='medium', style={'background-color':'transparent'}, children=[html.H2('4', style={'text-align': 'center', 'margin': '0'})])]),
+                                                                                ddk.Block(width=30, style={'vertical-align': '-webkit-baseline-middle',},children=[ddk.Block(width=100, children=[html.H6('Побед', style={'text-align': 'center', 'margin': '0'})]),
+                                                                                                              ddk.Block(width=100, children=[html.H2('1', style={'text-align': 'center', 'margin': '0'})])])]),
+                                                 ddk.Block(width=100, children=dbc.ListGroup([head_list, head_list,head_list,head_list,head_list,head_list]))])
 
 
 
+
+
+
+stat_list_item = ddk.Block(width=100, style={'vertical-align': '-webkit-baseline-middle', 'height':'35px'},
+                           children=[ddk.Block(width=50,
+                                               style={'vertical-align': '-webkit-baseline-middle'},
+                                               children=[
+                                                   ddk.Block(
+                                                         width=25,
+                                                         style={
+                                                 'max-height': '20px',
+                                                 'height': '20px',
+                                                 'width': 'fit-content'},
+                                                         children=[ddk.Logo(
+                                                 src='\\assets\\png\\1.png',
+                                                 style={
+                                                     'text-align': 'center',
+                                                     'max-height': '20px',
+                                                     'padding': '0',
+                                                     'margin': '0',
+                                                     'vertical-align': '-webkit-baseline-middle'})]),
+                                                   ddk.Block(
+                                                       width=25,
+                                                       children=[html.H6('vs',
+                                                                         style={'text-align': 'center', 'margin': '0'})]),
+                                                   ddk.Block(
+                                                       width=25,
+                                                       style={
+                                                           'max-height': '20px',
+                                                           'height': '20px',
+                                                           'width': 'fit-content'},
+                                                       children=[ddk.Logo(
+                                                           src='\\assets\\png\\2.png',
+                                                           style={
+                                                               'text-align': 'center',
+                                                               'max-height': '20px',
+                                                               'padding': '0',
+                                                               'margin': '0',
+                                                               'vertical-align': '-webkit-baseline-middle'})]),
+                                                   ddk.Block(
+                                                       width=25,
+                                                       style={
+                                                           'max-height': '20px',
+                                                           'height': '20px',
+                                                           'width': 'fit-content'},
+                                                       children=[ddk.Logo(
+                                                           src='\\assets\\png\\w.png',
+                                                           style={
+                                                               'text-align': 'center',
+                                                               'max-height': '20px',
+                                                               'padding': '0',
+                                                               'margin': '0',
+                                                               'margin-left': '10px',
+                                                               'vertical-align': '-webkit-baseline-middle'})])
+                                                                        ]),
+                                     ddk.Block(width=50,
+                                               style={'vertical-align': '-webkit-baseline-middle'},
+                                               children=[
+                                                   ddk.Block(
+                                                       width=25,
+                                                       style={
+                                                           'max-height': '20px',
+                                                           'height': '20px',
+                                                           'width': 'fit-content'},
+                                                       children=[ddk.Logo(
+                                                           src='\\assets\\png\\l.png',
+                                                           style={
+                                                               'text-align': 'center',
+                                                               'max-height': '20px',
+                                                               'padding': '0',
+                                                               'margin': '0',
+                                                               'margin-right': '10px',
+                                                               'vertical-align': '-webkit-baseline-middle'})]),
+                                                   ddk.Block(
+                                                         width=25,
+                                                         style={
+                                                 'max-height': '20px',
+                                                 'height': '20px',
+                                                 'width': 'fit-content'},
+                                                         children=[ddk.Logo(
+                                                 src='\\assets\\png\\2.png',
+                                                 style={
+                                                     'text-align': 'center',
+                                                     'max-height': '20px',
+                                                     'padding': '0',
+                                                     'margin': '0',
+                                                     'vertical-align': '-webkit-baseline-middle'})]),
+                                                   ddk.Block(
+                                                       width=25,
+                                                       children=[html.H6('vs',
+                                                                         style={'text-align': 'center', 'margin': '0'})]),
+                                                   ddk.Block(
+                                                       width=25,
+                                                       style={
+                                                           'max-height': '20px',
+                                                           'height': '20px',
+                                                           'width': 'fit-content'},
+                                                       children=[ddk.Logo(
+                                                           src='\\assets\\png\\1.png',
+                                                           style={
+                                                               'text-align': 'center',
+                                                               'max-height': '20px',
+                                                               'padding': '0',
+                                                               'margin': '0',
+                                                               'vertical-align': '-webkit-baseline-middle'})]),
+
+                                               ])])
+
+
+
+stat_list = dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
+                                                                       'height': '40px', 'justify-content': 'center',
+                                                                       'vertical-align': '-webkit-baseline-middle',
+                                                                       'max-height': 'fit-content', 'padding': '0px',
+                                                                       # 'background-color':'#0e4e70',
+                                                                       'list-style': 'none',
+                                                                       'align-items': 'center'},children=[stat_list_item])
+stat_teams = ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c',},
+                                             children=[
+                                                 ddk.Block(width=100, children=[ddk.Block(width=30, style={'vertical-align': '-webkit-baseline-middle',},children=[ddk.Block(width=100, children=[html.H6('Побед', style={'text-align': 'center', 'margin': '0'})]),
+                                                                                                              ddk.Block(width=100, children=[html.H2('3', style={'text-align': 'center', 'margin': '0'})])]),
+                                                                                ddk.Block(width=40, style={'vertical-align': '-webkit-baseline-middle',},children=[ddk.Card(shadow_weight='medium', style={'background-color':'transparent'}, children=[html.H2('4', style={'text-align': 'center', 'margin': '0'})])]),
+                                                                                ddk.Block(width=30, style={'vertical-align': '-webkit-baseline-middle',},children=[ddk.Block(width=100, children=[html.H6('Побед', style={'text-align': 'center', 'margin': '0'})]),
+                                                                                                              ddk.Block(width=100, children=[html.H2('1', style={'text-align': 'center', 'margin': '0'})])])]),
+                                                 ddk.Block(width=100, children=dbc.ListGroup([stat_list, stat_list,stat_list,stat_list,stat_list]))
 
 
                                              ])
 
-head_to_head = match_head = ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c',},
-                                             children=[
-                                                 ddk.Block(width=100, style={'height':'fit-content', }, children=[html.H2('Матч RNG vs NewBee', style={'text-align':'center', 'margin':'0'})]),
-                                                 ddk.Block(width=100, style={'max-height':'fit-content'}, children=[html.H6('05 апрб 11:15 MSK', style={'text-align':'center', 'margin':'0'})]),
-                                                 ddk.Block(width=40,  style={'max-height':'fit-content'}, children=[
-                                                     ddk.Block(width=100,
-                                                               children=[
-                                                                   ddk.Block(width=70, children=[
-                                                                       ddk.Block(width=100,
-                                                                                 children=html.H2('Royal Never Give Up',
-                                                                                                  style={
-                                                                                                      'text-align': 'right', 'margin':'0'})),
-                                                                       ddk.Block(width=100,
-                                                                                 children=html.H6('P1, P2, P3, P4, P5',
-                                                                                                  style={
-                                                                                                      'text-align': 'right', 'margin':'0'})),
 
-                                                                   ]),
-                                                                   ddk.Block(width=30, children=[
-                                                                       ddk.Logo(src='\\assets\\png\\1.png',
-                                                                                style={
-                                                                                     'max-height': '100px',
-                                                                                     'height': '80px',
-                                                                                     'width': '80px',
-                                                                                    'text-align': 'left',
-                                                                                     'padding': '0px', 'margin': '0',
-                                                                                     'vertical-align': '-webkit-baseline-middle'})
-                                                                   ]),
-                                                               ])
-                                                 ]),
-                                                 ddk.Block(width=20,  style={'max-height':'fit-content'}, children=[html.H1('1 vs 2', style={'text-align':'center', 'margin':'0'})]),
-                                                 ddk.Block(width=40,  style={'max-height':'fit-content'}, children=[
-                                                     ddk.Block(width=100,
-                                                               children=[
-                                                                   ddk.Block(width=30, children=[
-                                                                       ddk.Logo(src='\\assets\\png\\2.png',
-                                                                                style={
-                                                                                    'max-height': '100px',
-                                                                                    'text-align': 'right',
-                                                                                    'height': '80px',
-                                                                                     'width': '80px',
-                                                                                    'padding': '0px', 'margin': '0',
-                                                                                    'vertical-align': '-webkit-baseline-middle'})
-                                                                   ]),
-                                                                   ddk.Block(width=70, children=[
-                                                                       ddk.Block(width=100, children=html.H2('Royal Never Give Up', style={'text-align':'left', 'margin':'0'})),
-                                                                       ddk.Block(width=100, children=html.H6('P1, P2, P3, P4, P5', style={'text-align':'left', 'margin':'0'})),
-
-                                                                   ]),
-
-                                                               ])
-                                                 ]),
-
-
-
-
-
-                                             ])
-
-
-
+stat = ddk.Block(width=100, style={'vertical-align': 'top'},
+                           children=[
+                               ddk.Block(width=50,
+                                         style={'vertical-align': 'top'},
+                                         children=[head_to_head]),
+                               ddk.Block(width=50,
+                                         style={'vertical-align': 'top'},
+                                         children=[stat_teams])])
 
 
 
@@ -2816,17 +2857,12 @@ first_tab = dcc.Tab(label="Live",
                               ddk.Block(width=100, children=html.H2('Team 1', style={'margin': '0px'})),
                               score_table,
                               ddk.Block(width=100, children=html.H2('Team 2', style={'margin': '0px'})),
-                              score_table,
-                              chart_table],style={'margin': '10px', 'border-radius': '10px', 'background-color': '#0e4e70', 'color':'azure', 'border':'1px solid rgb(14, 78, 112)'}, selected_style={'margin': '10px', 'border-radius': '10px', 'background-color': '#0e4e70', 'color':'azure', 'border':'2px solid #1f78b4' })
+                              score_table],style={'margin': '10px', 'border-radius': '10px', 'background-color': '#0e4e70', 'color':'azure', 'border':'1px solid rgb(14, 78, 112)'}, selected_style={'margin': '10px', 'border-radius': '10px', 'background-color': '#0e4e70', 'color':'azure', 'border':'2px solid #1f78b4' })
 
 # create tab to retrieve the value entered in the other tab
 second_tab = dcc.Tab(label="Statistics",
-                     children=[match_head,
-                               match_head,
-                               match_head,
-                               match_head,
-                               match_head,
-                               match_head],style={'margin': '10px', 'border-radius': '10px', 'background-color': '#0e4e70', 'color':'azure', 'border':'1px solid rgb(14, 78, 112)'}, selected_style={'margin': '10px', 'border-radius': '10px', 'background-color': '#0e4e70', 'color':'azure', 'border':'2px solid #1f78b4' })
+                     children=[stat,
+                               chart_table],style={'margin': '10px', 'border-radius': '10px', 'background-color': '#0e4e70', 'color':'azure', 'border':'1px solid rgb(14, 78, 112)'}, selected_style={'margin': '10px', 'border-radius': '10px', 'background-color': '#0e4e70', 'color':'azure', 'border':'2px solid #1f78b4' })
 
 # assemble tabs in dcc.Tabs object
 tabs = dcc.Tabs(children=[first_tab, second_tab])
