@@ -1017,93 +1017,213 @@ layout_main = serve_layout()
 
 
 #####  Match card teams  ########
-live_teams= ddk.Card(style={'width':'fit-content', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c'},
+live_teams= ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c'},
                                              children=[
                                                  ddk.Block(width=100,
                                                            style={'height':'fit-content','vertical-align': '-webkit-baseline-middle'},
-                                                           children=[ddk.Block(width=40, style={'height':'fit-content'}, children=[ddk.Block(width=20, style={'height':'fit-content'}, children=[ddk.Block(width=100,
-                                                                                                                                                                                                           style={'max-height':'50px','height':'50px'},
-                                                                                                                                                                                                           children=[ddk.Logo(src='\\assets\\png\\profil.png',
-                                                                                                                                                                                                                              style={'text-align': 'center', 'max-height':'50px',
-                                                                                                                                                                                                                                     'padding': '0px', 'margin': '0',
-                                                                                                                                                                                                                                     'vertical-align': '-webkit-baseline-middle'})]),
-                                                                                                                                                                                                 ddk.Block(width=100, style={'max-width':'100px','height':'fit-content'}, children=[html.H6('Player1',
-                                                                                                                                                                                                                                                                                            style={'text-align': 'center', 'margin':'0'})]),
-                                                                                                                                                                                                 ddk.Block(width=100, style={'max-width':'100px','height':'fit-content'}, children=[html.P('1500',
-                                                                                                                                                                                                                                                                                            style={'text-align': 'center', 'margin':'0'})])]),
-                                                                                                                                   ddk.Block(width=20, style={'height':'fit-content'}, children=[ddk.Block(width=100,
-                                                                                                                                                                                                           style={'max-width':'100px','height':'50px'},
-                                                                                                                                                                                                           children=[ddk.Logo(src='\\assets\\png\\profil.png',
-                                                                                                                                                                                                                              style={'text-align': 'center','width':'50px',
-                                                                                                                                                                                                                                     'padding': '0px', 'margin': '0',
-                                                                                                                                                                                                                                     'vertical-align': '-webkit-baseline-middle'})]),
-                                                                                                                                                                                                 ddk.Block(width=100, style={'max-width':'100px','height':'fit-content'}, children=[html.H6('Player1',
-                                                                                                                                                                                                                                                                                            style={'text-align': 'center', 'margin':'0'})]),
-                                                                                                                                                                                                 ddk.Block(width=100, style={'max-width':'100px','height':'fit-content'}, children=[html.P('1500',
-                                                                                                                                                                                                                                                                                            style={'text-align': 'center', 'margin':'0'})])]),
-                                                                                                                                   ddk.Block(width=20, style={'height':'fit-content'}, children=[ddk.Block(width=100,
-                                                                                                                                                                                                           style={
-                                                                                                                                                                                                               'max-width': '100px',
-                                                                                                                                                                                                               'height': '50px'},
-                                                                                                                                                                                                           children=[
-                                                                                                                                                                                                               ddk.Logo(
-                                                                                                                                                                                                                   src='\\assets\\png\\profil.png',
-                                                                                                                                                                                                                   style={
-                                                                                                                                                                                                                       'text-align': 'center',
-                                                                                                                                                                                                                       'width': '50px',
-                                                                                                                                                                                                                                     'padding': '0px', 'margin': '0',
-                                                                                                                                                                                                                                     'vertical-align': '-webkit-baseline-middle'})]),
-                                                                                                                                                                                                 ddk.Block(width=100, style={'max-width':'100px','height':'fit-content'}, children=[html.H6('Player1',
-                                                                                                                                                                                                                                                                                            style={'text-align': 'center', 'margin':'0'})]),
-                                                                                                                                                                                                 ddk.Block(width=100, style={'max-width':'100px','height':'fit-content'}, children=[html.P('1500',
-                                                                                                                                                                                                                                                                                            style={'text-align': 'center', 'margin':'0'})])]),
-                                                                                                                                   ddk.Block(width=20, style={'height':'fit-content'}, children=[ddk.Block(width=100,
-                                                                                                                                                                                                           style={
-                                                                                                                                                                                                               'max-width': '100px',
-                                                                                                                                                                                                               'height': '50px'},
-                                                                                                                                                                                                           children=[
-                                                                                                                                                                                                               ddk.Logo(
-                                                                                                                                                                                                                   src='\\assets\\png\\profil.png',
-                                                                                                                                                                                                                   style={
-                                                                                                                                                                                                                       'text-align': 'center',
-                                                                                                                                                                                                                       'width': '50px',
-                                                                                                                                                                                                                                     'padding': '0px', 'margin': '0',
-                                                                                                                                                                                                                                     'vertical-align': '-webkit-baseline-middle'})]),
-                                                                                                                                                                                                 ddk.Block(width=100, style={'max-width':'100px','height':'fit-content'}, children=[html.H6('Player1',
-                                                                                                                                                                                                                                                                                            style={'text-align': 'center', 'margin':'0'})]),
-                                                                                                                                                                                                 ddk.Block(width=100, style={'max-width':'100px','height':'fit-content'}, children=[html.P('1500',
-                                                                                                                                                                                                                                                                                            style={'text-align': 'center', 'margin':'0'})])]),
-                                                                                                                                   ddk.Block(width=20, style={'height':'fit-content'}, children=[ddk.Block(width=100,
-                                                                                                                                                                                                           style={
-                                                                                                                                                                                                               'max-width': '100px',
-                                                                                                                                                                                                               'height': '50px'},
-                                                                                                                                                                                                           children=[
-                                                                                                                                                                                                               ddk.Logo(
-                                                                                                                                                                                                                   src='\\assets\\png\\profil.png',
-                                                                                                                                                                                                                   style={
-                                                                                                                                                                                                                       'text-align': 'center',
-                                                                                                                                                                                                                       'width': '50px',
-                                                                                                                                                                                                                                     'padding': '0px', 'margin': '0',
-                                                                                                                                                                                                                                     'vertical-align': '-webkit-baseline-middle'})]),
-                                                                                                                                                                                                 ddk.Block(width=100, style={'max-width':'100px','height':'fit-content'}, children=[html.H6('Player1',
-                                                                                                                                                                                                                                                                                            style={'text-align': 'center', 'margin':'0'})]),
-                                                                                                                                                                                                 ddk.Block(width=100, style={'max-width':'100px','height':'fit-content'}, children=[html.P('1500',
-                                                                                                                                                                                                                                                                                            style={'text-align': 'center', 'margin':'0'})])])]),
+                                                           children=[ddk.Block(width=40,
+                                                                               style={'height': 'fit-content'},
+                                                                               children=[ddk.Block(width=20, style={
+                                                                                   'height': 'fit-content'}, children=[
+                                                                                   ddk.Block(width=100,
+                                                                                             style={
+                                                                                                 'max-height': '50px',
+                                                                                                 'height': '50px',
+                                                                                                 'width': 'fit-content'},
+                                                                                             children=[ddk.Logo(
+                                                                                                 src='\\assets\\png\\profil.png',
+                                                                                                 style={
+                                                                                                     'text-align': 'center',
+                                                                                                     'max-height': '50px',
+                                                                                                     'padding': '0px',
+                                                                                                     'margin': '0',
+                                                                                                     'vertical-align': '-webkit-baseline-middle'})]),
+                                                                                   ddk.Block(width=100, style={
+                                                                                       'max-width': '100px',
+                                                                                       'height': 'fit-content'},
+                                                                                             children=[
+                                                                                                 html.H6('Player1',
+                                                                                                         style={
+                                                                                                             'text-align': 'center',
+                                                                                                             'margin': '0'})]),
+                                                                                   ddk.Block(width=100, style={
+                                                                                       'max-width': '100px',
+                                                                                       'height': 'fit-content'},
+                                                                                             children=[html.P('1500',
+                                                                                                              style={
+                                                                                                                  'text-align': 'center',
+                                                                                                                  'margin': '0'})])]),
+                                                                                         ddk.Block(width=20, style={
+                                                                                             'height': 'fit-content'},
+                                                                                                   children=[ddk.Block(
+                                                                                                       width=100,
+                                                                                                       style={
+                                                                                                           'max-height': '50px',
+                                                                                                           'height': '50px',
+                                                                                                           'width': 'fit-content'},
+                                                                                                       children=[
+                                                                                                           ddk.Logo(
+                                                                                                               src='\\assets\\png\\profil.png',
+                                                                                                               style={
+                                                                                                                   'text-align': 'center',
+                                                                                                                   'max-height': '50px',
+                                                                                                                   'padding': '0px',
+                                                                                                                   'margin': '0',
+                                                                                                                   'vertical-align': '-webkit-baseline-middle'})]),
+                                                                                                             ddk.Block(
+                                                                                                                 width=100,
+                                                                                                                 style={
+                                                                                                                     'max-width': '100px',
+                                                                                                                     'height': 'fit-content'},
+                                                                                                                 children=[
+                                                                                                                     html.H6(
+                                                                                                                         'Player1',
+                                                                                                                         style={
+                                                                                                                             'text-align': 'center',
+                                                                                                                             'margin': '0'})]),
+                                                                                                             ddk.Block(
+                                                                                                                 width=100,
+                                                                                                                 style={
+                                                                                                                     'max-width': '100px',
+                                                                                                                     'height': 'fit-content'},
+                                                                                                                 children=[
+                                                                                                                     html.P(
+                                                                                                                         '1500',
+                                                                                                                         style={
+                                                                                                                             'text-align': 'center',
+                                                                                                                             'margin': '0'})])]),
+                                                                                         ddk.Block(width=20, style={
+                                                                                             'height': 'fit-content'},
+                                                                                                   children=[ddk.Block(
+                                                                                                       width=100,
+                                                                                                       style={
+                                                                                                           'max-height': '50px',
+                                                                                                           'height': '50px',
+                                                                                                           'width': 'fit-content'},
+                                                                                                       children=[
+                                                                                                           ddk.Logo(
+                                                                                                               src='\\assets\\png\\profil.png',
+                                                                                                               style={
+                                                                                                                   'text-align': 'center',
+                                                                                                                   'max-height': '50px',
+                                                                                                                   'padding': '0px',
+                                                                                                                   'margin': '0',
+                                                                                                                   'vertical-align': '-webkit-baseline-middle'})]),
+                                                                                                             ddk.Block(
+                                                                                                                 width=100,
+                                                                                                                 style={
+                                                                                                                     'max-width': '100px',
+                                                                                                                     'height': 'fit-content'},
+                                                                                                                 children=[
+                                                                                                                     html.H6(
+                                                                                                                         'Player1',
+                                                                                                                         style={
+                                                                                                                             'text-align': 'center',
+                                                                                                                             'margin': '0'})]),
+                                                                                                             ddk.Block(
+                                                                                                                 width=100,
+                                                                                                                 style={
+                                                                                                                     'max-width': '100px',
+                                                                                                                     'height': 'fit-content'},
+                                                                                                                 children=[
+                                                                                                                     html.P(
+                                                                                                                         '1500',
+                                                                                                                         style={
+                                                                                                                             'text-align': 'center',
+                                                                                                                             'margin': '0'})])]),
+                                                                                         ddk.Block(width=20, style={
+                                                                                             'height': 'fit-content'},
+                                                                                                   children=[ddk.Block(
+                                                                                                       width=100,
+                                                                                                       style={
+                                                                                                           'max-height': '50px',
+                                                                                                           'height': '50px',
+                                                                                                           'width': 'fit-content'},
+                                                                                                       children=[
+                                                                                                           ddk.Logo(
+                                                                                                               src='\\assets\\png\\profil.png',
+                                                                                                               style={
+                                                                                                                   'text-align': 'center',
+                                                                                                                   'max-height': '50px',
+                                                                                                                   'padding': '0px',
+                                                                                                                   'margin': '0',
+                                                                                                                   'vertical-align': '-webkit-baseline-middle'})]),
+                                                                                                             ddk.Block(
+                                                                                                                 width=100,
+                                                                                                                 style={
+                                                                                                                     'max-width': '100px',
+                                                                                                                     'height': 'fit-content'},
+                                                                                                                 children=[
+                                                                                                                     html.H6(
+                                                                                                                         'Player1',
+                                                                                                                         style={
+                                                                                                                             'text-align': 'center',
+                                                                                                                             'margin': '0'})]),
+                                                                                                             ddk.Block(
+                                                                                                                 width=100,
+                                                                                                                 style={
+                                                                                                                     'max-width': '100px',
+                                                                                                                     'height': 'fit-content'},
+                                                                                                                 children=[
+                                                                                                                     html.P(
+                                                                                                                         '1500',
+                                                                                                                         style={
+                                                                                                                             'text-align': 'center',
+                                                                                                                             'margin': '0'})])]),
+                                                                                         ddk.Block(width=20, style={
+                                                                                             'height': 'fit-content'},
+                                                                                                   children=[ddk.Block(
+                                                                                                       width=100,
+                                                                                                       style={
+                                                                                                           'max-height': '50px',
+                                                                                                           'height': '50px',
+                                                                                                           'width': 'fit-content'},
+                                                                                                       children=[
+                                                                                                           ddk.Logo(
+                                                                                                               src='\\assets\\png\\profil.png',
+                                                                                                               style={
+                                                                                                                   'text-align': 'center',
+                                                                                                                   'max-height': '50px',
+                                                                                                                   'padding': '0px',
+                                                                                                                   'margin': '0',
+                                                                                                                   'vertical-align': '-webkit-baseline-middle'})]),
+                                                                                                             ddk.Block(
+                                                                                                                 width=100,
+                                                                                                                 style={
+                                                                                                                     'max-width': '100px',
+                                                                                                                     'height': 'fit-content'},
+                                                                                                                 children=[
+                                                                                                                     html.H6(
+                                                                                                                         'Player1',
+                                                                                                                         style={
+                                                                                                                             'text-align': 'center',
+                                                                                                                             'margin': '0'})]),
+                                                                                                             ddk.Block(
+                                                                                                                 width=100,
+                                                                                                                 style={
+                                                                                                                     'max-width': '100px',
+                                                                                                                     'height': 'fit-content'},
+                                                                                                                 children=[
+                                                                                                                     html.P(
+                                                                                                                         '1500',
+                                                                                                                         style={
+                                                                                                                             'text-align': 'center',
+                                                                                                                             'margin': '0'})])]), ]),
 
 
                                                                      ddk.Block(width=20,
-                                                                               style={'height':'fit-content','vertical-align': '-webkit-baseline-middle'},
+                                                                               style={'height':'100px','vertical-align': '-webkit-baseline-middle', 'padding': '10px'},
                                                                                children=[ddk.Block(width=100,
-                                                                                                   style={'height':'fit-content'},
-                                                                                                   children=[ddk.Block(width=30, style={'height':'fit-content'}, children=[html.H6('44%', style={'text-align':'center', 'margin':'0'})]),
-                                                                                                             ddk.Block(width=40, style={'height':'fit-content'}, children=[html.H2('WR', style={'text-align':'center', 'margin':'0'})]),
-                                                                                                             ddk.Block(width=30, style={'height':'fit-content'}, children=[html.H6('27%', style={'text-align':'center', 'margin':'0'})])]),
-                                                                                         ddk.Block(width=100, style={'height':'fit-content'}, children=[ddk.Block(width=30, style={'height':'fit-content'}, children=[html.H6('25%', style={'text-align':'center', 'margin':'0'})]),
-                                                                                                             ddk.Block(width=40, style={'height':'fit-content'}, children=[html.H2('FB', style={'text-align':'center', 'margin':'0'})]),
-                                                                                                             ddk.Block(width=30, style={'height':'fit-content'}, children=[html.H6('16%', style={'text-align':'center', 'margin':'0'})])]),
-                                                                                         ddk.Block(width=100, style={'height':'fit-content'}, children=[ddk.Block(width=30, style={'height':'fit-content'}, children=[html.H6('32%', style={'text-align':'center', 'margin':'0'})]),
-                                                                                                             ddk.Block(width=40, style={'height':'fit-content'}, children=[html.H2('F10', style={'text-align':'center', 'margin':'0'})]),
-                                                                                                             ddk.Block(width=30, style={'height':'fit-content'}, children=[html.H6('22%', style={'text-align':'center', 'margin':'0'})])])]),
+                                                                                                   style={'height':'33%'},
+                                                                                                   children=[ddk.Block(width=30, style={'height':'fit-content', 'vertical-align': 'middle'}, children=[html.H6('44%', style={'text-align':'center', 'padding': '0px', 'margin':'0'})]),
+                                                                                                             ddk.Block(width=40, style={'height':'fit-content', 'vertical-align': 'middle'}, children=[html.H2('WR', style={'text-align':'center', 'padding': '0px', 'margin':'0'})]),
+                                                                                                             ddk.Block(width=30, style={'height':'fit-content', 'vertical-align': 'middle'}, children=[html.H6('27%', style={'text-align':'center', 'padding': '0px', 'margin':'0'})])]),
+                                                                                         ddk.Block(width=100, style={'height':'33%'}, children=[ddk.Block(width=30, style={'height':'fit-content', 'vertical-align': 'middle'}, children=[html.H6('25%', style={'text-align':'center', 'padding': '0px', 'margin':'0'})]),
+                                                                                                             ddk.Block(width=40, style={'height':'fit-content', 'vertical-align': 'middle'}, children=[html.H2('FB', style={'text-align':'center', 'padding': '0px', 'margin':'0'})]),
+                                                                                                             ddk.Block(width=30, style={'height':'fit-content', 'vertical-align': 'middle'}, children=[html.H6('16%', style={'text-align':'center', 'padding': '0px', 'margin':'0'})])]),
+                                                                                         ddk.Block(width=100, style={'height':'33%'}, children=[ddk.Block(width=30, style={'height':'fit-content', 'vertical-align': 'middle'}, children=[html.H6('32%', style={'text-align':'center', 'padding': '0px', 'margin':'0'})]),
+                                                                                                             ddk.Block(width=40, style={'height':'fit-content', 'vertical-align': 'middle'}, children=[html.H2('F10', style={'text-align':'center', 'padding': '0px', 'margin':'0'})]),
+                                                                                                             ddk.Block(width=30, style={'height':'fit-content', 'vertical-align': 'middle'}, children=[html.H6('22%', style={'text-align':'center', 'padding': '0px', 'margin':'0'})])])]),
 
 
 
@@ -2266,7 +2386,7 @@ Card_matches = dbc.ListGroup(flush=True,
                                  ])
 
 
-match_head = ddk.Card(style={'width':'fit-content', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c',},
+match_head = ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c',},
                                              children=[
                                                  ddk.Block(width=100, style={'height':'fit-content', }, children=[html.H2('Матч RNG vs NewBee', style={'text-align':'center', 'margin':'0'})]),
                                                  ddk.Block(width=100, style={'max-height':'fit-content'}, children=[html.H6('05 апрб 11:15 MSK', style={'text-align':'center', 'margin':'0'})]),
@@ -2296,7 +2416,7 @@ match_head = ddk.Card(style={'width':'fit-content', 'margin':'10px', 'padding':'
                                                                    ]),
                                                                ])
                                                  ]),
-                                                 ddk.Block(width=20,  style={'max-height':'fit-content'}, children=[]),
+                                                 ddk.Block(width=20,  style={'max-height':'fit-content'}, children=[html.H1('1 vs 2', style={'text-align':'center', 'margin':'0'})]),
                                                  ddk.Block(width=40,  style={'max-height':'fit-content'}, children=[
                                                      ddk.Block(width=100,
                                                                children=[
@@ -2325,10 +2445,379 @@ match_head = ddk.Card(style={'width':'fit-content', 'margin':'10px', 'padding':'
 
                                              ])
 
+
+
+score_table_item = dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
+                                           'height': '70px', 'justify-content': 'center',
+                                           'vertical-align': '-webkit-baseline-middle',
+                                           'max-height': 'fit-content', 'padding': '0px',
+                                           'list-style': 'none',
+                                           'align-items': 'center'},
+                                     children=[ddk.Block(width=100,
+                                                         style={'justify-content': 'center'},
+                                                         children=[ddk.Block(width=15,
+                                                                             style={'vertical-align': '-webkit-baseline-middle'},
+                                                                             children=html.H6('PLAYER1',style={'margin': '0',
+                                                                                                           'text-align': 'center',
+                                                                                                           'justify': 'center'})),
+                                                                   ddk.Block(width=15,
+                                                                             style={'vertical-align': '-webkit-baseline-middle'},
+                                                                             children=ddk.Block(
+                                                                                 width=80,
+                                                                                 style={
+                                                                         'max-height': '20px',
+                                                                         'height': '20px',
+                                                                         'width': 'fit-content'},
+                                                                                 children=[ddk.Logo(
+                                                                         src='\\assets\\png\\1.png',
+                                                                         style={
+                                                                             'text-align': 'center',
+                                                                             'max-height': '20px',
+                                                                             'padding': '0',
+                                                                             'margin': '0',
+                                                                             'vertical-align': '-webkit-baseline-middle'})])),
+                                                                   ddk.Block(width=10,
+                                                                             style={'vertical-align': '-webkit-baseline-middle'},
+                                                                             children=html.H6('6/ 2/ 5',style={'margin': '0',
+                                                                                                           'text-align': 'center',
+                                                                                                           'justify': 'center'})),
+
+
+
+                                                                   ddk.Block(width=20,
+                                                                             style={'vertical-align': '-webkit-baseline-middle'},
+                                                                             children=[
+                                                                                 ddk.Block(
+                                                                                 width=16,
+                                                                                 style={
+                                                                         'max-height': '15px',
+                                                                         'height': '15px',
+                                                                         'width': 'fit-content'},
+                                                                                 children=[ddk.Logo(
+                                                                         src='\\assets\\png\\1.png',
+                                                                         style={
+                                                                             'text-align': 'center',
+                                                                             'max-height': '15px',
+                                                                             'padding': '0',
+                                                                             'margin': '0',
+                                                                             'vertical-align': '-webkit-baseline-middle'})]),
+                                                                                 ddk.Block(
+                                                                                 width=16,
+                                                                                 style={
+                                                                         'max-height': '15px',
+                                                                         'height': '15px',
+                                                                         'width': 'fit-content'},
+                                                                                 children=[ddk.Logo(
+                                                                         src='\\assets\\png\\1.png',
+                                                                         style={
+                                                                             'text-align': 'center',
+                                                                             'max-height': '15px',
+                                                                             'padding': '0',
+                                                                             'margin': '0',
+                                                                             'vertical-align': '-webkit-baseline-middle'})]),
+                                                                                 ddk.Block(
+                                                                                 width=16,
+                                                                                 style={
+                                                                         'max-height': '15px',
+                                                                         'height': '15px',
+                                                                         'width': 'fit-content'},
+                                                                                 children=[ddk.Logo(
+                                                                         src='\\assets\\png\\1.png',
+                                                                         style={
+                                                                             'text-align': 'center',
+                                                                             'max-height': '15px',
+                                                                             'padding': '0',
+                                                                             'margin': '0',
+                                                                             'vertical-align': '-webkit-baseline-middle'})]),
+                                                                                 ddk.Block(
+                                                                                 width=16,
+                                                                                 style={
+                                                                         'max-height': '15px',
+                                                                         'height': '15px',
+                                                                         'width': 'fit-content'},
+                                                                                 children=[ddk.Logo(
+                                                                         src='\\assets\\png\\1.png',
+                                                                         style={
+                                                                             'text-align': 'center',
+                                                                             'max-height': '15px',
+                                                                             'padding': '0',
+                                                                             'margin': '0',
+                                                                             'vertical-align': '-webkit-baseline-middle'})]),
+                                                                                 ddk.Block(
+                                                                                 width=16,
+                                                                                 style={
+                                                                         'max-height': '15px',
+                                                                         'height': '15px',
+                                                                         'width': 'fit-content'},
+                                                                                 children=[ddk.Logo(
+                                                                         src='\\assets\\png\\1.png',
+                                                                         style={
+                                                                             'text-align': 'center',
+                                                                             'max-height': '15px',
+                                                                             'padding': '0',
+                                                                             'margin': '0',
+                                                                             'vertical-align': '-webkit-baseline-middle'})]),
+                                                                                 ddk.Block(
+                                                                                 width=16,
+                                                                                 style={
+                                                                         'max-height': '15px',
+                                                                         'height': '15px',
+                                                                         'width': 'fit-content'},
+                                                                                 children=[ddk.Logo(
+                                                                         src='\\assets\\png\\1.png',
+                                                                         style={
+                                                                             'text-align': 'center',
+                                                                             'max-height': '15px',
+                                                                             'padding': '0',
+                                                                             'margin': '0',
+                                                                             'vertical-align': '-webkit-baseline-middle'})])
+
+
+                                                                             ]),
+                                                                   ddk.Block(width=10,
+                                                                             style={'vertical-align': '-webkit-baseline-middle'},
+                                                                             children=html.H6('95',style={'margin': '0',
+                                                                                                           'text-align': 'center',
+                                                                                                           'justify': 'center'})),
+                                                                   ddk.Block(width=10,
+                                                                             style={'vertical-align': '-webkit-baseline-middle'},
+                                                                             children=html.H6('193/11',
+                                                                                 style={
+                                                                                     'margin': '0',
+                                                                                     'text-align': 'center',
+                                                                                     'justify': 'center'})),
+                                                                   ddk.Block(width=10,
+                                                                             style={'vertical-align': '-webkit-baseline-middle'},
+                                                                             children=html.H6('620/961',style={'margin': '0',
+                                                                                                            'text-align': 'center',
+                                                                                                            'justify': 'center'})),
+                                                                   ddk.Block(width=10,
+                                                                             style={'vertical-align': '-webkit-baseline-middle'},
+                                                                             children=html.H6('13352',style={'margin': '0',
+                                                                                                           'text-align': 'center',
+                                                                                                           'justify': 'center'}))])])
+
+
+
+score_table = ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c',},
+                                             children=[dbc.ListGroup([
+                                            dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
+                                                                       'height': '40px', 'justify-content': 'center',
+                                                                       'vertical-align': '-webkit-baseline-middle',
+                                                                       'max-height': 'fit-content', 'padding': '0px',
+                                                                       'background-color':'#0e4e70',
+                                                                       'list-style': 'none',
+                                                                       'align-items': 'center'},
+                                                              children=[ddk.Block(width=100,
+                                                                                 style={'justify-content': 'center','vertical-align': '-webkit-baseline-middle','height': '40px',},
+                                                                                 children=[ddk.Block(width=15,
+                                                                                                     style={'vertical-align': '-webkit-baseline-middle'},
+                                                                                                     children=html.H2('PLAYER',style={'margin': '0',
+                                                                                                                                   'text-align': 'center',
+                                                                                                                                   'justify': 'center'})),
+                                                                                           ddk.Block(width=15,
+                                                                                                     style={'vertical-align': '-webkit-baseline-middle'},
+                                                                                                     children=html.H2('HERO',style={'margin': '0',
+                                                                                                                                   'text-align': 'center',
+                                                                                                                                   'justify': 'center'})),
+                                                                                           ddk.Block(width=10,
+                                                                                                     style={'vertical-align': '-webkit-baseline-middle'},
+                                                                                                     children=html.H2('KDA',style={'margin': '0',
+                                                                                                                                   'text-align': 'center',
+                                                                                                                                   'justify': 'center'})),
+                                                                                           ddk.Block(width=20,
+                                                                                                     style={'vertical-align': '-webkit-baseline-middle'},
+                                                                                                     children=html.H2('ITEMS',style={'margin': '0',
+                                                                                                                                   'text-align': 'center',
+                                                                                                                                   'justify': 'center'})),
+                                                                                           ddk.Block(width=10,
+                                                                                                     style={'vertical-align': '-webkit-baseline-middle'},
+                                                                                                     children=html.H2('GOLD',style={'margin': '0',
+                                                                                                                                   'text-align': 'center',
+                                                                                                                                   'justify': 'center'})),
+                                                                                           ddk.Block(width=10,
+                                                                                                     style={'vertical-align': '-webkit-baseline-middle'},
+                                                                                                     children=html.H2('LH/DN',
+                                                                                                         style={
+                                                                                                             'margin': '0',
+                                                                                                             'text-align': 'center',
+                                                                                                             'justify': 'center'})),
+                                                                                           ddk.Block(width=10,
+                                                                                                     style={'vertical-align': '-webkit-baseline-middle'},
+                                                                                                     children=html.H2('GPM/XPM',style={'margin': '0',
+                                                                                                                                    'text-align': 'center',
+                                                                                                                                    'justify': 'center'})),
+                                                                                           ddk.Block(width=10,
+                                                                                                     style={'vertical-align': '-webkit-baseline-middle'},
+                                                                                                     children=html.H2('NW',style={'margin': '0',
+                                                                                                                                   'text-align': 'center',
+                                                                                                                                   'justify': 'center'}))])]),
+                                                 score_table_item,
+                                                 score_table_item,
+                                                 score_table_item,
+                                                 score_table_item,
+                                                 score_table_item
+
+
+
+                                             ])])
+
+
+
+chart_table = ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c',},
+                                             children=ddk.Block(width=100,
+                                                                style={'justify-content': 'center','vertical-align': '-webkit-baseline-middle','height': '250px','width': '100%',},
+                                                                children=[ddk.Logo(src='\\assets\\png\\charts.png',
+                                                                                style={
+                                                                                     'max-height': '-webkit-fill-available',
+                                                                                     'height': '-webkit-fill-available',
+                                                                                     'width': '100%',
+                                                                                    'text-align': 'left',
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})]))
+
+
+
+
+
+#################   Statistics  #############################################
+stat_team1 = ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c',},
+                                             children=[
+                                                 ddk.Block(width=100, style={'height':'fit-content', }, children=[html.H2('Матч RNG vs NewBee', style={'text-align':'center', 'margin':'0'})]),
+                                                 ddk.Block(width=100, style={'max-height':'fit-content'}, children=[html.H6('05 апрб 11:15 MSK', style={'text-align':'center', 'margin':'0'})]),
+                                                 ddk.Block(width=40,  style={'max-height':'fit-content'}, children=[
+                                                     ddk.Block(width=100,
+                                                               children=[
+                                                                   ddk.Block(width=70, children=[
+                                                                       ddk.Block(width=100,
+                                                                                 children=html.H2('Royal Never Give Up',
+                                                                                                  style={
+                                                                                                      'text-align': 'right', 'margin':'0'})),
+                                                                       ddk.Block(width=100,
+                                                                                 children=html.H6('P1, P2, P3, P4, P5',
+                                                                                                  style={
+                                                                                                      'text-align': 'right', 'margin':'0'})),
+
+                                                                   ]),
+                                                                   ddk.Block(width=30, children=[
+                                                                       ddk.Logo(src='\\assets\\png\\1.png',
+                                                                                style={
+                                                                                     'max-height': '100px',
+                                                                                     'height': '80px',
+                                                                                     'width': '80px',
+                                                                                    'text-align': 'left',
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})
+                                                                   ]),
+                                                               ])
+                                                 ]),
+                                                 ddk.Block(width=20,  style={'max-height':'fit-content'}, children=[html.H1('1 vs 2', style={'text-align':'center', 'margin':'0'})]),
+                                                 ddk.Block(width=40,  style={'max-height':'fit-content'}, children=[
+                                                     ddk.Block(width=100,
+                                                               children=[
+                                                                   ddk.Block(width=30, children=[
+                                                                       ddk.Logo(src='\\assets\\png\\2.png',
+                                                                                style={
+                                                                                    'max-height': '100px',
+                                                                                    'text-align': 'right',
+                                                                                    'height': '80px',
+                                                                                     'width': '80px',
+                                                                                    'padding': '0px', 'margin': '0',
+                                                                                    'vertical-align': '-webkit-baseline-middle'})
+                                                                   ]),
+                                                                   ddk.Block(width=70, children=[
+                                                                       ddk.Block(width=100, children=html.H2('Royal Never Give Up', style={'text-align':'left', 'margin':'0'})),
+                                                                       ddk.Block(width=100, children=html.H6('P1, P2, P3, P4, P5', style={'text-align':'left', 'margin':'0'})),
+
+                                                                   ]),
+
+                                                               ])
+                                                 ]),
+
+
+
+
+
+                                             ])
+
+head_to_head = match_head = ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c',},
+                                             children=[
+                                                 ddk.Block(width=100, style={'height':'fit-content', }, children=[html.H2('Матч RNG vs NewBee', style={'text-align':'center', 'margin':'0'})]),
+                                                 ddk.Block(width=100, style={'max-height':'fit-content'}, children=[html.H6('05 апрб 11:15 MSK', style={'text-align':'center', 'margin':'0'})]),
+                                                 ddk.Block(width=40,  style={'max-height':'fit-content'}, children=[
+                                                     ddk.Block(width=100,
+                                                               children=[
+                                                                   ddk.Block(width=70, children=[
+                                                                       ddk.Block(width=100,
+                                                                                 children=html.H2('Royal Never Give Up',
+                                                                                                  style={
+                                                                                                      'text-align': 'right', 'margin':'0'})),
+                                                                       ddk.Block(width=100,
+                                                                                 children=html.H6('P1, P2, P3, P4, P5',
+                                                                                                  style={
+                                                                                                      'text-align': 'right', 'margin':'0'})),
+
+                                                                   ]),
+                                                                   ddk.Block(width=30, children=[
+                                                                       ddk.Logo(src='\\assets\\png\\1.png',
+                                                                                style={
+                                                                                     'max-height': '100px',
+                                                                                     'height': '80px',
+                                                                                     'width': '80px',
+                                                                                    'text-align': 'left',
+                                                                                     'padding': '0px', 'margin': '0',
+                                                                                     'vertical-align': '-webkit-baseline-middle'})
+                                                                   ]),
+                                                               ])
+                                                 ]),
+                                                 ddk.Block(width=20,  style={'max-height':'fit-content'}, children=[html.H1('1 vs 2', style={'text-align':'center', 'margin':'0'})]),
+                                                 ddk.Block(width=40,  style={'max-height':'fit-content'}, children=[
+                                                     ddk.Block(width=100,
+                                                               children=[
+                                                                   ddk.Block(width=30, children=[
+                                                                       ddk.Logo(src='\\assets\\png\\2.png',
+                                                                                style={
+                                                                                    'max-height': '100px',
+                                                                                    'text-align': 'right',
+                                                                                    'height': '80px',
+                                                                                     'width': '80px',
+                                                                                    'padding': '0px', 'margin': '0',
+                                                                                    'vertical-align': '-webkit-baseline-middle'})
+                                                                   ]),
+                                                                   ddk.Block(width=70, children=[
+                                                                       ddk.Block(width=100, children=html.H2('Royal Never Give Up', style={'text-align':'left', 'margin':'0'})),
+                                                                       ddk.Block(width=100, children=html.H6('P1, P2, P3, P4, P5', style={'text-align':'left', 'margin':'0'})),
+
+                                                                   ]),
+
+                                                               ])
+                                                 ]),
+
+
+
+
+
+                                             ])
+
+
+
+
+
+
+
+
+
+
+
+
 # create tab to enter a value
 first_tab = dcc.Tab(label="Live",
                     children=[live_teams,
-                              match_head],style={'margin': '10px', 'border-radius': '10px', 'background-color': '#0e4e70', 'color':'azure', 'border':'1px solid rgb(14, 78, 112)'}, selected_style={'margin': '10px', 'border-radius': '10px', 'background-color': '#0e4e70', 'color':'azure', 'border':'2px solid #1f78b4' })
+                              ddk.Block(width=100, children=html.H2('Team 1', style={'margin': '0px'})),
+                              score_table,
+                              ddk.Block(width=100, children=html.H2('Team 2', style={'margin': '0px'})),
+                              score_table,
+                              chart_table],style={'margin': '10px', 'border-radius': '10px', 'background-color': '#0e4e70', 'color':'azure', 'border':'1px solid rgb(14, 78, 112)'}, selected_style={'margin': '10px', 'border-radius': '10px', 'background-color': '#0e4e70', 'color':'azure', 'border':'2px solid #1f78b4' })
 
 # create tab to retrieve the value entered in the other tab
 second_tab = dcc.Tab(label="Statistics",
@@ -2363,12 +2852,12 @@ layout1=ddk.Block(width=100,
                                 children=[ddk.Card(width=100,
                                                    style={'background-color': 'transparent', 'max-height':'40vh', 'min-height':'40vh', 'overflowY': 'hidden', 'margin':'10px'},
                                                    children=[
-                                                       ddk.CardHeader(title='Live', style={'background-color': '#f9f9f91c'}),
+                                                       ddk.CardHeader(title='Live', style={'background-color': 'transparent'}),
                                                        Card_matches]),
                                           ddk.Card(width=100,
                                                    style={'background-color': 'transparent', 'max-height':'45vh', 'min-height':'45vh', 'overflowY': 'hidden','margin': '10px'},
                                                    children=[
-                                                       ddk.CardHeader(title='Matches', style={'background-color': '#f9f9f91c'}),
+                                                       ddk.CardHeader(title='Matches', style={'background-color': 'transparent'}),
                                                        Card_matches])
                                           ]),
 
