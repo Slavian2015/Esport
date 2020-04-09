@@ -2865,7 +2865,7 @@ news_item = dbc.ListGroupItem(style={'padding':'0px', 'border':'none'},
                                                         'max-height':'100px', 'min-height':'100px', 'overflowY': 'hidden', 'text-align': 'center','margin':'0', 'padding':'0px'},
                                                  card_hover=True,
                                                  children=[ddk.CardHeader('Alliance прощаются с Fata и 33',
-                                                                          style={'text-align': 'left', 'font-size':'12px'}),
+                                                                          style={'text-align': 'left', 'font-size':'12px','background-color': 'transparent',}),
                                                            html.H6("Команда Alliance опубликовала на своей странице сообщение об изменениях в текущем составе. Команду ...", style={'margin':'0', 'padding-bottom':'5px'})])])
 
 ##########################    TOP 3 LIVE   ###################################
@@ -2946,7 +2946,7 @@ layout_main = ddk.Block(width=100,
                                                                                          'margin': '10px'},
                                                                                      children=[
                                                                                          ddk.CardHeader(title='Матчи',
-                                                                                                        style={'background-color': '#0e4e70',
+                                                                                                        style={'background-color': 'transparent',
                                                                                                                'margin': '10px'},),
                                                                                          Card_matches])]),
                                                         ddk.Block(width=100,
@@ -2959,7 +2959,7 @@ layout_main = ddk.Block(width=100,
                                                                                          'margin': '10px'},
                                                                                      children=[
                                                                                          ddk.CardHeader(title='Турнииры',
-                                                                                                        style={'background-color': '#0e4e70',
+                                                                                                        style={'background-color': 'transparent',
                                                                                                                'margin': '10px'}),
                                                                                          Card_matches])]),
                                                         ddk.Block(width=100,
