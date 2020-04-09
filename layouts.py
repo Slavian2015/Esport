@@ -6,8 +6,7 @@ import uuid
 import os
 from app import dash_app
 
-###########  Main Page   ################
-
+##################     ALL MATCHES     ####################################
 def serve_layout():
     """Creates the layout for each user of the app.
     This function is executed each time a session is created for the app.
@@ -1011,14 +1010,14 @@ def serve_layout():
                                                        html.Div(Card_matches)
                                                    ])])])
     return layout
-layout_main = serve_layout()
+all_matches = serve_layout()
 
 
-
-
-#####  Match card teams  ########
-live_teams= ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c'},
-                                             children=[
+###################  TEAMS CARD of MATCH  #################################
+live_teams= ddk.Card(style={'width':'-webkit-fill-available',
+                            'margin':'10px',
+                            'padding':'0',
+                            'background-color': '#f9f9f91c'}, children=[
                                                  ddk.Block(width=100,
                                                            style={'height':'fit-content','vertical-align': '-webkit-baseline-middle'},
                                                            children=[ddk.Block(width=40,
@@ -1418,34 +1417,11 @@ live_teams= ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', '
                                                                                                                              'margin': '0'})])]), ])]),
                                              ])
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#####       EXAMPLE of Table   ###########
-Card_matches = dbc.ListGroup(flush=True,
-                             style={'max-height':'-webkit-fill-available', 'overflowY':'scroll'},
+###################       EXAMPLE of Table   ##############################
+Card_matches = dbc.ListGroup(flush=True,style={'max-height':'-webkit-fill-available',
+                                               'overflowY':'scroll'},
                              children=[
-                            dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
+        dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
                                  'height': '50px', 'justify-content': 'center',
                                  'vertical-align': '-webkit-baseline-middle',
                                  'max-height': 'fit-content', 'padding': '0px',
@@ -1475,7 +1451,7 @@ Card_matches = dbc.ListGroup(flush=True,
                                                          'align-items': 'center', 'justify-content': 'center',
                                                          'margin': '0', 'textAlign': 'center'},
                                                               children=ddk.Logo(src='../assets/logo.png',
-                                                                                style={
+                                                                                style={'text-align': 'center',
                                                                                      'max-height': '-webkit-fill-available',
                                                                                        'padding': '0px', 'margin': '0',
                                                                                      'vertical-align': '-webkit-baseline-middle'})),
@@ -1530,7 +1506,7 @@ Card_matches = dbc.ListGroup(flush=True,
                                                                       'justify-content': 'center',
                                                                       'margin': '0', 'textAlign': 'center'},
                                                               children=ddk.Logo(src='../assets/logo.png',
-                                                                                style={
+                                                                                style={'text-align': 'center',
                                                                                        'max-height': '-webkit-fill-available',
                                                                                        'padding': '0px', 'margin': '0',
                                                                                        'vertical-align': '-webkit-baseline-middle'}))]),
@@ -2385,9 +2361,12 @@ Card_matches = dbc.ListGroup(flush=True,
 
                                  ])
 
-
-match_head = ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c',},
-                                             children=[
+##############     HEAD CARD of MATCH   ###################################
+match_head = ddk.Card(style={'width':'-webkit-fill-available',
+                             'min-height': '120px',
+                             'margin':'10px',
+                             'padding':'15px',
+                             'background-color': '#f9f9f91c'}, children=[
                                                  ddk.Block(width=100, style={'height':'fit-content', }, children=[html.H2('Матч RNG vs NewBee', style={'text-align':'center', 'margin':'0'})]),
                                                  ddk.Block(width=100, style={'max-height':'fit-content'}, children=[html.H6('05 апрб 11:15 MSK', style={'text-align':'center', 'margin':'0'})]),
                                                  ddk.Block(width=40,  style={'max-height':'fit-content'}, children=[
@@ -2404,29 +2383,33 @@ match_head = ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', 
                                                                                                       'text-align': 'right', 'margin':'0'})),
 
                                                                    ]),
-                                                                   ddk.Block(width=30, children=[
+                                                                   ddk.Block(width=30,
+                                                                             style={'max-height':'40px', 'max-width':'40px', 'margin-left':'15px'},
+                                                                             children=[
                                                                        ddk.Logo(src='\\assets\\png\\1.png',
                                                                                 style={
-                                                                                     'max-height': '100px',
-                                                                                     'height': '80px',
-                                                                                     'width': '80px',
-                                                                                    'text-align': 'left',
+                                                                                     'max-height': '40px',
+                                                                                     'height': '40px',
+                                                                                     'width': '40px',
+                                                                                    'text-align': 'center',
                                                                                      'padding': '0px', 'margin': '0',
                                                                                      'vertical-align': '-webkit-baseline-middle'})
                                                                    ]),
                                                                ])
                                                  ]),
-                                                 ddk.Block(width=20,  style={'max-height':'fit-content'}, children=[html.H1('1 vs 2', style={'text-align':'center', 'font-size': '40px', 'margin':'0'})]),
+                                                 ddk.Block(width=20,  style={'max-height':'fit-content'}, children=[html.H1('1 : 2', style={'text-align':'center', 'font-size': '40px', 'margin':'0'})]),
                                                  ddk.Block(width=40,  style={'max-height':'fit-content'}, children=[
                                                      ddk.Block(width=100,
                                                                children=[
-                                                                   ddk.Block(width=30, children=[
-                                                                       ddk.Logo(src='\\assets\\png\\2.png',
+                                                                   ddk.Block(width=30,
+                                                                             style={'max-height':'40px', 'max-width':'40px','margin-right':'15px'},
+                                                                             children=[
+                                                                       ddk.Logo(src='\\assets\\png\\3.png',
                                                                                 style={
-                                                                                    'max-height': '100px',
-                                                                                    'text-align': 'right',
-                                                                                    'height': '80px',
-                                                                                     'width': '80px',
+                                                                                    'max-height': '40px',
+                                                                                    'text-align': 'center',
+                                                                                    'height': '40px',
+                                                                                     'width': '40px',
                                                                                     'padding': '0px', 'margin': '0',
                                                                                     'vertical-align': '-webkit-baseline-middle'})
                                                                    ]),
@@ -2438,22 +2421,15 @@ match_head = ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', 
 
                                                                ])
                                                  ]),
+])
 
-
-
-
-
-                                             ])
-
-
-
+##############     LIVE SCORE TABLES    ###################################
 score_table_item = dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
                                            'height': '70px', 'justify-content': 'center',
                                            'vertical-align': '-webkit-baseline-middle',
                                            'max-height': 'fit-content', 'padding': '0px',
                                            'list-style': 'none',
-                                           'align-items': 'center'},
-                                     children=[ddk.Block(width=100,
+                                           'align-items': 'center'}, children=[ddk.Block(width=100,
                                                          style={'justify-content': 'center'},
                                                          children=[ddk.Block(width=15,
                                                                              style={'vertical-align': '-webkit-baseline-middle'},
@@ -2596,11 +2572,10 @@ score_table_item = dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', '
                                                                              children=html.H6('13352',style={'margin': '0',
                                                                                                            'text-align': 'center',
                                                                                                            'justify': 'center'}))])])
-
-
-
-score_table = ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c',},
-                                             children=[dbc.ListGroup([
+score_table = ddk.Card(style={'width':'-webkit-fill-available',
+                              'margin':'10px',
+                              'padding':'0',
+                              'background-color': '#f9f9f91c',}, children=[dbc.ListGroup(flush=True, children=[
                                             dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
                                                                        'height': '40px', 'justify-content': 'center',
                                                                        'vertical-align': '-webkit-baseline-middle',
@@ -2662,12 +2637,13 @@ score_table = ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px',
 
                                              ])])
 
-
-
-chart_table = ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c',},
-                                             children=ddk.Block(width=100,
-                                                                style={'justify-content': 'center','vertical-align': '-webkit-baseline-middle','height': '250px','width': '100%',},
-                                                                children=[ddk.Logo(src='\\assets\\png\\charts.png',
+##############     CHART SCORE TABLES    ###################################
+chart_table = ddk.Card(style={'width':'-webkit-fill-available',
+                              'margin':'10px', 'padding':'0',
+                              'background-color': '#f9f9f91c'}, children=ddk.Block(width=100,style={'justify-content': 'center',
+                                                                       'vertical-align': '-webkit-baseline-middle',
+                                                                       'height': '250px',
+                                                                       'width': '100%',}, children=[ddk.Logo(src='\\assets\\png\\charts.png',
                                                                                 style={
                                                                                      'max-height': '-webkit-fill-available',
                                                                                      'height': '-webkit-fill-available',
@@ -2677,13 +2653,9 @@ chart_table = ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px',
                                                                                      'vertical-align': '-webkit-baseline-middle'})]))
 
 
-
-
-
-#################   Statistics  #############################################
-
-
-head_list_item = ddk.Block(width=100, style={'vertical-align': '-webkit-baseline-middle', 'height':'35px'}, children=[ddk.Block(width=20, style={'vertical-align': '-webkit-baseline-middle'}, children=[html.H2('1', style={'vertical-align': '-webkit-baseline-middle','text-align': 'center', 'margin': '0'})]),
+##############     H 2 H card items    ###################################
+head_list_item = ddk.Block(width=100, style={'vertical-align': '-webkit-baseline-middle',
+                                  'height':'35px'}, children=[ddk.Block(width=20, style={'vertical-align': '-webkit-baseline-middle'}, children=[html.H2('1', style={'vertical-align': '-webkit-baseline-middle','text-align': 'center', 'margin': '0'})]),
                                                 ddk.Block(width=60, style={'vertical-align': '-webkit-baseline-middle'}, children=[html.H6('05.04.20 ', style={'vertical-align': '-webkit-baseline-middle','text-align': 'center', 'margin': '0'})]),
                                                 ddk.Block(width=20, style={'vertical-align': '-webkit-baseline-middle'}, children=[html.H2('2', style={'vertical-align': '-webkit-baseline-middle','text-align': 'center', 'margin': '0'})])])
 head_list = dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
@@ -2692,23 +2664,22 @@ head_list = dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-
                                                                        'max-height': 'fit-content', 'padding': '0px',
                                                                        # 'background-color':'#0e4e70',
                                                                        'list-style': 'none',
-                                                                       'align-items': 'center'},children=[head_list_item])
-head_to_head = ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c',},
-                                             children=[
+                                                                       'align-items': 'center'}, children=[head_list_item])
+head_to_head = ddk.Card(style={'width':'-webkit-fill-available',
+                               'margin':'10px',
+                               'padding':'0',
+                               'background-color': '#f9f9f91c'}, children=[
                                                  ddk.Block(width=100, children=[ddk.Block(width=30, style={'vertical-align': '-webkit-baseline-middle',},children=[ddk.Block(width=100, children=[html.H6('Побед', style={'text-align': 'center', 'margin': '0'})]),
                                                                                                               ddk.Block(width=100, children=[html.H2('3', style={'text-align': 'center', 'margin': '0'})])]),
                                                                                 ddk.Block(width=40, style={'vertical-align': '-webkit-baseline-middle',},children=[ddk.Card(shadow_weight='medium', style={'background-color':'transparent'}, children=[html.H2('4', style={'text-align': 'center', 'margin': '0'})])]),
                                                                                 ddk.Block(width=30, style={'vertical-align': '-webkit-baseline-middle',},children=[ddk.Block(width=100, children=[html.H6('Побед', style={'text-align': 'center', 'margin': '0'})]),
                                                                                                               ddk.Block(width=100, children=[html.H2('1', style={'text-align': 'center', 'margin': '0'})])])]),
-                                                 ddk.Block(width=100, children=dbc.ListGroup([head_list, head_list,head_list,head_list,head_list,head_list]))])
+                                                 ddk.Block(width=100, children=dbc.ListGroup(flush=True, children=[head_list, head_list,head_list,head_list,head_list,head_list]))])
 
 
-
-
-
-
-stat_list_item = ddk.Block(width=100, style={'vertical-align': '-webkit-baseline-middle', 'height':'35px'},
-                           children=[ddk.Block(width=50,
+##############     Total games card items    ##############################
+stat_list_item = ddk.Block(width=100, style={'vertical-align': '-webkit-baseline-middle',
+                                             'height':'35px'},children=[ddk.Block(width=50,
                                                style={'vertical-align': '-webkit-baseline-middle'},
                                                children=[
                                                    ddk.Block(
@@ -2811,31 +2782,29 @@ stat_list_item = ddk.Block(width=100, style={'vertical-align': '-webkit-baseline
                                                                'vertical-align': '-webkit-baseline-middle'})]),
 
                                                ])])
-
-
-
 stat_list = dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
                                                                        'height': '40px', 'justify-content': 'center',
                                                                        'vertical-align': '-webkit-baseline-middle',
                                                                        'max-height': 'fit-content', 'padding': '0px',
                                                                        # 'background-color':'#0e4e70',
                                                                        'list-style': 'none',
-                                                                       'align-items': 'center'},children=[stat_list_item])
-stat_teams = ddk.Card(style={'width':'-webkit-fill-available', 'margin':'10px', 'padding':'0', 'background-color': '#f9f9f91c',},
-                                             children=[
+                                                                       'align-items': 'center'}, children=[stat_list_item])
+stat_teams = ddk.Card(style={'width':'-webkit-fill-available',
+                             'margin':'10px', 'padding':'0',
+                             'background-color': '#f9f9f91c',},children=[
                                                  ddk.Block(width=100, children=[ddk.Block(width=30, style={'vertical-align': '-webkit-baseline-middle',},children=[ddk.Block(width=100, children=[html.H6('Побед', style={'text-align': 'center', 'margin': '0'})]),
                                                                                                               ddk.Block(width=100, children=[html.H2('3', style={'text-align': 'center', 'margin': '0'})])]),
                                                                                 ddk.Block(width=40, style={'vertical-align': '-webkit-baseline-middle',},children=[ddk.Card(shadow_weight='medium', style={'background-color':'transparent'}, children=[html.H2('4', style={'text-align': 'center', 'margin': '0'})])]),
                                                                                 ddk.Block(width=30, style={'vertical-align': '-webkit-baseline-middle',},children=[ddk.Block(width=100, children=[html.H6('Побед', style={'text-align': 'center', 'margin': '0'})]),
                                                                                                               ddk.Block(width=100, children=[html.H2('1', style={'text-align': 'center', 'margin': '0'})])])]),
-                                                 ddk.Block(width=100, children=dbc.ListGroup([stat_list, stat_list,stat_list,stat_list,stat_list]))
+                                                 ddk.Block(width=100, children=dbc.ListGroup(flush=True, children=[stat_list, stat_list,stat_list,stat_list,stat_list]))
 
 
                                              ])
 
-
-stat = ddk.Block(width=100, style={'vertical-align': 'top'},
-                           children=[
+#################   Statistics  #############################################
+stat = ddk.Block(width=100, style={'vertical-align': 'top'
+                                   }, children=[
                                ddk.Block(width=50,
                                          style={'vertical-align': 'top'},
                                          children=[head_to_head]),
@@ -2844,36 +2813,25 @@ stat = ddk.Block(width=100, style={'vertical-align': 'top'},
                                          children=[stat_teams])])
 
 
-
-
-
-
-
-
-
-# create tab to enter a value
-first_tab = dcc.Tab(label="Live",
-                    children=[live_teams,
+############################     TABS    ###################################
+first_tab = dcc.Tab(label="Live",children=[live_teams,
                               ddk.Block(width=100, children=html.H2('Team 1', style={'margin': '0px'})),
                               score_table,
                               ddk.Block(width=100, children=html.H2('Team 2', style={'margin': '0px'})),
-                              score_table],style={'margin': '10px', 'border-radius': '10px', 'background-color': '#0e4e70', 'color':'azure', 'border':'1px solid rgb(14, 78, 112)'}, selected_style={'margin': '10px', 'border-radius': '10px', 'background-color': '#0e4e70', 'color':'azure', 'border':'2px solid #1f78b4' })
-
-# create tab to retrieve the value entered in the other tab
-second_tab = dcc.Tab(label="Statistics",
-                     children=[stat,
-                               chart_table],style={'margin': '10px', 'border-radius': '10px', 'background-color': '#0e4e70', 'color':'azure', 'border':'1px solid rgb(14, 78, 112)'}, selected_style={'margin': '10px', 'border-radius': '10px', 'background-color': '#0e4e70', 'color':'azure', 'border':'2px solid #1f78b4' })
-
-# assemble tabs in dcc.Tabs object
+                              score_table],style={'margin': '10px',
+                           'border-radius': '10px', 'background-color': '#0e4e70', 'color':'azure', 'border':'1px solid rgb(14, 78, 112)'},selected_style={'margin': '10px', 'border-radius': '10px',
+                                    'background-color': '#0e4e70', 'color':'azure', 'border':'2px solid #1f78b4' })
+second_tab = dcc.Tab(label="Statistics",children=[stat,
+                               chart_table],style={'margin': '10px',
+                                                   'border-radius': '10px', 'background-color': '#0e4e70', 'color':'azure', 'border':'1px solid rgb(14, 78, 112)'},selected_style={'margin': '10px',
+                                     'border-radius': '10px', 'background-color': '#0e4e70', 'color':'azure', 'border':'2px solid #1f78b4' })
 tabs = dcc.Tabs(children=[first_tab, second_tab])
 
 
 
-#####  ############   #############   ###########
-
-layout1=ddk.Block(width=100,
-                  style={'height': '90vh', 'text-align':'center'},
-                  children=[
+##########################    ONE MATCH CARD   ##############################
+match_card = ddk.Block(width=100, style={'height': '90vh',
+                         'text-align':'center'}, children=[
                       ddk.Block(width=70,
                                 style={'height':'89vh', 'margin':'0', 'padding':'0', 'color':'azure', 'overflowY': 'scroll', 'overflowX': 'hidden', },
                                 children=[
@@ -2900,18 +2858,113 @@ layout1=ddk.Block(width=100,
 ])
 
 
-layout2 = html.Div([
-    html.H3('Slava 2'),
-    dcc.Dropdown(
-        id='app-2-dropdown',
-        options=[
-            {'label': 'App 2 - {}'.format(i), 'value': i} for i in [
-                'NYC', 'MTL', 'LA'
-            ]
-        ]
-    ),
-    html.Div(id='app-2-display-value'),
-    dcc.Link('Go to App 1', href='/app1')
+
+##########################    NEWS CARD   ###################################
+news_item = dbc.ListGroupItem(style={'padding':'0px', 'border':'none'},
+                              children=[ddk.Card(style={'background-color': '#f9f9f91c',
+                                                        'max-height':'100px', 'min-height':'100px', 'overflowY': 'hidden', 'text-align': 'center','margin':'0', 'padding':'0px'},
+                                                 card_hover=True,
+                                                 children=[ddk.CardHeader('Alliance прощаются с Fata и 33',
+                                                                          style={'text-align': 'left', 'font-size':'12px'}),
+                                                           html.H6("Команда Alliance опубликовала на своей странице сообщение об изменениях в текущем составе. Команду ...", style={'margin':'0', 'padding-bottom':'5px'})])])
+
+##########################    TOP 3 LIVE   ###################################
+top3_live = ddk.Card(width=33,
+                     card_hover=True,
+                     style={'margin':'5px',
+                            'background-color': '#f9f9f91c', 'max-height':'fit-content',
+                            # 'min-height':'100px'
+                            },
+                     children=[ddk.Block(width=100,
+                                         style={'text-align':'center'},
+                                         children=[ddk.Block(width=46,
+                                                             style={'max-height': '40px','max-width': '-webkit-fill-available', 'height': '40px','text-align':'center',
+                                                                    'vertical-align': '-webkit-baseline-middle'},
+                                                             children=[ddk.Logo(
+                                                 src='\\assets\\png\\1.png',
+                                                 style={
+                                                     'text-align': 'center',
+                                                     'max-height': '40px',
+                                                     'padding': '0',
+                                                     'margin': '0',
+                                                     'vertical-align': '-webkit-baseline-middle'})]),
+                                                   ddk.Block(width=8,
+                                                             children=[html.H6('vs', style={'padding':'0px', 'margin':'0', 'vertical-align': '-webkit-baseline-middle'},)]),
+                                                   ddk.Block(width=46,
+                                                             style={'max-height': '40px','max-width': '-webkit-fill-available','height': '40px','text-align':'center',
+                                                                    'vertical-align': '-webkit-baseline-middle'},
+                                                             children=[ddk.Logo(
+                                                 src='\\assets\\png\\2.png',
+                                                 style={
+                                                     'text-align': 'center',
+                                                     'max-height': '40px',
+                                                     'padding': '0',
+                                                     'margin': '0',
+                                                     'vertical-align': '-webkit-baseline-middle'})])
+                               ]),
+                               ddk.Block(width=100,
+                                         children=[ddk.Block(width=50,
+                                                             children=[html.H2('NiP', style={'padding':'0px', 'margin':'0'},)]),
+                                                   ddk.Block(width=50,
+                                                             children=[html.H2('ChickenF', style={'padding':'0px', 'margin':'0'},)])]),
+                               ddk.Block(width=100,
+                                         children=[ddk.Block(width=40,
+                                                             children=[html.H1('2', style={'padding':'0px', 'margin':'0', 'text-align': 'right'},)]),
+                                                   ddk.Block(width=20,
+                                                             children=[html.H6('-', style={'padding':'0px', 'margin':'0'},)]),
+                                                   ddk.Block(width=40,
+                                                             children=[html.H1('1', style={'padding':'0px', 'margin':'0','text-align': 'left'},)])])
+                               ])
+
+
+##########################        MAIN PAGE      ##############################
+layout_main = ddk.Block(width=100,
+                        style={'height': '90vh',
+                         'text-align':'center'},
+                        children=[
+                      ddk.Block(width=80,
+                                style={'height':'90vh', 'margin':'0',
+                                       'padding':'0', 'color':'azure',
+                                       'overflowY': 'scroll', 'overflowX': 'hidden',
+                                       'justify':'center' },
+                                children=[
+                                    ddk.Block(width=30,
+                                              children=dbc.ListGroup(flush=True, style={'margin': '0', 'border':'0'}, children=[news_item,
+                                                                                  news_item,news_item,news_item,news_item,news_item])),
+                                    ddk.Block(width=70,
+                                              children=[ddk.Block(width=100,
+                                                                  style={'padding': '0',
+                                                                         'margin': '0',},
+                                                                  children=[top3_live,top3_live,top3_live]),
+                                                        ddk.Block(width=100,
+                                                                  children=[ddk.Card(width=100,
+                                                                                     style={
+                                                                                         'background-color': 'transparent',
+                                                                                         'max-height': '30vh',
+                                                                                         'min-height': '30vh',
+                                                                                         'overflowY': 'hidden',
+                                                                                         'margin': '10px'},
+                                                                                     children=[
+                                                                                         ddk.CardHeader(title='Матчи',
+                                                                                                        style={'background-color': '#0e4e70',
+                                                                                                               'margin': '10px'},),
+                                                                                         Card_matches])]),
+                                                        ddk.Block(width=100,
+                                                                  children=[ddk.Card(width=100,
+                                                                                     style={
+                                                                                         'background-color': 'transparent',
+                                                                                         'max-height': '30vh',
+                                                                                         'min-height': '30vh',
+                                                                                         'overflowY': 'hidden',
+                                                                                         'margin': '10px'},
+                                                                                     children=[
+                                                                                         ddk.CardHeader(title='Турнииры',
+                                                                                                        style={'background-color': '#0e4e70',
+                                                                                                               'margin': '10px'}),
+                                                                                         Card_matches])]),
+                                                        ddk.Block(width=100,
+                                                                  children=[top3_live,top3_live,top3_live])]),
+]),
 ])
 
 
