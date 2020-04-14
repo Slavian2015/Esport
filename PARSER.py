@@ -106,7 +106,9 @@ with open("Matches.html", "r", encoding='utf-8') as f:
 
     dw = {'match_id': match_id, 'Mlinks': Mlinks, 'T1names': T1names, 'T2names': T2names, 'T1logos': T1logos, 'T2logos': T2logos, 'Mtime': Mtime, 'Mdate': Mdate, 'Mtour': Mtour, 'Mtypes': Mtypes}
     df = pd.DataFrame(data=dw)
-    print(df.head(n=20))
+    df1 = df.head(n=20)
+
+    df1.to_csv('refresh.csv', index=False, header=True)
 
     dw_live = {'match_id': match_id_live, 'Mlinks': Mlinks_live}
     df_live = pd.DataFrame(data=dw_live)
