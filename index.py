@@ -1,14 +1,12 @@
 from app import dash_app, app
-from layouts import all_matches, layout_main, match_card
-from dash.dependencies import Input, Output
 import dash_core_components as dcc
 import dash_html_components as html
 import dash_design_kit as ddk
-# git push heroku master
 
+import PARSER
 import callbacks
 
-
+# git push heroku master
 # https://dash-gallery.plotly.host/Docs/packages/dash-design-kit/dash_design_kit-1.4.0.tar.gz
 # --extra-index-url=https://dash-gallery.plotly.host/Docs/packages
 # dash-design-kit==1.4.0
@@ -33,18 +31,6 @@ dash_app.layout = html.Div([
 ])])
 
 
-
-# @dash_app.callback(Output('page-content', 'children'),
-#               [Input('url', 'pathname')])
-# def display_page(pathname):
-#     if pathname == '/match_card':
-#          return match_card()
-#     elif pathname == '/all_matches':
-#          return all_matches
-#     elif pathname == '/':
-#          return layout_main
-#     # else:
-#     #     return '404'
 
 if __name__ == "__main__":
     # app.run_server(debug=True)

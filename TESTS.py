@@ -1,50 +1,57 @@
-import dash_core_components as dcc
-import dash_html_components as html
-import dash_bootstrap_components as dbc
-import dash_design_kit as ddk
-import uuid
-import os
-from app import dash_app
-from Structure import serverBD
+from bs4 import BeautifulSoup
+import requests as req
 import pandas as pd
+import requests
 
-# all_cardsBD = pd.read_csv('all_cards.csv')
-#
-tt = "/370614"
-id = tt.replace("/", "")
-#
-# df = all_cardsBD[(all_cardsBD['Mid'].isin([id]))]
-#
-# print(df)
-#
-# print(df.iloc[0]['Mtour'])
+import os
+import pandas as pd
+main_path_data = os.path.abspath("./data")
+import time
 
 
-# all_h2hBD = pd.read_csv('all_h2h.csv')
-# h2hdf = all_h2hBD[(all_h2hBD['Mid'].isin(['370614']))]
-#
-# print(h2hdf)
-#
-# # print(h2hdf.groupby('H2H_total_t1').count())
-#
-#
-# www = h2hdf['H2H_total_t1'].value_counts()
-# www2 = h2hdf['H2H_total_t2'].value_counts()
-#
-# tt = [www,www2]
-#
-# print("www[2]  :",tt[0][2])
+
+l = ['@Valqui / 외로운 본질', 'D1smar', 'Argius', 'Panda']
+
+print(len(l))
 
 
-all_t1BD = pd.read_csv('all_t1.csv')
-t1bd = all_t1BD[(all_t1BD['Mid'].isin([id]))]
+if len(l) < 5:
+    l.append("")
 
-all_t2BD = pd.read_csv('all_t2.csv')
-t2bd = all_t2BD[(all_t2BD['Mid'].isin([id]))]
+print(l)
+#
+#
+# resp = req.get('https://ru.dltv.org/matches/370571', headers={'User-Agent': 'Mozilla'})
+# # print (response.encoding)
+#
+# soup = BeautifulSoup(resp.content, 'lxml')
+#
+# # print(soup.prettify())
+#
+# gdp_table = soup.find("table", attrs={"class": "table player-stat"})
+# gdp_table_data = gdp_table.tbody.find_all("tr")
+# T2data = []
+# for td in gdp_table_data[7].find_all("a"):
+#     T2data.append(td.text.replace('\n', '').strip())
+#
+# print(T2data)
+#
+#
+# P21 = []
+# P22 = []
+# P23 = []
+# P24 = []
+# P25 = []
+#
+# P21.append(T2data[0])
+# P22.append(T2data[1])
+# P23.append(T2data[2])
+# P24.append(T2data[3])
+# P25.append(T2data[4])
+#
+#
+#
+# print(P21, P22, P23, P24, P25)
 
-
-df = pd.concat([t1bd, t2bd.reindex(t1bd.index)], axis=1)
-
-print(df)
 
 

@@ -6,7 +6,7 @@ import uuid
 import os
 from app import dash_app
 import pandas as pd
-
+main_path_data = os.path.abspath("./data")
 
 ##################     ALL MATCHES     ####################################
 def serve_layout():
@@ -1014,13 +1014,14 @@ def serve_layout():
     return layout
 all_matches = serve_layout()
 
-
+html.Div(id='table-container')
+interval = dcc.Interval(id='interval', interval=60000, n_intervals=0)
 
 
 
 ###################       EXAMPLE of Table   ##############################
 def cards_items():
-    serverBD = pd.read_csv('server.csv')
+    serverBD = pd.read_csv(main_path_data + '\\server.csv')
     cards = []
     for ind in serverBD.index:
         cards_items=dbc.ListGroupItem(
@@ -1390,7 +1391,7 @@ chart_table = ddk.Card(style={'width':'-webkit-fill-available',
                               'background-color': '#f9f9f91c'}, children=ddk.Block(width=100,style={'justify-content': 'center',
                                                                        'vertical-align': '-webkit-baseline-middle',
                                                                        'height': '250px',
-                                                                       'width': '100%',}, children=[ddk.Logo(src='\\assets\\png\\charts.png',
+                                                                       'width': '100%'}, children=[ddk.Logo(src='\\assets\\png\\charts.png',
                                                                                 style={
                                                                                      'max-height': '-webkit-fill-available',
                                                                                      'height': '-webkit-fill-available',
@@ -1402,25 +1403,12 @@ chart_table = ddk.Card(style={'width':'-webkit-fill-available',
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ##########################    ONE MATCH CARD   ##############################
 
 
 def match_card(id):
 
-    all_cardsBD = pd.read_csv('all_cards.csv')
+    all_cardsBD = pd.read_csv(main_path_data + '\\all_cards.csv')
     id = id.replace("/", "")
 
     df = all_cardsBD[(all_cardsBD['Mid'].isin([id]))]
@@ -1713,7 +1701,7 @@ def match_card(id):
                                                           style={'height': '33%'},
                                                           children=[ddk.Block(width=30, style={'height': 'fit-content',
                                                                                                'vertical-align': 'middle'},
-                                                                              children=[html.H6('44%', style={
+                                                                              children=[html.H6('{}%'.format(df.iloc[0]['WR']), style={
                                                                                   'text-align': 'center',
                                                                                   'padding': '0px', 'margin': '0'})]),
                                                                     ddk.Block(width=40, style={'height': 'fit-content',
@@ -1723,13 +1711,13 @@ def match_card(id):
                                                                                   'padding': '0px', 'margin': '0'})]),
                                                                     ddk.Block(width=30, style={'height': 'fit-content',
                                                                                                'vertical-align': 'middle'},
-                                                                              children=[html.H6('27%', style={
+                                                                              children=[html.H6('{}%'.format(df.iloc[0]['WR2']), style={
                                                                                   'text-align': 'center',
                                                                                   'padding': '0px', 'margin': '0'})])]),
                                                 ddk.Block(width=100, style={'height': '33%'}, children=[
                                                     ddk.Block(width=30, style={'height': 'fit-content',
                                                                                'vertical-align': 'middle'}, children=[
-                                                        html.H6('25%', style={'text-align': 'center', 'padding': '0px',
+                                                        html.H6('{}%'.format(df.iloc[0]['FB']), style={'text-align': 'center', 'padding': '0px',
                                                                               'margin': '0'})]),
                                                     ddk.Block(width=40, style={'height': 'fit-content',
                                                                                'vertical-align': 'middle'}, children=[
@@ -1737,12 +1725,12 @@ def match_card(id):
                                                                              'margin': '0'})]),
                                                     ddk.Block(width=30, style={'height': 'fit-content',
                                                                                'vertical-align': 'middle'}, children=[
-                                                        html.H6('16%', style={'text-align': 'center', 'padding': '0px',
+                                                        html.H6('{}%'.format(df.iloc[0]['FB2']), style={'text-align': 'center', 'padding': '0px',
                                                                               'margin': '0'})])]),
                                                 ddk.Block(width=100, style={'height': '33%'}, children=[
                                                     ddk.Block(width=30, style={'height': 'fit-content',
                                                                                'vertical-align': 'middle'}, children=[
-                                                        html.H6('32%', style={'text-align': 'center', 'padding': '0px',
+                                                        html.H6('{}%'.format(df.iloc[0]['F10']), style={'text-align': 'center', 'padding': '0px',
                                                                               'margin': '0'})]),
                                                     ddk.Block(width=40, style={'height': 'fit-content',
                                                                                'vertical-align': 'middle'}, children=[
@@ -1750,7 +1738,7 @@ def match_card(id):
                                                                               'margin': '0'})]),
                                                     ddk.Block(width=30, style={'height': 'fit-content',
                                                                                'vertical-align': 'middle'}, children=[
-                                                        html.H6('22%', style={'text-align': 'center', 'padding': '0px',
+                                                        html.H6('{}%'.format(df.iloc[0]['F102']), style={'text-align': 'center', 'padding': '0px',
                                                                               'margin': '0'})])])]),
 
                             ddk.Block(width=40,
@@ -1948,11 +1936,10 @@ def match_card(id):
     ##############     H 2 H card items    ###################################
 
     def h2h():
-        all_h2hBD = pd.read_csv('all_h2h.csv')
+        all_h2hBD = pd.read_csv(main_path_data + '\\all_h2h.csv')
         h2hdf = all_h2hBD[(all_h2hBD['Mid'].isin([id]))]
 
-        www = h2hdf['H2H_total_t1'].value_counts()
-        www2 = h2hdf['H2H_total_t2'].value_counts()
+
 
         shape = h2hdf.shape[0]
         h2h = []
@@ -1987,6 +1974,18 @@ def match_card(id):
                                                                     'text-align': 'center', 'margin': '0'})])]))
 
             h2h.append(head_list)
+
+        if shape > 0:
+            www = h2hdf['H2H_total_t1'].value_counts()
+            www2 = h2hdf['H2H_total_t2'].value_counts()
+            pass
+        else:
+            www = [[0], [0],[0]]
+            www2 = [[0], [0],[0]]
+            pass
+
+
+
         return h2h, shape, www, www2
 
     lhitem = h2h()
@@ -2019,18 +2018,17 @@ def match_card(id):
 
 
     def totals():
-        all_t1BD = pd.read_csv('all_t1.csv')
+        all_t1BD = pd.read_csv(main_path_data + '\\all_t1.csv')
         t1bd = all_t1BD[(all_t1BD['Mid'].isin([id]))]
 
-        all_t2BD = pd.read_csv('all_t2.csv')
+        all_t2BD = pd.read_csv(main_path_data + '\\all_t2.csv')
         t2bd = all_t2BD[(all_t2BD['Mid'].isin([id]))]
 
 
         ttt = []
         total = pd.concat([t1bd, t2bd.reindex(t1bd.index)], axis=1)
 
-        rew1 = total['T1_last_total_main'].value_counts()
-        rew2 = total['T2_last_total_main'].value_counts()
+
 
         for ind in total.index:
 
@@ -2168,8 +2166,28 @@ def match_card(id):
 
             ttt.append(stat_list)
 
+
+        dfr = total[(total['T1_last_total_main'] == 2)]
+        dfr2 = total[(total['T2_last_total_main'] == 2)]
+
+        if dfr.shape[0] > 0:
+            rew1 = total['T1_last_total_main'].value_counts()
+        else:
+            rew1 = [[0], [0], [0]]
+
+
+        if dfr2.shape[0] > 0:
+            rew2 = total['T2_last_total_main'].value_counts()
+        else:
+            rew2 = [[0], [0],[0]]
+
+
         return ttt, rew1, rew2
+
+
+
     rrr = totals()
+
     stat_teams = ddk.Card(style={'width': '-webkit-fill-available',
                                  'margin': '10px', 'padding': '0',
                                  'background-color': '#f9f9f91c', }, children=[
@@ -2260,31 +2278,6 @@ def match_card(id):
                                               ])])
 
     return match_card
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,25 +1,28 @@
 from bs4 import BeautifulSoup
-import requests
 import requests as req
 import pandas as pd
 import numpy as np
+import os
+import Structure
 
 
 
-##################################   SHOW ALL ROWS & COLS   ####################################
-pd.set_option('display.max_columns', None)
-pd.set_option('display.max_rows', None)
-pd.set_option('display.expand_frame_repr', False)
-# pd.set_option('max_colwidth', -1)
+main_path_data = os.path.abspath("./data")
+
+# ##################################   SHOW ALL ROWS & COLS   ####################################
+# pd.set_option('display.max_columns', None)
+# pd.set_option('display.max_rows', None)
+# pd.set_option('display.expand_frame_repr', False)
+# # pd.set_option('max_colwidth', -1)
+
+def new_refresh():
+    resp = req.get('https://ru.dltv.org/matches')
+    soup = BeautifulSoup(resp.text, 'lxml')
 
 
-# resp = req.get('https://dltv.org/matches')
-# soup = BeautifulSoup(resp.text, 'lxml')
-
-
-with open("Matches.html", "r", encoding='utf-8') as f:
-    contents = f.read()
-    soup = BeautifulSoup(contents, 'lxml')
+    # with open("Matches.html", "r", encoding='utf-8') as f:
+    #     contents = f.read()
+    #     soup = BeautifulSoup(contents, 'lxml')
 
 
     match_id =[]
@@ -73,29 +76,29 @@ with open("Matches.html", "r", encoding='utf-8') as f:
                             # print(id.get('src'))
 
 
-#######################   LIVE   MATCHES   ##########################################
-
-    match_id_live = []
-    Mlinks_live = []
-    T1names_live = []
-    T2names_live = []
-    T1logos_live = []
-    T2logos_live = []
-    Mdate_live = []
-    Mtime_live = []
-    Mtour_live = []
-    Mtypes_live = []
-    T1names_live_score = []
-    T2names_live_score = []
-
-
-    for rows in soup.find_all("div", attrs={"class": "event-box live-matches scrolling-inner-big jsLiveMatches"}):
-        for item in rows.find_all("div", attrs={"class": "live-matches-row"}):
-            id = item["data-serie-id"]
-            match_id_live.append(id)
-            for na in item.find_all("a", attrs={"class": "abs-link"}):
-                Mlinks_live.append(na.get('href'))
-                # print(na.get('href'))                                           #shows:  ALL MATCHES LINKS
+    # #######################   LIVE   MATCHES   ##########################################
+    #
+    # match_id_live = []
+    # Mlinks_live = []
+    # T1names_live = []
+    # T2names_live = []
+    # T1logos_live = []
+    # T2logos_live = []
+    # Mdate_live = []
+    # Mtime_live = []
+    # Mtour_live = []
+    # Mtypes_live = []
+    # T1names_live_score = []
+    # T2names_live_score = []
+    #
+    #
+    # for rows in soup.find_all("div", attrs={"class": "event-box live-matches scrolling-inner-big jsLiveMatches"}):
+    #     for item in rows.find_all("div", attrs={"class": "live-matches-row"}):
+    #         id = item["data-serie-id"]
+    #         match_id_live.append(id)
+    #         for na in item.find_all("a", attrs={"class": "abs-link"}):
+    #             Mlinks_live.append(na.get('href'))
+    #             # print(na.get('href'))                                           #shows:  ALL MATCHES LINKS
 
 
     # dw_live = {'match_id': match_id_live, 'Mlinks': Mlinks_live, 'T1names': T1names_live, 'T2names': T2names_live, 'T1logos': T1logos_live, 'T2logos': T2logos_live, 'Mtime': Mtime_live, 'Mtour': Mtour_live, 'Mtypes': Mtypes_live}
@@ -108,10 +111,13 @@ with open("Matches.html", "r", encoding='utf-8') as f:
     df = pd.DataFrame(data=dw)
     df1 = df.head(n=20)
 
-    df1.to_csv('refresh.csv', index=False, header=True)
+    df1.to_csv(main_path_data + '\\refresh.csv', index=False, header=True)
 
-    dw_live = {'match_id': match_id_live, 'Mlinks': Mlinks_live}
-    df_live = pd.DataFrame(data=dw_live)
-
+    # dw_live = {'match_id': match_id_live, 'Mlinks': Mlinks_live}
+    # df_live = pd.DataFrame(data=dw_live)
     # print(df_live)
+
+new_refresh()
+Structure.refresh_BD()
+
 
