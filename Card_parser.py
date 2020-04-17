@@ -16,6 +16,7 @@ pd.set_option('display.expand_frame_repr', False)
 
 def newCard(link, mid):
 
+
 # resp = req.get(link)
 # soup = BeautifulSoup(resp.text, 'lxml')
 #
@@ -445,3 +446,5 @@ def newCard(link, mid):
 # result = newCard("link", '654944')
 #
 # print(result[2])
+
+# newCard()

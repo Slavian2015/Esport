@@ -9,6 +9,10 @@ import dash_design_kit as ddk
 import callbacks
 
 
+# https://dash-gallery.plotly.host/Docs/packages/dash-design-kit/dash_design_kit-1.4.0.tar.gz
+# --extra-index-url=https://dash-gallery.plotly.host/Docs/packages
+# dash-design-kit==1.4.0
+
 dash_app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
     ddk.App(style={'background-color': 'transparent'},
@@ -30,17 +34,17 @@ dash_app.layout = html.Div([
 
 
 
-@dash_app.callback(Output('page-content', 'children'),
-              [Input('url', 'pathname')])
-def display_page(pathname):
-    if pathname == '/match_card':
-         return match_card
-    elif pathname == '/all_matches':
-         return all_matches
-    if pathname == '/':
-         return layout_main
-    else:
-        return '404'
+# @dash_app.callback(Output('page-content', 'children'),
+#               [Input('url', 'pathname')])
+# def display_page(pathname):
+#     if pathname == '/match_card':
+#          return match_card()
+#     elif pathname == '/all_matches':
+#          return all_matches
+#     elif pathname == '/':
+#          return layout_main
+#     # else:
+#     #     return '404'
 
 if __name__ == "__main__":
     # app.run_server(debug=True)

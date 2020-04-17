@@ -23,20 +23,21 @@ all_t2BD = pd.read_csv('all_t2.csv')
 #######################   BD CHANGES   #####################################
 
 df_new_items = refreshBD.loc[~refreshBD['match_id'].isin(serverBD['match_id'])]
-# print(df_new_items)
 df_old_items = serverBD.loc[~serverBD['match_id'].isin(refreshBD['match_id'])]
 
 if df_old_items.shape[0] > 0:
     serverBD = serverBD.set_index("match_id")
     serverBD = serverBD.drop(df_old_items['match_id'], axis=0)
     serverBD = serverBD.reset_index()
-    serverBD.to_csv('all_cards.csv', index=False, header=True)
+    serverBD.to_csv('server.csv', index=False, header=True)
 else:
     pass
 
 #############   Create Mcard and add to All_Cards  ##########################
 
 if df_new_items.shape[0] > 0:
+
+
     for i in df_new_items['Mlinks']:
         dt = df_new_items[(df_new_items['Mlinks'].isin([i]))]
 
@@ -51,6 +52,9 @@ if df_new_items.shape[0] > 0:
     all_h2hBD.to_csv('all_h2h.csv', index=False, header=True)
     all_t1BD.to_csv('all_t1.csv', index=False, header=True)
     all_t2BD.to_csv('all_t2.csv', index=False, header=True)
+    serverBD = serverBD.append(df_new_items)
+    serverBD.to_csv('server.csv', index=False, header=True)
+
 
 else:
     pass
