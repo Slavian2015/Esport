@@ -27,7 +27,10 @@ dash_app.layout = html.Div([
 
 
 
-    html.Div(id='page-content')
+    html.Div(id='page-content'),
+    html.Div(id='table-container'),
+    dcc.Interval(id='interval', interval=60000, n_intervals=0)
+
 ])])
 
 

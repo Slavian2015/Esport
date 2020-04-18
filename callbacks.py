@@ -4,6 +4,7 @@ import dash
 import PARSER
 import Structure
 from layouts import all_matches, layout_main, match_card
+import layouts
 # from dash.exceptions import PreventUpdate
 dash_app.config['suppress_callback_exceptions'] = True
 

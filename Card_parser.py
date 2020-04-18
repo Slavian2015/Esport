@@ -358,8 +358,16 @@ def newCard(link, mid):
             H2H_total_t2.append(t2)
 
 
+    def chek2(list):
+        if not list:
+            list.append("")
+        return
 
 
+    check_list = [T1name, T2name, T1logo, T2logo, Mstatus, T1score, T2score, Mdate, Mtime, Mtour, Mtypes, WR, FB, F10, WR2, FB2, F102, P11, P12, P13, P14, P15, P21, P22, P23, P24, P25, P11_photo, P12_photo, P13_photo, P14_photo, P15_photo, P21_photo, P22_photo, P23_photo, P24_photo, P25_photo, P11_score, P12_score, P13_score, P14_score, P15_score, P21_score, P22_score, P23_score, P24_score, P25_score]
+
+    for i in check_list:
+        chek2(i)
 
     dw = {
         'Mid': Mid,

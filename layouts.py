@@ -1014,8 +1014,6 @@ def serve_layout():
     return layout
 all_matches = serve_layout()
 
-html.Div(id='table-container')
-interval = dcc.Interval(id='interval', interval=60000, n_intervals=0)
 
 
 
@@ -1701,7 +1699,7 @@ def match_card(id):
                                                           style={'height': '33%'},
                                                           children=[ddk.Block(width=30, style={'height': 'fit-content',
                                                                                                'vertical-align': 'middle'},
-                                                                              children=[html.H6('{}%'.format(df.iloc[0]['WR']), style={
+                                                                              children=[html.H6('{}'.format(df.iloc[0]['WR']), style={
                                                                                   'text-align': 'center',
                                                                                   'padding': '0px', 'margin': '0'})]),
                                                                     ddk.Block(width=40, style={'height': 'fit-content',
@@ -1711,7 +1709,7 @@ def match_card(id):
                                                                                   'padding': '0px', 'margin': '0'})]),
                                                                     ddk.Block(width=30, style={'height': 'fit-content',
                                                                                                'vertical-align': 'middle'},
-                                                                              children=[html.H6('{}%'.format(df.iloc[0]['WR2']), style={
+                                                                              children=[html.H6('{}'.format(df.iloc[0]['WR2']), style={
                                                                                   'text-align': 'center',
                                                                                   'padding': '0px', 'margin': '0'})])]),
                                                 ddk.Block(width=100, style={'height': '33%'}, children=[
