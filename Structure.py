@@ -136,9 +136,26 @@ def refresh_BD():
             'T2_last_total_vs',
         ]
 
-        dft2 = pd.DataFrame(data=dwt2)
+        dft2 = pd.DataFrame(columns=dwt2)
         dft2.to_csv(main_path_data + "\\all_t2.csv", index=False, header=True)
         pass
+
+    # if os.path.isfile(main_path_data + "\\all_test.csv"):
+    #     pass
+    # else:
+    #     dwttest = [
+    #         'Mid',
+    #         'T2_last_date',
+    #         'T2_last_time',
+    #         'T2_last_name',
+    #         'T2_last_logo',
+    #         'T2_last_total_main',
+    #         'T2_last_total_vs',
+    #     ]
+    #
+    #     dfttt = pd.DataFrame(columns=dwttest)
+    #     dfttt.to_csv(main_path_data + "\\all_test.csv", index=False, header=True)
+    #     pass
 
 
 
@@ -162,7 +179,7 @@ def refresh_BD():
         serverBD = serverBD.set_index("match_id")
         serverBD = serverBD.drop(df_old_items['match_id'], axis=0)
         serverBD = serverBD.reset_index()
-        serverBD.to_csv(main_path_data + "\\server.csv", index=False, header=True)
+        serverBD.to_csv(main_path_data + "\\server.csv", index=False, header=False)
     else:
         pass
 

@@ -439,7 +439,7 @@ def newCard(link, mid):
     # print(dft1)
 
     dwt2 = {
-        'Mid': Mid,
+        'Mid': str(Mid),
         'T2_last_date': T2_last_date,
         'T2_last_time': T2_last_time,
         'T2_last_name': T2_last_name,
@@ -463,5 +463,7 @@ def newCard(link, mid):
     dfh2h = pd.DataFrame(data=dwh2h)
     # dfh2h.to_csv('all_h2h.csv', index=False, header=True)
     # print(dfh2h)
+
+
 
     return df, dfh2h, dft1, dft2
