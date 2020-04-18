@@ -109,7 +109,7 @@ def new_refresh():
 
     dw = {'match_id': match_id, 'Mlinks': Mlinks, 'T1names': T1names, 'T2names': T2names, 'T1logos': T1logos, 'T2logos': T2logos, 'Mtime': Mtime, 'Mdate': Mdate, 'Mtour': Mtour, 'Mtypes': Mtypes}
     df = pd.DataFrame(data=dw)
-    df1 = df.head(n=20)
+    df1 = df.head(n=10)
 
     df1.to_csv(main_path_data + '\\refresh.csv', index=False, header=True)
 
