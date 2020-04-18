@@ -1717,7 +1717,7 @@ def match_card(id):
                                                 ddk.Block(width=100, style={'height': '33%'}, children=[
                                                     ddk.Block(width=30, style={'height': 'fit-content',
                                                                                'vertical-align': 'middle'}, children=[
-                                                        html.H6('{}%'.format(df.iloc[0]['FB']), style={'text-align': 'center', 'padding': '0px',
+                                                        html.H6('{}'.format(df.iloc[0]['FB']), style={'text-align': 'center', 'padding': '0px',
                                                                               'margin': '0'})]),
                                                     ddk.Block(width=40, style={'height': 'fit-content',
                                                                                'vertical-align': 'middle'}, children=[
@@ -1725,12 +1725,12 @@ def match_card(id):
                                                                              'margin': '0'})]),
                                                     ddk.Block(width=30, style={'height': 'fit-content',
                                                                                'vertical-align': 'middle'}, children=[
-                                                        html.H6('{}%'.format(df.iloc[0]['FB2']), style={'text-align': 'center', 'padding': '0px',
+                                                        html.H6('{}'.format(df.iloc[0]['FB2']), style={'text-align': 'center', 'padding': '0px',
                                                                               'margin': '0'})])]),
                                                 ddk.Block(width=100, style={'height': '33%'}, children=[
                                                     ddk.Block(width=30, style={'height': 'fit-content',
                                                                                'vertical-align': 'middle'}, children=[
-                                                        html.H6('{}%'.format(df.iloc[0]['F10']), style={'text-align': 'center', 'padding': '0px',
+                                                        html.H6('{}'.format(df.iloc[0]['F10']), style={'text-align': 'center', 'padding': '0px',
                                                                               'margin': '0'})]),
                                                     ddk.Block(width=40, style={'height': 'fit-content',
                                                                                'vertical-align': 'middle'}, children=[
@@ -1738,7 +1738,7 @@ def match_card(id):
                                                                               'margin': '0'})]),
                                                     ddk.Block(width=30, style={'height': 'fit-content',
                                                                                'vertical-align': 'middle'}, children=[
-                                                        html.H6('{}%'.format(df.iloc[0]['F102']), style={'text-align': 'center', 'padding': '0px',
+                                                        html.H6('{}'.format(df.iloc[0]['F102']), style={'text-align': 'center', 'padding': '0px',
                                                                               'margin': '0'})])])]),
 
                             ddk.Block(width=40,
@@ -1975,14 +1975,24 @@ def match_card(id):
 
             h2h.append(head_list)
 
-        if shape > 0:
+
+        dfr = h2hdf[(h2hdf['H2H_total_t1'] == 2)]
+        dfr2 = h2hdf[(h2hdf['H2H_total_t2'] == 2)]
+
+        if dfr.shape[0] > 0:
             www = h2hdf['H2H_total_t1'].value_counts()
-            www2 = h2hdf['H2H_total_t2'].value_counts()
-            pass
         else:
-            www = [[0], [0],[0]]
-            www2 = [[0], [0],[0]]
-            pass
+            www = [[0], [0], [0]]
+
+        if dfr2.shape[0] > 0:
+            www2 = h2hdf['H2H_total_t2'].value_counts()
+        else:
+            www2 = [[0], [0], [0]]
+
+
+
+
+
 
 
 
