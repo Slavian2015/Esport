@@ -1162,17 +1162,17 @@ Card_matches = dbc.ListGroup(flush=True,style={'max-height':'-webkit-fill-availa
 
 
 
-
-
 ##############     LIVE SCORE TABLES    ###################################
 score_table_item = dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
                                            'height': '70px', 'justify-content': 'center',
                                            'vertical-align': '-webkit-baseline-middle',
                                            'max-height': 'fit-content', 'padding': '0px',
                                            'list-style': 'none',
-                                           'align-items': 'center'}, children=[ddk.Block(width=100,
-                                                         style={'justify-content': 'center'},
-                                                         children=[ddk.Block(width=15,
+                                           'align-items': 'center'},
+                                     children=[
+                                         ddk.Block(width=100,
+                                                   style={'justify-content': 'center'},
+                                                   children=[ddk.Block(width=15,
                                                                              style={'vertical-align': '-webkit-baseline-middle'},
                                                                              children=html.H6('PLAYER1',style={'margin': '0',
                                                                                                            'text-align': 'center',
@@ -1386,24 +1386,24 @@ score_table = ddk.Card(style={'width':'-webkit-fill-available',
 ##############     CHART SCORE TABLES    ###################################
 chart_table = ddk.Card(style={'width':'-webkit-fill-available',
                               'margin':'10px', 'padding':'0',
-                              'background-color': '#f9f9f91c'}, children=ddk.Block(width=100,style={'justify-content': 'center',
-                                                                       'vertical-align': '-webkit-baseline-middle',
-                                                                       'height': '250px',
-                                                                       'width': '100%'}, children=[ddk.Logo(src='\\assets\\png\\charts.png',
-                                                                                style={
-                                                                                     'max-height': '-webkit-fill-available',
-                                                                                     'height': '-webkit-fill-available',
-                                                                                     'width': '100%',
-                                                                                    'text-align': 'left',
-                                                                                     'padding': '0px', 'margin': '0',
-                                                                                     'vertical-align': '-webkit-baseline-middle'})]))
+                              'background-color': '#f9f9f91c'},
+                       children=ddk.Block(width=100,
+                                          style={'justify-content': 'center',
+                                               'vertical-align': '-webkit-baseline-middle',
+                                               'height': '250px',
+                                               'width': '100%'}, children=[ddk.Logo(src='\\assets\\png\\charts.png',
+                                                        style={
+                                                             'max-height': '-webkit-fill-available',
+                                                             'height': '-webkit-fill-available',
+                                                             'width': '100%',
+                                                            'text-align': 'left',
+                                                             'padding': '0px', 'margin': '0',
+                                                             'vertical-align': '-webkit-baseline-middle'})]))
 
 
 
 
 ##########################    ONE MATCH CARD   ##############################
-
-
 def match_card(id):
 
     all_cardsBD = pd.read_csv(main_path_data + '\\all_cards.csv')
