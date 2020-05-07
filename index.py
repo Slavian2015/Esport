@@ -3,7 +3,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 import dash_design_kit as ddk
 
-import PARSER
+# import PARSER
 import callbacks
 
 # git push heroku master
@@ -15,13 +15,15 @@ dash_app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
     ddk.App(style={'background-color': 'transparent'},
                      children=[
-                         ddk.Header(style={'height': '7vh', 'background-color': '#0e4e70', 'opacity': '1'},
+                         ddk.Header(style={'height': '7vh', 'background-color': '#163d47', 'opacity': '1', 'margin':'0'},
                                     children=[
-                                        ddk.Logo(src='../assets/logo.png'),
+                                        ddk.Logo(src='../assets/logo.gif'),
                                         ddk.Block(style={'text-align': 'right'}, children=[
                                             dcc.Link('Главная', style={'color': 'azure', 'margin': '10px'}, href='/'),
-                                            dcc.Link('Карточка Матча', style={'color': '#fff', 'margin': '10px'}, href='/match_card'),
-                                            dcc.Link('МАТЧИ', style={'color': '#fff', 'margin': '10px'}, href='/all_matches')])]),
+                                            # dcc.Link('Карточка Матча', style={'color': '#fff', 'margin': '10px'}, href='/match_card'),
+                                            # dcc.Link('МАТЧИ', style={'color': '#fff', 'margin': '10px'}, href='/all_matches')
+                                        ])]),
+
 
 
 
@@ -29,7 +31,7 @@ dash_app.layout = html.Div([
 
     html.Div(id='page-content'),
     html.Div(id='table-container'),
-    dcc.Interval(id='interval', interval=60000, n_intervals=0)
+
 
 ])])
 

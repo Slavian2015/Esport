@@ -4,7 +4,7 @@ import pandas as pd
 import requests
 
 import os
-import pandas as pd
+# import pandas as pd
 main_path_data = os.path.abspath("./data")
 import time
 

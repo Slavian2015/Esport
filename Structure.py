@@ -159,52 +159,61 @@ def refresh_BD():
 
 
 
-
-
-    refreshBD = pd.read_csv(main_path_data + "\\refresh.csv")
-    serverBD = pd.read_csv(main_path_data + "\\server.csv")
-    all_cardsBD = pd.read_csv(main_path_data + "\\all_cards.csv")
-    all_h2hBD = pd.read_csv(main_path_data + "\\all_h2h.csv")
-    all_t1BD = pd.read_csv(main_path_data + "\\all_t1.csv")
-    all_t2BD = pd.read_csv(main_path_data + "\\all_t2.csv")
+    refresh_liveBD = pd.read_csv(main_path_data + "\\live.csv")
 
 
 
-    #######################   BD CHANGES   #####################################
 
-    df_new_items = refreshBD.loc[~refreshBD['match_id'].isin(serverBD['match_id'])]
-    df_old_items = serverBD.loc[~serverBD['match_id'].isin(refreshBD['match_id'])]
+    def match_changes():
 
-    if df_old_items.shape[0] > 0:
-        serverBD = serverBD.set_index("match_id")
-        serverBD = serverBD.drop(df_old_items['match_id'], axis=0)
-        serverBD = serverBD.reset_index()
-        serverBD.to_csv(main_path_data + "\\server.csv", index=False, header=False)
-    else:
-        pass
+        refreshBD = pd.read_csv(main_path_data + "\\refresh.csv")
+        serverBD = pd.read_csv(main_path_data + "\\server.csv")
+        all_cardsBD = pd.read_csv(main_path_data + "\\all_cards.csv")
+        all_h2hBD = pd.read_csv(main_path_data + "\\all_h2h.csv")
+        all_t1BD = pd.read_csv(main_path_data + "\\all_t1.csv")
+        all_t2BD = pd.read_csv(main_path_data + "\\all_t2.csv")
 
-    #############   Create Mcard and add to All_Cards  ##########################
+        #######################   BD CHANGES   #####################################
 
-    if df_new_items.shape[0] > 0:
+        df_new_items = refreshBD.loc[~refreshBD['match_id'].isin(serverBD['match_id'])]
+        df_old_items = serverBD.loc[~serverBD['match_id'].isin(refreshBD['match_id'])]
 
+        if df_old_items.shape[0] > 0:
+            serverBD = serverBD.set_index("match_id")
+            serverBD = serverBD.drop(df_old_items['match_id'], axis=0)
+            serverBD = serverBD.reset_index()
+            serverBD.to_csv(main_path_data + "\\server.csv", index=False, header=True)
+        else:
+            pass
 
-        for i in df_new_items['Mlinks']:
-            dt = df_new_items[(df_new_items['Mlinks'].isin([i]))]
+        #############   Create Mcard and add to All_Cards  ##########################
 
-            result = Card_parser.newCard(i, dt.iloc[0]['match_id'])
-
-            all_cardsBD = all_cardsBD.append(result[0], ignore_index=True, sort=False)
-            all_h2hBD = all_h2hBD.append(result[1], ignore_index=True, sort=False)
-            all_t1BD = all_t1BD.append(result[2], ignore_index=True, sort=False)
-            all_t2BD = all_t2BD.append(result[3], ignore_index=True, sort=False)
-
-        all_cardsBD.to_csv(main_path_data + "\\all_cards.csv", index=False, header=True)
-        all_h2hBD.to_csv(main_path_data + "\\all_h2h.csv", index=False, header=True)
-        all_t1BD.to_csv(main_path_data + "\\all_t1.csv", index=False, header=True)
-        all_t2BD.to_csv(main_path_data + "\\all_t2.csv", index=False, header=True)
-        serverBD = serverBD.append(df_new_items)
-        serverBD.to_csv(main_path_data + "\\server.csv", index=False, header=True)
+        if df_new_items.shape[0] > 0:
 
 
-    else:
-        pass
+            for i in df_new_items['Mlinks']:
+                dt = df_new_items[(df_new_items['Mlinks'].isin([i]))]
+
+                result = Card_parser.newCard(i, dt.iloc[0]['match_id'])
+
+                all_cardsBD = all_cardsBD.append(result[0], ignore_index=True, sort=False)
+                all_h2hBD = all_h2hBD.append(result[1], ignore_index=True, sort=False)
+                all_t1BD = all_t1BD.append(result[2], ignore_index=True, sort=False)
+                all_t2BD = all_t2BD.append(result[3], ignore_index=True, sort=False)
+
+            all_cardsBD.to_csv(main_path_data + "\\all_cards.csv", index=False, header=True)
+            all_h2hBD.to_csv(main_path_data + "\\all_h2h.csv", index=False, header=True)
+            all_t1BD.to_csv(main_path_data + "\\all_t1.csv", index=False, header=True)
+            all_t2BD.to_csv(main_path_data + "\\all_t2.csv", index=False, header=True)
+            serverBD = serverBD.append(df_new_items)
+
+
+            serverBD.to_csv(main_path_data + "\\server.csv", index=False, header=True)
+
+
+        else:
+            pass
+
+        return
+
+    match_changes()

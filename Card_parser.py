@@ -157,10 +157,10 @@ def newCard(link, mid):
 
 
         for id in rows.find_all("div", attrs={"class": "head"}):
-            t = id.text.replace('\n', '').strip()
-            t = t.split(' ')
-            Mdate.append(t[0])
-            Mtime.append(t[1])
+            ff = id.text.split('\n')
+            d = ff[1].split(' ')
+            Mdate.append(d[0])
+            Mtime.append(d[1])
 
     Mstatus.append(data222[1])
 
@@ -430,6 +430,13 @@ def newCard(link, mid):
     df = pd.DataFrame(data=dw)
     # print(df)
     # df.to_csv('all_cards.csv', index=False, header=True)
+
+
+    df['TIME'] = df['Mdate'].astype(str) + ' ' + df['Mtime'].astype(str)
+    df['TIME'] = pd.to_datetime(df['TIME'])
+    df['TIME'] = df['TIME'].dt.tz_localize('UTC').dt.tz_convert('Etc/GMT-3')
+    df['Mdate'] = [d.date() for d in df['TIME']]
+    df['Mtime'] = [d.time() for d in df['TIME']]
 
 
     dwt1 = {
