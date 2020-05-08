@@ -11,7 +11,7 @@ import Match_sample
 import layouts
 dash_app.config['suppress_callback_exceptions'] = True
 import Live_matches
-import Main_tours_page
+# import Main_tours_page
 import News_card
 from dash_database import DashDatabase
 from dash.exceptions import PreventUpdate
@@ -99,7 +99,7 @@ def refresh(app: dash.Dash):
     ###############################    RESTART ALL FUNCTIONS     ########################################
     @app.callback([Output('main_matches', 'children'),
                   Output('main_results', 'children'),
-                   Output('main_matches_live', 'children')
+                   # Output('main_matches_live', 'children')
                    ],
                   [Input('interval', 'n_intervals')])
 
@@ -109,9 +109,7 @@ def refresh(app: dash.Dash):
         # PARSER.new_refresh()
         # Structure.refresh_BD()
         # print("###############  UPDATE 2  #########################")
-
-
-
+        print("###############  START UPDATED   #########################")
 
         result = [ddk.CardHeader(title='Матчи',
                                 style={'background-color': '#1c424c',
@@ -121,7 +119,7 @@ def refresh(app: dash.Dash):
                                'font-size': '20px'}),
                  Main_page.main_page()]
 
-        live = [i for i in Live_matches.live()]
+        # live = [i for i in Live_matches.live()]
 
         results = [ddk.CardHeader(title='Результаты',
                            style={'background-color': '#1c424c',
@@ -144,25 +142,32 @@ def refresh(app: dash.Dash):
         #      Main_tours_page.tour_page()]
 
         print("###############  UPDATED   #########################")
-        return result, results, live
-def ref_match(app: dash.Dash):
-    @app.callback(
-        [dash.dependencies.Output({'type': 'dynamic-cards-item', 'index': MATCH}, 'children')],
-        [dash.dependencies.Input({'type': 'interval_match', 'index': MATCH}, 'n_intervals')],
-        [dash.dependencies.State({'type': 'interval_match', 'index': MATCH}, 'id')],
-                  )
-    def display_output(n, id):
-        # if n is None:
-        #     raise PreventUpdate
-        # else:
-        print("#########     MATCH     ######    MATCH   #################")
-        print("MATCH Interval  : ", id['index'])
-        div = Match_sample.match_card2(id['index'])
-        return div
+        return result, results
+# def ref_match(app: dash.Dash):
+#     @app.callback(
+#         [Output({'type': 'dynamic-cards-item', 'index': MATCH}, 'children')],
+#         [Input({'type': 'interval_match', 'index': MATCH}, 'n_intervals')],
+#         [dash.dependencies.State({'type': 'interval_match', 'index': MATCH}, 'id')],
+#                   )
+#     def display_output(n, id):
+#
+#         ctx = dash.callback_context
+#
+#         if not ctx.triggered:
+#             raise dash.exceptions.PreventUpdate
+#         else:
+#             pass
+#         # if n is None:
+#         #     raise PreventUpdate
+#         # else:
+#         print("#########     MATCH     ######    MATCH   #################")
+#         print("MATCH Interval  : ", id['index'])
+#         div = Match_sample.match_card2(id['index'])
+#         return div
 
 
 cardwindow(dash_app)
 refresh(dash_app)
 create_callback_save_value(dash_app, dash_db)
 create_callback_retrieve_value(dash_app, dash_db)
-ref_match(dash_app)
+# ref_match(dash_app)

@@ -9,8 +9,160 @@ main_path_data = os.path.abspath("./data")
 
 def main_page():
     def cards_items():
+        serverBD1 = pd.read_csv(main_path_data + '\\live.csv')
         serverBD = pd.read_csv(main_path_data + '\\server.csv')
         cards = []
+        for ind in serverBD1.index:
+            cards_items1=dbc.ListGroupItem(
+                id={'type': 'live-cards-item',
+                    'index': str(serverBD1['match_id_live'][ind])},
+                href='/{}'.format(str(serverBD1['match_id_live'][ind])),
+                style={'line-height': '1', 'margin': '0', 'margin-right': '0',
+                                     'height': 'fit-content', 'justify-content': 'center',
+                                     'vertical-align': '-webkit-baseline-middle',
+                                     'max-height': '60px', 'padding': '0px',
+                                     'align-items': 'center'},
+                color="default",
+                action=True,
+                children=[
+                    ddk.Block(style={'max-height': '60px',
+                                     'overflow-y': 'hidden',
+                                 'height': '100%',
+                                 'padding': '0px',
+                                 "width": '100%',
+                                   'align-items': 'center',
+                                 # 'justify-content': 'flex-start',
+                                   'justify-content': 'center',
+                                   'margin': '0',
+                                 'vertical-align': '-webkit-baseline-middle',
+                                 'textAlign': 'center', 'margin-left': '0',
+                                 'margin-right': '0'},
+                            children=[
+                                ddk.Block(width=30,
+                                          style={
+                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                         'align-items': 'center', 'justify-content': 'center',
+                                         'margin': '0', 'textAlign': 'center',
+                                              # 'width':'fit-content',
+                                         'margin-left': '0', 'margin-right': '0'},
+                                          children=[
+                                              ddk.Block(width=40,
+                                                        style={
+                                                        'max-height': '40px',
+                                                        'height': '40px',
+                                                            'background-image': 'url(/assets/png/fon2.png)',
+                                                            'background-repeat': 'no-repeat',
+                                                            'background-position': 'center',
+                                                            'background-size': 'auto 90%',
+                                                            # 'background-size': 'cover',
+                                                        # 'width': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                        children=ddk.Logo(
+                                                            src=serverBD1['T1logos_live'][ind],
+                                                            style={'text-align': 'center',
+                                                                   'max-height': '-webkit-fill-available',
+                                                                   'padding': '0px', 'margin': '0',
+                                                                 'vertical-align': '-webkit-baseline-middle'})),
+                                              ddk.Block(width=60,
+                                                        style={
+                                                            # 'overflowX': 'hidden',
+                                                 'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                 'align-items': 'center', 'justify-content': 'center',
+                                                 'margin': '0', 'textAlign': 'center'},
+                                                      children=html.H6(serverBD1['T1names_live'][ind],
+                                                                      style={'color':'azure',
+                                                                             # 'width': 'fit-content',
+                                                                             'padding': '0px', 'margin': '0',
+                                                                'max-height': '-webkit-fill-available',
+                                                                'vertical-align': '-webkit-baseline-middle'}))]),
+                                ddk.Block(width=20,
+                                          style={'max-width': 'fit-content',
+                                             'max-height': 'fit-content',
+                                             'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                             'align-items': 'center', 'justify-content': 'center',
+                                             'margin': '0', 'textAlign': 'center',
+                                             'margin-left': '10px', 'margin-right': '10px'},
+                                          children=[html.H1("{} : {}".format(serverBD1['T1_live_score1'][ind],
+                                                                              serverBD1['T2_live_score1'][ind]),
+                                                                      style={'height': '100%',
+                                                                             'margin-top': '10px',
+                                                                             # 'margin': '0',
+                                                                             'margin-bottom': '0px',
+                                                                             'color': '#3dea04', 'padding':'0',
+                                                                             'max-height': 'fit-content',
+                                                                             'width':'100%',
+                                                                             'vertical-align': '-webkit-baseline-middle'}),
+                                                    html.P("{} - {}".format(serverBD1['T1_live_score2'][ind],
+                                                                             serverBD1['T2_live_score2'][ind]),
+                                                            style={'height': '100%',
+                                                                   'color': 'gold', 'padding': '0',
+                                                                   'max-height': 'fit-content',
+                                                                   'margin-bottom': '10px',
+                                                                   'margin-top': '0px',
+                                                                   'width': '100%','font-size': '10px',
+                                                                   'vertical-align': '-webkit-baseline-middle'})
+                                                    ]),
+                                ddk.Block(width=30,
+                                          style={
+
+                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                         'align-items': 'center', 'justify-content': 'center',
+                                         'margin': '0', 'textAlign': 'center',
+                                              # 'width':'fit-content',
+                                         'margin-left': '0', 'margin-right': '0'},
+                                          children=[
+                                            ddk.Block(width=60,
+                                                      style={
+                                                            # 'overflowX': 'hidden',
+                                                 'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                 'align-items': 'center', 'justify-content': 'center',
+                                                 'margin': '0', 'textAlign': 'center'},
+                                                      children=html.H6(serverBD1['T2names_live'][ind],
+                                                                                   style={'color':'azure',
+                                                                             # 'width': 'fit-content',
+                                                                             'padding': '0px', 'margin': '0',
+                                                                'max-height': '-webkit-fill-available',
+                                                                'vertical-align': '-webkit-baseline-middle'})),
+                                            ddk.Block(width=40,
+                                                      style={
+                                                        'max-height': '40px',
+                                                        'height': '40px',
+                                                        # 'width': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                      children=ddk.Logo(src=serverBD1['T2logos_live'][ind],
+                                                                        style={'text-align': 'center',
+                                                                               'background-image': 'url(/assets/png/fon2.png)',
+                                                            'background-repeat': 'no-repeat',
+                                                            'background-position': 'center',
+                                                            'background-size': 'auto 90%',
+                                                                   'max-height': '-webkit-fill-available',
+                                                                   'padding': '0px', 'margin': '0',
+                                                                 'vertical-align': '-webkit-baseline-middle'}))]),
+                                # ddk.Block(
+                                #     # width=50,
+                                #           style={'max-width': '200px',
+                                #              'max-height': 'fit-content',
+                                #              'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                #              'align-items': 'center', 'justify-content': 'center',
+                                #              'margin': '0', 'textAlign': 'center',
+                                #              # 'margin-left': '10px', 'margin-right': '10px'
+                                #                  },
+                                #           children=html.H6(serverBD['Mtour_live'][ind],
+                                #                       style={'height': '100%','color':'azure',
+                                #                              'max-height': 'fit-content',
+                                #                              'max-width': '200px',
+                                #                              'overflow-x':'hidden',
+                                #                              'margin': '0',
+                                #                              'vertical-align': '-webkit-baseline-middle'})),
+
+
+                                          ])])
+            cards.append(cards_items1)
+
         for ind in serverBD.index:
             cards_items=dbc.ListGroupItem(
                 id={'type': 'dynamic-cards-item',
@@ -146,9 +298,140 @@ def main_page():
 
                                           ])])
             cards.append(cards_items)
+        empty_card=dbc.ListGroupItem(
+                style={'line-height': '1', 'margin': '0', 'margin-right': '0',
+                                     'height': 'fit-content', 'justify-content': 'center',
+                                     'vertical-align': '-webkit-baseline-middle',
+                                     'max-height': '50px', 'padding': '0px',
+                                     'align-items': 'center'},
+                color="default",
+                action=True,
+                children=[
+                    ddk.Block(style={'max-height': '50px',
+                                     'overflow-y':'hidden',
+                                 'height': '50px',
+                                 'padding': '0px',
+                                 "width": '100%',
+                                   'align-items': 'center',
+                                 # 'justify-content': 'flex-start',
+                                   'justify-content': 'center',
+                                   'margin': '0',
+                                 'vertical-align': '-webkit-baseline-middle',
+                                 'textAlign': 'center', 'margin-left': '0',
+                                 'margin-right': '0'},
+                            children=[
+                                ddk.Block(width=30,
+                                          style={
+                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                         'align-items': 'center', 'justify-content': 'center',
+                                         'margin': '0', 'textAlign': 'center',
+                                              'height': '40px',
+                                              # 'width':'fit-content',
+                                         'margin-left': '0', 'margin-right': '0'},
+                                          children=[
+                                              ddk.Block(width=40,
+                                                        style={
+                                                        'max-height': '40px',
+                                                        'height': '40px',
+                                                            # 'background-image': 'url(/assets/png/fon2.png)',
+                                                            # 'background-repeat': 'no-repeat',
+                                                            # 'background-position': 'center',
+                                                            # 'background-size': 'auto 90%',
+                                                            # 'background-size': 'cover',
+                                                        # 'width': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                        children=ddk.Logo(
+                                                            src='',
+                                                            style={'text-align': 'center',
+                                                                   'max-height': '-webkit-fill-available',
+                                                                   'padding': '0px', 'margin': '0',
+                                                                 'vertical-align': '-webkit-baseline-middle'})),
+                                              ddk.Block(width=60,
+                                                        style={'height': '40px',
+                                                            # 'overflowX': 'hidden',
+                                                 'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                 'align-items': 'center', 'justify-content': 'center',
+                                                 'margin': '0', 'textAlign': 'center'},
+                                                      children=html.H6('',
+                                                                       style={'color':'azure',
+                                                                             # 'width': 'fit-content',
+                                                                             'padding': '0px', 'margin': '0',
+                                                                'max-height': '-webkit-fill-available',
+                                                                'vertical-align': '-webkit-baseline-middle'}))]),
+                                ddk.Block(width=20,
+                                          style={'max-width': 'fit-content',
+                                             'max-height': '50px', 'height': '50px',
+                                             'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                             'align-items': 'center', 'justify-content': 'center',
+                                             'margin': '0', 'textAlign': 'center',
+                                             'margin-left': '10px', 'margin-right': '10px'},
+                                          children=[html.H6('',
+                                                                      style={'height': '100%',
+                                                                             'color': 'azure', 'padding':'0',
+                                                                             'max-height': 'fit-content',
+                                                                             'vertical-align': '-webkit-baseline-middle'})]),
+                                ddk.Block(width=30,
+                                          style={
+
+                                         'padding': '0', 'vertical-align': '-webkit-baseline-middle',
+                                         'align-items': 'center', 'justify-content': 'center',
+                                         'margin': '0', 'textAlign': 'center',
+                                              # 'width':'fit-content',
+                                         'margin-left': '0', 'margin-right': '0'},
+                                          children=[
+                                            ddk.Block(width=60,
+                                                      style={
+                                                            # 'overflowX': 'hidden',
+                                                          'height': '50px',
+                                                 'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                 'align-items': 'center', 'justify-content': 'center',
+                                                 'margin': '0', 'textAlign': 'center'},
+                                                      children=html.H6('',
+                                                                                   style={'color':'azure',
+                                                                             # 'width': 'fit-content',
+                                                                             'padding': '0px', 'margin': '0',
+                                                                'max-height': '-webkit-fill-available',
+                                                                'vertical-align': '-webkit-baseline-middle'})),
+                                            ddk.Block(width=40,
+                                                      style={
+                                                        'max-height': '50px',
+                                                        'height': '50px',
+                                                        # 'width': 'fit-content',
+                                                         'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                                         'align-items': 'center', 'justify-content': 'center',
+                                                         'margin': '0', 'textAlign': 'center'},
+                                                      children=ddk.Logo(src='',
+                                                                        style={'text-align': 'center',
+                                                            #                    'background-image': 'url(/assets/png/fon2.png)',
+                                                            # 'background-repeat': 'no-repeat',
+                                                            # 'background-position': 'center',
+                                                            # 'background-size': 'auto 90%',
+                                                                   'max-height': '-webkit-fill-available',
+                                                                   'padding': '0px', 'margin': '0',
+                                                                 'vertical-align': '-webkit-baseline-middle'}))]),
+                                ddk.Block(
+                                    # width=50,
+                                          style={'max-width': '200px',
+                                             'max-height': '50px',
+                                             'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                             'align-items': 'center', 'justify-content': 'center',
+                                             'margin': '0', 'textAlign': 'center',
+                                             # 'margin-left': '10px', 'margin-right': '10px'
+                                                 },
+                                          children=html.H6('',
+                                                      style={'height': '50px','color':'azure',
+                                                             'max-height': '50px',
+                                                             'max-width': '200px',
+                                                             'overflow-x':'hidden',
+                                                             'margin': '0',
+                                                             'vertical-align': '-webkit-baseline-middle'})),
+
+
+                                          ])])
+        cards.append(empty_card)
         return cards
-
-
 
     Card_matches = dbc.ListGroup(flush=True,
                                  style={'min-height': '100%',
@@ -160,3 +443,4 @@ def main_page():
 
 
     return Card_matches
+

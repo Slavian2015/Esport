@@ -1048,7 +1048,7 @@ def layout_main():
     # store_session_id_div = dcc.Store(id='session_id_div_id',
     #                                  storage_type='session',  # IMPORTANT! see docstring of dcc.Store
     #                                  data=session_id)
-    interval = dcc.Interval(id='interval', interval=20000, n_intervals=0)
+    interval = dcc.Interval(id='interval', interval=12000, n_intervals=0)
 
     layout_main2 = ddk.Block(width=100,
                             style={'height': '93vh',
@@ -1071,96 +1071,173 @@ def layout_main():
                                                 #           children=dbc.ListGroup(flush=True,
                                                 #                                  style={'margin': '0', 'border':'0'},
                                                 #                                  children=[i for i in News_card.news_items()])),
-                                                ddk.Block(width=70,
-                                                          children=[ddk.Block(width=100,
-                                                                              id='main_matches_live',
-                                                                              style={'padding': '0',
-                                                                                     'margin': '0',},
-                                                                              children=[i for i in Live_matches.live()]),
+                                              ddk.Block(width=70,
+                                                        children=[
+                                                            # ddk.Block(width=100,
+                                                            #                 id='main_matches_live',
+                                                            #                 style={'padding': '0',
+                                                            #                        'margin': '0',},
+                                                            #                 children=[i for i in Live_matches.live()]),
 
-                                                                    ddk.Block(width=100,
-                                                                              children=[ddk.Card(width=50,
-                                                                                                 id='main_matches',
-                                                                                                 style={#073642
-                                                                                                     'background-color': '#163d47',
-                                                                                                     "opacity":"1",
-                                                                                                     # 'background-color': '#07364275',
-                                                                                                     'max-height': '50vh',
-                                                                                                     'min-height': '50vh',
-                                                                                                     'overflowY': 'hidden',
-                                                                                                     'margin': '10px',
-                                                                                                 'padding':'0'},
-                                                                                                 children=[
-                                                                                                     ddk.CardHeader(title='Матчи',
-                                                                                                                    style={'background-color': '#1c424c',
-                                                                                                                           'margin': '0px',
-                                                                                                                           'padding': '15px',
-                                                                                                                           'display':'block',
-                                                                                                                           'font-size': '20px'}),
-                                                                                                     Main_page.main_page()
-                                                                                                 ]),
-                                                                                        ddk.Card(width=50,
-                                                                                                 id='main_results',
-                                                                                                 style={#073642
-                                                                                                     'background-color': '#163d47',
-                                                                                                     "opacity":"1",
-                                                                                                     # 'background-color': '#07364275',
-                                                                                                     'max-height': '50vh',
-                                                                                                     'min-height': '50vh',
-                                                                                                     'overflowY': 'hidden',
-                                                                                                     'margin': '10px',
-                                                                                                 'padding':'0'},
-                                                                                                 children=[
-                                                                                                     ddk.CardHeader(title='Результаты',
-                                                                                                                    style={'background-color': '#1c424c',
-                                                                                                                           'margin': '0px',
-                                                                                                                           'padding': '15px',
-                                                                                                                           'display':'block',
-                                                                                                                           'font-size': '20px'}),
-                                                                                                     Result_page.result_page()
-                                                                                                 ])]),
-
-
-                                                                    ddk.Block(width=100,
-                                                                              children=[ddk.Card(width=100,
+                                                            ddk.Block(width=100,
+                                                                      children=[ddk.Card(width=50,
+                                                                                         id='main_matches',
+                                                                                         style={  # 073642
+                                                                                             'background-color': '#163d47',
+                                                                                             "opacity": "1",
+                                                                                             # 'background-color': '#07364275',
+                                                                                             'max-height': '50vh',
+                                                                                             'min-height': '50vh',
+                                                                                             'overflowY': 'hidden',
+                                                                                             'margin': '10px',
+                                                                                             'padding': '0'},
+                                                                                         children=[
+                                                                                             ddk.CardHeader(
+                                                                                                 title='Матчи',
                                                                                                  style={
-                                                                                                     'background-color': '#163d47',
-                                                                                                     'max-height': '50vh',
-                                                                                                     "opacity":"1",
-                                                                                                     'min-height': '50vh',
-                                                                                                     'overflowY': 'hidden',
-                                                                                                     'margin': '10px'},
-                                                                                                 children=[
-                                                                                                     ddk.CardHeader(title='Турниры',
-                                                                                                                    style={'background-color': '#1c424c',
-                                                                                                                           'margin': '0px',
-                                                                                                                           'padding': '15px',
-                                                                                                                           'display':'block',
-                                                                                                                           'font-size': '20px'}),
-                                                                                                     Main_tours_page.tour_page()])]),
-                                                                    ddk.Block(width=100,
-                                                                              children=[ddk.Card(width=100,
-                                     rounded=10,
-                                     card_hover=True,
-                                     style={'max-height': 'fit-content',
-                                            'height': '70px',
-                                            'padding': '0px',
-                                            'display': 'inline-block',
-                                            # "width": '100%',
-                                            'background-color': '#163d47',
-                                            "opacity":"0.8",
-                                            'align-items': 'center',
-                                            # 'justify-content': 'flex-start',
-                                            'justify-content': 'center',
-                                            'margin': '5px',
-                                            'vertical-align': '-webkit-baseline-middle',
-                                            'textAlign': 'center',
-                                            'color':"azure"
-                                            # 'margin-left': '0',
-                                            # 'margin-right': '0'
-                                            },
-                                     children=[html.P("© eltv.online 2020. Копирование материалов с сайта запрещена. Все права защищены.")])])]),
+                                                                                                     'background-color': '#1c424c',
+                                                                                                     'margin': '0px',
+                                                                                                     'padding': '15px',
+                                                                                                     'display': 'block',
+                                                                                                     'font-size': '20px'}),
+                                                                                             Main_page.main_page()
+                                                                                         ]),
+                                                                                ddk.Card(width=50,
+                                                                                         id='main_matches',
+                                                                                         style={  # 073642
+                                                                                             'background-color': '#163d47',
+                                                                                             "opacity": "1",
+                                                                                             # 'background-color': '#07364275',
+                                                                                             'max-height': '50vh',
+                                                                                             'min-height': '50vh',
+                                                                                             'overflowY': 'hidden',
+                                                                                             'margin': '10px',
+                                                                                             'padding': '0'},
+                                                                                         children=[
+                                                                                             ddk.CardHeader(
+                                                                                                 title='Результаты',
+                                                                                                 style={
+                                                                                                     'background-color': '#1c424c',
+                                                                                                     'margin': '0px',
+                                                                                                     'padding': '15px',
+                                                                                                     'display': 'block',
+                                                                                                     'font-size': '20px'}),
+                                                                                             Result_page.result_page()
+                                                                                         ])]),
 
+                                                            ddk.Block(width=100,
+                                                                      children=[ddk.Card(width=100,
+                                                                                         style={
+                                                                                             'background-color': '#163d47',
+                                                                                             'max-height': '50vh',
+                                                                                             "opacity": "1",
+                                                                                             'min-height': '50vh',
+                                                                                             'padding': '0px',
+                                                                                             'overflowY': 'hidden',
+                                                                                             'margin': '10px'},
+                                                                                         children=[
+                                                                                             ddk.CardHeader(
+                                                                                                 # title='Турниры',
+                                                                                                 style={
+                                                                                                     'background-color': '#1c424c',
+                                                                                                     'margin': '0px',
+                                                                                                     'padding': '0px',
+                                                                                                     # 'display':'block',
+                                                                                                     # 'font-size': '20px',
+                                                                                                     },
+                                                                                                 children=[
+                                                                                                     ddk.Block(
+                                                                                                         width=100,
+                                                                                                         children=[
+                                                                                                             ddk.Block(
+                                                                                                                 width=35,
+                                                                                                                 style={
+                                                                                                                     'min-width': 'fit-content', },
+                                                                                                                 children=[
+                                                                                                                     html.H6(
+                                                                                                                         "Название",
+                                                                                                                         style={
+                                                                                                                             'font-size': '20px',
+                                                                                                                             'padding': '0px','width': '100%',
+                                                                                                                             'margin': '0px'})]),
+                                                                                                             ddk.Block(
+                                                                                                                 width=20,
+                                                                                                                 style={
+                                                                                                                     'min-width': 'fit-content', },
+                                                                                                                 children=[
+                                                                                                                     html.H6(
+                                                                                                                         "Фонд",
+                                                                                                                         style={
+                                                                                                                             'font-size': '20px','width': '100%',
+                                                                                                                             'padding': '0px',
+                                                                                                                             'margin': '0px'})]),
+                                                                                                             ddk.Block(
+                                                                                                                 width=15,
+                                                                                                                 style={
+                                                                                                                     'min-width': 'fit-content', },
+                                                                                                                 children=[
+                                                                                                                     html.H6(
+                                                                                                                         "Период",
+                                                                                                                         style={
+                                                                                                                             'font-size': '20px','width': '100%',
+                                                                                                                             'padding': '0px',
+                                                                                                                             'margin': '0px'})]),
+                                                                                                             ddk.Block(
+                                                                                                                 width=10,
+                                                                                                                 style={
+                                                                                                                     'min-width': 'fit-content', },
+                                                                                                                 children=[
+                                                                                                                     html.H6(
+                                                                                                                         "Команд",
+                                                                                                                         style={
+                                                                                                                             'font-size': '20px','width': '100%',
+                                                                                                                             'padding': '0px',
+                                                                                                                             'margin': '0px'})]),
+                                                                                                             ddk.Block(
+                                                                                                                 width=5,
+                                                                                                                 style={
+                                                                                                                     'min-width': 'fit-content',
+                                                                                                                     # 'margin-left': '5px'
+                                                                                                                 },
+                                                                                                                 children=[
+                                                                                                                     html.H6(
+                                                                                                                         "Страна",
+                                                                                                                         style={
+                                                                                                                             'font-size': '20px',
+                                                                                                                             'padding': '0px','width': '100%',
+                                                                                                                             'margin': '0px'})]),
+
+                                                                                                         ])
+
+                                                                                                 ]),
+                                                                                             Main_tours_page.tour_page()])]),
+                                                            ddk.Block(width=100,
+                                                                      children=[ddk.Card(width=100,
+                                                                                         rounded=10,
+                                                                                         card_hover=True,
+                                                                                         style={'max-height': '100%',
+                                                                                                'height': '70px',
+                                                                                                'padding': '0px',
+                                                                                                'display': 'inline-block',
+                                                                                                # "width": '100%',
+                                                                                                'background-color': '#163d47',
+                                                                                                "opacity": "0.8",
+                                                                                                'align-items': 'center',
+                                                                                                # 'justify-content': 'flex-start',
+                                                                                                'justify-content': 'center',
+                                                                                                'margin': '5px',
+                                                                                                'vertical-align': '-webkit-baseline-middle',
+                                                                                                'textAlign': 'center',
+                                                                                                'color': "azure"
+                                                                                                # 'margin-left': '0',
+                                                                                                # 'margin-right': '0'
+                                                                                                },
+                                                                                         children=[ddk.Block(width=100,
+                                                                                                             style={
+                                                                                                                 'vertical-align': '-webkit-baseline-middle', },
+                                                                                                             children=html.P(
+                                                                                                                 "© eltv.online 2020. Копирование материалов с сайта запрещена. Все права защищены.",  style={
+                                                                                                                 'vertical-align': '-webkit-baseline-middle', 'margin-top': '15px', }))])])]),
 
                     ]),
                                 # dcc.Interval(id='interval',

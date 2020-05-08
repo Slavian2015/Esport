@@ -902,14 +902,15 @@ def match_card2(id):
                                                  children=tabs)]),
                           ddk.Block(width=30,
                                     style={'height':'93vh'},
-                                    children=[ddk.Card(width=100,
-                                                       style={'background-color': 'transparent', 'max-height':'40vh', 'min-height':'40vh', 'padding':'0','overflowY': 'hidden', 'margin':'10px'},
-                                                       children=[
-                                                           ddk.CardHeader(title='Live', style={'background-color': 'transparent'}),
-                                                           Live_matches.live_list()]),
+                                    children=[
+                                        # ddk.Card(width=100,
+                                        #                style={'background-color': 'transparent', 'max-height':'40vh', 'min-height':'40vh', 'padding':'0','overflowY': 'hidden', 'margin':'10px'},
+                                        #                children=[
+                                        #                    ddk.CardHeader(title='Live', style={'background-color': 'transparent'}),
+                                        #                    Live_matches.live_list()]),
                                               ddk.Card(width=100,
                                                        id='match_sample_right',
-                                                       style={'background-color': 'transparent', 'max-height':'45vh', 'min-height':'45vh', 'padding':'0','overflowY': 'hidden','margin': '10px'},
+                                                       style={'background-color': 'transparent', 'max-height':'89vh', 'min-height':'89vh', 'padding':'0','overflowY': 'hidden','margin': '10px'},
                                                        children=[
                                                            ddk.CardHeader(title='Matches', style={'background-color': 'transparent'}),
                                                            Main_page.main_page()])
