@@ -6,13 +6,123 @@ import os
 import pandas as pd
 main_path_data = os.path.abspath("./data")
 
+##################################   SHOW ALL ROWS & COLS   ####################################
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', None)
+pd.set_option('display.expand_frame_repr', False)
+pd.set_option('max_colwidth', None)
+
 
 def main_page():
     def cards_items():
         serverBD1 = pd.read_csv(main_path_data + '\\live.csv')
         serverBD = pd.read_csv(main_path_data + '\\server.csv')
         cards = []
+
+        # print('serverBD1', serverBD1)
         for ind in serverBD1.index:
+
+            if serverBD1['T1gold'][ind] == "r" or serverBD1['T1gold'][ind] == 'd':
+                T1gold = [ddk.Block(width=80,
+                       style={'margin': '0', 'padding': '0'},
+                       children=html.H6("",
+                                    style={'color': '#ff0000',
+                                            'font-weight': '900',
+                                            # 'width': 'fit-content',
+                                            'padding': '0px', 'margin': '0',
+                                            'max-height': '-webkit-fill-available',
+                                            'vertical-align': '-webkit-baseline-middle'})),
+                           ddk.Block(width=20,
+                                     style={'margin': '0', 'padding': '0',
+                                            'max-height': '20px',
+                                            'height': '20px'},
+                                     children=[])]
+            else:
+                T1gold = [ddk.Block(width=80,
+                       style={'margin': '0', 'padding': '0'},
+                       children=html.H6(serverBD1['T1gold'][ind],
+                                    style={'color': '#ff0000',
+                                            'font-weight': '900',
+                                            # 'width': 'fit-content',
+                                            'padding': '0px', 'margin': '0',
+                                            'max-height': '-webkit-fill-available',
+                                            'vertical-align': '-webkit-baseline-middle'})),
+                           ddk.Block(width=20,
+                                     style={'margin': '0', 'padding': '0',
+                                            'max-height': '20px',
+                                            'height': '20px'},
+                                     children=ddk.Logo(
+                                         src='../assets/png/gold.png',
+                                         style={'text-align': 'center',
+                                               'max-height': '-webkit-fill-available',
+                                               'padding': '0px', 'margin': '0',
+                                             'vertical-align': '-webkit-baseline-middle'}))]
+
+            if serverBD1['T2gold'][ind] == "r" or serverBD1['T2gold'][ind] == 'd':
+                T2gold = [ddk.Block(width=20,
+                                     style={'margin': '0', 'padding': '0',
+                                            'max-height': '20px',
+                                            'height': '20px'},
+                                     children=[]),
+                          ddk.Block(width=80,
+                              style={'margin': '0', 'padding': '0'},
+                              children=html.H6("",
+                                               style={'color': '#ff0000',
+                                                      'font-weight': '900',
+                                                      # 'width': 'fit-content',
+                                                      'padding': '0px', 'margin': '0',
+                                                      'max-height': '-webkit-fill-available',
+                                                      'vertical-align': '-webkit-baseline-middle'})),
+                       ]
+            else:
+                T2gold = [ddk.Block(width=20,
+                                     style={'margin': '0', 'padding': '0',
+                                            'max-height': '20px',
+                                            'height': '20px'},
+                                     children=ddk.Logo(
+                                         src='../assets/png/gold.png',
+                                         style={'text-align': 'center',
+                                                'max-height': '-webkit-fill-available',
+                                                'padding': '0px', 'margin': '0',
+                                                'vertical-align': '-webkit-baseline-middle'})),
+                          ddk.Block(width=80,
+                                    style={'margin': '0', 'padding': '0'},
+                                    children=html.H6(serverBD1['T2gold'][ind],
+                                                     style={'color': '#ff0000',
+                                                            'font-weight': '900',
+                                                            # 'width': 'fit-content',
+                                                            'padding': '0px', 'margin': '0',
+                                                            'max-height': '-webkit-fill-available',
+                                                            'vertical-align': '-webkit-baseline-middle'})),
+                       ]
+
+            T1 = [ddk.Block(width=100,
+                       style={'margin':'0', 'padding':'0'},
+                       children=html.H6(serverBD1['T1names_live'][ind],
+                     style={'color': 'azure',
+                            # 'width': 'fit-content',
+                            'padding': '0px', 'margin': '0',
+                            'max-height': '-webkit-fill-available',
+                            'vertical-align': '-webkit-baseline-middle'})),
+             ddk.Block(width=100,
+                       style={'margin': '0', 'padding': '0'},
+                       children=T1gold)]
+
+            T2 = [ddk.Block(width=100,
+                          style={'margin': '0', 'padding': '0'},
+                          children=html.H6(serverBD1['T2names_live'][ind],
+                                           style={'color': 'azure',
+                                                  # 'width': 'fit-content',
+                                                  'padding': '0px', 'margin': '0',
+                                                  'max-height': '-webkit-fill-available',
+                                                  'vertical-align': '-webkit-baseline-middle'})),
+                  ddk.Block(width=100,
+                            style={'margin': '0', 'padding': '0'},
+                            children=T2gold),
+             ]
+
+
+
             cards_items1=dbc.ListGroupItem(
                 id={'type': 'live-cards-item',
                     'index': str(serverBD1['match_id_live'][ind])},
@@ -71,12 +181,21 @@ def main_page():
                                                  'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
                                                  'align-items': 'center', 'justify-content': 'center',
                                                  'margin': '0', 'textAlign': 'center'},
-                                                      children=html.H6(serverBD1['T1names_live'][ind],
-                                                                      style={'color':'azure',
-                                                                             # 'width': 'fit-content',
-                                                                             'padding': '0px', 'margin': '0',
-                                                                'max-height': '-webkit-fill-available',
-                                                                'vertical-align': '-webkit-baseline-middle'}))]),
+                                                      children=T1
+                                                          # html.H6(serverBD1['T1names_live'][ind],
+                                                          #             style={'color':'azure',
+                                                          #                    # 'width': 'fit-content',
+                                                          #                    'padding': '0px', 'margin': '0',
+                                                          #       'max-height': '-webkit-fill-available',
+                                                          #       'vertical-align': '-webkit-baseline-middle'}),
+                                                          #       html.H6(T1gold,
+                                                          #               style={'color': '#ff0000',
+                                                          #                     'font-weight':'900',
+                                                          #                      # 'width': 'fit-content',
+                                                          #                      'padding': '0px', 'margin': '0',
+                                                          #                      'max-height': '-webkit-fill-available',
+                                                          #                      'vertical-align': '-webkit-baseline-middle'})
+                                                                )]),
                                 ddk.Block(width=20,
                                           style={'max-width': 'fit-content',
                                              'max-height': 'fit-content',
@@ -119,12 +238,21 @@ def main_page():
                                                  'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
                                                  'align-items': 'center', 'justify-content': 'center',
                                                  'margin': '0', 'textAlign': 'center'},
-                                                      children=html.H6(serverBD1['T2names_live'][ind],
-                                                                                   style={'color':'azure',
-                                                                             # 'width': 'fit-content',
-                                                                             'padding': '0px', 'margin': '0',
-                                                                'max-height': '-webkit-fill-available',
-                                                                'vertical-align': '-webkit-baseline-middle'})),
+                                                      children=T2
+                                                          # html.H6(serverBD1['T2names_live'][ind],
+                                                          #                          style={'color':'azure',
+                                                          #                    # 'width': 'fit-content',
+                                                          #                    'padding': '0px', 'margin': '0',
+                                                          #       'max-height': '-webkit-fill-available',
+                                                          #       'vertical-align': '-webkit-baseline-middle'}),
+                                                          #       html.H6(T2gold,
+                                                          #              style={'color': '#ff0000',
+                                                          #                     'font-weight':'900',
+                                                          #                     # 'width': 'fit-content',
+                                                          #                     'padding': '0px', 'margin': '0',
+                                                          #                     'max-height': '-webkit-fill-available',
+                                                          #                     'vertical-align': '-webkit-baseline-middle'})
+                                                                ),
                                             ddk.Block(width=40,
                                                       style={
                                                         'max-height': '40px',

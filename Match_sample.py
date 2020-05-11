@@ -38,13 +38,13 @@ def match_card2(id):
     id = id.replace("/", "")
     df = all_cardsBD[(all_cardsBD['Mid'].isin([id]))]
 
+    time = df.iloc[0]['Mtime']
 
     # session_id = str(uuid.uuid1())
     # # store the session id in a dcc.Store component (invisible component for storing data)
     # store_session_id_div = dcc.Store(id={'type': 'session_id_div_id', 'index': id},
     #                                  storage_type='session',  # IMPORTANT! see docstring of dcc.Store
     #                                  data=session_id)
-
 
     ##############     HEAD CARD of MATCH   ###################################
     match_head = ddk.Card(style={'width': '-webkit-fill-available',
@@ -57,7 +57,8 @@ def match_card2(id):
                                                                 'text-color': 'azure',
                                                                 'margin': '0'})]),
         ddk.Block(width=100, style={'max-height': 'fit-content'},
-                  children=[html.H6('{} {}'.format(df.iloc[0]['Mdate'], df.iloc[0]['Mtime']), style={'text-align': 'center', 'margin': '0'})]),
+                  children=[html.H6('{} {}'.format(df.iloc[0]['Mdate'], time[0:4]),
+                                    style={'text-align': 'center', 'margin': '0'})]),
         ddk.Block(width=40, style={'max-height': 'fit-content'}, children=[
             ddk.Block(width=100,
                       children=[
@@ -92,8 +93,22 @@ def match_card2(id):
         ]),
         ddk.Block(width=20,
                   style={'max-height': 'fit-content'},
-                  children=[html.H1('{} : {}'.format(df.iloc[0]['T1score'], df.iloc[0]['T2score']),
-                                    style={'text-align': 'center', 'font-size': '40px', 'margin': '0'})]),
+                  children=[ddk.Block(width=100, style={'margin': '0', 'padding': '0', },
+                                      children=[html.H1('{} : {}'.format(df.iloc[0]['T1score'], df.iloc[0]['T2score']),
+                                                        style={'text-align': 'center', 'font-size': '40px',
+                                                               'margin': '0'})]),
+                            ddk.Block(width=100,
+                                      style={'margin': '0', 'padding': '0',
+                                             'max-height': '50px',
+                                             'height': '50px'},
+                                      children=ddk.Logo(
+                                          src='../assets/png/play.png',
+                                          style={'text-align': 'center',
+                                                 'max-height': '-webkit-fill-available',
+                                                 'padding': '0px', 'margin': '0',
+                                                 'vertical-align': '-webkit-baseline-middle'}))
+
+                            ]),
         ddk.Block(width=40, style={'max-height': 'fit-content'}, children=[
             ddk.Block(width=100,
                       children=[
@@ -113,10 +128,10 @@ def match_card2(id):
                               ddk.Block(width=100, children=html.H2(df.iloc[0]['T2name'],
                                                                     style={'text-align': 'left', 'margin': '0'})),
                               ddk.Block(width=100, children=html.H6('{}, {}, {}, {}, {}'.format(df.iloc[0]['P21'],
-                                                                                     df.iloc[0]['P22'],
-                                                                                     df.iloc[0]['P23'],
-                                                                                     df.iloc[0]['P24'],
-                                                                                     df.iloc[0]['P25']),
+                                                                                                df.iloc[0]['P22'],
+                                                                                                df.iloc[0]['P23'],
+                                                                                                df.iloc[0]['P24'],
+                                                                                                df.iloc[0]['P25']),
                                                                     style={'text-align': 'left', 'margin': '0'})),
 
                           ]),

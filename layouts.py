@@ -1048,7 +1048,7 @@ def layout_main():
     # store_session_id_div = dcc.Store(id='session_id_div_id',
     #                                  storage_type='session',  # IMPORTANT! see docstring of dcc.Store
     #                                  data=session_id)
-    interval = dcc.Interval(id='interval', interval=12000, n_intervals=0)
+    interval = dcc.Interval(id='interval', interval=20000, n_intervals=0)
 
     layout_main2 = ddk.Block(width=100,
                             style={'height': '93vh',
@@ -1103,7 +1103,7 @@ def layout_main():
                                                                                              Main_page.main_page()
                                                                                          ]),
                                                                                 ddk.Card(width=50,
-                                                                                         id='main_matches',
+                                                                                         id='main_results',
                                                                                          style={  # 073642
                                                                                              'background-color': '#163d47',
                                                                                              "opacity": "1",
@@ -1150,7 +1150,7 @@ def layout_main():
                                                                                                          width=100,
                                                                                                          children=[
                                                                                                              ddk.Block(
-                                                                                                                 width=35,
+                                                                                                                 width=25,
                                                                                                                  style={
                                                                                                                      'min-width': 'fit-content', },
                                                                                                                  children=[
@@ -1161,7 +1161,7 @@ def layout_main():
                                                                                                                              'padding': '0px','width': '100%',
                                                                                                                              'margin': '0px'})]),
                                                                                                              ddk.Block(
-                                                                                                                 width=20,
+                                                                                                                 width=25,
                                                                                                                  style={
                                                                                                                      'min-width': 'fit-content', },
                                                                                                                  children=[
@@ -1172,7 +1172,7 @@ def layout_main():
                                                                                                                              'padding': '0px',
                                                                                                                              'margin': '0px'})]),
                                                                                                              ddk.Block(
-                                                                                                                 width=15,
+                                                                                                                 width=10,
                                                                                                                  style={
                                                                                                                      'min-width': 'fit-content', },
                                                                                                                  children=[
@@ -1183,7 +1183,7 @@ def layout_main():
                                                                                                                              'padding': '0px',
                                                                                                                              'margin': '0px'})]),
                                                                                                              ddk.Block(
-                                                                                                                 width=10,
+                                                                                                                 width=15,
                                                                                                                  style={
                                                                                                                      'min-width': 'fit-content', },
                                                                                                                  children=[
@@ -1194,7 +1194,7 @@ def layout_main():
                                                                                                                              'padding': '0px',
                                                                                                                              'margin': '0px'})]),
                                                                                                              ddk.Block(
-                                                                                                                 width=5,
+                                                                                                                 width=10,
                                                                                                                  style={
                                                                                                                      'min-width': 'fit-content',
                                                                                                                      # 'margin-left': '5px'
