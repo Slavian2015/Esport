@@ -3166,11 +3166,476 @@ Mid,T1_last_date,T1_last_time,T1_last_name,T1_last_logo,T1_last_total_main,T1_la
 371396,2020-05-04,11:10:00,Vici Gaming Potential,https://ru.dltv.org/storage/app/uploads/public/186/52a/0a7/thumb__100_100_0_0_auto.png,2.0,0.0
 372222,2020-05-10,07:45:00,496 Gaming,https://ru.dltv.org/storage/app/uploads/public/b87/1ed/190/thumb__100_100_0_0_auto.png,2.0,0.0
 372222,2020-05-10,05:40:00,The New Top,https://ru.dltv.org/storage/app/uploads/public/ddb/866/30d/thumb__100_100_0_0_auto.png,1.0,1.0
-371201,2020-05-06,10:00:00,Benny Brian,https://ru.dltv.org/storage/app/uploads/public/aeb/286/2c1/thumb__100_100_0_0_auto.png,1,1
-371201,2020-05-02,12:30:00,Burgers Flippers,https://ru.dltv.org/storage/app/uploads/public/bfb/033/b84/thumb__100_100_0_0_auto.png,1,1
-371201,2020-04-30,10:30:00,Adió Chula,https://ru.dltv.org/storage/app/uploads/public/949/ee6/7aa/thumb__100_100_0_0_auto.png,2,0
-371201,2020-04-28,10:35:00,Pristine n Clean,https://ru.dltv.org/storage/app/uploads/public/be1/146/ab4/thumb__100_100_0_0_auto.png,1,1
-371201,2020-04-21,10:05:00,Sweaty Soldiers,https://ru.dltv.org/storage/app/uploads/public/49f/f11/493/thumb__100_100_0_0_auto.png,0,2
-371201,2020-04-18,10:15:00,SADBOYS.AU,https://ru.dltv.org/storage/app/uploads/public/2f2/1d9/88b/thumb__100_100_0_0_auto.png,0,2
-371201,2020-04-17,10:05:00,Spag and Sons,https://ru.dltv.org/storage/app/uploads/public/068/599/d2e/thumb__100_100_0_0_auto.png,0,2
-371201,2020-04-14,10:10:00,Adió Chula,https://ru.dltv.org/storage/app/uploads/public/949/ee6/7aa/thumb__100_100_0_0_auto.png,0,2
+371201,2020-05-06,10:00:00,Benny Brian,https://ru.dltv.org/storage/app/uploads/public/aeb/286/2c1/thumb__100_100_0_0_auto.png,1.0,1.0
+371201,2020-05-02,12:30:00,Burgers Flippers,https://ru.dltv.org/storage/app/uploads/public/bfb/033/b84/thumb__100_100_0_0_auto.png,1.0,1.0
+371201,2020-04-30,10:30:00,Adió Chula,https://ru.dltv.org/storage/app/uploads/public/949/ee6/7aa/thumb__100_100_0_0_auto.png,2.0,0.0
+371201,2020-04-28,10:35:00,Pristine n Clean,https://ru.dltv.org/storage/app/uploads/public/be1/146/ab4/thumb__100_100_0_0_auto.png,1.0,1.0
+371201,2020-04-21,10:05:00,Sweaty Soldiers,https://ru.dltv.org/storage/app/uploads/public/49f/f11/493/thumb__100_100_0_0_auto.png,0.0,2.0
+371201,2020-04-18,10:15:00,SADBOYS.AU,https://ru.dltv.org/storage/app/uploads/public/2f2/1d9/88b/thumb__100_100_0_0_auto.png,0.0,2.0
+371201,2020-04-17,10:05:00,Spag and Sons,https://ru.dltv.org/storage/app/uploads/public/068/599/d2e/thumb__100_100_0_0_auto.png,0.0,2.0
+371201,2020-04-14,10:10:00,Adió Chula,https://ru.dltv.org/storage/app/uploads/public/949/ee6/7aa/thumb__100_100_0_0_auto.png,0.0,2.0
+370054,2020-05-11,08:05:00,Newbee,https://ru.dltv.org/storage/app/uploads/public/be9/f06/a04/thumb__100_100_0_0_auto.png,2.0,1.0
+370054,2020-05-08,11:10:00,Invictus Gaming,https://ru.dltv.org/storage/app/uploads/public/c37/997/4af/thumb__100_100_0_0_auto.png,1.0,2.0
+370054,2020-05-07,11:55:00,EHOME,https://ru.dltv.org/storage/app/uploads/public/f96/bb8/3a4/thumb__100_100_0_0_auto.png,1.0,2.0
+370054,2020-05-06,11:00:00,StarLucK.Fly,https://ru.dltv.org/storage/app/uploads/public/32f/6c1/a6e/thumb__100_100_0_0_auto.png,2.0,1.0
+370054,2020-05-04,11:05:00,Invictus Gaming,https://ru.dltv.org/storage/app/uploads/public/c37/997/4af/thumb__100_100_0_0_auto.png,1.0,2.0
+370054,2020-05-02,12:50:00,Team Aster,https://ru.dltv.org/storage/app/uploads/public/295/8d3/87a/thumb__100_100_0_0_auto.png,2.0,0.0
+370054,2020-05-02,08:10:00,Keen Gaming,https://ru.dltv.org/storage/app/uploads/public/edd/602/459/thumb__100_100_0_0_auto.png,1.0,2.0
+370054,2020-04-22,11:00:00,Ocean,https://ru.dltv.org/storage/app/uploads/public/ddb/f51/e19/thumb__100_100_0_0_auto.png,2.0,0.0
+371338,2020-05-11,05:10:00,LGD.international,https://ru.dltv.org/storage/app/uploads/public/65b/372/74e/thumb__100_100_0_0_auto.png,2.0,1.0
+371338,2020-05-08,11:10:00,Sparking Arrow Gaming,https://ru.dltv.org/storage/app/uploads/public/618/b7f/26a/thumb__100_100_0_0_auto.png,2.0,1.0
+371338,2020-05-08,08:35:00,Royal Never Give Up,https://ru.dltv.org/storage/app/uploads/public/f00/bb8/679/thumb__100_100_0_0_auto.png,0.0,2.0
+371338,2020-05-08,03:20:00,iG Vitality,https://ru.dltv.org/storage/app/uploads/public/dbd/f5e/6b9/thumb__100_100_0_0_auto.png,2.0,0.0
+371338,2020-05-07,05:10:00,Goodfellaz,https://ru.dltv.org/storage/app/uploads/public/51e/e3e/7d1/thumb__100_100_0_0_auto.png,2.0,1.0
+371338,2020-05-06,08:10:00,Team Aster,https://ru.dltv.org/storage/app/uploads/public/295/8d3/87a/thumb__100_100_0_0_auto.png,0.0,2.0
+371338,2020-05-05,06:10:00,Vici Gaming,https://ru.dltv.org/storage/app/uploads/public/0a9/787/b22/thumb__100_100_0_0_auto.png,1.0,2.0
+371338,2020-05-04,11:05:00,Sparking Arrow Gaming,https://ru.dltv.org/storage/app/uploads/public/618/b7f/26a/thumb__100_100_0_0_auto.png,2.0,1.0
+371358,2020-05-11,11:45:00,Vici Gaming,https://ru.dltv.org/storage/app/uploads/public/0a9/787/b22/thumb__100_100_0_0_auto.png,0.0,2.0
+371358,2020-05-11,08:05:00,Sparking Arrow Gaming,https://ru.dltv.org/storage/app/uploads/public/618/b7f/26a/thumb__100_100_0_0_auto.png,1.0,2.0
+371358,2020-05-10,08:05:00,Royal Never Give Up,https://ru.dltv.org/storage/app/uploads/public/f00/bb8/679/thumb__100_100_0_0_auto.png,1.0,2.0
+371358,2020-04-30,11:55:00,CDEC Gaming,https://ru.dltv.org/storage/app/uploads/public/a9c/cfb/125/thumb__100_100_0_0_auto.png,0.0,2.0
+371358,2020-04-25,08:00:00,CDEC Gaming,https://ru.dltv.org/storage/app/uploads/public/a9c/cfb/125/thumb__100_100_0_0_auto.png,1.0,2.0
+371358,2020-04-24,11:25:00,EHOME,https://ru.dltv.org/storage/app/uploads/public/f96/bb8/3a4/thumb__100_100_0_0_auto.png,0.0,2.0
+371358,2020-04-24,08:10:00,PSG.LGD,https://ru.dltv.org/storage/app/uploads/public/fd9/4e3/f01/thumb__100_100_0_0_auto.png,0.0,2.0
+371358,2020-04-19,11:05:00,Invictus Gaming,https://ru.dltv.org/storage/app/uploads/public/c37/997/4af/thumb__100_100_0_0_auto.png,0.0,2.0
+370054,2020-05-11,11:15:00,Vici Gaming Potential,https://ru.dltv.org/storage/app/uploads/public/186/52a/0a7/thumb__100_100_0_0_auto.png,2.0,0.0
+370054,2020-05-11,08:05:00,Newbee,https://ru.dltv.org/storage/app/uploads/public/be9/f06/a04/thumb__100_100_0_0_auto.png,2.0,1.0
+370054,2020-05-08,11:10:00,Invictus Gaming,https://ru.dltv.org/storage/app/uploads/public/c37/997/4af/thumb__100_100_0_0_auto.png,1.0,2.0
+370054,2020-05-07,11:55:00,EHOME,https://ru.dltv.org/storage/app/uploads/public/f96/bb8/3a4/thumb__100_100_0_0_auto.png,1.0,2.0
+370054,2020-05-06,11:00:00,StarLucK.Fly,https://ru.dltv.org/storage/app/uploads/public/32f/6c1/a6e/thumb__100_100_0_0_auto.png,2.0,1.0
+370054,2020-05-04,11:05:00,Invictus Gaming,https://ru.dltv.org/storage/app/uploads/public/c37/997/4af/thumb__100_100_0_0_auto.png,1.0,2.0
+370054,2020-05-02,12:50:00,Team Aster,https://ru.dltv.org/storage/app/uploads/public/295/8d3/87a/thumb__100_100_0_0_auto.png,2.0,0.0
+370054,2020-05-02,08:10:00,Keen Gaming,https://ru.dltv.org/storage/app/uploads/public/edd/602/459/thumb__100_100_0_0_auto.png,1.0,2.0
+371338,2020-05-11,05:10:00,LGD.international,https://ru.dltv.org/storage/app/uploads/public/65b/372/74e/thumb__100_100_0_0_auto.png,2.0,1.0
+371338,2020-05-08,11:10:00,Sparking Arrow Gaming,https://ru.dltv.org/storage/app/uploads/public/618/b7f/26a/thumb__100_100_0_0_auto.png,2.0,1.0
+371338,2020-05-08,08:35:00,Royal Never Give Up,https://ru.dltv.org/storage/app/uploads/public/f00/bb8/679/thumb__100_100_0_0_auto.png,0.0,2.0
+371338,2020-05-08,03:20:00,iG Vitality,https://ru.dltv.org/storage/app/uploads/public/dbd/f5e/6b9/thumb__100_100_0_0_auto.png,2.0,0.0
+371338,2020-05-07,05:10:00,Goodfellaz,https://ru.dltv.org/storage/app/uploads/public/51e/e3e/7d1/thumb__100_100_0_0_auto.png,2.0,1.0
+371338,2020-05-06,08:10:00,Team Aster,https://ru.dltv.org/storage/app/uploads/public/295/8d3/87a/thumb__100_100_0_0_auto.png,0.0,2.0
+371338,2020-05-05,06:10:00,Vici Gaming,https://ru.dltv.org/storage/app/uploads/public/0a9/787/b22/thumb__100_100_0_0_auto.png,1.0,2.0
+371338,2020-05-04,11:05:00,Sparking Arrow Gaming,https://ru.dltv.org/storage/app/uploads/public/618/b7f/26a/thumb__100_100_0_0_auto.png,2.0,1.0
+370040,2020-05-11,11:15:00,Sparking Arrow Gaming,https://ru.dltv.org/storage/app/uploads/public/618/b7f/26a/thumb__100_100_0_0_auto.png,0.0,2.0
+370040,2020-05-09,12:30:00,iG Vitality,https://ru.dltv.org/storage/app/uploads/public/dbd/f5e/6b9/thumb__100_100_0_0_auto.png,0.0,2.0
+370040,2020-05-08,05:20:00,Longinus,https://ru.dltv.org/storage/app/uploads/public/1f4/586/34c/thumb__100_100_0_0_auto.png,0.0,2.0
+370040,2020-05-06,08:55:00,iG Vitality,https://ru.dltv.org/storage/app/uploads/public/dbd/f5e/6b9/thumb__100_100_0_0_auto.png,0.0,2.0
+370040,2020-05-06,05:05:00,Ocean,https://ru.dltv.org/storage/app/uploads/public/ddb/f51/e19/thumb__100_100_0_0_auto.png,0.0,2.0
+370040,2020-05-05,07:35:00,StarLucK.Fly,https://ru.dltv.org/storage/app/uploads/public/32f/6c1/a6e/thumb__100_100_0_0_auto.png,0.0,2.0
+370040,2020-05-04,11:10:00,LGD.international,https://ru.dltv.org/storage/app/uploads/public/65b/372/74e/thumb__100_100_0_0_auto.png,0.0,2.0
+370040,2020-05-04,05:05:00,EHOME.immortal,https://ru.dltv.org/storage/app/uploads/public/b8e/a5f/10c/thumb__100_100_0_0_auto.png,1.0,1.0
+371338,2020-05-11,05:10:00,LGD.international,https://ru.dltv.org/storage/app/uploads/public/65b/372/74e/thumb__100_100_0_0_auto.png,2.0,1.0
+371338,2020-05-08,11:10:00,Sparking Arrow Gaming,https://ru.dltv.org/storage/app/uploads/public/618/b7f/26a/thumb__100_100_0_0_auto.png,2.0,1.0
+371338,2020-05-08,08:35:00,Royal Never Give Up,https://ru.dltv.org/storage/app/uploads/public/f00/bb8/679/thumb__100_100_0_0_auto.png,0.0,2.0
+371338,2020-05-08,03:20:00,iG Vitality,https://ru.dltv.org/storage/app/uploads/public/dbd/f5e/6b9/thumb__100_100_0_0_auto.png,2.0,0.0
+371338,2020-05-07,05:10:00,Goodfellaz,https://ru.dltv.org/storage/app/uploads/public/51e/e3e/7d1/thumb__100_100_0_0_auto.png,2.0,1.0
+371338,2020-05-06,08:10:00,Team Aster,https://ru.dltv.org/storage/app/uploads/public/295/8d3/87a/thumb__100_100_0_0_auto.png,0.0,2.0
+371338,2020-05-05,06:10:00,Vici Gaming,https://ru.dltv.org/storage/app/uploads/public/0a9/787/b22/thumb__100_100_0_0_auto.png,1.0,2.0
+371338,2020-05-04,11:05:00,Sparking Arrow Gaming,https://ru.dltv.org/storage/app/uploads/public/618/b7f/26a/thumb__100_100_0_0_auto.png,2.0,1.0
+372221,2020-05-11,09:55:00,Neon Esports,https://ru.dltv.org/storage/app/uploads/public/d99/a95/8dc/thumb__100_100_0_0_auto.png,2.0,0.0
+372221,2020-05-10,11:30:00,Ocean,https://ru.dltv.org/storage/app/uploads/public/ddb/f51/e19/thumb__100_100_0_0_auto.png,0.0,2.0
+372221,2020-05-10,07:45:00,Rampage gaming,https://ru.dltv.org/storage/app/uploads/public/268/288/640/thumb__100_100_0_0_auto.png,0.0,2.0
+372221,2020-05-09,11:15:00,LGD.international,https://ru.dltv.org/storage/app/uploads/public/65b/372/74e/thumb__100_100_0_0_auto.png,0.0,1.0
+372221,2020-05-09,09:02:45,KingPins,https://ru.dltv.org/storage/app/uploads/public/c29/7da/68c/thumb__100_100_0_0_auto.png,1.0,0.0
+372221,2020-05-08,03:25:00,Elephant,https://ru.dltv.org/storage/app/uploads/public/97e/46a/ed7/thumb__100_100_0_0_auto.png,2.0,1.0
+372221,2020-05-07,06:50:00,Cignal Ultra,https://ru.dltv.org/storage/app/uploads/public/ad7/c47/7a9/thumb__100_100_0_0_auto.png,1.0,2.0
+372221,2020-05-07,03:30:00,Busy Gaming,https://ru.dltv.org/storage/app/uploads/public/d9c/63b/103/thumb__100_100_0_0_auto.png,2.0,1.0
+371741,2020-05-11,10:00:00,LGD.international,https://ru.dltv.org/storage/app/uploads/public/65b/372/74e/thumb__100_100_0_0_auto.png,2.0,1.0
+371741,2020-05-11,06:15:00,Cignal Ultra,https://ru.dltv.org/storage/app/uploads/public/ad7/c47/7a9/thumb__100_100_0_0_auto.png,1.0,2.0
+371741,2020-05-10,11:25:00,Flower Gaming,https://ru.dltv.org/storage/app/uploads/public/270/3a9/5a7/thumb__100_100_0_0_auto.png,0.0,2.0
+371741,2020-05-10,10:10:00,NGID.M11,https://ru.dltv.org/storage/app/uploads/public/fe3/5fa/4e3/thumb__100_100_0_0_auto.png,1.0,0.0
+371741,2020-05-05,09:15:00,Team Strawberry,https://ru.dltv.org/storage/app/uploads/public/003/098/11c/thumb__100_100_0_0_auto.png,0.0,2.0
+371741,2020-05-04,10:00:00,Neon Esports,https://ru.dltv.org/storage/app/uploads/public/d99/a95/8dc/thumb__100_100_0_0_auto.png,2.0,0.0
+371741,2020-05-04,06:40:00,LGD.international,https://ru.dltv.org/storage/app/uploads/public/65b/372/74e/thumb__100_100_0_0_auto.png,1.0,2.0
+371741,2020-05-03,09:50:00,Reality Rift,https://ru.dltv.org/storage/app/uploads/public/9d9/d47/aea/thumb__100_100_0_0_auto.png,2.0,0.0
+371794,2020-05-11,02:45:00,Team Ethereal,https://ru.dltv.org/storage/app/uploads/public/b10/c86/82c/thumb__100_100_0_0_auto.png,0.0,2.0
+371794,2020-05-09,08:30:00,Team Honor,https://ru.dltv.org/storage/app/uploads/public/901/f9e/a88/thumb__100_100_0_0_auto.png,2.0,1.0
+371794,2020-05-08,02:40:00,Panda Gaming,https://ru.dltv.org/storage/app/uploads/public/177/b11/79e/thumb__100_100_0_0_auto.png,1.0,2.0
+371794,2020-05-06,04:30:00,Team Brave,https://ru.dltv.org/storage/app/uploads/public/01d/ba7/3b0/thumb__100_100_0_0_auto.png,1.0,2.0
+371794,2020-05-04,06:55:00,Immortal Gaming,https://ru.dltv.org/storage/app/uploads/public/c3e/ac4/df1/thumb__100_100_0_0_auto.png,1.0,2.0
+371794,2020-05-02,06:50:00,Team Destiny,https://ru.dltv.org/storage/app/uploads/public/420/ba5/00e/thumb__100_100_0_0_auto.png,2.0,0.0
+371794,2020-05-01,06:13:45,Cobra Gaming,https://ru.dltv.org/storage/app/uploads/public/efe/ff1/705/thumb__100_100_0_0_auto.png,1.0,2.0
+371794,2020-03-12,05:35:00,Cobra Gaming,https://ru.dltv.org/storage/app/uploads/public/efe/ff1/705/thumb__100_100_0_0_auto.png,3.0,1.0
+371755,2020-05-10,04:45:00,Team Honor,https://ru.dltv.org/storage/app/uploads/public/901/f9e/a88/thumb__100_100_0_0_auto.png,0.0,2.0
+371755,2020-05-07,06:05:00,Cobra Gaming,https://ru.dltv.org/storage/app/uploads/public/efe/ff1/705/thumb__100_100_0_0_auto.png,2.0,0.0
+371755,2020-05-06,04:30:00,Team Varanid,https://ru.dltv.org/storage/app/uploads/public/36a/77d/446/thumb__100_100_0_0_auto.png,2.0,1.0
+371755,2020-05-04,02:50:00,Team Destiny,https://ru.dltv.org/storage/app/uploads/public/420/ba5/00e/thumb__100_100_0_0_auto.png,0.0,2.0
+371755,2020-05-03,03:50:54,Panda Gaming,https://ru.dltv.org/storage/app/uploads/public/177/b11/79e/thumb__100_100_0_0_auto.png,2.0,0.0
+371755,2020-05-03,01:43:39,Immortal Gaming,https://ru.dltv.org/storage/app/uploads/public/c3e/ac4/df1/thumb__100_100_0_0_auto.png,0.0,2.0
+371755,2020-05-02,01:39:52,Team Galaxy,https://ru.dltv.org/storage/app/uploads/public/47d/395/d6b/thumb__100_100_0_0_auto.png,2.0,0.0
+371755,2020-04-29,11:30:00,Cobra Gaming,https://ru.dltv.org/storage/app/uploads/public/efe/ff1/705/thumb__100_100_0_0_auto.png,0.0,2.0
+371741,2020-05-12,03:15:00,Geek Fam,https://ru.dltv.org/storage/app/uploads/public/e39/b61/93b/thumb__100_100_0_0_auto.png,0.0,2.0
+371741,2020-05-11,10:00:00,LGD.international,https://ru.dltv.org/storage/app/uploads/public/65b/372/74e/thumb__100_100_0_0_auto.png,2.0,1.0
+371741,2020-05-11,06:15:00,Cignal Ultra,https://ru.dltv.org/storage/app/uploads/public/ad7/c47/7a9/thumb__100_100_0_0_auto.png,1.0,2.0
+371741,2020-05-10,11:25:00,Flower Gaming,https://ru.dltv.org/storage/app/uploads/public/270/3a9/5a7/thumb__100_100_0_0_auto.png,0.0,2.0
+371741,2020-05-10,10:10:00,NGID.M11,https://ru.dltv.org/storage/app/uploads/public/fe3/5fa/4e3/thumb__100_100_0_0_auto.png,1.0,0.0
+371741,2020-05-05,09:15:00,Team Strawberry,https://ru.dltv.org/storage/app/uploads/public/003/098/11c/thumb__100_100_0_0_auto.png,0.0,2.0
+371741,2020-05-04,10:00:00,Neon Esports,https://ru.dltv.org/storage/app/uploads/public/d99/a95/8dc/thumb__100_100_0_0_auto.png,2.0,0.0
+371741,2020-05-04,06:40:00,LGD.international,https://ru.dltv.org/storage/app/uploads/public/65b/372/74e/thumb__100_100_0_0_auto.png,1.0,2.0
+372045,2020-05-10,11:10:00,Team Aster,https://ru.dltv.org/storage/app/uploads/public/295/8d3/87a/thumb__100_100_0_0_auto.png,2.0,1.0
+372045,2020-05-09,09:30:00,EHOME,https://ru.dltv.org/storage/app/uploads/public/f96/bb8/3a4/thumb__100_100_0_0_auto.png,2.0,1.0
+372045,2020-05-09,08:00:00,look for smile,https://ru.dltv.org/storage/app/uploads/public/b39/4f7/49d/thumb__100_100_0_0_auto.png,0.0,1.0
+372045,2020-05-07,12:10:00,Keen Gaming,https://ru.dltv.org/storage/app/uploads/public/edd/602/459/thumb__100_100_0_0_auto.png,2.0,1.0
+372045,2020-05-07,08:35:00,Royal Never Give Up,https://ru.dltv.org/storage/app/uploads/public/f00/bb8/679/thumb__100_100_0_0_auto.png,1.0,2.0
+372045,2020-05-06,11:00:00,EHOME,https://ru.dltv.org/storage/app/uploads/public/f96/bb8/3a4/thumb__100_100_0_0_auto.png,0.0,2.0
+372045,2020-05-04,09:15:00,EHOME,https://ru.dltv.org/storage/app/uploads/public/f96/bb8/3a4/thumb__100_100_0_0_auto.png,2.0,1.0
+372045,2020-05-03,12:20:00,Vici Gaming,https://ru.dltv.org/storage/app/uploads/public/0a9/787/b22/thumb__100_100_0_0_auto.png,0.0,2.0
+372056,2020-04-18,10:15:00,Geek Fam,https://ru.dltv.org/storage/app/uploads/public/e39/b61/93b/thumb__100_100_0_0_auto.png,0.0,2.0
+372056,2020-03-11,10:10:00,Neon Esports,https://ru.dltv.org/storage/app/uploads/public/d99/a95/8dc/thumb__100_100_0_0_auto.png,2.0,0.0
+372056,2020-03-11,04:20:00,Neon Esports,https://ru.dltv.org/storage/app/uploads/public/d99/a95/8dc/thumb__100_100_0_0_auto.png,2.0,0.0
+372056,2020-03-10,07:00:00,Team Adroit,https://ru.dltv.org/storage/app/uploads/public/e1d/eae/cf0/thumb__100_100_0_0_auto.png,2.0,1.0
+372056,2020-03-09,13:55:00,Reality Rift,https://ru.dltv.org/storage/app/uploads/public/9d9/d47/aea/thumb__100_100_0_0_auto.png,2.0,1.0
+372056,2020-03-09,03:10:00,Team Oracle,https://ru.dltv.org/storage/app/uploads/public/4c4/12a/79b/thumb__100_100_0_0_auto.png,2.0,0.0
+372056,2020-03-07,04:30:00,Team Virus,https://ru.dltv.org/storage/app/uploads/public/49f/c44/a7a/thumb__100_100_0_0_auto.png,1.0,1.0
+372056,2020-03-06,04:20:00,LGD.international,https://ru.dltv.org/storage/app/uploads/public/65b/372/74e/thumb__100_100_0_0_auto.png,2.0,0.0
+371697,2020-05-11,17:35:00,CR4ZY,https://ru.dltv.org/storage/app/uploads/public/042/1f9/bab/thumb__100_100_0_0_auto.png,1.0,2.0
+371697,2020-05-05,15:35:00,Empire Hope,https://ru.dltv.org/storage/app/uploads/public/6bd/a9b/bd8/thumb__100_100_0_0_auto.png,2.0,1.0
+371697,2020-05-05,10:10:00,FlyToMoon 2.0,https://ru.dltv.org/storage/app/uploads/public/36b/7c9/bdb/thumb__100_100_0_0_auto.png,2.0,0.0
+371697,2020-04-28,10:05:00,Cyberium,https://ru.dltv.org/storage/app/uploads/public/702/e00/ba7/thumb__100_100_0_0_auto.png,2.0,0.0
+371697,2020-04-27,12:30:00,KBU,https://ru.dltv.org/storage/app/uploads/public/d1a/b23/f35/thumb__100_100_0_0_auto.png,2.0,0.0
+371697,2020-04-26,21:00:00,Obscurial,https://ru.dltv.org/storage/app/uploads/public/27f/a55/828/thumb__100_100_0_0_auto.png,2.0,0.0
+371697,2019-12-09,16:10:00,minor atendari,https://ru.dltv.org/storage/app/uploads/public/268/288/640/thumb__100_100_0_0_auto.png,1.0,3.0
+371697,2019-12-08,16:10:00,Ad Finem,https://ru.dltv.org/storage/app/uploads/public/672/848/92a/thumb__100_100_0_0_auto.png,2.0,0.0
+371645,2020-05-11,19:00:00,F.R.I.E.N.D.S.,https://ru.dltv.org/storage/app/uploads/public/4b5/9d6/49d/thumb__100_100_0_0_auto.png,2.0,0.0
+371645,2020-05-11,12:40:00,miaww^^,https://ru.dltv.org/storage/app/uploads/public/a69/2b1/41e/thumb__100_100_0_0_auto.png,2.0,0.0
+371645,2020-05-10,18:05:00,Cyber Legacy,https://ru.dltv.org/storage/app/uploads/public/181/19f/cb6/thumb__100_100_0_0_auto.png,2.0,1.0
+371645,2020-05-08,19:00:00,Empire Hope,https://ru.dltv.org/storage/app/uploads/public/6bd/a9b/bd8/thumb__100_100_0_0_auto.png,2.0,1.0
+371645,2020-05-07,16:25:00,Nova,https://ru.dltv.org/storage/app/uploads/public/12d/aab/7fa/thumb__100_100_0_0_auto.png,1.0,0.0
+371645,2020-05-07,13:10:00,Nemiga Gaming,https://ru.dltv.org/storage/app/uploads/public/ae4/8f4/2f5/thumb__100_100_0_0_auto.png,0.0,2.0
+371645,2020-05-06,16:35:00,Nova,https://ru.dltv.org/storage/app/uploads/public/12d/aab/7fa/thumb__100_100_0_0_auto.png,2.0,0.0
+371645,2020-05-05,15:25:00,Team Spirit,https://ru.dltv.org/storage/app/uploads/public/ba5/980/72f/thumb__100_100_0_0_auto.png,0.0,2.0
+371686,2020-05-11,17:35:00,KVP,https://ru.dltv.org/storage/app/uploads/public/268/288/640/thumb__100_100_0_0_auto.png,2.0,1.0
+371686,2020-05-05,18:35:00,miaww^^,https://ru.dltv.org/storage/app/uploads/public/a69/2b1/41e/thumb__100_100_0_0_auto.png,2.0,1.0
+371686,2020-04-29,22:30:00,business associates,https://ru.dltv.org/storage/app/uploads/public/af5/fe7/2a9/thumb__100_100_0_0_auto.png,1.0,2.0
+371686,2020-04-28,20:05:00,4 Zoomers,https://ru.dltv.org/storage/app/uploads/public/268/288/640/thumb__100_100_0_0_auto.png,1.0,2.0
+371686,2020-04-25,19:25:00,Thunder Predator,https://ru.dltv.org/storage/app/uploads/public/203/42b/153/thumb__100_100_0_0_auto.png,1.0,2.0
+371686,2020-04-24,22:30:00,Cloud 9,https://ru.dltv.org/storage/app/uploads/public/ace/295/e19/thumb__100_100_0_0_auto.png,2.0,1.0
+371686,2020-04-24,00:20:00,Evil Geniuses,https://ru.dltv.org/storage/app/uploads/public/008/21c/b3a/thumb__100_100_0_0_auto.png,1.0,2.0
+371686,2020-04-22,20:10:00,Quincy Crew,https://ru.dltv.org/storage/app/uploads/public/885/481/fbd/thumb__100_100_0_0_auto.png,1.0,2.0
+372160,2020-05-11,20:30:00,Khan,https://ru.dltv.org/storage/app/uploads/public/8ab/df6/867/thumb__100_100_0_0_auto.png,2.0,0.0
+372160,2020-05-11,15:00:00,Nova,https://ru.dltv.org/storage/app/uploads/public/12d/aab/7fa/thumb__100_100_0_0_auto.png,2.0,0.0
+372160,2020-05-10,16:10:00,Nemiga Gaming,https://ru.dltv.org/storage/app/uploads/public/ae4/8f4/2f5/thumb__100_100_0_0_auto.png,0.0,1.0
+372160,2020-05-10,13:05:00,Khan,https://ru.dltv.org/storage/app/uploads/public/8ab/df6/867/thumb__100_100_0_0_auto.png,0.0,2.0
+372160,2020-05-10,10:00:00,F.R.I.E.N.D.S.,https://ru.dltv.org/storage/app/uploads/public/4b5/9d6/49d/thumb__100_100_0_0_auto.png,0.0,1.0
+372160,2020-05-09,19:15:00,Team Heroic,https://ru.dltv.org/storage/app/uploads/public/993/f09/5a4/thumb__100_100_0_0_auto.png,1.0,2.0
+372160,2020-05-09,17:30:00,Repulse Gaming,https://ru.dltv.org/storage/app/uploads/public/5c6/9e6/e5b/thumb__100_100_0_0_auto.png,1.0,0.0
+372160,2020-05-07,18:20:00,Family Team,https://ru.dltv.org/storage/app/uploads/public/df7/b70/52d/thumb__100_100_0_0_auto.png,2.0,0.0
+371703,2020-05-07,15:15:00,Nigma,https://ru.dltv.org/storage/app/uploads/public/fd4/d24/31c/thumb__100_100_0_0_auto.png,0.0,1.0
+371703,2020-05-04,13:30:00,Team Liquid,https://ru.dltv.org/storage/app/uploads/public/8f7/855/e04/thumb__100_100_0_0_auto.png,0.0,2.0
+371703,2020-05-02,14:55:00,OG,https://ru.dltv.org/storage/app/uploads/public/842/59c/acf/thumb__100_100_0_0_auto.png,2.0,1.0
+371703,2020-04-30,11:10:00,Alliance,https://ru.dltv.org/storage/app/uploads/public/fa7/e27/383/thumb__100_100_0_0_auto.png,1.0,2.0
+371703,2020-04-27,11:10:00,Nigma,https://ru.dltv.org/storage/app/uploads/public/fd4/d24/31c/thumb__100_100_0_0_auto.png,1.0,2.0
+371703,2020-04-26,18:25:00,Team Secret,https://ru.dltv.org/storage/app/uploads/public/697/dc9/c84/thumb__100_100_0_0_auto.png,0.0,2.0
+371703,2020-04-23,16:30:00,Ninjas in Pyjamas,https://ru.dltv.org/storage/app/uploads/public/ae1/b22/89c/thumb__100_100_0_0_auto.png,1.0,2.0
+371703,2020-04-22,17:05:00,Vikin.gg,https://ru.dltv.org/storage/app/uploads/public/9d4/c53/8f1/thumb__100_100_0_0_auto.png,2.0,1.0
+372236,2020-05-11,05:45:00,StarLucK.Fly,https://ru.dltv.org/storage/app/uploads/public/32f/6c1/a6e/thumb__100_100_0_0_auto.png,2.0,0.0
+372236,2020-05-02,11:20:00,Newbee Young,https://ru.dltv.org/storage/app/uploads/public/7b6/7f9/ecc/thumb__100_100_0_0_auto.png,0.0,2.0
+372236,2020-05-02,03:00:00,Blaze,https://ru.dltv.org/storage/app/uploads/public/d2f/3e2/d5f/thumb__100_100_0_0_auto.png,0.0,2.0
+372236,2020-04-30,05:25:00,You Know Who,https://ru.dltv.org/storage/app/uploads/public/5a7/34f/a8a/thumb__100_100_0_0_auto.png,0.0,2.0
+372236,2020-04-28,07:35:00,Old Boys,https://ru.dltv.org/storage/app/uploads/public/58a/70a/840/thumb__100_100_0_0_auto.png,2.0,0.0
+372236,2020-04-28,05:10:00,Aster.Aries,https://ru.dltv.org/storage/app/uploads/public/ef3/7d1/960/thumb__100_100_0_0_auto.png,1.0,1.0
+372236,2020-04-05,07:30:00,Avengerls,https://ru.dltv.org/storage/app/uploads/public/5ac/af6/cd4/thumb__100_100_0_0_auto.png,2.0,0.0
+372236,2020-04-03,05:50:00,EHOME.immortal,https://ru.dltv.org/storage/app/uploads/public/b8e/a5f/10c/thumb__100_100_0_0_auto.png,1.0,1.0
+371744,2020-05-12,03:15:00,T1,https://ru.dltv.org/storage/app/uploads/public/0f9/42d/c38/thumb__100_100_0_0_auto.png,2.0,0.0
+371744,2020-05-11,03:20:00,CR,https://ru.dltv.org/storage/app/uploads/public/318/51e/4ad/thumb__100_100_0_0_auto.png,2.0,0.0
+371744,2020-04-26,06:05:00,TNC Predator,https://ru.dltv.org/storage/app/uploads/public/c7b/0ec/91e/thumb__100_100_0_0_auto.png,0.0,2.0
+371744,2020-04-25,09:25:00,BOOM Esports,https://ru.dltv.org/storage/app/uploads/public/e9d/2c2/434/thumb__100_100_0_0_auto.png,2.0,0.0
+371744,2020-04-24,09:30:00,Team Adroit,https://ru.dltv.org/storage/app/uploads/public/e1d/eae/cf0/thumb__100_100_0_0_auto.png,2.0,1.0
+371744,2020-04-22,09:25:00,BOOM Esports,https://ru.dltv.org/storage/app/uploads/public/e9d/2c2/434/thumb__100_100_0_0_auto.png,0.0,2.0
+371744,2020-04-20,10:40:00,Reality Rift,https://ru.dltv.org/storage/app/uploads/public/9d9/d47/aea/thumb__100_100_0_0_auto.png,1.0,2.0
+371744,2020-04-19,10:05:00,BOOM Esports,https://ru.dltv.org/storage/app/uploads/public/e9d/2c2/434/thumb__100_100_0_0_auto.png,2.0,3.0
+371367,2020-05-12,06:10:00,Goodfellaz,https://ru.dltv.org/storage/app/uploads/public/51e/e3e/7d1/thumb__100_100_0_0_auto.png,2.0,1.0
+371367,2020-05-12,03:25:00,Denique,https://ru.dltv.org/storage/app/uploads/public/6c0/14b/8a3/thumb__100_100_0_0_auto.png,2.0,1.0
+371367,2020-05-10,05:10:00,Keen Gaming,https://ru.dltv.org/storage/app/uploads/public/edd/602/459/thumb__100_100_0_0_auto.png,0.0,2.0
+371367,2020-05-09,03:45:00,Busy Gaming,https://ru.dltv.org/storage/app/uploads/public/d9c/63b/103/thumb__100_100_0_0_auto.png,2.0,0.0
+371367,2020-05-08,06:15:00,Cignal Ultra,https://ru.dltv.org/storage/app/uploads/public/ad7/c47/7a9/thumb__100_100_0_0_auto.png,2.0,0.0
+371367,2020-05-07,10:25:00,Neon Esports,https://ru.dltv.org/storage/app/uploads/public/d99/a95/8dc/thumb__100_100_0_0_auto.png,2.0,0.0
+371367,2020-05-06,06:20:00,496 Gaming,https://ru.dltv.org/storage/app/uploads/public/b87/1ed/190/thumb__100_100_0_0_auto.png,2.0,0.0
+371367,2020-05-05,11:40:00,LGD.international,https://ru.dltv.org/storage/app/uploads/public/65b/372/74e/thumb__100_100_0_0_auto.png,2.0,0.0
+371824,2020-05-09,08:50:00,Hot Pot Brother,https://ru.dltv.org/storage/app/uploads/public/71c/bbc/9fb/thumb__100_100_0_0_auto.png,2.0,0.0
+371824,2020-05-08,10:50:00,Sunrise,https://ru.dltv.org/storage/app/uploads/public/c70/e24/d25/thumb__100_100_0_0_auto.png,2.0,1.0
+371824,2020-05-08,08:35:00,Team Lightning,https://ru.dltv.org/storage/app/uploads/public/1d5/b8e/518/thumb__100_100_0_0_auto.png,2.0,1.0
+371824,2020-05-04,08:55:00,Team Rockets,https://ru.dltv.org/storage/app/uploads/public/086/740/812/thumb__100_100_0_0_auto.png,0.0,2.0
+371824,2020-05-03,09:27:05,Nightmare team,https://ru.dltv.org/storage/app/uploads/public/87f/995/d32/thumb__100_100_0_0_auto.png,0.0,2.0
+371824,2020-05-03,08:35:00,WOLF,https://ru.dltv.org/storage/app/uploads/public/47e/fef/8f9/thumb__100_100_0_0_auto.png,0.0,2.0
+371824,2020-04-27,04:15:00,Team Venture,https://ru.dltv.org/storage/app/uploads/public/7b6/c1c/1be/thumb__100_100_0_0_auto.png,0.0,2.0
+371824,2020-04-27,02:40:00,WOLF,https://ru.dltv.org/storage/app/uploads/public/47e/fef/8f9/thumb__100_100_0_0_auto.png,0.0,2.0
+371367,2020-05-12,06:10:00,Goodfellaz,https://ru.dltv.org/storage/app/uploads/public/51e/e3e/7d1/thumb__100_100_0_0_auto.png,2.0,1.0
+371367,2020-05-12,03:25:00,Denique,https://ru.dltv.org/storage/app/uploads/public/6c0/14b/8a3/thumb__100_100_0_0_auto.png,2.0,1.0
+371367,2020-05-10,05:10:00,Keen Gaming,https://ru.dltv.org/storage/app/uploads/public/edd/602/459/thumb__100_100_0_0_auto.png,0.0,2.0
+371367,2020-05-09,03:45:00,Busy Gaming,https://ru.dltv.org/storage/app/uploads/public/d9c/63b/103/thumb__100_100_0_0_auto.png,2.0,0.0
+371367,2020-05-08,06:15:00,Cignal Ultra,https://ru.dltv.org/storage/app/uploads/public/ad7/c47/7a9/thumb__100_100_0_0_auto.png,2.0,0.0
+371367,2020-05-07,10:25:00,Neon Esports,https://ru.dltv.org/storage/app/uploads/public/d99/a95/8dc/thumb__100_100_0_0_auto.png,2.0,0.0
+371367,2020-05-06,06:20:00,496 Gaming,https://ru.dltv.org/storage/app/uploads/public/b87/1ed/190/thumb__100_100_0_0_auto.png,2.0,0.0
+371367,2020-05-05,11:40:00,LGD.international,https://ru.dltv.org/storage/app/uploads/public/65b/372/74e/thumb__100_100_0_0_auto.png,2.0,0.0
+371818,2020-05-10,14:30:00,Team Lightning,https://ru.dltv.org/storage/app/uploads/public/1d5/b8e/518/thumb__100_100_0_0_auto.png,2.0,0.0
+371818,2020-05-10,11:30:00,Nightmare team,https://ru.dltv.org/storage/app/uploads/public/87f/995/d32/thumb__100_100_0_0_auto.png,2.0,0.0
+371818,2020-05-08,14:30:00,Sunrise,https://ru.dltv.org/storage/app/uploads/public/c70/e24/d25/thumb__100_100_0_0_auto.png,2.0,1.0
+371818,2020-05-07,12:50:00,Hot Pot Brother,https://ru.dltv.org/storage/app/uploads/public/71c/bbc/9fb/thumb__100_100_0_0_auto.png,2.0,1.0
+371818,2020-05-05,14:30:00,Team Rockets,https://ru.dltv.org/storage/app/uploads/public/086/740/812/thumb__100_100_0_0_auto.png,0.0,2.0
+371818,2020-05-05,11:30:00,Five brothers,https://ru.dltv.org/storage/app/uploads/public/a16/7ca/01a/thumb__100_100_0_0_auto.png,1.0,2.0
+371818,2020-04-30,02:40:00,Team Venture,https://ru.dltv.org/storage/app/uploads/public/7b6/c1c/1be/thumb__100_100_0_0_auto.png,0.0,2.0
+371818,2020-04-29,07:30:00,Sunrise,https://ru.dltv.org/storage/app/uploads/public/c70/e24/d25/thumb__100_100_0_0_auto.png,2.0,0.0
+371822,2020-05-10,14:30:00,Team Lightning,https://ru.dltv.org/storage/app/uploads/public/1d5/b8e/518/thumb__100_100_0_0_auto.png,2.0,0.0
+371822,2020-05-10,11:30:00,Nightmare team,https://ru.dltv.org/storage/app/uploads/public/87f/995/d32/thumb__100_100_0_0_auto.png,2.0,0.0
+371822,2020-05-08,14:30:00,Sunrise,https://ru.dltv.org/storage/app/uploads/public/c70/e24/d25/thumb__100_100_0_0_auto.png,2.0,1.0
+371822,2020-05-07,12:50:00,Hot Pot Brother,https://ru.dltv.org/storage/app/uploads/public/71c/bbc/9fb/thumb__100_100_0_0_auto.png,2.0,1.0
+371822,2020-05-05,14:30:00,Team Rockets,https://ru.dltv.org/storage/app/uploads/public/086/740/812/thumb__100_100_0_0_auto.png,0.0,2.0
+371822,2020-05-05,11:30:00,Five brothers,https://ru.dltv.org/storage/app/uploads/public/a16/7ca/01a/thumb__100_100_0_0_auto.png,1.0,2.0
+371822,2020-04-30,02:40:00,Team Venture,https://ru.dltv.org/storage/app/uploads/public/7b6/c1c/1be/thumb__100_100_0_0_auto.png,0.0,2.0
+371822,2020-04-29,07:30:00,Sunrise,https://ru.dltv.org/storage/app/uploads/public/c70/e24/d25/thumb__100_100_0_0_auto.png,2.0,0.0
+371744,2020-05-12,03:15:00,T1,https://ru.dltv.org/storage/app/uploads/public/0f9/42d/c38/thumb__100_100_0_0_auto.png,2.0,0.0
+371744,2020-05-11,03:20:00,CR,https://ru.dltv.org/storage/app/uploads/public/318/51e/4ad/thumb__100_100_0_0_auto.png,2.0,0.0
+371744,2020-04-26,06:05:00,TNC Predator,https://ru.dltv.org/storage/app/uploads/public/c7b/0ec/91e/thumb__100_100_0_0_auto.png,0.0,2.0
+371744,2020-04-25,09:25:00,BOOM Esports,https://ru.dltv.org/storage/app/uploads/public/e9d/2c2/434/thumb__100_100_0_0_auto.png,2.0,0.0
+371744,2020-04-24,09:30:00,Team Adroit,https://ru.dltv.org/storage/app/uploads/public/e1d/eae/cf0/thumb__100_100_0_0_auto.png,2.0,1.0
+371744,2020-04-22,09:25:00,BOOM Esports,https://ru.dltv.org/storage/app/uploads/public/e9d/2c2/434/thumb__100_100_0_0_auto.png,0.0,2.0
+371744,2020-04-20,10:40:00,Reality Rift,https://ru.dltv.org/storage/app/uploads/public/9d9/d47/aea/thumb__100_100_0_0_auto.png,1.0,2.0
+371744,2020-04-19,10:05:00,BOOM Esports,https://ru.dltv.org/storage/app/uploads/public/e9d/2c2/434/thumb__100_100_0_0_auto.png,2.0,3.0
+371367,2020-05-12,06:10:00,Goodfellaz,https://ru.dltv.org/storage/app/uploads/public/51e/e3e/7d1/thumb__100_100_0_0_auto.png,2.0,1.0
+371367,2020-05-12,03:25:00,Denique,https://ru.dltv.org/storage/app/uploads/public/6c0/14b/8a3/thumb__100_100_0_0_auto.png,2.0,1.0
+371367,2020-05-10,05:10:00,Keen Gaming,https://ru.dltv.org/storage/app/uploads/public/edd/602/459/thumb__100_100_0_0_auto.png,0.0,2.0
+371367,2020-05-09,03:45:00,Busy Gaming,https://ru.dltv.org/storage/app/uploads/public/d9c/63b/103/thumb__100_100_0_0_auto.png,2.0,0.0
+371367,2020-05-08,06:15:00,Cignal Ultra,https://ru.dltv.org/storage/app/uploads/public/ad7/c47/7a9/thumb__100_100_0_0_auto.png,2.0,0.0
+371367,2020-05-07,10:25:00,Neon Esports,https://ru.dltv.org/storage/app/uploads/public/d99/a95/8dc/thumb__100_100_0_0_auto.png,2.0,0.0
+371367,2020-05-06,06:20:00,496 Gaming,https://ru.dltv.org/storage/app/uploads/public/b87/1ed/190/thumb__100_100_0_0_auto.png,2.0,0.0
+371367,2020-05-05,11:40:00,LGD.international,https://ru.dltv.org/storage/app/uploads/public/65b/372/74e/thumb__100_100_0_0_auto.png,2.0,0.0
+372237,2020-05-11,12:00:00,Aster.Aries,https://ru.dltv.org/storage/app/uploads/public/ef3/7d1/960/thumb__100_100_0_0_auto.png,0.0,2.0
+371669,2020-05-12,06:10:00,Goodfellaz,https://ru.dltv.org/storage/app/uploads/public/51e/e3e/7d1/thumb__100_100_0_0_auto.png,2.0,1.0
+371669,2020-05-12,03:25:00,Denique,https://ru.dltv.org/storage/app/uploads/public/6c0/14b/8a3/thumb__100_100_0_0_auto.png,2.0,1.0
+371669,2020-05-10,05:10:00,Keen Gaming,https://ru.dltv.org/storage/app/uploads/public/edd/602/459/thumb__100_100_0_0_auto.png,0.0,2.0
+371669,2020-05-09,03:45:00,Busy Gaming,https://ru.dltv.org/storage/app/uploads/public/d9c/63b/103/thumb__100_100_0_0_auto.png,2.0,0.0
+371669,2020-05-08,06:15:00,Cignal Ultra,https://ru.dltv.org/storage/app/uploads/public/ad7/c47/7a9/thumb__100_100_0_0_auto.png,2.0,0.0
+371669,2020-05-07,10:25:00,Neon Esports,https://ru.dltv.org/storage/app/uploads/public/d99/a95/8dc/thumb__100_100_0_0_auto.png,2.0,0.0
+371669,2020-05-06,06:20:00,496 Gaming,https://ru.dltv.org/storage/app/uploads/public/b87/1ed/190/thumb__100_100_0_0_auto.png,2.0,0.0
+371669,2020-05-05,11:40:00,LGD.international,https://ru.dltv.org/storage/app/uploads/public/65b/372/74e/thumb__100_100_0_0_auto.png,2.0,0.0
+371747,2020-05-12,06:10:00,LGD.international,https://ru.dltv.org/storage/app/uploads/public/65b/372/74e/thumb__100_100_0_0_auto.png,2.0,1.0
+371747,2020-05-11,09:55:00,496 Gaming,https://ru.dltv.org/storage/app/uploads/public/b87/1ed/190/thumb__100_100_0_0_auto.png,0.0,2.0
+371747,2020-05-11,06:10:00,Goodfellaz,https://ru.dltv.org/storage/app/uploads/public/51e/e3e/7d1/thumb__100_100_0_0_auto.png,2.0,1.0
+371747,2020-05-10,10:10:00,CR,https://ru.dltv.org/storage/app/uploads/public/318/51e/4ad/thumb__100_100_0_0_auto.png,0.0,1.0
+371747,2020-05-09,11:10:00,ShenZhen,https://ru.dltv.org/storage/app/uploads/public/268/288/640/thumb__100_100_0_0_auto.png,1.0,0.0
+371747,2020-05-07,10:25:00,Team Adroit,https://ru.dltv.org/storage/app/uploads/public/e1d/eae/cf0/thumb__100_100_0_0_auto.png,0.0,2.0
+371747,2020-05-07,06:10:00,KingPins,https://ru.dltv.org/storage/app/uploads/public/c29/7da/68c/thumb__100_100_0_0_auto.png,0.0,2.0
+371747,2020-05-04,10:00:00,T1,https://ru.dltv.org/storage/app/uploads/public/0f9/42d/c38/thumb__100_100_0_0_auto.png,0.0,2.0
+371374,2020-05-12,03:15:00,Geek Fam,https://ru.dltv.org/storage/app/uploads/public/e39/b61/93b/thumb__100_100_0_0_auto.png,0.0,2.0
+371374,2020-05-11,10:00:00,LGD.international,https://ru.dltv.org/storage/app/uploads/public/65b/372/74e/thumb__100_100_0_0_auto.png,2.0,1.0
+371374,2020-05-11,06:15:00,Cignal Ultra,https://ru.dltv.org/storage/app/uploads/public/ad7/c47/7a9/thumb__100_100_0_0_auto.png,1.0,2.0
+371374,2020-05-10,11:25:00,Flower Gaming,https://ru.dltv.org/storage/app/uploads/public/270/3a9/5a7/thumb__100_100_0_0_auto.png,0.0,2.0
+371374,2020-05-10,10:10:00,NGID.M11,https://ru.dltv.org/storage/app/uploads/public/fe3/5fa/4e3/thumb__100_100_0_0_auto.png,1.0,0.0
+371374,2020-05-05,09:15:00,Team Strawberry,https://ru.dltv.org/storage/app/uploads/public/003/098/11c/thumb__100_100_0_0_auto.png,0.0,2.0
+371374,2020-05-04,10:00:00,Neon Esports,https://ru.dltv.org/storage/app/uploads/public/d99/a95/8dc/thumb__100_100_0_0_auto.png,2.0,0.0
+371374,2020-05-04,06:40:00,LGD.international,https://ru.dltv.org/storage/app/uploads/public/65b/372/74e/thumb__100_100_0_0_auto.png,1.0,2.0
+372228,2020-05-11,09:55:00,Aster.Aries,https://ru.dltv.org/storage/app/uploads/public/ef3/7d1/960/thumb__100_100_0_0_auto.png,2.0,0.0
+372228,2020-05-11,07:45:00,Dark Knight,https://ru.dltv.org/storage/app/uploads/public/e1c/3af/fae/thumb__100_100_0_0_auto.png,0.0,2.0
+372228,2020-04-30,09:55:00,Blaze,https://ru.dltv.org/storage/app/uploads/public/d2f/3e2/d5f/thumb__100_100_0_0_auto.png,1.0,1.0
+372228,2020-04-30,07:25:00,Aster.Aries,https://ru.dltv.org/storage/app/uploads/public/ef3/7d1/960/thumb__100_100_0_0_auto.png,0.0,2.0
+372228,2020-04-28,12:50:00,You Know Who,https://ru.dltv.org/storage/app/uploads/public/5a7/34f/a8a/thumb__100_100_0_0_auto.png,0.0,2.0
+372228,2020-04-28,10:10:00,Newbee Young,https://ru.dltv.org/storage/app/uploads/public/7b6/7f9/ecc/thumb__100_100_0_0_auto.png,0.0,2.0
+372228,2020-04-28,07:35:00,Leopard Gaming,https://ru.dltv.org/storage/app/uploads/public/95d/adf/c97/thumb__100_100_0_0_auto.png,0.0,2.0
+372228,2015-05-26,07:30:14,TongFu.WanZhou,https://ru.dltv.org/storage/app/uploads/public/268/288/640/thumb__100_100_0_0_auto.png,2.0,0.0
+371231,2020-05-06,08:05:00,Pristine n Clean,https://ru.dltv.org/storage/app/uploads/public/be1/146/ab4/thumb__100_100_0_0_auto.png,1.0,1.0
+371231,2020-05-02,08:05:00,Flashpoint Gaming,https://ru.dltv.org/storage/app/uploads/public/545/833/d12/thumb__100_100_0_0_auto.png,0.0,2.0
+371231,2020-04-29,08:05:00,SADBOYS.AU,https://ru.dltv.org/storage/app/uploads/public/2f2/1d9/88b/thumb__100_100_0_0_auto.png,0.0,2.0
+371231,2020-04-27,08:15:00,Sincerely Fury,https://ru.dltv.org/storage/app/uploads/public/836/c7b/7c6/thumb__100_100_0_0_auto.png,0.0,2.0
+371231,2020-04-25,08:05:00,Burgers Flippers,https://ru.dltv.org/storage/app/uploads/public/bfb/033/b84/thumb__100_100_0_0_auto.png,0.0,2.0
+371231,2020-04-24,10:35:00,Adió Chula,https://ru.dltv.org/storage/app/uploads/public/949/ee6/7aa/thumb__100_100_0_0_auto.png,0.0,2.0
+371231,2020-04-23,08:10:00,Benny Brian,https://ru.dltv.org/storage/app/uploads/public/aeb/286/2c1/thumb__100_100_0_0_auto.png,0.0,2.0
+371231,2020-04-18,08:10:00,Sweaty Soldiers,https://ru.dltv.org/storage/app/uploads/public/49f/f11/493/thumb__100_100_0_0_auto.png,1.0,1.0
+370043,2020-05-12,07:55:00,Typhoon E-Sports,https://ru.dltv.org/storage/app/uploads/public/887/46a/a42/thumb__100_100_0_0_auto.png,2.0,0.0
+370043,2020-05-11,09:00:00,The New Top,https://ru.dltv.org/storage/app/uploads/public/ddb/866/30d/thumb__100_100_0_0_auto.png,2.0,1.0
+370043,2020-05-09,12:30:00,Vici Gaming Potential,https://ru.dltv.org/storage/app/uploads/public/186/52a/0a7/thumb__100_100_0_0_auto.png,2.0,0.0
+370043,2020-05-09,05:10:00,Keen Gaming,https://ru.dltv.org/storage/app/uploads/public/edd/602/459/thumb__100_100_0_0_auto.png,0.0,2.0
+370043,2020-05-08,10:25:00,Team Cosy,https://ru.dltv.org/storage/app/uploads/public/519/c84/fb6/thumb__100_100_0_0_auto.png,0.0,1.0
+370043,2020-05-08,03:20:00,Invictus Gaming,https://ru.dltv.org/storage/app/uploads/public/c37/997/4af/thumb__100_100_0_0_auto.png,0.0,2.0
+370043,2020-05-07,08:45:00,Longinus,https://ru.dltv.org/storage/app/uploads/public/1f4/586/34c/thumb__100_100_0_0_auto.png,1.0,1.0
+370043,2020-05-06,08:55:00,Vici Gaming Potential,https://ru.dltv.org/storage/app/uploads/public/186/52a/0a7/thumb__100_100_0_0_auto.png,2.0,0.0
+371348,2020-05-10,08:05:00,Newbee,https://ru.dltv.org/storage/app/uploads/public/be9/f06/a04/thumb__100_100_0_0_auto.png,2.0,1.0
+371348,2020-05-09,12:30:00,Vici Gaming,https://ru.dltv.org/storage/app/uploads/public/0a9/787/b22/thumb__100_100_0_0_auto.png,1.0,2.0
+371348,2020-05-09,06:05:00,EHOME,https://ru.dltv.org/storage/app/uploads/public/f96/bb8/3a4/thumb__100_100_0_0_auto.png,1.0,2.0
+371348,2020-05-08,11:15:00,PSG.LGD,https://ru.dltv.org/storage/app/uploads/public/fd9/4e3/f01/thumb__100_100_0_0_auto.png,2.0,0.0
+371348,2020-05-08,08:35:00,Invictus Gaming,https://ru.dltv.org/storage/app/uploads/public/c37/997/4af/thumb__100_100_0_0_auto.png,2.0,0.0
+371348,2020-05-07,08:35:00,CDEC Gaming,https://ru.dltv.org/storage/app/uploads/public/a9c/cfb/125/thumb__100_100_0_0_auto.png,2.0,1.0
+371348,2020-05-07,06:10:00,PSG.LGD,https://ru.dltv.org/storage/app/uploads/public/fd9/4e3/f01/thumb__100_100_0_0_auto.png,0.0,2.0
+371348,2020-05-06,06:05:00,EHOME,https://ru.dltv.org/storage/app/uploads/public/f96/bb8/3a4/thumb__100_100_0_0_auto.png,2.0,0.0
+370043,2020-05-12,07:55:00,Typhoon E-Sports,https://ru.dltv.org/storage/app/uploads/public/887/46a/a42/thumb__100_100_0_0_auto.png,2.0,0.0
+370043,2020-05-11,09:00:00,The New Top,https://ru.dltv.org/storage/app/uploads/public/ddb/866/30d/thumb__100_100_0_0_auto.png,2.0,1.0
+370043,2020-05-09,12:30:00,Vici Gaming Potential,https://ru.dltv.org/storage/app/uploads/public/186/52a/0a7/thumb__100_100_0_0_auto.png,2.0,0.0
+370043,2020-05-09,05:10:00,Keen Gaming,https://ru.dltv.org/storage/app/uploads/public/edd/602/459/thumb__100_100_0_0_auto.png,0.0,2.0
+370043,2020-05-08,10:25:00,Team Cosy,https://ru.dltv.org/storage/app/uploads/public/519/c84/fb6/thumb__100_100_0_0_auto.png,0.0,1.0
+370043,2020-05-08,03:20:00,Invictus Gaming,https://ru.dltv.org/storage/app/uploads/public/c37/997/4af/thumb__100_100_0_0_auto.png,0.0,2.0
+370043,2020-05-07,08:45:00,Longinus,https://ru.dltv.org/storage/app/uploads/public/1f4/586/34c/thumb__100_100_0_0_auto.png,1.0,1.0
+370043,2020-05-06,08:55:00,Vici Gaming Potential,https://ru.dltv.org/storage/app/uploads/public/186/52a/0a7/thumb__100_100_0_0_auto.png,2.0,0.0
+371348,2020-05-10,08:05:00,Newbee,https://ru.dltv.org/storage/app/uploads/public/be9/f06/a04/thumb__100_100_0_0_auto.png,2.0,1.0
+371348,2020-05-09,12:30:00,Vici Gaming,https://ru.dltv.org/storage/app/uploads/public/0a9/787/b22/thumb__100_100_0_0_auto.png,1.0,2.0
+371348,2020-05-09,06:05:00,EHOME,https://ru.dltv.org/storage/app/uploads/public/f96/bb8/3a4/thumb__100_100_0_0_auto.png,1.0,2.0
+371348,2020-05-08,11:15:00,PSG.LGD,https://ru.dltv.org/storage/app/uploads/public/fd9/4e3/f01/thumb__100_100_0_0_auto.png,2.0,0.0
+371348,2020-05-08,08:35:00,Invictus Gaming,https://ru.dltv.org/storage/app/uploads/public/c37/997/4af/thumb__100_100_0_0_auto.png,2.0,0.0
+371348,2020-05-07,08:35:00,CDEC Gaming,https://ru.dltv.org/storage/app/uploads/public/a9c/cfb/125/thumb__100_100_0_0_auto.png,2.0,1.0
+371348,2020-05-07,06:10:00,PSG.LGD,https://ru.dltv.org/storage/app/uploads/public/fd9/4e3/f01/thumb__100_100_0_0_auto.png,0.0,2.0
+371348,2020-05-06,06:05:00,EHOME,https://ru.dltv.org/storage/app/uploads/public/f96/bb8/3a4/thumb__100_100_0_0_auto.png,2.0,0.0
+372229,2020-05-11,09:55:00,Aster.Aries,https://ru.dltv.org/storage/app/uploads/public/ef3/7d1/960/thumb__100_100_0_0_auto.png,2.0,0.0
+372229,2020-05-11,07:45:00,Dark Knight,https://ru.dltv.org/storage/app/uploads/public/e1c/3af/fae/thumb__100_100_0_0_auto.png,0.0,2.0
+372229,2020-04-30,09:55:00,Blaze,https://ru.dltv.org/storage/app/uploads/public/d2f/3e2/d5f/thumb__100_100_0_0_auto.png,1.0,1.0
+372229,2020-04-30,07:25:00,Aster.Aries,https://ru.dltv.org/storage/app/uploads/public/ef3/7d1/960/thumb__100_100_0_0_auto.png,0.0,2.0
+372229,2020-04-28,12:50:00,You Know Who,https://ru.dltv.org/storage/app/uploads/public/5a7/34f/a8a/thumb__100_100_0_0_auto.png,0.0,2.0
+372229,2020-04-28,10:10:00,Newbee Young,https://ru.dltv.org/storage/app/uploads/public/7b6/7f9/ecc/thumb__100_100_0_0_auto.png,0.0,2.0
+372229,2020-04-28,07:35:00,Leopard Gaming,https://ru.dltv.org/storage/app/uploads/public/95d/adf/c97/thumb__100_100_0_0_auto.png,0.0,2.0
+372229,2015-05-26,07:30:14,TongFu.WanZhou,https://ru.dltv.org/storage/app/uploads/public/268/288/640/thumb__100_100_0_0_auto.png,2.0,0.0
+372326,2020-05-04,13:05:00,Virtus.pro,https://ru.dltv.org/storage/app/uploads/public/825/a78/65e/thumb__100_100_0_0_auto.png,1.0,2.0
+372326,2020-05-03,15:05:00,Team Unique,https://ru.dltv.org/storage/app/uploads/public/482/916/292/thumb__100_100_0_0_auto.png,2.0,1.0
+372326,2020-04-27,13:05:00,Cyber Legacy,https://ru.dltv.org/storage/app/uploads/public/181/19f/cb6/thumb__100_100_0_0_auto.png,2.0,1.0
+372326,2020-04-26,13:05:00,Nemiga Gaming,https://ru.dltv.org/storage/app/uploads/public/ae4/8f4/2f5/thumb__100_100_0_0_auto.png,0.0,2.0
+372326,2020-04-26,10:00:00,Khan,https://ru.dltv.org/storage/app/uploads/public/8ab/df6/867/thumb__100_100_0_0_auto.png,0.0,2.0
+372326,2020-04-25,13:05:00,Team Spirit,https://ru.dltv.org/storage/app/uploads/public/ba5/980/72f/thumb__100_100_0_0_auto.png,0.0,2.0
+372326,2020-04-23,10:00:00,Empire Hope,https://ru.dltv.org/storage/app/uploads/public/6bd/a9b/bd8/thumb__100_100_0_0_auto.png,0.0,2.0
+372326,2020-04-22,15:05:00,FlyToMoon,https://ru.dltv.org/storage/app/uploads/public/e86/805/1db/thumb__100_100_0_0_auto.png,0.0,2.0
+372229,2020-05-11,09:55:00,Aster.Aries,https://ru.dltv.org/storage/app/uploads/public/ef3/7d1/960/thumb__100_100_0_0_auto.png,2.0,0.0
+372229,2020-05-11,07:45:00,Dark Knight,https://ru.dltv.org/storage/app/uploads/public/e1c/3af/fae/thumb__100_100_0_0_auto.png,0.0,2.0
+372229,2020-04-30,09:55:00,Blaze,https://ru.dltv.org/storage/app/uploads/public/d2f/3e2/d5f/thumb__100_100_0_0_auto.png,1.0,1.0
+372229,2020-04-30,07:25:00,Aster.Aries,https://ru.dltv.org/storage/app/uploads/public/ef3/7d1/960/thumb__100_100_0_0_auto.png,0.0,2.0
+372229,2020-04-28,12:50:00,You Know Who,https://ru.dltv.org/storage/app/uploads/public/5a7/34f/a8a/thumb__100_100_0_0_auto.png,0.0,2.0
+372229,2020-04-28,10:10:00,Newbee Young,https://ru.dltv.org/storage/app/uploads/public/7b6/7f9/ecc/thumb__100_100_0_0_auto.png,0.0,2.0
+372229,2020-04-28,07:35:00,Leopard Gaming,https://ru.dltv.org/storage/app/uploads/public/95d/adf/c97/thumb__100_100_0_0_auto.png,0.0,2.0
+372229,2015-05-26,07:30:14,TongFu.WanZhou,https://ru.dltv.org/storage/app/uploads/public/268/288/640/thumb__100_100_0_0_auto.png,2.0,0.0
+371751,2020-05-11,13:25:00,LGD.international,https://ru.dltv.org/storage/app/uploads/public/65b/372/74e/thumb__100_100_0_0_auto.png,1.0,2.0
+371751,2020-04-15,03:30:00,Saint,https://ru.dltv.org/storage/app/uploads/public/5f4/d4d/0fc/thumb__100_100_0_0_auto.png,1.0,2.0
+371751,2020-04-12,09:55:00,Neon Esports,https://ru.dltv.org/storage/app/uploads/public/d99/a95/8dc/thumb__100_100_0_0_auto.png,0.0,2.0
+371751,2020-04-12,07:40:00,Goodfellaz,https://ru.dltv.org/storage/app/uploads/public/51e/e3e/7d1/thumb__100_100_0_0_auto.png,1.0,1.0
+371751,2020-04-08,07:15:00,Reality Rift,https://ru.dltv.org/storage/app/uploads/public/9d9/d47/aea/thumb__100_100_0_0_auto.png,1.0,1.0
+371751,2020-04-08,05:30:00,Equation,https://ru.dltv.org/storage/app/uploads/public/d4e/3e5/867/thumb__100_100_0_0_auto.png,2.0,0.0
+371751,2020-04-07,10:40:00,Cignal Ultra,https://ru.dltv.org/storage/app/uploads/public/ad7/c47/7a9/thumb__100_100_0_0_auto.png,1.0,1.0
+371751,2020-03-23,07:00:00,Team Strawberry,https://ru.dltv.org/storage/app/uploads/public/003/098/11c/thumb__100_100_0_0_auto.png,0.0,2.0
+372300,2020-05-09,11:10:00,Virtus.pro,https://ru.dltv.org/storage/app/uploads/public/825/a78/65e/thumb__100_100_0_0_auto.png,0.0,2.0
+372300,2020-05-08,11:05:00,Ninjas in Pyjamas,https://ru.dltv.org/storage/app/uploads/public/ae1/b22/89c/thumb__100_100_0_0_auto.png,0.0,2.0
+372300,2020-05-04,15:50:00,Team Spirit,https://ru.dltv.org/storage/app/uploads/public/ba5/980/72f/thumb__100_100_0_0_auto.png,2.0,1.0
+372300,2020-05-02,11:00:00,VP.Prodigy,https://ru.dltv.org/storage/app/uploads/public/bca/9cc/3ac/thumb__100_100_0_0_auto.png,1.0,2.0
+372300,2020-05-01,11:10:00,B8,https://ru.dltv.org/storage/app/uploads/public/69a/96f/ae8/thumb__100_100_0_0_auto.jpg,2.0,0.0
+372300,2020-04-29,14:35:00,Virtus.pro,https://ru.dltv.org/storage/app/uploads/public/825/a78/65e/thumb__100_100_0_0_auto.png,2.0,1.0
+372300,2020-04-25,11:05:00,FlyToMoon,https://ru.dltv.org/storage/app/uploads/public/e86/805/1db/thumb__100_100_0_0_auto.png,2.0,0.0
+372300,2020-04-23,14:05:00,Natus Vincere,https://ru.dltv.org/storage/app/uploads/public/926/90e/d55/thumb__100_100_0_0_auto.png,2.0,0.0
+372348,2020-05-07,15:15:00,Nigma,https://ru.dltv.org/storage/app/uploads/public/fd4/d24/31c/thumb__100_100_0_0_auto.png,0.0,1.0
+372348,2020-05-04,13:30:00,Team Liquid,https://ru.dltv.org/storage/app/uploads/public/8f7/855/e04/thumb__100_100_0_0_auto.png,0.0,2.0
+372348,2020-05-02,14:55:00,OG,https://ru.dltv.org/storage/app/uploads/public/842/59c/acf/thumb__100_100_0_0_auto.png,2.0,1.0
+372348,2020-04-30,11:10:00,Alliance,https://ru.dltv.org/storage/app/uploads/public/fa7/e27/383/thumb__100_100_0_0_auto.png,1.0,2.0
+372348,2020-04-27,11:10:00,Nigma,https://ru.dltv.org/storage/app/uploads/public/fd4/d24/31c/thumb__100_100_0_0_auto.png,1.0,2.0
+372348,2020-04-26,18:25:00,Team Secret,https://ru.dltv.org/storage/app/uploads/public/697/dc9/c84/thumb__100_100_0_0_auto.png,0.0,2.0
+372348,2020-04-23,16:30:00,Ninjas in Pyjamas,https://ru.dltv.org/storage/app/uploads/public/ae1/b22/89c/thumb__100_100_0_0_auto.png,1.0,2.0
+372348,2020-04-22,17:05:00,Vikin.gg,https://ru.dltv.org/storage/app/uploads/public/9d4/c53/8f1/thumb__100_100_0_0_auto.png,2.0,1.0
+372201,2020-03-28,19:00:00,Inverse,https://ru.dltv.org/storage/app/uploads/public/9ce/39e/26b/thumb__100_100_0_0_auto.png,0.0,2.0
+372201,2020-03-27,21:40:00,Gorillaz-Pride,https://ru.dltv.org/storage/app/uploads/public/747/654/cd7/thumb__100_100_0_0_auto.png,0.0,2.0
+372201,2020-03-27,01:25:00,Vicious Gaming,https://ru.dltv.org/storage/app/uploads/public/643/ce7/c05/thumb__100_100_0_0_auto.png,0.0,2.0
+372201,2020-03-26,19:10:00,Thunder Predator,https://ru.dltv.org/storage/app/uploads/public/203/42b/153/thumb__100_100_0_0_auto.png,1.0,2.0
+372201,2020-03-26,16:30:00,Infamous,https://ru.dltv.org/storage/app/uploads/public/a97/ae9/8a2/thumb__100_100_0_0_auto.png,2.0,0.0
+372201,2020-03-25,23:20:00,Inverse,https://ru.dltv.org/storage/app/uploads/public/9ce/39e/26b/thumb__100_100_0_0_auto.png,2.0,0.0
+372201,2020-03-25,17:25:00,G-Pride Blue,https://ru.dltv.org/storage/app/uploads/public/866/b25/246/thumb__100_100_0_0_auto.png,1.0,1.0
+372201,2020-03-23,17:25:00,0-900 Skr,https://ru.dltv.org/storage/app/uploads/public/930/bd4/034/thumb__100_100_0_0_auto.png,1.0,1.0
+372200,2020-03-28,19:00:00,Inverse,https://ru.dltv.org/storage/app/uploads/public/9ce/39e/26b/thumb__100_100_0_0_auto.png,0.0,2.0
+372200,2020-03-27,21:40:00,Gorillaz-Pride,https://ru.dltv.org/storage/app/uploads/public/747/654/cd7/thumb__100_100_0_0_auto.png,0.0,2.0
+372200,2020-03-27,01:25:00,Vicious Gaming,https://ru.dltv.org/storage/app/uploads/public/643/ce7/c05/thumb__100_100_0_0_auto.png,0.0,2.0
+372200,2020-03-26,19:10:00,Thunder Predator,https://ru.dltv.org/storage/app/uploads/public/203/42b/153/thumb__100_100_0_0_auto.png,1.0,2.0
+372200,2020-03-26,16:30:00,Infamous,https://ru.dltv.org/storage/app/uploads/public/a97/ae9/8a2/thumb__100_100_0_0_auto.png,2.0,0.0
+372200,2020-03-25,23:20:00,Inverse,https://ru.dltv.org/storage/app/uploads/public/9ce/39e/26b/thumb__100_100_0_0_auto.png,2.0,0.0
+372200,2020-03-25,17:25:00,G-Pride Blue,https://ru.dltv.org/storage/app/uploads/public/866/b25/246/thumb__100_100_0_0_auto.png,1.0,1.0
+372200,2020-03-23,17:25:00,0-900 Skr,https://ru.dltv.org/storage/app/uploads/public/930/bd4/034/thumb__100_100_0_0_auto.png,1.0,1.0
+372191,2017-06-13,22:29:25,Union Gaming Bolivia,https://ru.dltv.org/storage/app/uploads/public/268/288/640/thumb__100_100_0_0_auto.png,0.0,1.0
+372191,2014-08-29,02:08:09,Flip.Sid3 Tactics NA,https://ru.dltv.org/storage/app/uploads/public/268/288/640/thumb__100_100_0_0_auto.png,1.0,0.0
+372191,2014-08-29,01:14:18,hmmmm...,https://ru.dltv.org/storage/app/uploads/public/268/288/640/thumb__100_100_0_0_auto.png,0.0,0.0
+372191,2014-08-28,23:49:08,Team Bird's Nest,https://ru.dltv.org/storage/app/uploads/public/268/288/640/thumb__100_100_0_0_auto.png,1.0,0.0
+372191,2014-08-28,00:03:49,613 Dota,https://ru.dltv.org/storage/app/uploads/public/268/288/640/thumb__100_100_0_0_auto.png,1.0,0.0
+372191,2014-08-26,23:51:51,team x),https://ru.dltv.org/storage/app/uploads/public/268/288/640/thumb__100_100_0_0_auto.png,1.0,0.0
+372191,2014-08-22,01:27:14,Flip.Sid3 Tactics NA,https://ru.dltv.org/storage/app/uploads/public/268/288/640/thumb__100_100_0_0_auto.png,0.0,1.0
+372191,2014-08-21,01:45:51,Yakuz4 eSports,https://ru.dltv.org/storage/app/uploads/public/268/288/640/thumb__100_100_0_0_auto.png,1.0,0.0
+372187,2020-05-10,22:25:00,L0w_Profile,https://ru.dltv.org/storage/app/uploads/public/268/288/640/thumb__100_100_0_0_auto.png,0.0,1.0
+372187,2020-04-29,21:05:00,NoPing,https://ru.dltv.org/storage/app/uploads/public/250/b0b/30d/thumb__100_100_0_0_auto.png,0.0,2.0
+372187,2020-04-26,22:15:00,Gorillaz-Pride,https://ru.dltv.org/storage/app/uploads/public/747/654/cd7/thumb__100_100_0_0_auto.png,0.0,2.0
+372187,2020-04-25,23:10:00,Azules Esports,https://ru.dltv.org/storage/app/uploads/public/643/76f/ce4/thumb__100_100_0_0_auto.png,2.0,0.0
+372187,2020-04-24,21:05:00,Sadboys,https://ru.dltv.org/storage/app/uploads/public/3e5/603/d83/thumb__100_100_0_0_auto.png,2.0,0.0
+372187,2020-04-23,22:20:00,Gorillaz-Pride,https://ru.dltv.org/storage/app/uploads/public/747/654/cd7/thumb__100_100_0_0_auto.png,1.0,2.0
+372187,2020-04-22,02:35:00,Pacific Esports,https://ru.dltv.org/storage/app/uploads/public/16e/c9f/ed1/thumb__100_100_0_0_auto.png,1.0,0.0
+372187,2020-04-22,01:30:00,Incubus Gaming,https://ru.dltv.org/storage/app/uploads/public/9d2/5b6/918/thumb__100_100_0_0_auto.png,0.0,1.0
+371348,2020-05-10,08:05:00,Newbee,https://ru.dltv.org/storage/app/uploads/public/be9/f06/a04/thumb__100_100_0_0_auto.png,2.0,1.0
+371348,2020-05-09,12:30:00,Vici Gaming,https://ru.dltv.org/storage/app/uploads/public/0a9/787/b22/thumb__100_100_0_0_auto.png,1.0,2.0
+371348,2020-05-09,06:05:00,EHOME,https://ru.dltv.org/storage/app/uploads/public/f96/bb8/3a4/thumb__100_100_0_0_auto.png,1.0,2.0
+371348,2020-05-08,11:15:00,PSG.LGD,https://ru.dltv.org/storage/app/uploads/public/fd9/4e3/f01/thumb__100_100_0_0_auto.png,2.0,0.0
+371348,2020-05-08,08:35:00,Invictus Gaming,https://ru.dltv.org/storage/app/uploads/public/c37/997/4af/thumb__100_100_0_0_auto.png,2.0,0.0
+371348,2020-05-07,08:35:00,CDEC Gaming,https://ru.dltv.org/storage/app/uploads/public/a9c/cfb/125/thumb__100_100_0_0_auto.png,2.0,1.0
+371348,2020-05-07,06:10:00,PSG.LGD,https://ru.dltv.org/storage/app/uploads/public/fd9/4e3/f01/thumb__100_100_0_0_auto.png,0.0,2.0
+371348,2020-05-06,06:05:00,EHOME,https://ru.dltv.org/storage/app/uploads/public/f96/bb8/3a4/thumb__100_100_0_0_auto.png,2.0,0.0
+372348,2020-05-07,15:15:00,Nigma,https://ru.dltv.org/storage/app/uploads/public/fd4/d24/31c/thumb__100_100_0_0_auto.png,0.0,1.0
+372348,2020-05-04,13:30:00,Team Liquid,https://ru.dltv.org/storage/app/uploads/public/8f7/855/e04/thumb__100_100_0_0_auto.png,0.0,2.0
+372348,2020-05-02,14:55:00,OG,https://ru.dltv.org/storage/app/uploads/public/842/59c/acf/thumb__100_100_0_0_auto.png,2.0,1.0
+372348,2020-04-30,11:10:00,Alliance,https://ru.dltv.org/storage/app/uploads/public/fa7/e27/383/thumb__100_100_0_0_auto.png,1.0,2.0
+372348,2020-04-27,11:10:00,Nigma,https://ru.dltv.org/storage/app/uploads/public/fd4/d24/31c/thumb__100_100_0_0_auto.png,1.0,2.0
+372348,2020-04-26,18:25:00,Team Secret,https://ru.dltv.org/storage/app/uploads/public/697/dc9/c84/thumb__100_100_0_0_auto.png,0.0,2.0
+372348,2020-04-23,16:30:00,Ninjas in Pyjamas,https://ru.dltv.org/storage/app/uploads/public/ae1/b22/89c/thumb__100_100_0_0_auto.png,1.0,2.0
+372348,2020-04-22,17:05:00,Vikin.gg,https://ru.dltv.org/storage/app/uploads/public/9d4/c53/8f1/thumb__100_100_0_0_auto.png,2.0,1.0
+372229,2020-05-11,09:55:00,Aster.Aries,https://ru.dltv.org/storage/app/uploads/public/ef3/7d1/960/thumb__100_100_0_0_auto.png,2.0,0.0
+372229,2020-05-11,07:45:00,Dark Knight,https://ru.dltv.org/storage/app/uploads/public/e1c/3af/fae/thumb__100_100_0_0_auto.png,0.0,2.0
+372229,2020-04-30,09:55:00,Blaze,https://ru.dltv.org/storage/app/uploads/public/d2f/3e2/d5f/thumb__100_100_0_0_auto.png,1.0,1.0
+372229,2020-04-30,07:25:00,Aster.Aries,https://ru.dltv.org/storage/app/uploads/public/ef3/7d1/960/thumb__100_100_0_0_auto.png,0.0,2.0
+372229,2020-04-28,12:50:00,You Know Who,https://ru.dltv.org/storage/app/uploads/public/5a7/34f/a8a/thumb__100_100_0_0_auto.png,0.0,2.0
+372229,2020-04-28,10:10:00,Newbee Young,https://ru.dltv.org/storage/app/uploads/public/7b6/7f9/ecc/thumb__100_100_0_0_auto.png,0.0,2.0
+372229,2020-04-28,07:35:00,Leopard Gaming,https://ru.dltv.org/storage/app/uploads/public/95d/adf/c97/thumb__100_100_0_0_auto.png,0.0,2.0
+372229,2015-05-26,07:30:14,TongFu.WanZhou,https://ru.dltv.org/storage/app/uploads/public/268/288/640/thumb__100_100_0_0_auto.png,2.0,0.0
+371751,2020-05-11,13:25:00,LGD.international,https://ru.dltv.org/storage/app/uploads/public/65b/372/74e/thumb__100_100_0_0_auto.png,1.0,2.0
+371751,2020-04-15,03:30:00,Saint,https://ru.dltv.org/storage/app/uploads/public/5f4/d4d/0fc/thumb__100_100_0_0_auto.png,1.0,2.0
+371751,2020-04-12,09:55:00,Neon Esports,https://ru.dltv.org/storage/app/uploads/public/d99/a95/8dc/thumb__100_100_0_0_auto.png,0.0,2.0
+371751,2020-04-12,07:40:00,Goodfellaz,https://ru.dltv.org/storage/app/uploads/public/51e/e3e/7d1/thumb__100_100_0_0_auto.png,1.0,1.0
+371751,2020-04-08,07:15:00,Reality Rift,https://ru.dltv.org/storage/app/uploads/public/9d9/d47/aea/thumb__100_100_0_0_auto.png,1.0,1.0
+371751,2020-04-08,05:30:00,Equation,https://ru.dltv.org/storage/app/uploads/public/d4e/3e5/867/thumb__100_100_0_0_auto.png,2.0,0.0
+371751,2020-04-07,10:40:00,Cignal Ultra,https://ru.dltv.org/storage/app/uploads/public/ad7/c47/7a9/thumb__100_100_0_0_auto.png,1.0,1.0
+371751,2020-03-23,07:00:00,Team Strawberry,https://ru.dltv.org/storage/app/uploads/public/003/098/11c/thumb__100_100_0_0_auto.png,0.0,2.0
+372300,2020-05-09,11:10:00,Virtus.pro,https://ru.dltv.org/storage/app/uploads/public/825/a78/65e/thumb__100_100_0_0_auto.png,0.0,2.0
+372300,2020-05-08,11:05:00,Ninjas in Pyjamas,https://ru.dltv.org/storage/app/uploads/public/ae1/b22/89c/thumb__100_100_0_0_auto.png,0.0,2.0
+372300,2020-05-04,15:50:00,Team Spirit,https://ru.dltv.org/storage/app/uploads/public/ba5/980/72f/thumb__100_100_0_0_auto.png,2.0,1.0
+372300,2020-05-02,11:00:00,VP.Prodigy,https://ru.dltv.org/storage/app/uploads/public/bca/9cc/3ac/thumb__100_100_0_0_auto.png,1.0,2.0
+372300,2020-05-01,11:10:00,B8,https://ru.dltv.org/storage/app/uploads/public/69a/96f/ae8/thumb__100_100_0_0_auto.jpg,2.0,0.0
+372300,2020-04-29,14:35:00,Virtus.pro,https://ru.dltv.org/storage/app/uploads/public/825/a78/65e/thumb__100_100_0_0_auto.png,2.0,1.0
+372300,2020-04-25,11:05:00,FlyToMoon,https://ru.dltv.org/storage/app/uploads/public/e86/805/1db/thumb__100_100_0_0_auto.png,2.0,0.0
+372300,2020-04-23,14:05:00,Natus Vincere,https://ru.dltv.org/storage/app/uploads/public/926/90e/d55/thumb__100_100_0_0_auto.png,2.0,0.0
+372357,2020-05-12,14:30:00,WOLF,https://ru.dltv.org/storage/app/uploads/public/47e/fef/8f9/thumb__100_100_0_0_auto.png,2.0,1.0
+372357,2020-05-12,11:30:00,Future.club,https://ru.dltv.org/storage/app/uploads/public/7a5/539/8cd/thumb__100_100_0_0_auto.png,0.0,2.0
+372357,2020-05-10,14:30:00,Team Lightning,https://ru.dltv.org/storage/app/uploads/public/1d5/b8e/518/thumb__100_100_0_0_auto.png,2.0,0.0
+372357,2020-05-10,11:30:00,Nightmare team,https://ru.dltv.org/storage/app/uploads/public/87f/995/d32/thumb__100_100_0_0_auto.png,2.0,0.0
+372357,2020-05-08,14:30:00,Sunrise,https://ru.dltv.org/storage/app/uploads/public/c70/e24/d25/thumb__100_100_0_0_auto.png,2.0,1.0
+372357,2020-05-07,12:50:00,Hot Pot Brother,https://ru.dltv.org/storage/app/uploads/public/71c/bbc/9fb/thumb__100_100_0_0_auto.png,2.0,1.0
+372357,2020-05-05,14:30:00,Team Rockets,https://ru.dltv.org/storage/app/uploads/public/086/740/812/thumb__100_100_0_0_auto.png,0.0,2.0
+372357,2020-05-05,11:30:00,Five brothers,https://ru.dltv.org/storage/app/uploads/public/a16/7ca/01a/thumb__100_100_0_0_auto.png,1.0,2.0
+372300,2020-05-09,11:10:00,Virtus.pro,https://ru.dltv.org/storage/app/uploads/public/825/a78/65e/thumb__100_100_0_0_auto.png,0.0,2.0
+372300,2020-05-08,11:05:00,Ninjas in Pyjamas,https://ru.dltv.org/storage/app/uploads/public/ae1/b22/89c/thumb__100_100_0_0_auto.png,0.0,2.0
+372300,2020-05-04,15:50:00,Team Spirit,https://ru.dltv.org/storage/app/uploads/public/ba5/980/72f/thumb__100_100_0_0_auto.png,2.0,1.0
+372300,2020-05-02,11:00:00,VP.Prodigy,https://ru.dltv.org/storage/app/uploads/public/bca/9cc/3ac/thumb__100_100_0_0_auto.png,1.0,2.0
+372300,2020-05-01,11:10:00,B8,https://ru.dltv.org/storage/app/uploads/public/69a/96f/ae8/thumb__100_100_0_0_auto.jpg,2.0,0.0
+372300,2020-04-29,14:35:00,Virtus.pro,https://ru.dltv.org/storage/app/uploads/public/825/a78/65e/thumb__100_100_0_0_auto.png,2.0,1.0
+372300,2020-04-25,11:05:00,FlyToMoon,https://ru.dltv.org/storage/app/uploads/public/e86/805/1db/thumb__100_100_0_0_auto.png,2.0,0.0
+372300,2020-04-23,14:05:00,Natus Vincere,https://ru.dltv.org/storage/app/uploads/public/926/90e/d55/thumb__100_100_0_0_auto.png,2.0,0.0
+372047,2020-05-12,09:05:00,Longinus,https://ru.dltv.org/storage/app/uploads/public/1f4/586/34c/thumb__100_100_0_0_auto.png,1.0,2.0
+372047,2020-05-10,08:10:00,Avengerls,https://ru.dltv.org/storage/app/uploads/public/5ac/af6/cd4/thumb__100_100_0_0_auto.png,2.0,1.0
+372047,2020-05-09,09:05:45,Team Strawberry,https://ru.dltv.org/storage/app/uploads/public/003/098/11c/thumb__100_100_0_0_auto.png,1.0,0.0
+372047,2020-05-09,08:20:00,The New Top,https://ru.dltv.org/storage/app/uploads/public/ddb/866/30d/thumb__100_100_0_0_auto.png,1.0,0.0
+372047,2020-04-12,05:05:00,iG Vitality,https://ru.dltv.org/storage/app/uploads/public/dbd/f5e/6b9/thumb__100_100_0_0_auto.png,0.0,2.0
+372047,2020-04-11,05:15:00,Newbee,https://ru.dltv.org/storage/app/uploads/public/be9/f06/a04/thumb__100_100_0_0_auto.png,1.0,2.0
+372047,2020-04-10,05:10:00,iG Vitality,https://ru.dltv.org/storage/app/uploads/public/dbd/f5e/6b9/thumb__100_100_0_0_auto.png,2.0,1.0
+372047,2020-04-09,10:00:00,You Know Who,https://ru.dltv.org/storage/app/uploads/public/5a7/34f/a8a/thumb__100_100_0_0_auto.png,2.0,0.0
+372367,2020-05-09,02:50:00,Cobra Gaming,https://ru.dltv.org/storage/app/uploads/public/efe/ff1/705/thumb__100_100_0_0_auto.png,2.0,1.0
+372367,2020-05-07,04:20:00,Team Destiny,https://ru.dltv.org/storage/app/uploads/public/420/ba5/00e/thumb__100_100_0_0_auto.png,2.0,0.0
+372367,2020-05-07,02:40:00,Team Honor,https://ru.dltv.org/storage/app/uploads/public/901/f9e/a88/thumb__100_100_0_0_auto.png,0.0,2.0
+372367,2020-05-06,02:50:00,Team Ethereal,https://ru.dltv.org/storage/app/uploads/public/b10/c86/82c/thumb__100_100_0_0_auto.png,2.0,0.0
+372367,2020-05-05,02:45:00,Team Galaxy,https://ru.dltv.org/storage/app/uploads/public/47d/395/d6b/thumb__100_100_0_0_auto.png,0.0,2.0
+372367,2020-05-04,06:55:00,Team Varanid,https://ru.dltv.org/storage/app/uploads/public/36a/77d/446/thumb__100_100_0_0_auto.png,2.0,1.0
+372367,2020-05-03,01:43:39,Team Brave,https://ru.dltv.org/storage/app/uploads/public/01d/ba7/3b0/thumb__100_100_0_0_auto.png,2.0,0.0
+372367,2020-05-02,03:38:02,Panda Gaming,https://ru.dltv.org/storage/app/uploads/public/177/b11/79e/thumb__100_100_0_0_auto.png,2.0,0.0
+372368,2020-05-12,07:35:00,Team Brave,https://ru.dltv.org/storage/app/uploads/public/01d/ba7/3b0/thumb__100_100_0_0_auto.png,2.0,0.0
+372368,2020-05-11,02:45:00,Team Varanid,https://ru.dltv.org/storage/app/uploads/public/36a/77d/446/thumb__100_100_0_0_auto.png,2.0,0.0
+372368,2020-05-10,03:00:00,Team Honor,https://ru.dltv.org/storage/app/uploads/public/901/f9e/a88/thumb__100_100_0_0_auto.png,2.0,0.0
+372368,2020-05-08,07:20:00,Team Destiny,https://ru.dltv.org/storage/app/uploads/public/420/ba5/00e/thumb__100_100_0_0_auto.png,2.0,1.0
+372368,2020-05-08,05:40:00,Team Galaxy,https://ru.dltv.org/storage/app/uploads/public/47d/395/d6b/thumb__100_100_0_0_auto.png,0.0,2.0
+372368,2020-05-06,07:10:00,Cobra Gaming,https://ru.dltv.org/storage/app/uploads/public/efe/ff1/705/thumb__100_100_0_0_auto.png,2.0,0.0
+372368,2020-05-06,02:50:00,Immortal Gaming,https://ru.dltv.org/storage/app/uploads/public/c3e/ac4/df1/thumb__100_100_0_0_auto.png,0.0,2.0
+372368,2020-05-01,04:31:47,Panda Gaming,https://ru.dltv.org/storage/app/uploads/public/177/b11/79e/thumb__100_100_0_0_auto.png,2.0,0.0
+372300,2020-05-09,11:10:00,Virtus.pro,https://ru.dltv.org/storage/app/uploads/public/825/a78/65e/thumb__100_100_0_0_auto.png,0,2
+372300,2020-05-08,11:05:00,Ninjas in Pyjamas,https://ru.dltv.org/storage/app/uploads/public/ae1/b22/89c/thumb__100_100_0_0_auto.png,0,2
+372300,2020-05-04,15:50:00,Team Spirit,https://ru.dltv.org/storage/app/uploads/public/ba5/980/72f/thumb__100_100_0_0_auto.png,2,1
+372300,2020-05-02,11:00:00,VP.Prodigy,https://ru.dltv.org/storage/app/uploads/public/bca/9cc/3ac/thumb__100_100_0_0_auto.png,1,2
+372300,2020-05-01,11:10:00,B8,https://ru.dltv.org/storage/app/uploads/public/69a/96f/ae8/thumb__100_100_0_0_auto.jpg,2,0
+372300,2020-04-29,14:35:00,Virtus.pro,https://ru.dltv.org/storage/app/uploads/public/825/a78/65e/thumb__100_100_0_0_auto.png,2,1
+372300,2020-04-25,11:05:00,FlyToMoon,https://ru.dltv.org/storage/app/uploads/public/e86/805/1db/thumb__100_100_0_0_auto.png,2,0
+372300,2020-04-23,14:05:00,Natus Vincere,https://ru.dltv.org/storage/app/uploads/public/926/90e/d55/thumb__100_100_0_0_auto.png,2,0
