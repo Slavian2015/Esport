@@ -1146,63 +1146,76 @@ def layout_main():
                                                                                                      # 'font-size': '20px',
                                                                                                      },
                                                                                                  children=[
-                                                                                                     ddk.Block(
-                                                                                                         width=100,
+                                                                                                     dbc.Row(style={'width': '100%', 'textAlign': 'center','min-height': '40px',},
+                                                                                                         # width=100,
                                                                                                          children=[
-                                                                                                             ddk.Block(
-                                                                                                                 width=25,
-                                                                                                                 style={
-                                                                                                                     'min-width': 'fit-content', },
+                                                                                                             dbc.Col(
+                                                                                                                 # width=20,
+                                                                                                                 style={'width': '30%','padding': '0px',
+                                                                                                                             'margin': '0px'
+                                                                                                                     # 'min-width': 'fit-content',
+                                                                                                                        },
                                                                                                                  children=[
                                                                                                                      html.H6(
                                                                                                                          "Название",
-                                                                                                                         style={
+                                                                                                                         style={'text-align': 'center',
                                                                                                                              'font-size': '20px',
                                                                                                                              'padding': '0px','width': '100%',
                                                                                                                              'margin': '0px'})]),
-                                                                                                             ddk.Block(
-                                                                                                                 width=25,
+                                                                                                             dbc.Col(
+                                                                                                                 # width=15,
                                                                                                                  style={
-                                                                                                                     'min-width': 'fit-content', },
+                                                                                                                     # 'padding-right': '25px',
+                                                                                                                     # 'min-width': 'fit-content',
+                                                                                                                 'width': '20%','padding': '0px',
+                                                                                                                             'margin': '0px'},
                                                                                                                  children=[
                                                                                                                      html.H6(
                                                                                                                          "Фонд",
-                                                                                                                         style={
+                                                                                                                         style={'text-align': 'center',
                                                                                                                              'font-size': '20px','width': '100%',
                                                                                                                              'padding': '0px',
                                                                                                                              'margin': '0px'})]),
-                                                                                                             ddk.Block(
-                                                                                                                 width=10,
+                                                                                                             dbc.Col(
+                                                                                                                 # width=20,
                                                                                                                  style={
-                                                                                                                     'min-width': 'fit-content', },
+                                                                                                                     # 'padding-right': '25px',
+                                                                                                                     'width': '20%','padding': '0px',
+                                                                                                                             'margin': '0px'
+                                                                                                                     # 'min-width': 'fit-content',
+                                                                                                                 },
                                                                                                                  children=[
                                                                                                                      html.H6(
                                                                                                                          "Период",
-                                                                                                                         style={
+                                                                                                                         style={'text-align': 'center',
                                                                                                                              'font-size': '20px','width': '100%',
                                                                                                                              'padding': '0px',
                                                                                                                              'margin': '0px'})]),
-                                                                                                             ddk.Block(
-                                                                                                                 width=15,
-                                                                                                                 style={
-                                                                                                                     'min-width': 'fit-content', },
+                                                                                                             dbc.Col(
+                                                                                                                 # width=10,
+                                                                                                                 style={'width': '15%','padding': '0px',
+                                                                                                                             'margin': '0px'
+                                                                                                                     # 'min-width': 'fit-content',
+                                                                                                                        },
                                                                                                                  children=[
                                                                                                                      html.H6(
                                                                                                                          "Команд",
-                                                                                                                         style={
+                                                                                                                         style={'text-align': 'center',
                                                                                                                              'font-size': '20px','width': '100%',
                                                                                                                              'padding': '0px',
                                                                                                                              'margin': '0px'})]),
-                                                                                                             ddk.Block(
-                                                                                                                 width=10,
+                                                                                                             dbc.Col(
+                                                                                                                 # width=10,
                                                                                                                  style={
-                                                                                                                     'min-width': 'fit-content',
+                                                                                                                     'width': '15%','padding': '0px',
+                                                                                                                             'margin': '0px'
+                                                                                                                     # 'min-width': 'fit-content',
                                                                                                                      # 'margin-left': '5px'
                                                                                                                  },
                                                                                                                  children=[
                                                                                                                      html.H6(
                                                                                                                          "Страна",
-                                                                                                                         style={
+                                                                                                                         style={'text-align': 'center',
                                                                                                                              'font-size': '20px',
                                                                                                                              'padding': '0px','width': '100%',
                                                                                                                              'margin': '0px'})]),

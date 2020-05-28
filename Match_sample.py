@@ -5,9 +5,7 @@ import dash_design_kit as ddk
 import os
 import pandas as pd
 import Main_page
-import Live_matches
 import Match_Score_Teble
-# import uuid
 
 
 main_path_data = os.path.abspath("./data")
@@ -32,7 +30,7 @@ chart_table = ddk.Card(style={'width':'-webkit-fill-available',
 
 
 ##########################    ONE MATCH CARD   ##############################
-def match_card2(id):
+def match_card(id):
 
     all_cardsBD = pd.read_csv(main_path_data + '\\all_cards.csv')
     id = id.replace("/", "")
@@ -40,94 +38,181 @@ def match_card2(id):
 
     time = df.iloc[0]['Mtime']
 
-    # session_id = str(uuid.uuid1())
-    # # store the session id in a dcc.Store component (invisible component for storing data)
-    # store_session_id_div = dcc.Store(id={'type': 'session_id_div_id', 'index': id},
-    #                                  storage_type='session',  # IMPORTANT! see docstring of dcc.Store
-    #                                  data=session_id)
-
     ##############     HEAD CARD of MATCH   ###################################
     match_head = ddk.Card(style={'width': '-webkit-fill-available',
                                  'min-height': '120px',
                                  'margin': '10px',
-                                 'padding': '15px',
-                                 'background-color': '#f9f9f91c'}, children=[
-        ddk.Block(width=100, style={'height': 'fit-content', },
+                                 'padding': '10px',
+                                 'background-color': '#f9f9f91c',
+                                 'text-align': '-webkit-center'}, children=[
+        dbc.Row(
+            # width=100,
+            style={'height': 'fit-content', 'justify-content': 'center'},
                   children=[html.H2(df.iloc[0]['Mtour'], style={'text-align': 'center',
                                                                 'text-color': 'azure',
                                                                 'margin': '0'})]),
-        ddk.Block(width=100, style={'max-height': 'fit-content'},
-                  children=[html.H6('{} {}'.format(df.iloc[0]['Mdate'], time[0:4]),
+        dbc.Row(
+            # width=100,
+            style={'max-height': 'fit-content', 'justify-content': 'center','padding': '5px',},
+                  children=[html.H6('{} {}'.format(df.iloc[0]['Mdate'], time[0:5]),
                                     style={'text-align': 'center', 'margin': '0'})]),
-        ddk.Block(width=40, style={'max-height': 'fit-content'}, children=[
-            ddk.Block(width=100,
-                      children=[
-                          ddk.Block(width=70, children=[
-                              ddk.Block(width=100,
+
+        dbc.Row(style={'text-align': 'center',
+                       'margin': '0',
+                       'padding': '0',
+                       'width':'100%',
+                       'justify-content': 'center'},
+                children=[
+        dbc.Col(
+            # width=40,
+                style={'width': '40%',
+                       'max-height': 'fit-content',
+                       'padding': '0',
+                       # 'min-width':'fit-content',
+                       'max-width':'fit-content'
+                       },
+                children=dbc.Row(
+                    style={'width': '100%',
+                           'margin': '0',
+                           # 'padding': '0',
+                           # 'text-align': 'center',
+                           'justify-content': 'center'
+                           },
+                children=[
+                          dbc.Col(
+                              # width=70,
+                                  style={'width': '70%',
+                                         'justify-content': 'center',
+                                         'padding': '0',
+                                         # 'min-width':'fit-content'
+                                         },
+                                    children=[
+                              dbc.Row(style={'margin': '0',
+                                             'padding': '0',
+                                             'justify-content': 'right'},
+                                  # width=100,
                                         children=html.H2(df.iloc[0]['T1name'],
                                                          style={
                                                              'text-align': 'right', 'margin': '0'})),
-                              ddk.Block(width=100,
+                              dbc.Row(style={'margin': '0',
+                                             # 'padding': '0',
+                                             'justify-content': 'right'},
+                                  # width=100,
                                         children=html.H6('{}, {}, {}, {}, {}'.format(df.iloc[0]['P11'],
                                                                                      df.iloc[0]['P12'],
                                                                                      df.iloc[0]['P13'],
                                                                                      df.iloc[0]['P14'],
                                                                                      df.iloc[0]['P15']),
                                                          style={
-                                                             'text-align': 'right', 'margin': '0'})),
-
-                          ]),
-                          ddk.Block(width=30,
-                                    style={'max-height': '40px', 'max-width': '40px', 'margin-left': '15px'},
+                                                             'text-align': 'right', 'margin': '0'}))]),
+                          dbc.Col(
+                              # width=30,
+                                    style={'width': '30%',
+                                           'max-height': '40px',
+                                           'padding': '0',
+                                           # 'max-width': '40px',
+                                           # 'margin-left': '15px',
+                                           # 'min-width':'fit-content'
+                                           },
                                     children=[
                                         ddk.Logo(src=df.iloc[0]['T1logo'],
                                                  style={
                                                      'max-height': '40px',
                                                      'height': '40px',
-                                                     'width': '40px',
+                                                     # 'width': '40px',
                                                      'text-align': 'center',
                                                      'padding': '0px', 'margin': '0',
                                                      'vertical-align': '-webkit-baseline-middle'})
-                                    ]),
-                      ])
-        ]),
-        ddk.Block(width=20,
-                  style={'max-height': 'fit-content'},
-                  children=[ddk.Block(width=100, style={'margin': '0', 'padding': '0', },
-                                      children=[html.H1('{} : {}'.format(df.iloc[0]['T1score'], df.iloc[0]['T2score']),
+                                    ])])),
+
+
+
+
+        dbc.Col(
+            # width=20,
+                style={'width': '20%',
+                       'max-height': 'fit-content',
+                       'padding': '0',
+                       'min-width':'fit-content',
+                       'max-width':'fit-content'
+                       },
+                children=[dbc.Row(
+                    # width=100,
+                                    style={'margin': '0', 'padding': '0', 'justify-content': 'center' },
+                                    children=[html.H1('{} : {}'.format(df.iloc[0]['T1score'], df.iloc[0]['T2score']),
                                                         style={'text-align': 'center', 'font-size': '40px',
                                                                'margin': '0'})]),
-                            ddk.Block(width=100,
-                                      style={'margin': '0', 'padding': '0',
-                                             'max-height': '50px',
+                          dbc.Row(
+                              # width=100,
+                                    style={'margin': '0', 'padding': '0',
+                                                     'text-align': 'center',
+                                             'max-height': '50px', 'justify-content': 'center',
                                              'height': '50px'},
-                                      children=ddk.Logo(
+                                    children=html.A(
+                                        style={'text-align': 'center', 'justify-content': 'center'},
+                                          id={'type': 'video_btn',
+                                              'index': id},
+                                          # n_clicks=0,
+                                          children=[ddk.Logo(
                                           src='../assets/png/play.png',
-                                          style={'text-align': 'center',
+                                          style={'text-align': 'center', 'justify-content': 'center',
                                                  'max-height': '-webkit-fill-available',
                                                  'padding': '0px', 'margin': '0',
-                                                 'vertical-align': '-webkit-baseline-middle'}))
+                                                 'vertical-align': '-webkit-baseline-middle'})]))
 
                             ]),
-        ddk.Block(width=40, style={'max-height': 'fit-content'}, children=[
-            ddk.Block(width=100,
-                      children=[
-                          ddk.Block(width=30,
-                                    style={'max-height': '40px', 'max-width': '40px', 'margin-right': '15px'},
+
+
+
+
+
+        dbc.Col(
+            # width=40,
+                style={'width': '40%',
+                       'max-height': 'fit-content',
+                       'padding': '0',
+                       # 'min-width':'fit-content',
+                       'max-width':'fit-content'
+                       },
+                children=dbc.Row(
+                    style={'width': '100%',
+                           'margin': '0',
+                        # 'margin': '0', 'padding': '0',
+                           'justify-content': 'center', },
+
+                    children=[
+                          dbc.Col(
+                              # width=30,
+                                    style={'max-height': '40px','width': '30%',
+                                           # 'margin': '0',
+                                           'padding': '0',
+                                           # 'max-width': '40px', 'margin-right': '15px',
+                                           # 'min-width':'fit-content',
+                                           'justify-content': 'left'},
                                     children=[
                                         ddk.Logo(src=df.iloc[0]['T2logo'],
                                                  style={
                                                      'max-height': '40px',
                                                      'text-align': 'center',
                                                      'height': '40px',
-                                                     'width': '40px',
+                                                     # 'width': '40px',
                                                      'padding': '0px', 'margin': '0',
                                                      'vertical-align': '-webkit-baseline-middle'})
                                     ]),
-                          ddk.Block(width=70, children=[
-                              ddk.Block(width=100, children=html.H2(df.iloc[0]['T2name'],
+                          dbc.Col(
+                              # width=70,
+                                  style={'width': '70%',
+                                         'margin': '0',
+                                         # 'padding': '0',
+                                         },
+                                  children=[
+                              dbc.Row(style={'margin': '0', 'padding': '0', 'justify-content': 'left'},
+                                  # width=100,
+                                  children=html.H2(df.iloc[0]['T2name'],
                                                                     style={'text-align': 'left', 'margin': '0'})),
-                              ddk.Block(width=100, children=html.H6('{}, {}, {}, {}, {}'.format(df.iloc[0]['P21'],
+                              dbc.Row(style={'margin': '0', 'padding': '0', 'justify-content': 'left'},
+                                  # width=100,
+                                      children=html.H6('{}, {}, {}, {}, {}'.format(df.iloc[0]['P21'],
                                                                                                 df.iloc[0]['P22'],
                                                                                                 df.iloc[0]['P23'],
                                                                                                 df.iloc[0]['P24'],
@@ -136,9 +221,10 @@ def match_card2(id):
 
                           ]),
 
-                      ])
-        ]),
+        ]))])
     ])
+
+
 
 
 
@@ -858,8 +944,7 @@ def match_card2(id):
                                                            ddk.Block(width=100, children=[html.H2("{}".format(rrr[2][2]),
                                                                                                   style={
                                                                'text-align': 'center', 'margin': '0'})])])]),
-        ddk.Block(width=100,
-                  children=dbc.ListGroup(flush=True, children=[i for i in rrr[0]]))
+        ddk.Block(width=100, children=dbc.ListGroup(flush=True, children=[i for i in rrr[0]]))
 
     ])
 
@@ -881,34 +966,42 @@ def match_card2(id):
     first_tab = dcc.Tab(label="Live",
                         children=[live_teams,
                                   Match_Score_Teble.new_table(id, df.iloc[0]['T1name'], df.iloc[0]['T2name'])],
-                        style={'margin': '10px',
+                        style={
+                            # 'margin': '10px',
                                                                      'border-radius': '10px',
                                                                      'background-color': '#0e4e70', 'color': 'azure',
                                                                      'border': '1px solid rgb(14, 78, 112)'},
-                        selected_style={'margin': '10px', 'border-radius': '10px',
+                        selected_style={
+                            # 'margin': '10px',
+                                        'border-radius': '10px',
                                         'background-color': '#0e4e70', 'color': 'azure', 'border': '2px solid #1f78b4'})
     second_tab = dcc.Tab(label="Statistics", children=[stat,
                                                        # chart_table
-                                                       ], style={'margin': '10px',
+                                                       ], style={
+        # 'margin': '10px',
                                                                             'border-radius': '10px',
                                                                             'background-color': '#0e4e70',
                                                                             'color': 'azure',
                                                                             'border': '1px solid rgb(14, 78, 112)'},
-                         selected_style={'margin': '10px',
+                         selected_style={
+                             # 'margin': '10px',
                                          'border-radius': '10px', 'background-color': '#0e4e70', 'color': 'azure',
                                          'border': '2px solid #1f78b4'})
-    tabs = dcc.Tabs(children=[first_tab, second_tab])
+    tabs = dcc.Tabs(style={'width':'100%', 'padding-left':'5px',},children=[first_tab, second_tab])
+        # dbc.Row(
+        # style={'width':'100%', 'padding-left':'5px', 'padding-right':'5px'}, children=(
+        #     dcc.Tabs(children=[first_tab, second_tab])
+        # ))
 
 
 
 
 
 
-    match_card = ddk.Block(width=100,
+    match_card = [ddk.Block(width=100,
                            style={'height': '90vh',
                              'text-align':'center'},
                            children=[
-        # store_session_id_div,
                           ddk.Block(width=70,
                                     style={'height':'90vh', 'margin':'0', 'padding':'0', 'color':'azure', 'overflowY': 'scroll', 'overflowX': 'hidden', },
                                     children=[
@@ -917,25 +1010,81 @@ def match_card2(id):
                                                  children=tabs)]),
                           ddk.Block(width=30,
                                     style={'height':'93vh'},
-                                    children=[
-                                        # ddk.Card(width=100,
-                                        #                style={'background-color': 'transparent', 'max-height':'40vh', 'min-height':'40vh', 'padding':'0','overflowY': 'hidden', 'margin':'10px'},
-                                        #                children=[
-                                        #                    ddk.CardHeader(title='Live', style={'background-color': 'transparent'}),
-                                        #                    Live_matches.live_list()]),
-                                              ddk.Card(width=100,
+                                    children=[ddk.Card(width=100,
                                                        id='match_sample_right',
                                                        style={'background-color': 'transparent', 'max-height':'89vh', 'min-height':'89vh', 'padding':'0','overflowY': 'hidden','margin': '10px'},
                                                        children=[
                                                            ddk.CardHeader(title='Matches', style={'background-color': 'transparent'}),
                                                            Main_page.main_page()])
-                                              ]),])
+                                              ])]),
+                  dbc.Toast(
+                      # "This toast is placed in the top right",
+                      id={'type': 'video_div',
+                          'index': id},
+                      # header="Positioned toast",
+                      is_open=False,
+                      # width='640px',
+                      # dismissable=True,
+                      body_style={'margin':'0', 'padding':'0', 'max-width': '380px', 'overflow': 'hidden','max-height': '240px',
+                             'min-width': '380px', 'min-height':'220px',},
+                      header_style={'margin': '0', 'padding': '0'},
+                        # icon="danger",
+                      # top: 66 positions the toast below the navbar
+                      style={'margin':'0', 'padding':'0', "position": "fixed", "top": 350, "right": 10,
+                             # "width": '640px',
+                             "maxWidth": "380px", "maxHeight": "240px",
+                             'over-flowX':'hidden','over-flowY':'hidden',
+                             'max-width': '380px', 'overflow': 'hidden','max-height': '240px',
+                             'min-width': '380px', 'min-height':'220px',},
+                      children=[
+
+
+                            #   dcc.Markdown(f'''
+                            # <iframe
+                            #     src="https://player.twitch.tv/?channel={df.iloc[0]['Video']}&muted=true"
+                            #     height="720"
+                            #     width="1280"
+                            #     frameborder="0"
+                            #     scrolling="no"
+                            #     allowfullscreen="true">
+                            # </iframe>
+                            # ''')
+
+
+                          html.Iframe(
+                              style={'frameborder':'0', 'overflowX':'hidden','overflowY':'hidden','margin':'0', 'padding':'0',
+                                     "max-height": '230px', "min-height": '230px', "width": '230px',
+                                     "max-width": '410px', "min-width": '410px',"height": '410px','border': '0'
+                                     },
+                              # src=f"https://player.twitch.tv/?channel={df.iloc[0]['Video']}",
+                            # height="720",
+                            # width="1280",
+                            #   width='640px',
+                          srcDoc=f'''
+                            <iframe
+                                src="https://player.twitch.tv/?channel={df.iloc[0]['Video']}&muted=true"
+                                frameborder="0"
+                                scrolling="yes"
+                                height="200"
+                                width="360"
+                                allowfullscreen="true">
+                            </iframe>
+                              '''
+                              # frameborder="<frameborder>",
+                            #  scrolling=True,
+                            #  allowfullscreen=True
+                          )
+
+                      ]
+
+                  )]
+
 
     # dcc.Interval(id='interval', interval=60000, n_intervals=0)
-
+    # print('id 3', id)
     return match_card
 
-def match_card(id):
-    ref_match = html.Div(id={'type':'session_match_div', 'index': id},
-                         children=[dcc.Interval(id={'type': 'interval_match', 'index': id}, interval=5000, n_intervals=0),match_card2(id)])
-    return ref_match
+# def match_card(id):
+#     ref_match = html.Div(id={'type':'session_match_div', 'index': id},
+#                          children=[dcc.Interval(id={'type': 'interval_match', 'index': id}, interval=5000, n_intervals=0),match_card2(id)])
+#     return ref_match

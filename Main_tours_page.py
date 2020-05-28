@@ -22,11 +22,12 @@ def tour_page():
                        'height': 'fit-content', 'justify-content': 'center',
                        'vertical-align': '-webkit-baseline-middle',
                        'max-height': 'fit-content', 'padding': '0px',
+                       "width": '100%',
                        'align-items': 'center'},
                 color="default",
                 action=True,
                 children=[
-                    ddk.Block(style={'max-height': 'fit-content',
+                    dbc.Row(style={'max-height': 'fit-content',
                                      'height': '100%',
                                      'padding': '0px',
                                      "width": '100%',
@@ -38,119 +39,90 @@ def tour_page():
                                      'textAlign': 'center', 'margin-left': '0',
                                      'margin-right': '0'},
                               children=[
-                                  ddk.Block(
-                                      width=35,
-                                      style={'max-width': '200px',
+                                  dbc.Col(
+                                      # width=30,
+                                      style={
+                                          "width": '30%',
+                                          # 'max-width': '200px',
                                              'max-height': 'fit-content',
                                              'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
                                              'align-items': 'center', 'justify-content': 'center',
                                              'margin': '0', 'textAlign': 'center',
                                              # 'margin-left': '10px', 'margin-right': '10px'
                                              },
-                                      children=ddk.Block(width=100,
-                                                         children=html.H6(serverBD['TourName'][ind],
+                                      children=html.H6(serverBD['TourName'][ind],
                                                                           style={'height': '100%', 'color': 'azure',
                                                                                  'max-height': 'fit-content',
                                                                                  # 'max-width': '200px',
                                                                                  'overflow-x': 'hidden',
                                                                                  'margin': '0',
                                                                                  'font-size': '15px',
-                                                                                 'text-align': 'left',
-                                                                                 'vertical-align': '-webkit-baseline-middle'}))),
-                                  # ddk.Block(width=15,
-                                  #           style={
-                                  #               'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-                                  #               'align-items': 'center', 'justify-content': 'center',
-                                  #               # 'min-width': 'fit-content',
-                                  #               'margin': '0', 'textAlign': 'center'},
-                                  #           children=html.H5(serverBD['TourCountry'][ind], style={'color': 'azure',
-                                  #                                                                 'padding': '0px',
-                                  #                                                                 'margin': '0',
-                                  #                                                                 'max-height': '-webkit-fill-available',
-                                  #                                                                 'vertical-align': '-webkit-baseline-middle'})),
-                                  ddk.Block(width=20,
+                                                                                 'text-align': 'center',
+                                                                                 'vertical-align': '-webkit-baseline-middle'})),
+                                  dbc.Col(
+                                      # width=20,
                                             style={
+                                                "width": '20%',
                                                 # 'max-width': 'fit-content',
                                                 'max-height': 'fit-content',
                                                 'min-width': 'fit-content',
                                                 'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
                                                 'align-items': 'center', 'justify-content': 'center',
-                                                'margin': '0', 'textAlign': 'center',
+                                                'margin': '0', 'textAlign': 'left',
                                                 # 'margin-left': '10px', 'margin-right': '10px'
                                             },
-                                            children=[ddk.Block(width=100,
-                                                                children=html.H2(
-                                                                    "{}".format(serverBD['TourPrize'][ind]),
-                                                                    style={
-                                                                        # 'height': '100%',
-                                                                        "width": '100%',
+                                            children=[html.H2("{}".format(serverBD['TourPrize'][ind]),
+                                                                    style={"width": '100%', 'text-align': 'center',
                                                                         'color': 'azure', 'padding': '0',
                                                                         'margin': '0',
                                                                         'max-height': 'fit-content',
-                                                                        'vertical-align': '-webkit-baseline-middle'})),
-                                                      # html.P("prize",
-                                                      #        style={
-                                                      #            # 'height': '100%',
-                                                      #            "width": '100%',
-                                                      #            'font-size': '12px',
-                                                      #            'color': 'azure', 'padding': '0', 'margin': '0',
-                                                      #            'max-height': 'fit-content',
-                                                      #            'vertical-align': '-webkit-baseline-middle'}),
-
-                                                      ]),
-                                  ddk.Block(width=15,
+                                                                        'vertical-align': '-webkit-baseline-middle'})]),
+                                  dbc.Col(
+                                      # width=13,
                                             style={
-                                                'max-height': '30px',
-                                                'height': '30px',
+                                                "width": '20%',
+                                                'max-height': '60px',
+                                                # 'height': '60px',
                                                 'min-width': 'fit-content',
                                                 'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
                                                 'align-items': 'center', 'justify-content': 'center',
                                                 'margin': '0', 'textAlign': 'center'},
-                                            children=[ddk.Block(width=100,
-                                                                children=html.P(
-                                                                    "{}".format(serverBD['TourDateFrom'][ind]),
-                                                                    style={'color': 'azure',
+                                            children=[
+                                                dbc.Row(children=html.P("{}".format(serverBD['TourDateFrom'][ind]),
+                                                                    style={'color': 'azure','text-align': 'center',
                                                                            'width': '100%',
                                                                            'font-size': '12px',
                                                                            'padding': '0px', 'margin': '0',
                                                                            'max-height': '-webkit-fill-available',
                                                                            'vertical-align': '-webkit-baseline-middle'})),
-
-                                                      ddk.Block(width=100,
-                                                                children=html.P(
+                                                dbc.Row(children=html.P(
                                                                     "{}".format(serverBD['TourDateTo'][ind]),
-                                                                    style={'color': 'azure',
+                                                                    style={'color': 'azure','text-align': 'center',
                                                                            'width': '100%',
                                                                            'font-size': '12px',
                                                                            'padding': '0px', 'margin': '0',
                                                                            'max-height': '-webkit-fill-available',
                                                                            'vertical-align': '-webkit-baseline-middle'})),
                                                       ]),
-                                  ddk.Block(width=10,
+                                  dbc.Col(
+                                      # width=8,
                                             style={
+                                                "width": '15%',
                                                 'min-width': 'fit-content',
                                                 'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
                                                 'align-items': 'center', 'justify-content': 'center',
                                                 'margin': '0', 'textAlign': 'center'},
-                                            children=[ddk.Block(width=100,
-                                                                children=html.H2(
-                                                                    "{}".format(serverBD['TourTeams'][ind]),
+                                            children=[html.H2("{}".format(serverBD['TourTeams'][ind]),
                                                                     style={'color': 'azure',
                                                                            'width': '100%',
                                                                            'padding': '0px', 'margin': '0',
                                                                            'max-height': '-webkit-fill-available',
-                                                                           'vertical-align': '-webkit-baseline-middle'})),
-
-                                                      # html.P("teams",
-                                                      #        style={'color': 'azure',
-                                                      #               'width': '100%',
-                                                      #               'font-size': '12px',
-                                                      #               'padding': '0px', 'margin': '0',
-                                                      #               'max-height': '-webkit-fill-available',
-                                                      #               'vertical-align': '-webkit-baseline-middle'}),
+                                                                           'vertical-align': '-webkit-baseline-middle'})
                                                       ]),
-                                  ddk.Block(width=5,
+                                  dbc.Col(
+                                      # width=13,
                                             style={
+                                                "width": '15%',
                                                 'max-height': '60px',
                                                 'height': '60px',
                                                 'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
@@ -158,15 +130,15 @@ def tour_page():
                                                 'min-width': 'fit-content',
                                                 'margin-left': '5px',
                                                 'margin': '0', 'textAlign': 'center'},
-                                            children=ddk.Block(width=100,
-                                                               children=ddk.Logo(
-                                                                   src=serverBD['TourFlagLink'][ind],
+                                            children=ddk.Logo(src=serverBD['TourFlagLink'][ind],
                                                                    style={'text-align': 'center',
-                                                                          'max-height': '-webkit-fill-available',
+                                                                          "width": '100%',
+                                                                          'max-height': '50px',
                                                                           'padding': '0px', 'margin': '0',
-                                                                          'vertical-align': '-webkit-baseline-middle'}))),
+                                                                          'vertical-align': '-webkit-baseline-middle'})),
 
-                              ])])
+                              ])
+                ])
             cards.append(cards_items)
         return cards
 

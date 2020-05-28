@@ -109,7 +109,7 @@ def refresh(app: dash.Dash):
         # PARSER.new_refresh()
         # Structure.refresh_BD()
         # print("###############  UPDATE 2  #########################")
-        print("###############  START UPDATED   #########################")
+        print("###############  START UPDATE   #########################")
 
         result = [ddk.CardHeader(title='Матчи',
                                 style={'background-color': '#1c424c',
@@ -164,10 +164,37 @@ def refresh(app: dash.Dash):
 #         print("MATCH Interval  : ", id['index'])
 #         div = Match_sample.match_card2(id['index'])
 #         return div
+def video_div(app: dash.Dash):
+    @app.callback(Output({'type': 'video_div', 'index': ALL}, 'is_open'),
+        [Input({'type': 'video_btn', 'index': ALL}, 'n_clicks')],
+                  [State({'type': 'video_btn', 'index': ALL}, 'id')],
+                  )
+    def display_output(n, id):
 
+        ctx = dash.callback_context
+
+        if not ctx.triggered:
+            raise dash.exceptions.PreventUpdate
+        else:
+            pass
+
+        # ctx = dash.callback_context
+        button_id = ctx.triggered[0]['value']
+        print('button_id',button_id)
+
+        if n == 0:
+            raise PreventUpdate
+        # else:
+        #     return True
+        elif n:
+            print('VIDEO DIV ID', id)
+            return [True]
+        else:
+            return [False]
 
 cardwindow(dash_app)
 refresh(dash_app)
 create_callback_save_value(dash_app, dash_db)
 create_callback_retrieve_value(dash_app, dash_db)
 # ref_match(dash_app)
+video_div(dash_app)

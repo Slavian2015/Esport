@@ -23,8 +23,12 @@ def main_page():
         for ind in serverBD1.index:
 
             if serverBD1['T1gold'][ind] == "r" or serverBD1['T1gold'][ind] == 'd':
-                T1gold = [ddk.Block(width=80,
-                       style={'margin': '0', 'padding': '0'},
+                T1gold = dbc.Row(style={'margin':'0','justify-content': 'center',
+                                        # 'width': 'fit-content',
+                                        'padding':'0'},
+                                 children=[
+                    dbc.Col(width=80,
+                       style={'margin': '0', 'padding': '0', 'width': '80%',},
                        children=html.H6("",
                                     style={'color': '#ff0000',
                                             'font-weight': '900',
@@ -32,23 +36,26 @@ def main_page():
                                             'padding': '0px', 'margin': '0',
                                             'max-height': '-webkit-fill-available',
                                             'vertical-align': '-webkit-baseline-middle'})),
-                           ddk.Block(width=20,
-                                     style={'margin': '0', 'padding': '0',
+                    dbc.Col(width=20,
+                                     style={'margin': '0', 'padding': '0','width': '20%',
                                             'max-height': '20px',
                                             'height': '20px'},
-                                     children=[])]
+                                     children=[])])
             else:
-                T1gold = [ddk.Block(width=80,
-                       style={'margin': '0', 'padding': '0'},
-                       children=html.H6(serverBD1['T1gold'][ind],
-                                    style={'color': '#ff0000',
+                T1gold = dbc.Row(style={'margin':'0','justify-content': 'center',
+                                        # 'width': 'fit-content',
+                                        'padding':'0'},
+                                 children=[
+                    dbc.Col(width=80,
+                       style={'margin': '0', 'padding': '0','width': '80%',},
+                       children=html.H6(serverBD1['T1gold'][ind], style={'color': '#ff0000',
                                             'font-weight': '900',
                                             # 'width': 'fit-content',
                                             'padding': '0px', 'margin': '0',
                                             'max-height': '-webkit-fill-available',
                                             'vertical-align': '-webkit-baseline-middle'})),
-                           ddk.Block(width=20,
-                                     style={'margin': '0', 'padding': '0',
+                    dbc.Col(width=20,
+                                     style={'margin': '0', 'padding': '0','width': '20%',
                                             'max-height': '20px',
                                             'height': '20px'},
                                      children=ddk.Logo(
@@ -56,28 +63,36 @@ def main_page():
                                          style={'text-align': 'center',
                                                'max-height': '-webkit-fill-available',
                                                'padding': '0px', 'margin': '0',
-                                             'vertical-align': '-webkit-baseline-middle'}))]
+                                             'vertical-align': '-webkit-baseline-middle'}))])
 
             if serverBD1['T2gold'][ind] == "r" or serverBD1['T2gold'][ind] == 'd':
-                T2gold = [ddk.Block(width=20,
+                T2gold = dbc.Row(style={'margin':'0','justify-content': 'center',
+                                        # 'width': 'fit-content',
+                                        'padding':'0'},
+                                 children=[
+                                     dbc.Col(width=20,
                                      style={'margin': '0', 'padding': '0',
-                                            'max-height': '20px',
+                                            'max-height': '20px','width': '20%',
                                             'height': '20px'},
                                      children=[]),
-                          ddk.Block(width=80,
-                              style={'margin': '0', 'padding': '0'},
-                              children=html.H6("",
+                                     dbc.Col(width=80,
+                                              style={'margin': '0', 'padding': '0', 'width': '80%',},
+                                              children=html.H6("",
                                                style={'color': '#ff0000',
                                                       'font-weight': '900',
                                                       # 'width': 'fit-content',
                                                       'padding': '0px', 'margin': '0',
                                                       'max-height': '-webkit-fill-available',
                                                       'vertical-align': '-webkit-baseline-middle'})),
-                       ]
+                       ])
             else:
-                T2gold = [ddk.Block(width=20,
+                T2gold = dbc.Row(style={'margin':'0','justify-content': 'center',
+                                        'width': '100%',
+                                        'padding':'0'},
+                                 children=[
+                    dbc.Col(width=20,
                                      style={'margin': '0', 'padding': '0',
-                                            'max-height': '20px',
+                                            'max-height': '20px','width': '20%',
                                             'height': '20px'},
                                      children=ddk.Logo(
                                          src='../assets/png/gold.png',
@@ -85,8 +100,8 @@ def main_page():
                                                 'max-height': '-webkit-fill-available',
                                                 'padding': '0px', 'margin': '0',
                                                 'vertical-align': '-webkit-baseline-middle'})),
-                          ddk.Block(width=80,
-                                    style={'margin': '0', 'padding': '0'},
+                    dbc.Col(width=80,
+                                    style={'margin': '0', 'padding': '0', 'width': '80%',},
                                     children=html.H6(serverBD1['T2gold'][ind],
                                                      style={'color': '#ff0000',
                                                             'font-weight': '900',
@@ -94,32 +109,53 @@ def main_page():
                                                             'padding': '0px', 'margin': '0',
                                                             'max-height': '-webkit-fill-available',
                                                             'vertical-align': '-webkit-baseline-middle'})),
-                       ]
+                       ])
 
-            T1 = [ddk.Block(width=100,
-                       style={'margin':'0', 'padding':'0'},
-                       children=html.H6(serverBD1['T1names_live'][ind],
-                     style={'color': 'azure',
-                            # 'width': 'fit-content',
-                            'padding': '0px', 'margin': '0',
-                            'max-height': '-webkit-fill-available',
-                            'vertical-align': '-webkit-baseline-middle'})),
-             ddk.Block(width=100,
-                       style={'margin': '0', 'padding': '0'},
-                       children=T1gold)]
+            T1 = dbc.Col(style={'margin':'0','justify-content': 'center',
+                                # 'width': '100%',
+                                'padding':'0'},
+                                 children=[
+                                     dbc.Row(
+                                         # width=100,
+                                             style={'margin':'0','justify-content': 'center',
+                                                    # 'width': '100%',
+                                                    'padding':'0'},
+                                             children=html.H6(serverBD1['T1names_live'][ind],
+                                                              style={'color': 'azure',
+                                                            # 'width': 'fit-content',
+                                                            'padding': '0px', 'margin': '0',
+                                                            'max-height': '-webkit-fill-available',
+                                                            'vertical-align': '-webkit-baseline-middle'})),
 
-            T2 = [ddk.Block(width=100,
-                          style={'margin': '0', 'padding': '0'},
-                          children=html.H6(serverBD1['T2names_live'][ind],
-                                           style={'color': 'azure',
-                                                  # 'width': 'fit-content',
+                                     T1gold
+                                     # dbc.Row(
+                                     #     # width=100,
+                                     #       style={'margin': '0', 'width': '100%','padding': '0'},
+                                     #       children=T1gold)
+                                           ])
+
+            T2 = dbc.Col(style={'margin':'0','justify-content': 'center',
+                                # 'width': 'fit-content',
+                                'padding':'0'},
+                                 children=[
+                                     dbc.Row(
+                                         # width=100,
+                                             style={'margin': '0',
+                                                    'width': '100%','justify-content': 'center',
+                                                    'padding': '0'},
+                                             children=html.H6(serverBD1['T2names_live'][ind],
+                                                              style={'color': 'azure',
                                                   'padding': '0px', 'margin': '0',
                                                   'max-height': '-webkit-fill-available',
                                                   'vertical-align': '-webkit-baseline-middle'})),
-                  ddk.Block(width=100,
-                            style={'margin': '0', 'padding': '0'},
-                            children=T2gold),
-             ]
+                                     T2gold
+                                     # dbc.Row(
+                                     #     # width=100,
+                                     #        style={'margin': '0',
+                                     #               'width': '100%',
+                                     #               'padding': '0'},
+                                     #        children=T2gold),
+             ])
 
 
 
@@ -133,30 +169,34 @@ def main_page():
                                      'max-height': '60px', 'padding': '0px',
                                      'align-items': 'center'},
                 color="default",
+                className='live_list',
                 action=True,
                 children=[
-                    ddk.Block(style={'max-height': '60px',
-                                     'overflow-y': 'hidden',
+                    dbc.Row(style={'max-height': '60px',
+                                   "flex-direction": "row",
+                                     # 'overflow-y': 'hidden',
                                  'height': '100%',
                                  'padding': '0px',
-                                 "width": '100%',
+                                 # "width": 'fit-content',
                                    'align-items': 'center',
                                  # 'justify-content': 'flex-start',
                                    'justify-content': 'center',
-                                   'margin': '0',
+                                   # 'margin': '0',
                                  'vertical-align': '-webkit-baseline-middle',
-                                 'textAlign': 'center', 'margin-left': '0',
-                                 'margin-right': '0'},
+                                 'textAlign': 'center',
+                                 #   'margin-left': '0',
+                                 # 'margin-right': '0'
+                                   },
                             children=[
-                                ddk.Block(width=30,
-                                          style={
+                                dbc.Col(width=30,
+                                          style={'width': '30%',
                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
                                          'align-items': 'center', 'justify-content': 'center',
                                          'margin': '0', 'textAlign': 'center',
-                                              # 'width':'fit-content',
                                          'margin-left': '0', 'margin-right': '0'},
-                                          children=[
-                                              ddk.Block(width=40,
+                                          children=dbc.Row(
+                                              [
+                                              dbc.Col(width=40,
                                                         style={
                                                         'max-height': '40px',
                                                         'height': '40px',
@@ -164,8 +204,7 @@ def main_page():
                                                             'background-repeat': 'no-repeat',
                                                             'background-position': 'center',
                                                             'background-size': 'auto 90%',
-                                                            # 'background-size': 'cover',
-                                                        # 'width': 'fit-content',
+                                                        'width': '40%',
                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
                                                          'align-items': 'center', 'justify-content': 'center',
                                                          'margin': '0', 'textAlign': 'center'},
@@ -175,29 +214,16 @@ def main_page():
                                                                    'max-height': '-webkit-fill-available',
                                                                    'padding': '0px', 'margin': '0',
                                                                  'vertical-align': '-webkit-baseline-middle'})),
-                                              ddk.Block(width=60,
+                                              dbc.Col(width=60,
                                                         style={
-                                                            # 'overflowX': 'hidden',
+                                                            'width': '60%',
                                                  'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
                                                  'align-items': 'center', 'justify-content': 'center',
                                                  'margin': '0', 'textAlign': 'center'},
-                                                      children=T1
-                                                          # html.H6(serverBD1['T1names_live'][ind],
-                                                          #             style={'color':'azure',
-                                                          #                    # 'width': 'fit-content',
-                                                          #                    'padding': '0px', 'margin': '0',
-                                                          #       'max-height': '-webkit-fill-available',
-                                                          #       'vertical-align': '-webkit-baseline-middle'}),
-                                                          #       html.H6(T1gold,
-                                                          #               style={'color': '#ff0000',
-                                                          #                     'font-weight':'900',
-                                                          #                      # 'width': 'fit-content',
-                                                          #                      'padding': '0px', 'margin': '0',
-                                                          #                      'max-height': '-webkit-fill-available',
-                                                          #                      'vertical-align': '-webkit-baseline-middle'})
-                                                                )]),
-                                ddk.Block(width=20,
-                                          style={'max-width': 'fit-content',
+                                                      children=T1)])),
+                                dbc.Col(width=20,
+                                          style={'min-width': 'fit-content',
+                                                 'width': '20%',
                                              'max-height': 'fit-content',
                                              'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
                                              'align-items': 'center', 'justify-content': 'center',
@@ -223,41 +249,28 @@ def main_page():
                                                                    'width': '100%','font-size': '10px',
                                                                    'vertical-align': '-webkit-baseline-middle'})
                                                     ]),
-                                ddk.Block(width=30,
+                                dbc.Col(width=30,
                                           style={
-
+                                              'width': '30%',
                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
                                          'align-items': 'center', 'justify-content': 'center',
                                          'margin': '0', 'textAlign': 'center',
                                               # 'width':'fit-content',
                                          'margin-left': '0', 'margin-right': '0'},
-                                          children=[
-                                            ddk.Block(width=60,
-                                                      style={
+                                          children=dbc.Row(
+                                              [
+                                            dbc.Col(width=60,
+                                                      style={'width': '60%',
                                                             # 'overflowX': 'hidden',
                                                  'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
                                                  'align-items': 'center', 'justify-content': 'center',
                                                  'margin': '0', 'textAlign': 'center'},
-                                                      children=T2
-                                                          # html.H6(serverBD1['T2names_live'][ind],
-                                                          #                          style={'color':'azure',
-                                                          #                    # 'width': 'fit-content',
-                                                          #                    'padding': '0px', 'margin': '0',
-                                                          #       'max-height': '-webkit-fill-available',
-                                                          #       'vertical-align': '-webkit-baseline-middle'}),
-                                                          #       html.H6(T2gold,
-                                                          #              style={'color': '#ff0000',
-                                                          #                     'font-weight':'900',
-                                                          #                     # 'width': 'fit-content',
-                                                          #                     'padding': '0px', 'margin': '0',
-                                                          #                     'max-height': '-webkit-fill-available',
-                                                          #                     'vertical-align': '-webkit-baseline-middle'})
-                                                                ),
-                                            ddk.Block(width=40,
+                                                      children=T2),
+                                            dbc.Col(width=40,
                                                       style={
                                                         'max-height': '40px',
                                                         'height': '40px',
-                                                        # 'width': 'fit-content',
+                                                        'width': '40%',
                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
                                                          'align-items': 'center', 'justify-content': 'center',
                                                          'margin': '0', 'textAlign': 'center'},
@@ -269,25 +282,9 @@ def main_page():
                                                             'background-size': 'auto 90%',
                                                                    'max-height': '-webkit-fill-available',
                                                                    'padding': '0px', 'margin': '0',
-                                                                 'vertical-align': '-webkit-baseline-middle'}))]),
-                                # ddk.Block(
-                                #     # width=50,
-                                #           style={'max-width': '200px',
-                                #              'max-height': 'fit-content',
-                                #              'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-                                #              'align-items': 'center', 'justify-content': 'center',
-                                #              'margin': '0', 'textAlign': 'center',
-                                #              # 'margin-left': '10px', 'margin-right': '10px'
-                                #                  },
-                                #           children=html.H6(serverBD['Mtour_live'][ind],
-                                #                       style={'height': '100%','color':'azure',
-                                #                              'max-height': 'fit-content',
-                                #                              'max-width': '200px',
-                                #                              'overflow-x':'hidden',
-                                #                              'margin': '0',
-                                #                              'vertical-align': '-webkit-baseline-middle'})),
+                                                                 'vertical-align': '-webkit-baseline-middle'}))])),
 
-
+                                # ])
                                           ])])
             cards.append(cards_items1)
 
@@ -304,11 +301,11 @@ def main_page():
                 color="default",
                 action=True,
                 children=[
-                    ddk.Block(style={'max-height': '50px',
+                    dbc.Row(style={'max-height': '50px',
                                      'overflow-y':'hidden',
                                  'height': '100%',
                                  'padding': '0px',
-                                 "width": '100%',
+                                 # "width": '100%',
                                    'align-items': 'center',
                                  # 'justify-content': 'flex-start',
                                    'justify-content': 'center',
@@ -317,15 +314,15 @@ def main_page():
                                  'textAlign': 'center', 'margin-left': '0',
                                  'margin-right': '0'},
                             children=[
-                                ddk.Block(width=30,
+                                dbc.Col(width=30,
                                           style={
                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
                                          'align-items': 'center', 'justify-content': 'center',
                                          'margin': '0', 'textAlign': 'center',
-                                              # 'width':'fit-content',
+                                              "width": '30%',
                                          'margin-left': '0', 'margin-right': '0'},
-                                          children=[
-                                              ddk.Block(width=40,
+                                          children=dbc.Row([
+                                              dbc.Col(width=40,
                                                         style={
                                                         'max-height': '40px',
                                                         'height': '40px',
@@ -334,7 +331,7 @@ def main_page():
                                                             'background-position': 'center',
                                                             'background-size': 'auto 90%',
                                                             # 'background-size': 'cover',
-                                                        # 'width': 'fit-content',
+                                                        "width": '40%',
                                                          'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
                                                          'align-items': 'center', 'justify-content': 'center',
                                                          'margin': '0', 'textAlign': 'center'},
@@ -344,8 +341,8 @@ def main_page():
                                                                    'max-height': '-webkit-fill-available',
                                                                    'padding': '0px', 'margin': '0',
                                                                  'vertical-align': '-webkit-baseline-middle'})),
-                                              ddk.Block(width=60,
-                                                        style={
+                                              dbc.Col(width=60,
+                                                        style={"width": '60%',
                                                             # 'overflowX': 'hidden',
                                                  'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
                                                  'align-items': 'center', 'justify-content': 'center',
@@ -355,9 +352,10 @@ def main_page():
                                                                              # 'width': 'fit-content',
                                                                              'padding': '0px', 'margin': '0',
                                                                 'max-height': '-webkit-fill-available',
-                                                                'vertical-align': '-webkit-baseline-middle'}))]),
-                                ddk.Block(width=20,
-                                          style={'max-width': 'fit-content',
+                                                                'vertical-align': '-webkit-baseline-middle'}))])),
+                                dbc.Col(width=20,
+                                          style={'min-width': 'fit-content',
+                                                 "width": '20%',
                                              'max-height': 'fit-content',
                                              'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
                                              'align-items': 'center', 'justify-content': 'center',
@@ -368,17 +366,17 @@ def main_page():
                                                                              'color': 'azure', 'padding':'0',
                                                                              'max-height': 'fit-content',
                                                                              'vertical-align': '-webkit-baseline-middle'})]),
-                                ddk.Block(width=30,
+                                dbc.Col(width=30,
                                           style={
-
+                                              "width": '30%',
                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
                                          'align-items': 'center', 'justify-content': 'center',
                                          'margin': '0', 'textAlign': 'center',
                                               # 'width':'fit-content',
                                          'margin-left': '0', 'margin-right': '0'},
-                                          children=[
-                                            ddk.Block(width=60,
-                                                      style={
+                                          children=dbc.Row([
+                                            dbc.Col(width=60,
+                                                      style={"width": '60%',
                                                             # 'overflowX': 'hidden',
                                                  'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
                                                  'align-items': 'center', 'justify-content': 'center',
@@ -389,8 +387,8 @@ def main_page():
                                                                              'padding': '0px', 'margin': '0',
                                                                 'max-height': '-webkit-fill-available',
                                                                 'vertical-align': '-webkit-baseline-middle'})),
-                                            ddk.Block(width=40,
-                                                      style={
+                                            dbc.Col(width=40,
+                                                      style={"width": '40%',
                                                         'max-height': '40px',
                                                         'height': '40px',
                                                         # 'width': 'fit-content',
@@ -405,23 +403,23 @@ def main_page():
                                                             'background-size': 'auto 90%',
                                                                    'max-height': '-webkit-fill-available',
                                                                    'padding': '0px', 'margin': '0',
-                                                                 'vertical-align': '-webkit-baseline-middle'}))]),
-                                ddk.Block(
-                                    # width=50,
-                                          style={'max-width': '200px',
-                                             'max-height': 'fit-content',
-                                             'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
-                                             'align-items': 'center', 'justify-content': 'center',
-                                             'margin': '0', 'textAlign': 'center',
-                                             # 'margin-left': '10px', 'margin-right': '10px'
-                                                 },
-                                          children=html.H6(serverBD['Mtour'][ind],
-                                                      style={'height': '100%','color':'azure',
-                                                             'max-height': 'fit-content',
-                                                             'max-width': '200px',
-                                                             'overflow-x':'hidden',
-                                                             'margin': '0',
-                                                             'vertical-align': '-webkit-baseline-middle'})),
+                                                                 'vertical-align': '-webkit-baseline-middle'}))])),
+                                # dbc.Col(
+                                #     # width=50,
+                                #           style={'max-width': '200px',
+                                #              'max-height': 'fit-content',
+                                #              'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
+                                #              'align-items': 'center', 'justify-content': 'center',
+                                #              'margin': '0', 'textAlign': 'center',
+                                #              # 'margin-left': '10px', 'margin-right': '10px'
+                                #                  },
+                                #           children=html.H6(serverBD['Mtour'][ind],
+                                #                       style={'height': '100%','color':'azure',
+                                #                              'max-height': 'fit-content',
+                                #                              'max-width': '200px',
+                                #                              'overflow-x':'hidden',
+                                #                              'margin': '0',
+                                #                              'vertical-align': '-webkit-baseline-middle'})),
 
 
                                           ])])
@@ -448,7 +446,7 @@ def main_page():
                                  'textAlign': 'center', 'margin-left': '0',
                                  'margin-right': '0'},
                             children=[
-                                ddk.Block(width=30,
+                                dbc.Col(width=30,
                                           style={
                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
                                          'align-items': 'center', 'justify-content': 'center',
@@ -457,7 +455,7 @@ def main_page():
                                               # 'width':'fit-content',
                                          'margin-left': '0', 'margin-right': '0'},
                                           children=[
-                                              ddk.Block(width=40,
+                                              dbc.Col(width=40,
                                                         style={
                                                         'max-height': '40px',
                                                         'height': '40px',
@@ -476,7 +474,7 @@ def main_page():
                                                                    'max-height': '-webkit-fill-available',
                                                                    'padding': '0px', 'margin': '0',
                                                                  'vertical-align': '-webkit-baseline-middle'})),
-                                              ddk.Block(width=60,
+                                              dbc.Col(width=60,
                                                         style={'height': '40px',
                                                             # 'overflowX': 'hidden',
                                                  'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
@@ -488,7 +486,7 @@ def main_page():
                                                                              'padding': '0px', 'margin': '0',
                                                                 'max-height': '-webkit-fill-available',
                                                                 'vertical-align': '-webkit-baseline-middle'}))]),
-                                ddk.Block(width=20,
+                                dbc.Col(width=20,
                                           style={'max-width': 'fit-content',
                                              'max-height': '50px', 'height': '50px',
                                              'padding': '0px', 'vertical-align': '-webkit-baseline-middle',
@@ -500,7 +498,7 @@ def main_page():
                                                                              'color': 'azure', 'padding':'0',
                                                                              'max-height': 'fit-content',
                                                                              'vertical-align': '-webkit-baseline-middle'})]),
-                                ddk.Block(width=30,
+                                dbc.Col(width=30,
                                           style={
 
                                          'padding': '0', 'vertical-align': '-webkit-baseline-middle',
@@ -509,7 +507,7 @@ def main_page():
                                               # 'width':'fit-content',
                                          'margin-left': '0', 'margin-right': '0'},
                                           children=[
-                                            ddk.Block(width=60,
+                                            dbc.Col(width=60,
                                                       style={
                                                             # 'overflowX': 'hidden',
                                                           'height': '50px',
@@ -522,7 +520,7 @@ def main_page():
                                                                              'padding': '0px', 'margin': '0',
                                                                 'max-height': '-webkit-fill-available',
                                                                 'vertical-align': '-webkit-baseline-middle'})),
-                                            ddk.Block(width=40,
+                                            dbc.Col(width=40,
                                                       style={
                                                         'max-height': '50px',
                                                         'height': '50px',
@@ -539,7 +537,7 @@ def main_page():
                                                                    'max-height': '-webkit-fill-available',
                                                                    'padding': '0px', 'margin': '0',
                                                                  'vertical-align': '-webkit-baseline-middle'}))]),
-                                ddk.Block(
+                                dbc.Col(
                                     # width=50,
                                           style={'max-width': '200px',
                                              'max-height': '50px',
