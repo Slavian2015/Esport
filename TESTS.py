@@ -1,57 +1,39 @@
-from bs4 import BeautifulSoup
-import requests as req
+
 import pandas as pd
-import requests
-
 import os
-# import pandas as pd
+from datetime import datetime, timedelta
 main_path_data = os.path.abspath("./data")
-import time
+
+
+all_cardsBD = pd.read_csv(main_path_data + '\\all_cards.csv')
+id = 373736
+df = all_cardsBD[(all_cardsBD['Mid'].isin([id]))]
 
 
 
-l = ['@Valqui / 외로운 본질', 'D1smar', 'Argius', 'Panda']
 
-print(len(l))
+timer = df.iloc[0]['Mdate'] + ' ' + df.iloc[0]['Mtime']
+print(timer)
+server_time = datetime.now()
+print(server_time)
 
 
-if len(l) < 5:
-    l.append("")
+timer = pd.to_datetime(timer)
+server_time = (server_time + timedelta(hours=10))
+server_time = pd.to_datetime(server_time)
+diff = server_time - timer
+# print(diff)
 
-print(l)
-#
-#
-# resp = req.get('https://ru.dltv.org/matches/370571', headers={'User-Agent': 'Mozilla'})
-# # print (response.encoding)
-#
-# soup = BeautifulSoup(resp.content, 'lxml')
-#
-# # print(soup.prettify())
-#
-# gdp_table = soup.find("table", attrs={"class": "table player-stat"})
-# gdp_table_data = gdp_table.tbody.find_all("tr")
-# T2data = []
-# for td in gdp_table_data[7].find_all("a"):
-#     T2data.append(td.text.replace('\n', '').strip())
-#
-# print(T2data)
-#
-#
-# P21 = []
-# P22 = []
-# P23 = []
-# P24 = []
-# P25 = []
-#
-# P21.append(T2data[0])
-# P22.append(T2data[1])
-# P23.append(T2data[2])
-# P24.append(T2data[3])
-# P25.append(T2data[4])
-#
-#
-#
-# print(P21, P22, P23, P24, P25)
+
+totalMinute, second = divmod(diff.seconds, 60)
+hour, minute = divmod(totalMinute, 60)
+dif = f"{hour}:{minute:02}:{second:02}"
+# print(dif)
+
+if diff > pd.Timedelta(0):
+    print("1")
 
 
 
+else:
+    print("2")

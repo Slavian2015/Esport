@@ -10,6 +10,7 @@ main_path_data = os.path.abspath("./data")
 def result_page():
     def cards_items():
         serverBD = pd.read_csv(main_path_data + '\\all_cards.csv')
+        serverBD = serverBD.drop_duplicates(subset='Mid', keep="last")
         serverBD = serverBD[serverBD["Mstatus"] == 'Finished']
         serverBD = serverBD.sort_values(by='TIME', ascending=False)
         serverBD = serverBD.head(n=10)

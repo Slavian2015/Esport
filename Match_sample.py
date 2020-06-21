@@ -6,6 +6,7 @@ import os
 import pandas as pd
 import Main_page
 import Match_Score_Teble
+from datetime import datetime, timedelta
 
 
 main_path_data = os.path.abspath("./data")
@@ -37,6 +38,40 @@ def match_card(id):
     df = all_cardsBD[(all_cardsBD['Mid'].isin([id]))]
 
     time = df.iloc[0]['Mtime']
+    timer = df.iloc[0]['Mdate'] + ' ' + df.iloc[0]['Mtime']
+    print(timer)
+    server_time = datetime.now()
+    print(server_time)
+
+    timer = pd.to_datetime(timer)
+    server_time = (server_time + timedelta(hours=10))
+    server_time = pd.to_datetime(server_time)
+    diff = server_time - timer
+
+    if diff > pd.Timedelta(0):
+        My_player =dbc.Row(
+                    style={'margin': '0', 'padding': '0',
+                                     'text-align': 'center',
+                             'max-height': '50px', 'justify-content': 'center',
+                             'height': '50px'},
+                    children=html.A(
+                        style={'text-align': 'center', 'justify-content': 'center'},
+                          id={'type': 'video_btn',
+                              'index': id},
+                          # n_clicks=0,
+                          children=[ddk.Logo(
+                          src='../assets/png/play.png',
+                          style={'text-align': 'center', 'justify-content': 'center',
+                                 'max-height': '-webkit-fill-available',
+                                 'padding': '0px', 'margin': '0',
+                                 'vertical-align': '-webkit-baseline-middle'})]))
+    else:
+        My_player = dbc.Row(
+            style={'margin': '0', 'padding': '0',
+                   'text-align': 'center',
+                   'max-height': '50px', 'justify-content': 'center',
+                   'height': '50px'},
+            children=[])
 
     ##############     HEAD CARD of MATCH   ###################################
     match_head = ddk.Card(style={'width': '-webkit-fill-available',
@@ -60,7 +95,7 @@ def match_card(id):
         dbc.Row(style={'text-align': 'center',
                        'margin': '0',
                        'padding': '0',
-                       'width':'100%',
+                       # 'width':'100%',
                        'justify-content': 'center'},
                 children=[
         dbc.Col(
@@ -69,7 +104,7 @@ def match_card(id):
                        'max-height': 'fit-content',
                        'padding': '0',
                        # 'min-width':'fit-content',
-                       'max-width':'fit-content'
+                       'max-width':'40%'
                        },
                 children=dbc.Row(
                     style={'width': '100%',
@@ -110,6 +145,7 @@ def match_card(id):
                                     style={'width': '30%',
                                            'max-height': '40px',
                                            'padding': '0',
+                                           'max-width': 'fit-content',
                                            # 'max-width': '40px',
                                            # 'margin-left': '15px',
                                            # 'min-width':'fit-content'
@@ -134,7 +170,7 @@ def match_card(id):
                        'max-height': 'fit-content',
                        'padding': '0',
                        'min-width':'fit-content',
-                       'max-width':'fit-content'
+                       'max-width':'20%'
                        },
                 children=[dbc.Row(
                     # width=100,
@@ -142,23 +178,8 @@ def match_card(id):
                                     children=[html.H1('{} : {}'.format(df.iloc[0]['T1score'], df.iloc[0]['T2score']),
                                                         style={'text-align': 'center', 'font-size': '40px',
                                                                'margin': '0'})]),
-                          dbc.Row(
-                              # width=100,
-                                    style={'margin': '0', 'padding': '0',
-                                                     'text-align': 'center',
-                                             'max-height': '50px', 'justify-content': 'center',
-                                             'height': '50px'},
-                                    children=html.A(
-                                        style={'text-align': 'center', 'justify-content': 'center'},
-                                          id={'type': 'video_btn',
-                                              'index': id},
-                                          # n_clicks=0,
-                                          children=[ddk.Logo(
-                                          src='../assets/png/play.png',
-                                          style={'text-align': 'center', 'justify-content': 'center',
-                                                 'max-height': '-webkit-fill-available',
-                                                 'padding': '0px', 'margin': '0',
-                                                 'vertical-align': '-webkit-baseline-middle'})]))
+                    My_player
+
 
                             ]),
 
@@ -172,10 +193,11 @@ def match_card(id):
                        'max-height': 'fit-content',
                        'padding': '0',
                        # 'min-width':'fit-content',
-                       'max-width':'fit-content'
+                       'max-width':'40%'
                        },
                 children=dbc.Row(
-                    style={'width': '100%',
+                    style={
+                        # 'width': '100%',
                            'margin': '0',
                         # 'margin': '0', 'padding': '0',
                            'justify-content': 'center', },
@@ -185,7 +207,7 @@ def match_card(id):
                               # width=30,
                                     style={'max-height': '40px','width': '30%',
                                            # 'margin': '0',
-                                           'padding': '0',
+                                           'padding': '0', 'max-width': 'fit-content',
                                            # 'max-width': '40px', 'margin-right': '15px',
                                            # 'min-width':'fit-content',
                                            'justify-content': 'left'},
@@ -229,21 +251,35 @@ def match_card(id):
 
 
     ###################  TEAMS CARD of MATCH  #################################
-    live_teams = ddk.Card(style={'width': '-webkit-fill-available',
+    live_teams = ddk.Card(style={
+        # 'width': '-webkit-fill-available',
                                  'margin': '10px',
                                  'padding': '0',
                                  'background-color': '#f9f9f91c'}, children=[
         ddk.Block(width=100,
                   style={'height': 'fit-content', 'vertical-align': '-webkit-baseline-middle'},
                   children=[ddk.Block(width=40,
-                                      style={'height': 'fit-content'},
-                                      children=[ddk.Block(width=20, style={
-                                          'height': 'fit-content'}, children=[
-                                          ddk.Block(width=100,
-                                                    style={
+                                      style={'height': 'fit-content','word-wrap': 'normal'},
+                                      children=dbc.Row(
+                                          style={'margin': '0px',
+                                                 'padding': '0',
+                                                 'text-align': 'center',
+                                                 'justify-content': 'center'},
+                                      children=[
+
+
+                                                dbc.Col(
+                                                    # width=20,
+                                                    style={'width': '20%','padding': '0',
+                                          'height': 'fit-content','text-align': '-webkit-center'},
+                                                    children=[
+                                                        dbc.Row(
+                                                            # width=100,
+                                                    style={'margin': '0',
                                                         'max-height': '50px',
                                                         'height': '50px',
-                                                        'width': 'fit-content'},
+                                                        'width': 'fit-content',
+                                                 'justify-content': 'center','text-align': '-webkit-center'},
                                                     children=[ddk.Logo(
                                                         src=df.iloc[0]['P11_photo'],
                                                         style={
@@ -252,29 +288,38 @@ def match_card(id):
                                                             'padding': '0px',
                                                             'margin': '0',
                                                             'vertical-align': '-webkit-baseline-middle'})]),
-                                          ddk.Block(width=100, style={
+                                                        dbc.Row(
+                                                            # width=100,
+                                                            style={'margin': '0',
                                               'max-width': '100px',
-                                              'height': 'fit-content'},
+                                              'height': 'fit-content',
+                                                 'justify-content': 'center','text-align': '-webkit-center'},
                                                     children=[
                                                         html.H6(df.iloc[0]['P11'],
                                                                 style={
                                                                     'text-align': 'center',
                                                                     'margin': '0'})]),
-                                          ddk.Block(width=100, style={
+                                                        dbc.Row(
+                                                            # width=100,
+                                                            style={'margin': '0',
                                               'max-width': '100px',
-                                              'height': 'fit-content'},
+                                              'height': 'fit-content',
+                                                 'justify-content': 'center','text-align': '-webkit-center'},
                                                     children=[html.P(df.iloc[0]['P11_score'],
                                                                      style={
                                                                          'text-align': 'center',
                                                                          'margin': '0'})])]),
-                                                ddk.Block(width=20, style={
-                                                    'height': 'fit-content'},
-                                                          children=[ddk.Block(
-                                                              width=100,
-                                                              style={
+                                                dbc.Col(
+                                                    # width=20,
+                                                          style={'height': 'fit-content', 'padding': '0','width': '20%','text-align': '-webkit-center'},
+                                                          children=[
+
+                                                              dbc.Row(
+                                                              # width=100,
+                                                              style={'margin': '0',
                                                                   'max-height': '50px',
                                                                   'height': '50px',
-                                                                  'width': 'fit-content'},
+                                                                  'width': 'fit-content','text-align': '-webkit-center'},
                                                               children=[
                                                                   ddk.Logo(
                                                                       src=df.iloc[0]['P12_photo'],
@@ -284,33 +329,38 @@ def match_card(id):
                                                                           'padding': '0px',
                                                                           'margin': '0',
                                                                           'vertical-align': '-webkit-baseline-middle'})]),
-                                                              ddk.Block(
-                                                                  width=100,
-                                                                  style={
+                                                              dbc.Row(
+                                                                  # width=100,
+                                                                  style={'margin': '0',
                                                                       'max-width': '100px',
-                                                                      'height': 'fit-content'},
+                                                                      'height': 'fit-content','text-align': '-webkit-center',
+                                                 'justify-content': 'center'},
                                                                   children=[
                                                                       html.H6(
                                                                           df.iloc[0]['P12'],
                                                                           style={
                                                                               'text-align': 'center',
                                                                               'margin': '0'})]),
-                                                              ddk.Block(
-                                                                  width=100,
-                                                                  style={
+                                                              dbc.Row(
+                                                                  # width=100,
+                                                                  style={'margin': '0',
                                                                       'max-width': '100px',
-                                                                      'height': 'fit-content'},
+                                                                      'height': 'fit-content','text-align': '-webkit-center',
+                                                 'justify-content': 'center'},
                                                                   children=[
                                                                       html.P(
                                                                           df.iloc[0]['P12_score'],
                                                                           style={
                                                                               'text-align': 'center',
                                                                               'margin': '0'})])]),
-                                                ddk.Block(width=20, style={
-                                                    'height': 'fit-content'},
-                                                          children=[ddk.Block(
-                                                              width=100,
-                                                              style={
+                                                dbc.Col(
+                                                    # width=20,
+                                                          style={
+                                                    'height': 'fit-content', 'padding': '0','width':'20%','text-align': '-webkit-center'},
+                                                          children=[
+                                                              dbc.Row(
+                                                              # width=100,
+                                                              style={'margin': '0',
                                                                   'max-height': '50px',
                                                                   'height': '50px',
                                                                   'width': 'fit-content'},
@@ -323,33 +373,38 @@ def match_card(id):
                                                                           'padding': '0px',
                                                                           'margin': '0',
                                                                           'vertical-align': '-webkit-baseline-middle'})]),
-                                                              ddk.Block(
-                                                                  width=100,
-                                                                  style={
+                                                              dbc.Row(
+                                                                  # width=100,
+                                                                  style={'margin': '0',
                                                                       'max-width': '100px',
-                                                                      'height': 'fit-content'},
+                                                                      'height': 'fit-content','text-align': '-webkit-center',
+                                                 'justify-content': 'center'},
                                                                   children=[
                                                                       html.H6(
                                                                           df.iloc[0]['P13'],
                                                                           style={
                                                                               'text-align': 'center',
                                                                               'margin': '0'})]),
-                                                              ddk.Block(
-                                                                  width=100,
-                                                                  style={
+                                                              dbc.Row(
+                                                                  # width=100,
+                                                                  style={'margin': '0',
                                                                       'max-width': '100px',
-                                                                      'height': 'fit-content'},
+                                                                      'height': 'fit-content','text-align': '-webkit-center',
+                                                 'justify-content': 'center'},
                                                                   children=[
                                                                       html.P(
                                                                           df.iloc[0]['P13_score'],
                                                                           style={
                                                                               'text-align': 'center',
                                                                               'margin': '0'})])]),
-                                                ddk.Block(width=20, style={
-                                                    'height': 'fit-content'},
-                                                          children=[ddk.Block(
-                                                              width=100,
-                                                              style={
+                                                dbc.Col(
+                                                    # width=20,
+                                                          style={
+                                                    'height': 'fit-content', 'padding': '0','width':'20%','text-align': '-webkit-center'},
+                                                          children=[
+                                                              dbc.Row(
+                                                              # width=100,
+                                                              style={'margin': '0',
                                                                   'max-height': '50px',
                                                                   'height': '50px',
                                                                   'width': 'fit-content'},
@@ -362,33 +417,37 @@ def match_card(id):
                                                                           'padding': '0px',
                                                                           'margin': '0',
                                                                           'vertical-align': '-webkit-baseline-middle'})]),
-                                                              ddk.Block(
-                                                                  width=100,
-                                                                  style={
+                                                              dbc.Row(
+                                                                  # width=100,
+                                                                  style={'margin': '0',
                                                                       'max-width': '100px',
-                                                                      'height': 'fit-content'},
+                                                                      'height': 'fit-content','text-align': '-webkit-center',
+                                                 'justify-content': 'center'},
                                                                   children=[
                                                                       html.H6(
                                                                           df.iloc[0]['P14'],
                                                                           style={
                                                                               'text-align': 'center',
                                                                               'margin': '0'})]),
-                                                              ddk.Block(
-                                                                  width=100,
-                                                                  style={
+                                                              dbc.Row(
+                                                                  # width=100,
+                                                                  style={'margin': '0',
                                                                       'max-width': '100px',
-                                                                      'height': 'fit-content'},
+                                                                      'height': 'fit-content','text-align': '-webkit-center',
+                                                 'justify-content': 'center'},
                                                                   children=[
                                                                       html.P(
                                                                           df.iloc[0]['P14_score'],
                                                                           style={
                                                                               'text-align': 'center',
                                                                               'margin': '0'})])]),
-                                                ddk.Block(width=20, style={
-                                                    'height': 'fit-content'},
-                                                          children=[ddk.Block(
-                                                              width=100,
-                                                              style={
+                                                dbc.Col(
+                                                    # width=20,
+                                                    style={
+                                                    'height': 'fit-content', 'padding': '0','width':'20%','text-align': '-webkit-center'},
+                                                          children=[dbc.Row(
+                                                              # width=100,
+                                                              style={'margin': '0',
                                                                   'max-height': '50px',
                                                                   'height': '50px',
                                                                   'width': 'fit-content'},
@@ -401,81 +460,119 @@ def match_card(id):
                                                                           'padding': '0px',
                                                                           'margin': '0',
                                                                           'vertical-align': '-webkit-baseline-middle'})]),
-                                                              ddk.Block(
-                                                                  width=100,
-                                                                  style={
+                                                              dbc.Row(
+                                                                  # width=100,
+                                                                  style={'margin': '0',
                                                                       'max-width': '100px',
-                                                                      'height': 'fit-content'},
+                                                                      'height': 'fit-content','text-align': '-webkit-center',
+                                                 'justify-content': 'center'},
                                                                   children=[
                                                                       html.H6(
                                                                           df.iloc[0]['P15'],
                                                                           style={
                                                                               'text-align': 'center',
                                                                               'margin': '0'})]),
-                                                              ddk.Block(
-                                                                  width=100,
-                                                                  style={
+                                                              dbc.Row(
+                                                                  # width=100,
+                                                                  style={'margin': '0',
                                                                       'max-width': '100px',
-                                                                      'height': 'fit-content'},
+                                                                      'height': 'fit-content','text-align': '-webkit-center',
+                                                 'justify-content': 'center'},
                                                                   children=[
                                                                       html.P(
                                                                           df.iloc[0]['P15_score'],
                                                                           style={
                                                                               'text-align': 'center',
-                                                                              'margin': '0'})])]), ]),
+                                                                              'margin': '0'})])]), ])),
 
                             ddk.Block(width=20,
                                       style={'height': '100px', 'vertical-align': '-webkit-baseline-middle',
                                              'padding': '10px'},
-                                      children=[ddk.Block(width=100,
-                                                          style={'height': '33%'},
-                                                          children=[ddk.Block(width=30, style={'height': 'fit-content',
+                                      children=[dbc.Row(
+                                          # width=100,
+                                                          style={'height': '33%','padding': '0px', 'margin': '0'},
+                                                          children=[dbc.Col(
+                                                              # width=30,
+                                                                            style={
+                                                                                   'height': 'fit-content','width': '30%',
                                                                                                'vertical-align': 'middle'},
                                                                               children=[html.H6('{}'.format(df.iloc[0]['WR']), style={
                                                                                   'text-align': 'center',
                                                                                   'padding': '0px', 'margin': '0'})]),
-                                                                    ddk.Block(width=40, style={'height': 'fit-content',
+                                                                    dbc.Col(
+                                                                        # width=40,
+                                                                        style={'height': 'fit-content','width': '40%',
                                                                                                'vertical-align': 'middle'},
                                                                               children=[html.H2('WR', style={
                                                                                   'text-align': 'center',
                                                                                   'padding': '0px', 'margin': '0'})]),
-                                                                    ddk.Block(width=30, style={'height': 'fit-content',
+                                                                    dbc.Col(
+                                                                        # width=30,
+                                                                        style={'height': 'fit-content','width': '30%',
                                                                                                'vertical-align': 'middle'},
                                                                               children=[html.H6('{}'.format(df.iloc[0]['WR2']), style={
                                                                                   'text-align': 'center',
                                                                                   'padding': '0px', 'margin': '0'})])]),
-                                                ddk.Block(width=100, style={'height': '33%'}, children=[
-                                                    ddk.Block(width=30, style={'height': 'fit-content',
+                                                dbc.Row(
+                                                    # width=100,
+                                                        style={'height': '33%','padding': '0px', 'margin': '0'}, children=[
+                                                    dbc.Col(
+
+                                                        # width=30,
+                                                            style={'height': 'fit-content','width': '30%',
                                                                                'vertical-align': 'middle'}, children=[
                                                         html.H6('{}'.format(df.iloc[0]['FB']), style={'text-align': 'center', 'padding': '0px',
                                                                               'margin': '0'})]),
-                                                    ddk.Block(width=40, style={'height': 'fit-content',
+                                                    dbc.Col(
+                                                        # width=40,
+                                                        style={'height': 'fit-content','width': '40%',
                                                                                'vertical-align': 'middle'}, children=[
                                                         html.H2('FB', style={'text-align': 'center', 'padding': '0px',
                                                                              'margin': '0'})]),
-                                                    ddk.Block(width=30, style={'height': 'fit-content',
+                                                    dbc.Col(
+                                                        # width=30,
+                                                        style={'height': 'fit-content','width': '30%',
                                                                                'vertical-align': 'middle'}, children=[
                                                         html.H6('{}'.format(df.iloc[0]['FB2']), style={'text-align': 'center', 'padding': '0px',
                                                                               'margin': '0'})])]),
-                                                ddk.Block(width=100, style={'height': '33%'}, children=[
-                                                    ddk.Block(width=30, style={'height': 'fit-content',
+                                                dbc.Row(
+                                                    # width=100,
+                                                    style={'height': '33%','padding': '0px', 'margin': '0'}, children=[
+                                                    dbc.Col(
+                                                        # width=30,
+                                                        style={'height': 'fit-content','width': '30%',
                                                                                'vertical-align': 'middle'}, children=[
                                                         html.H6('{}'.format(df.iloc[0]['F10']), style={'text-align': 'center', 'padding': '0px',
                                                                               'margin': '0'})]),
-                                                    ddk.Block(width=40, style={'height': 'fit-content',
+                                                    dbc.Col(
+                                                        # width=40,
+                                                        style={'height': 'fit-content','width': '40%',
                                                                                'vertical-align': 'middle'}, children=[
                                                         html.H2('F10', style={'text-align': 'center', 'padding': '0px',
                                                                               'margin': '0'})]),
-                                                    ddk.Block(width=30, style={'height': 'fit-content',
+                                                    dbc.Col(
+                                                        # width=30,
+                                                        style={'height': 'fit-content','width': '30%',
                                                                                'vertical-align': 'middle'}, children=[
                                                         html.H6('{}'.format(df.iloc[0]['F102']), style={'text-align': 'center', 'padding': '0px',
                                                                               'margin': '0'})])])]),
 
                             ddk.Block(width=40,
                                       style={'height': 'fit-content'},
-                                      children=[ddk.Block(width=20, style={
-                                          'height': 'fit-content'}, children=[
-                                          ddk.Block(width=100,
+                                      children=dbc.Row(style={'margin': '0px',
+                                                 'padding': '0',
+                                                 'text-align': 'center',
+                                                'word-wrap': 'normal',
+                                                 'justify-content': 'center'},
+                                      children=[
+
+                                          dbc.Col(
+                                              # width=20,
+                                              style={'width': '20%',
+                                          'height': 'fit-content','text-align': '-webkit-center'},
+                                                          children=[
+                                          dbc.Row(
+                                              # width=100,
                                                     style={
                                                         'max-height': '50px',
                                                         'height': '50px',
@@ -487,26 +584,35 @@ def match_card(id):
                                                             'max-height': '50px',
                                                             'padding': '0px',
                                                             'margin': '0',
-                                                            'vertical-align': '-webkit-baseline-middle'})]),
-                                          ddk.Block(width=100, style={
+                                                            'vertical-align': '-webkit-baseline-middle',
+                                                 'justify-content': 'center'})]),
+                                          dbc.Row(
+                                              # width=100,
+                                              style={
                                               'max-width': '100px',
-                                              'height': 'fit-content'},
+                                              'height': 'fit-content','text-align': '-webkit-center',
+                                                 'justify-content': 'center'},
                                                     children=[
                                                         html.H6(df.iloc[0]['P21'],
                                                                 style={
                                                                     'text-align': 'center',
                                                                     'margin': '0'})]),
-                                          ddk.Block(width=100, style={
+                                          dbc.Row(
+                                              # width=100,
+                                              style={
                                               'max-width': '100px',
-                                              'height': 'fit-content'},
+                                              'height': 'fit-content','text-align': '-webkit-center',
+                                                 'justify-content': 'center'},
                                                     children=[html.P(df.iloc[0]['P21_score'],
                                                                      style={
                                                                          'text-align': 'center',
                                                                          'margin': '0'})])]),
-                                                ddk.Block(width=20, style={
-                                                    'height': 'fit-content'},
-                                                          children=[ddk.Block(
-                                                              width=100,
+                                                dbc.Col(
+                                                    # width=20,
+                                                    style={'width': '20%',
+                                                    'height': 'fit-content','text-align': '-webkit-center'},
+                                                          children=[dbc.Row(
+                                                              # width=100,
                                                               style={
                                                                   'max-height': '50px',
                                                                   'height': '50px',
@@ -519,33 +625,38 @@ def match_card(id):
                                                                           'max-height': '50px',
                                                                           'padding': '0px',
                                                                           'margin': '0',
-                                                                          'vertical-align': '-webkit-baseline-middle'})]),
-                                                              ddk.Block(
-                                                                  width=100,
+                                                                          'vertical-align': '-webkit-baseline-middle',
+                                                 'justify-content': 'center'})]),
+                                                              dbc.Row(
+                                                                  # width=100,
                                                                   style={
                                                                       'max-width': '100px',
-                                                                      'height': 'fit-content'},
+                                                                      'height': 'fit-content','text-align': '-webkit-center',
+                                                 'justify-content': 'center'},
                                                                   children=[
                                                                       html.H6(
                                                                           df.iloc[0]['P22'],
                                                                           style={
                                                                               'text-align': 'center',
                                                                               'margin': '0'})]),
-                                                              ddk.Block(
-                                                                  width=100,
+                                                              dbc.Row(
+                                                                  # width=100,
                                                                   style={
                                                                       'max-width': '100px',
-                                                                      'height': 'fit-content'},
+                                                                      'height': 'fit-content','text-align': '-webkit-center',
+                                                 'justify-content': 'center'},
                                                                   children=[
                                                                       html.P(
                                                                           df.iloc[0]['P22_score'],
                                                                           style={
                                                                               'text-align': 'center',
                                                                               'margin': '0'})])]),
-                                                ddk.Block(width=20, style={
-                                                    'height': 'fit-content'},
-                                                          children=[ddk.Block(
-                                                              width=100,
+                                                dbc.Col(
+                                                    # width=20,
+                                                    style={'width': '20%',
+                                                    'height': 'fit-content','text-align': '-webkit-center'},
+                                                          children=[dbc.Row(
+                                                              # width=100,
                                                               style={
                                                                   'max-height': '50px',
                                                                   'height': '50px',
@@ -558,33 +669,38 @@ def match_card(id):
                                                                           'max-height': '50px',
                                                                           'padding': '0px',
                                                                           'margin': '0',
-                                                                          'vertical-align': '-webkit-baseline-middle'})]),
-                                                              ddk.Block(
-                                                                  width=100,
+                                                                          'vertical-align': '-webkit-baseline-middle',
+                                                 'justify-content': 'center'})]),
+                                                              dbc.Row(
+                                                                  # width=100,
                                                                   style={
                                                                       'max-width': '100px',
-                                                                      'height': 'fit-content'},
+                                                                      'height': 'fit-content','text-align': '-webkit-center',
+                                                 'justify-content': 'center'},
                                                                   children=[
                                                                       html.H6(
                                                                           df.iloc[0]['P23'],
                                                                           style={
                                                                               'text-align': 'center',
                                                                               'margin': '0'})]),
-                                                              ddk.Block(
-                                                                  width=100,
+                                                              dbc.Row(
+                                                                  # width=100,
                                                                   style={
                                                                       'max-width': '100px',
-                                                                      'height': 'fit-content'},
+                                                                      'height': 'fit-content','text-align': '-webkit-center',
+                                                 'justify-content': 'center'},
                                                                   children=[
                                                                       html.P(
                                                                           df.iloc[0]['P23_score'],
                                                                           style={
                                                                               'text-align': 'center',
                                                                               'margin': '0'})])]),
-                                                ddk.Block(width=20, style={
-                                                    'height': 'fit-content'},
-                                                          children=[ddk.Block(
-                                                              width=100,
+                                                dbc.Col(
+                                                    # width=20,
+                                                    style={'width': '20%',
+                                                    'height': 'fit-content','text-align': '-webkit-center'},
+                                                          children=[dbc.Row(
+                                                              # width=100,
                                                               style={
                                                                   'max-height': '50px',
                                                                   'height': '50px',
@@ -597,33 +713,38 @@ def match_card(id):
                                                                           'max-height': '50px',
                                                                           'padding': '0px',
                                                                           'margin': '0',
-                                                                          'vertical-align': '-webkit-baseline-middle'})]),
-                                                              ddk.Block(
-                                                                  width=100,
+                                                                          'vertical-align': '-webkit-baseline-middle',
+                                                 'justify-content': 'center'})]),
+                                                              dbc.Row(
+                                                                  # width=100,
                                                                   style={
                                                                       'max-width': '100px',
-                                                                      'height': 'fit-content'},
+                                                                      'height': 'fit-content','text-align': '-webkit-center',
+                                                 'justify-content': 'center'},
                                                                   children=[
                                                                       html.H6(
                                                                           df.iloc[0]['P24'],
                                                                           style={
                                                                               'text-align': 'center',
                                                                               'margin': '0'})]),
-                                                              ddk.Block(
-                                                                  width=100,
+                                                              dbc.Row(
+                                                                  # width=100,
                                                                   style={
                                                                       'max-width': '100px',
-                                                                      'height': 'fit-content'},
+                                                                      'height': 'fit-content','text-align': '-webkit-center',
+                                                 'justify-content': 'center'},
                                                                   children=[
                                                                       html.P(
                                                                           df.iloc[0]['P24_score'],
                                                                           style={
                                                                               'text-align': 'center',
                                                                               'margin': '0'})])]),
-                                                ddk.Block(width=20, style={
-                                                    'height': 'fit-content'},
-                                                          children=[ddk.Block(
-                                                              width=100,
+                                                dbc.Col(
+                                                    # width=20,
+                                                    style={'width': '20%',
+                                                    'height': 'fit-content','text-align': '-webkit-center'},
+                                                          children=[dbc.Row(
+                                                              # width=100,
                                                               style={
                                                                   'max-height': '50px',
                                                                   'height': '50px',
@@ -636,29 +757,32 @@ def match_card(id):
                                                                           'max-height': '50px',
                                                                           'padding': '0px',
                                                                           'margin': '0',
-                                                                          'vertical-align': '-webkit-baseline-middle'})]),
-                                                              ddk.Block(
-                                                                  width=100,
+                                                                          'vertical-align': '-webkit-baseline-middle',
+                                                 'justify-content': 'center'})]),
+                                                              dbc.Row(
+                                                                  # width=100,
                                                                   style={
                                                                       'max-width': '100px',
-                                                                      'height': 'fit-content'},
+                                                                      'height': 'fit-content','text-align': '-webkit-center',
+                                                 'justify-content': 'center'},
                                                                   children=[
                                                                       html.H6(
                                                                           df.iloc[0]['P25'],
                                                                           style={
                                                                               'text-align': 'center',
                                                                               'margin': '0'})]),
-                                                              ddk.Block(
-                                                                  width=100,
+                                                              dbc.Row(
+                                                                  # width=100,
                                                                   style={
                                                                       'max-width': '100px',
-                                                                      'height': 'fit-content'},
+                                                                      'height': 'fit-content','text-align': '-webkit-center',
+                                                 'justify-content': 'center'},
                                                                   children=[
                                                                       html.P(
                                                                           df.iloc[0]['P24_score'],
                                                                           style={
                                                                               'text-align': 'center',
-                                                                              'margin': '0'})])]), ])]),
+                                                                              'margin': '0'})])]), ]))]),
     ])
 
 
@@ -668,6 +792,7 @@ def match_card(id):
     def h2h():
         all_h2hBD = pd.read_csv(main_path_data + '\\all_h2h.csv')
         h2hdf = all_h2hBD[(all_h2hBD['Mid'].isin([id]))]
+        h2hdf = h2hdf.drop_duplicates(subset='H2H_date', keep="last")
 
 
 
@@ -682,22 +807,26 @@ def match_card(id):
                                                  # 'background-color':'#0e4e70',
                                                  'list-style': 'none',
                                                  'align-items': 'center'},
-                                          children=ddk.Block(width=100,
+                                          children=dbc.Row(
+                                              # width=100,
                                                              style={'vertical-align': '-webkit-baseline-middle',
                                                                     'height': '35px'}, children=[
-                                                  ddk.Block(width=20,
-                                                            style={'vertical-align': '-webkit-baseline-middle'},
+                                                  dbc.Col(
+                                                      # width=20,
+                                                            style={'vertical-align': '-webkit-baseline-middle','width':'20%'},
                                                             children=[
                                                                 html.H2(h2hdf['H2H_total_t1'][ind], style={
                                                                     'vertical-align': '-webkit-baseline-middle',
                                                                     'text-align': 'center', 'margin': '0'})]),
-                                                  ddk.Block(width=60,
-                                                            style={'vertical-align': '-webkit-baseline-middle'},
+                                                  dbc.Col(
+                                                      # width=60,
+                                                            style={'vertical-align': '-webkit-baseline-middle','width':'60%'},
                                                             children=[html.H6(h2hdf['H2H_date'][ind], style={
                                                                 'vertical-align': '-webkit-baseline-middle',
                                                                 'text-align': 'center', 'margin': '0'})]),
-                                                  ddk.Block(width=20,
-                                                            style={'vertical-align': '-webkit-baseline-middle'},
+                                                  dbc.Col(
+                                                  # width=20,
+                                                            style={'vertical-align': '-webkit-baseline-middle','width':'20%'},
                                                             children=[
                                                                 html.H2(h2hdf['H2H_total_t2'][ind], style={
                                                                     'vertical-align': '-webkit-baseline-middle',
@@ -733,21 +862,44 @@ def match_card(id):
                                    'margin': '10px',
                                    'padding': '0',
                                    'background-color': '#f9f9f91c'}, children=[
-        ddk.Block(width=100, children=[ddk.Block(width=30, style={'vertical-align': '-webkit-baseline-middle', },
-                                                 children=[ddk.Block(width=100, children=[
+        dbc.Row(
+            # width=100,
+            style={
+                   'margin': '0',
+                   'padding': '0'},
+                children=[dbc.Col(
+                    # width=30,
+                    style={'vertical-align': '-webkit-baseline-middle','width':'30%' },
+                                                 children=[dbc.Row(
+                                                     style={'justify-content': 'center'},
+                                                     # width=100,
+                                                     children=[
                                                      html.H6('Побед', style={'text-align': 'center', 'margin': '0'})]),
-                                                           ddk.Block(width=100, children=[html.H2(lhitem[2][2], style={
+                                                           dbc.Row(
+                                                     style={'justify-content': 'center'},
+                                                               # width=100,
+                                                               children=[html.H2(lhitem[2][2], style={
                                                                'text-align': 'center', 'margin': '0'})])]),
-                                       ddk.Block(width=40, style={'vertical-align': '-webkit-baseline-middle', },
+                                       dbc.Col(
+                                       # (width=40,
+                                        style={'vertical-align': '-webkit-baseline-middle','width':'40%' },
                                                  children=[ddk.Card(shadow_weight='medium',
                                                                     style={'background-color': 'transparent'},
                                                                     children=[html.H2(lhitem[1],
                                                                                       style={'text-align': 'center',
                                                                                              'margin': '0'})])]),
-                                       ddk.Block(width=30, style={'vertical-align': '-webkit-baseline-middle', },
-                                                 children=[ddk.Block(width=100, children=[
+                                       dbc.Col(
+                                           # width=30,
+                                           style={'vertical-align': '-webkit-baseline-middle','width':'30%' },
+                                                 children=[dbc.Row(
+                                                     style={'justify-content': 'center'},
+                                                     # width=100,
+                                                     children=[
                                                      html.H6('Побед', style={'text-align': 'center', 'margin': '0'})]),
-                                                           ddk.Block(width=100, children=[html.H2(lhitem[3][2], style={
+                                                           dbc.Row(
+                                                     style={'justify-content': 'center'},
+                                                               # width=100,
+                                                               children=[html.H2(lhitem[3][2], style={
                                                                'text-align': 'center', 'margin': '0'})])])]),
         ddk.Block(width=100, children=dbc.ListGroup(flush=True,
                                                     children=[i for i in lhitem[0]]))])
@@ -760,14 +912,16 @@ def match_card(id):
     def totals():
         all_t1BD = pd.read_csv(main_path_data + '\\all_t1.csv')
         t1bd = all_t1BD[(all_t1BD['Mid'].isin([id]))]
+        t1bd = t1bd.drop_duplicates(subset='T1_last_date', keep="last")
+        t1bd = t1bd.reset_index(drop=True)
 
         all_t2BD = pd.read_csv(main_path_data + '\\all_t2.csv')
         t2bd = all_t2BD[(all_t2BD['Mid'].isin([id]))]
-
-
+        t2bd = t2bd.drop_duplicates(subset='T2_last_date', keep="last")
+        t2bd = t2bd.reset_index(drop=True)
         ttt = []
-        total = pd.concat([t1bd, t2bd.reindex(t1bd.index)], axis=1)
-
+        # total = pd.concat([t1bd, t2bd.reindex(t1bd.index)], axis=1)
+        total = pd.concat([t1bd, t2bd], axis=1)
 
 
         for ind in total.index:
@@ -789,23 +943,25 @@ def match_card(id):
 
 
 
-
             stat_list = dbc.ListGroupItem(style={'line-height': '1', 'margin': '0', 'margin-right': '0',
                                                  'height': '40px', 'justify-content': 'center',
                                                  'vertical-align': '-webkit-baseline-middle',
                                                  'max-height': 'fit-content', 'padding': '0px',
                                                  # 'background-color':'#0e4e70',
                                                  'list-style': 'none',
-                                                 'align-items': 'center'}, children=ddk.Block(width=100,
+                                                 'align-items': 'center'},
+                                          children=dbc.Row(
+                                              # width=100,
                                        style={'vertical-align': '-webkit-baseline-middle',
-                                              'height': '35px'},
+                                              'height': '35px','margin': '0','padding': '0','justify-content': 'center'},
                                        children=[
-                                           ddk.Block(width=50,
-                                                     style={'vertical-align': '-webkit-baseline-middle'},
-                                                     children=[
-                                                         ddk.Block(
-                                                             width=25,
-                                                             style={
+                                           dbc.Col(
+                                               # width=50,
+                                                     style={'vertical-align': '-webkit-baseline-middle','width':'50%'},
+                                                     children=dbc.Row(style={'margin': '0','padding': '0',},children=[
+                                                         dbc.Col(
+                                                             # width=25,
+                                                             style={ 'max-width': '25%',
                                                                  'max-height': '20px',
                                                                  'height': '20px',
                                                                  'width': 'fit-content'},
@@ -817,13 +973,14 @@ def match_card(id):
                                                                      'padding': '0',
                                                                      'margin': '0',
                                                                      'vertical-align': '-webkit-baseline-middle'})]),
-                                                         ddk.Block(
-                                                             width=25,
+                                                         dbc.Col(
+                                                             # width=25,
+                                                             style={'width': 'fit-content', 'max-width': '25%'},
                                                              children=[html.H6('vs',
                                                                                style={'text-align': 'center', 'margin': '0'})]),
-                                                         ddk.Block(
-                                                             width=25,
-                                                             style={
+                                                         dbc.Col(
+                                                             # width=25,
+                                                             style={'max-width': '25%',
                                                                  'max-height': '20px',
                                                                  'height': '20px',
                                                                  'width': 'fit-content'},
@@ -835,9 +992,9 @@ def match_card(id):
                                                                      'padding': '0',
                                                                      'margin': '0',
                                                                      'vertical-align': '-webkit-baseline-middle'})]),
-                                                         ddk.Block(
-                                                             width=25,
-                                                             style={
+                                                         dbc.Col(
+                                                             # width=25,
+                                                             style={'max-width': '25%',
                                                                  'max-height': '20px',
                                                                  'height': '20px',
                                                                  'width': 'fit-content'},
@@ -850,16 +1007,17 @@ def match_card(id):
                                                                      'margin': '0',
                                                                      'margin-left': '10px',
                                                                      'vertical-align': '-webkit-baseline-middle'})])
-                                                     ]),
-                                           ddk.Block(width=50,
-                                                     style={'vertical-align': '-webkit-baseline-middle'},
-                                                     children=[
-                                                         ddk.Block(
-                                                             width=25,
+                                                     ])),
+                                           dbc.Col(
+                                               # width=50,
+                                                     style={'vertical-align': '-webkit-baseline-middle','width':'50%'},
+                                                     children=dbc.Row([
+                                                         dbc.Col(
+                                                             # width=25,
                                                              style={
                                                                  'max-height': '20px',
                                                                  'height': '20px',
-                                                                 'width': 'fit-content'},
+                                                                 'width': 'fit-content','max-width':'25%'},
                                                              children=[ddk.Logo(
                                                                  src=ty,
                                                                  style={
@@ -869,12 +1027,12 @@ def match_card(id):
                                                                      'margin': '0',
                                                                      'margin-right': '10px',
                                                                      'vertical-align': '-webkit-baseline-middle'})]),
-                                                         ddk.Block(
-                                                             width=25,
+                                                         dbc.Col(
+                                                             # width=25,
                                                              style={
                                                                  'max-height': '20px',
                                                                  'height': '20px',
-                                                                 'width': 'fit-content'},
+                                                                 'width': 'fit-content','max-width':'25%'},
                                                              children=[ddk.Logo(
                                                                  src=df.iloc[0]['T2logo'],
                                                                  style={
@@ -883,16 +1041,16 @@ def match_card(id):
                                                                      'padding': '0',
                                                                      'margin': '0',
                                                                      'vertical-align': '-webkit-baseline-middle'})]),
-                                                         ddk.Block(
-                                                             width=25,
+                                                         dbc.Col(style={'width': 'fit-content','max-width':'25%'},
+                                                             # width=25,
                                                              children=[html.H6('vs',
                                                                                style={'text-align': 'center', 'margin': '0'})]),
-                                                         ddk.Block(
-                                                             width=25,
+                                                         dbc.Col(
+                                                             # width=25,
                                                              style={
                                                                  'max-height': '20px',
                                                                  'height': '20px',
-                                                                 'width': 'fit-content'},
+                                                                 'width': 'fit-content','max-width':'25%'},
                                                              children=[ddk.Logo(
                                                                  src=total['T2_last_logo'][ind],
                                                                  style={
@@ -902,7 +1060,7 @@ def match_card(id):
                                                                      'margin': '0',
                                                                      'vertical-align': '-webkit-baseline-middle'})]),
 
-                                                     ])]))
+                                                     ]))]))
 
             ttt.append(stat_list)
 
@@ -931,19 +1089,25 @@ def match_card(id):
     stat_teams = ddk.Card(style={'width': '-webkit-fill-available',
                                  'margin': '10px', 'padding': '0',
                                  'background-color': '#f9f9f91c', }, children=[
-        ddk.Block(width=100, children=[ddk.Block(width=50, style={'vertical-align': '-webkit-baseline-middle', },
+        ddk.Block(width=100, children=dbc.Row(style={
+                                 'margin': '10px', 'padding': '0'},
+            children=[dbc.Col(
+                # width=50,
+                style={'vertical-align': '-webkit-baseline-middle', 'width': '50%'},
                                                  children=[ddk.Block(width=100, children=[
                                                      html.H6('Побед', style={'text-align': 'center', 'margin': '0'})]),
                                                            ddk.Block(width=100, children=[html.H2("{}".format(rrr[1][2]),
                                                                                                   style={
                                                                'text-align': 'center', 'margin': '0'})])]),
 
-                                       ddk.Block(width=50, style={'vertical-align': '-webkit-baseline-middle', },
+                                       dbc.Col(
+                                           # width=50,
+                style={'vertical-align': '-webkit-baseline-middle', 'width': '50%'},
                                                  children=[ddk.Block(width=100, children=[
                                                      html.H6('Побед', style={'text-align': 'center', 'margin': '0'})]),
                                                            ddk.Block(width=100, children=[html.H2("{}".format(rrr[2][2]),
                                                                                                   style={
-                                                               'text-align': 'center', 'margin': '0'})])])]),
+                                                               'text-align': 'center', 'margin': '0'})])])])),
         ddk.Block(width=100, children=dbc.ListGroup(flush=True, children=[i for i in rrr[0]]))
 
     ])
@@ -988,12 +1152,6 @@ def match_card(id):
                                          'border-radius': '10px', 'background-color': '#0e4e70', 'color': 'azure',
                                          'border': '2px solid #1f78b4'})
     tabs = dcc.Tabs(style={'width':'100%', 'padding-left':'5px',},children=[first_tab, second_tab])
-        # dbc.Row(
-        # style={'width':'100%', 'padding-left':'5px', 'padding-right':'5px'}, children=(
-        #     dcc.Tabs(children=[first_tab, second_tab])
-        # ))
-
-
 
 
 
@@ -1038,31 +1196,17 @@ def match_card(id):
                              'min-width': '380px', 'min-height':'220px',},
                       children=[
 
-
-                            #   dcc.Markdown(f'''
-                            # <iframe
-                            #     src="https://player.twitch.tv/?channel={df.iloc[0]['Video']}&muted=true"
-                            #     height="720"
-                            #     width="1280"
-                            #     frameborder="0"
-                            #     scrolling="no"
-                            #     allowfullscreen="true">
-                            # </iframe>
-                            # ''')
-
-
                           html.Iframe(
                               style={'frameborder':'0', 'overflowX':'hidden','overflowY':'hidden','margin':'0', 'padding':'0',
                                      "max-height": '230px', "min-height": '230px', "width": '230px',
                                      "max-width": '410px', "min-width": '410px',"height": '410px','border': '0'
                                      },
-                              # src=f"https://player.twitch.tv/?channel={df.iloc[0]['Video']}",
-                            # height="720",
-                            # width="1280",
-                            #   width='640px',
+
+                              #################################################
                           srcDoc=f'''
                             <iframe
-                                src="https://player.twitch.tv/?channel={df.iloc[0]['Video']}&muted=true"
+                                class="twitch"
+                                src="https://player.twitch.tv/?channel={df.iloc[0]['Video']}&muted=true&parent=eltv.online"
                                 frameborder="0"
                                 scrolling="yes"
                                 height="200"
@@ -1070,9 +1214,7 @@ def match_card(id):
                                 allowfullscreen="true">
                             </iframe>
                               '''
-                              # frameborder="<frameborder>",
-                            #  scrolling=True,
-                            #  allowfullscreen=True
+
                           )
 
                       ]
@@ -1080,11 +1222,7 @@ def match_card(id):
                   )]
 
 
-    # dcc.Interval(id='interval', interval=60000, n_intervals=0)
-    # print('id 3', id)
+
     return match_card
 
-# def match_card(id):
-#     ref_match = html.Div(id={'type':'session_match_div', 'index': id},
-#                          children=[dcc.Interval(id={'type': 'interval_match', 'index': id}, interval=5000, n_intervals=0),match_card2(id)])
-#     return ref_match
+

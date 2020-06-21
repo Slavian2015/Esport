@@ -25,10 +25,6 @@ dash_app.layout = html.Div([
                                         ])]),
 
 
-
-
-
-
     html.Div(id='page-content'),
     html.Div(id='table-container'),
 
